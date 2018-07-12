@@ -700,6 +700,9 @@ section {
   .card:first-child, .card:nth-child(6) {
     margin-left: 0; }
 
+@media all and (max-width: 1200px) {
+  .card:first-child, .card:nth-child(6) {
+    margin-left: 10px; } }
 .card-header {
   background: grey;
   width: 100%;
@@ -774,6 +777,16 @@ section {
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
+.tag {
+  display: inline-block;
+  line-height: 20px;
+  height: 20px;
+  background: #e2e2e2;
+  color: #bababa;
+  padding: 0 10px;
+  margin: 2px;
+  border-radius: 10px; }
+
 /*color palettes*/
 .blue-1 {
   background: #33beef; }
@@ -789,6 +802,21 @@ section {
 
 .blue-5 {
   background: #0b96c7; }
+
+.blue-median-1 {
+  background: #2791D9; }
+
+.blue-median-2 {
+  background: #3ba5ed; }
+
+.blue-median-3 {
+  background: #4fb9ff; }
+
+.blue-median-4 {
+  background: #137dc5; }
+
+.blue-median-5 {
+  background: #0069b1; }
 
 .blue-firm-1 {
   background: #173155; }
@@ -899,7 +927,7 @@ section {
     .footer-nav a:before {
       font-family: "urbanfont";
       display: inline-block;
-      content: "\e037";
+      content: "\E05F";
       margin-right: 20px; }
     .footer-nav a i {
       margin-right: 20px; }
@@ -916,7 +944,7 @@ section {
       .footer-nav a:last-child:after {
         font-family: "urbanfont";
         display: inline-block;
-        content: "\e056";
+        content: "\E060";
         margin-left: 20px; }
 
 /*# sourceMappingURL=style.css.map */
