@@ -1,0 +1,375 @@
+/*header*/
+.site-header{
+	width:100%;
+	height:$hh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:90000;
+    background:rgba($c-0, 0);
+    transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
+	//box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+    &.is-scrolled {
+        background:rgba($c-0, 1);
+        @include box-shadow(0 2px 10px rgba(0, 0, 0, 0.2));
+    }
+    .btn{
+        line-height:35px;
+        height:35px;
+        margin-top:10px;
+        &:hover{
+            color:$c-0;
+        }
+    }
+}
+.site-logo{
+	display:inline-block;
+	width:156px;
+	height:35px;
+	background-image:url('../img/logo-urbanhire.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+	margin-top:$margin-m;
+}
+.logo{
+    display:inline-block;
+    height: 30px;
+  float:left;
+  display:block;
+  margin-top:((80px - 30px) / 2);
+}
+
+.site-nav{
+    ul{
+        margin:0;
+        padding:0;
+        list-style-type:none;
+        li{
+            float:left;
+            position:relative;
+            a{
+                cursor:pointer;
+                color:$c-4;
+               &:before{
+                    transition:cubic-bezier(.71,.14,.23,1.01) .35s;
+                    content:'';
+                    background:$c-1;
+                    width:0%;
+                    height:2px;
+                    position:absolute;
+                    display: block;
+                    bottom:0px;
+                    left:0;
+                    right:0;
+                    margin:0 auto;
+                } 
+                &:hover{
+                    cursor:pointer;
+                }
+                &.active, &:hover{
+                    color:$c-1;
+                    &:before{
+                        width:100%;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media all and (min-width:$mobile-view + 1){
+    .site-nav{
+    float:right;
+    height:$hh;
+    line-height:$hh;
+    //border:solid 1px red;
+    ul{
+        li{
+            float:left;
+            position:relative;
+            a{
+                display:inline-block;
+                padding:0 $margin;
+                text-decoration:none;
+                color:$c-1;
+                color:rgba($c-1, .65);
+                font-size:16px;
+                    
+                &:hover{    
+                    color:$c-1;
+                    &:before{
+                    height:2px; 
+                    }
+                }
+            }
+        &.has-children{
+               &:after{
+                    font-family:$font-icon;
+                    content: "\E003";
+                    margin-right:$margin-m;
+                    margin-left:-($margin-m);
+                    padding:0;
+                    font-size:.725em;
+                    column-rule: $c-1;
+                }
+                &.is-active{
+                    ul{
+                        display:block;
+                    }
+                }
+                ul{
+                    width:200px;
+                    position:absolute;
+                    z-index:4;
+                    display:none;
+                    background:$c-0;
+                    top:$hh + 1;
+                    border-top:solid 1px $c-border;
+                    @include box-shadow-default;
+                    li{
+                        display:block;
+                        float:none;
+                        width:100%;
+                        a{
+                            display:block;
+                            line-height:1em;
+                            padding-top:15px;
+                            padding-bottom:15px;
+                            &:hover{
+                                background:$c-10;
+                            }
+                            &:active{
+                                background:$c-10;
+                            }
+                            &:before{
+                                display:none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+@media all and (max-width:$mobile-view){
+    .site-nav{
+       ul{
+         li{
+            float:none;
+            width:100%;
+            position:relative;
+             &.has-children{
+                &:after{
+                    font-family:$font-icon;
+                    content: "\E003";
+                    margin-right:$margin-m;
+                    margin-left:-($margin-m);
+                    padding:0;
+                    font-size:.725em;
+                    color:$c-8;
+                    position:absolute;
+                    display:block;
+                    height:100%;
+                    line-height:40px;
+                    right:$margin-m;
+                    top:0;
+                }
+                ul{
+                    &.show-sub-menu{
+                        display:block;
+                    }
+                }
+            }
+            &.is-opened{
+                &:after{
+                    content: "\e005";
+                    color:$c-1;
+                }
+            }
+            a{
+                display:block;
+                padding:$margin-m $margin;
+                text-decoration:none;
+                color:$c-font;
+                &:before{
+                    display:none;
+                }
+                &:hover{
+
+                }
+            }
+           
+             ul{
+                    width:100%;
+                    position:static;
+                    z-index:4;
+                    display:none;
+                    background:$c-10;
+                    top:$hh;
+                    border-top:solid 1px $c-border;
+                    @include box-shadow(none);
+                    li{
+                        display:block;
+                        float:none;
+                        width:100%;
+                        a{
+                            display:block;
+                            padding-left:$margin*1.5;
+                            &:hover{
+                                background:$c-10;
+                            }
+                            &:active{
+                                background:$c-10;
+                            }
+                            &:before{
+                                display:none;
+                            }
+                        }
+                    }
+                }
+        }
+       }
+       .btn{
+        margin:0;
+        line-height:40px;
+        height:40px;
+        padding:0 $margin;
+        @include border-radius(0);
+       }
+    }
+}
+.menu-toggle{
+    width:30px;
+    height:30px;
+    padding:5px;
+    position:absolute;
+    top:25px;
+    right:$margin;
+    //outline:solid 1px red;
+    span{
+        display:block;
+        width:80%;
+        left:0;
+        right:0;
+        margin:auto;
+        height:3px;
+        background:$c-1;
+        position:absolute;
+        border-radius: 2px;
+        &:nth-child(1){
+            top:4px;
+        }
+        &:nth-child(2){
+            top:14px;
+        }
+        &:nth-child(3){
+            top:24px;
+        }
+    }
+    &:hover{
+        cursor:pointer;
+    }
+}
+/*media query for menu*/
+@media all and (max-width:$mobile-view){
+    
+    .site-nav{
+        position:fixed;
+        width:250px;
+        height:100%;
+        top:0;
+        right:-240px;
+        padding-top:$hh;
+        overflow:hidden;
+        background:$c-0;
+        //margin-right:-240px;
+        opacity:0;
+        z-index:9877;
+        @include box-shadow(0 0 10px rgba(black, .2));
+        @include transition(all ease, .2s);
+        &.site-nav-active{
+            right:0;
+            opacity:1;
+        }
+        ul{
+            width:100%;
+            height:100%;
+            overflow:auto;
+
+        }
+        li{
+            border-bottom:solid 1px $c-border;
+            width:100%;
+            a{
+                display:block;
+                width:100%;
+                color:$c-font;
+                padding:$margin $margin;
+            }
+
+        }
+        .search-header{
+            padding-left:0;
+            height:42px;
+            width:100%;
+            //@include bb;
+        }
+    }
+
+    .menu-toggle{
+        span{
+            @include transition(all ease,.2s);
+        }
+        &.menu-toggle-active{
+            z-index:9888;
+            
+            span{
+                &:nth-child(1), &:nth-child(3){
+                    //width:50%;
+                    right:-10px;
+                }
+            }
+        }
+    }
+
+    .site-nav-header{
+        width:100%;
+        height:$hh;
+        background:$c-0;
+        position:absolute;
+        top:0;
+        left:0;
+        span{
+            color:$c-1;
+            line-height:$hh;
+            font-size:18px;
+            //font-family:$font-display;
+            padding:0 $margin;
+            text-transform:uppercase;
+        }
+    }
+
+    .menu-overlay{
+        width:100%;
+        height:100%;
+        background:rgba(black, .5);
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:9876;
+        display:none;
+        &.active{
+            display:block;
+        }
+    }
+}
+@media all and (max-width:$screen-s){
+    .site-header{
+        padding:0 $margin-m;
+        //background:rgba($c-0, 1);
+        //@include box-shadow(0 0px 2px rgba(0, 0, 0, 0.2));
+    }
+}
+

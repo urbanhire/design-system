@@ -1,0 +1,90 @@
+/*footer*/
+.site-footer{
+	font-size:(14/16)+em;
+	color:$c-4;
+	p{
+		margin:0;
+		padding:0;
+	}
+	.img-partner{
+		max-width: 150px;
+	}
+
+}
+.top-footer{
+	padding:$margin*3 0;
+	border-top:solid 1px $c-border;
+	font-weight: 300;
+	h4{
+		color:$c-4;
+		letter-spacing: 1px;
+		font-size:(14/16)+em;
+		font-weight: 500;
+	}
+}
+.bottom-footer{
+	border-top:solid 1px $c-border;
+	padding:$margin 0;
+	font-weight: 300;
+	ul{
+		li{
+			a{
+				color:lighten($c-4, 50%);
+				font-size: 14px;
+				text-decoration: none;
+				&:hover{
+					color:lighten($c-4, 30%);
+					text-decoration:underline;
+				}
+				&:active{
+					color:lighten($c-4, 10%);
+				}
+			}
+		}
+	}
+	.socmed{
+		li a{
+			font-size: 18px;
+		}
+	}
+}
+.copyright{
+	color:lighten($c-4, 50%);
+	font-size: 14px;
+}
+.list{
+    margin:0;
+    padding:0;
+    li{
+        list-style-type:none;
+        a{
+        	text-decoration: none;
+            color:lighten($c-4, 20%);
+            display:inline-block;
+            margin:$margin/4 0;
+            &:hover{
+                text-decoration:underline;
+                color:lighten($c-4, 10%);
+            }
+        }
+    }
+}
+.list-inline{
+    margin:0;
+    padding:0;
+    li{
+        list-style-type:none;
+        display:inline-block;
+        padding:0 $margin/4;
+        a{
+            color:lighten($c-4, 20%);
+            display:inline-block;
+            margin:$margin/4 0;
+            text-decoration: none;
+            &:hover{
+                text-decoration:none;
+                color:lighten($c-1, 10%);
+            }
+        }
+    }
+}

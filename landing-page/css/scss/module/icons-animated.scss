@@ -1,0 +1,199 @@
+/*Icons animated*/
+.icon-link-animated{
+  display:inline-block;
+  width:100px;
+  //height:50px;
+  text-align:center;
+  line-height:50px;
+  //border:solid 1px rgba(black,.05);
+  margin:20px 10px;
+  padding:10px;
+  text-decoration:none;
+  overflow:hidden;
+  color:#424242;
+  transition:cubic-bezier(.11,.65,.73,.66), .25s;
+  span{
+    display:block;
+    //border:solid 1px red;
+    font-size:(14/16)+em;
+    line-height:1.2em;
+    padding:0;
+    margin-top:-10px;
+  }
+  &:hover{
+    text-decoration:none;
+    span{
+      color:$c-2;
+    }
+    svg{
+      transform:scale(1.1);
+    }
+    #ic-laptop{
+      #screen, #keyboard{
+    fill:$c-2;
+  }
+  #screen-line{
+    opacity:0;
+  }
+  #code{
+    opacity:1;
+    stroke:#f00;
+  }
+  #angle-right{
+    //transform:translateX(10px);
+    animation: angle-right-move .75s infinite linear;
+  }
+  #angle-left{
+    //transform:translateX(-10px);
+    animation: angle-left-move .75s infinite linear;
+  }
+    }
+    #ic-bulb{
+      #bulb{
+      fill:$c-2;
+    }
+    #light-strip{
+    stroke:#424242;
+      stroke-dasharray: 4;
+  -moz-animation: dash 30s infinite linear;
+  -webkit-animation: dash 30s infinite linear;
+  animation: dash 30s infinite linear;
+  }
+    }
+    #ic-coin{
+          #coin{
+    fill:$c-2;
+  }
+  #star-1{
+    animation: star-wink .5s infinite linear;
+  }
+  #star-2{
+    animation: star-wink 1s infinite linear;
+  }
+  #star-3{
+    animation: star-wink .75s infinite linear;
+  }
+    }
+    #ic-chat{
+      #bubble{
+      fill:$c-2;
+    }
+    #text-front{
+      opacity:1;
+      #text-long{
+    stroke:#424242;
+      stroke-dasharray:19;
+  -moz-animation: dash-text 5s infinite linear;
+  -webkit-animation: dash-text 5s infinite linear;
+  animation: dash-text 5s infinite linear;
+  }
+  #text-short{
+    stroke:#424242;
+      stroke-dasharray:10;
+  -moz-animation: dash-text 5s infinite linear;
+  -webkit-animation: dash-text 5s infinite linear;
+  animation: dash-text 5s infinite linear;
+  }
+    }
+    }
+    #ic-chart{
+      #liner{
+      fill:$c-2;
+    }
+    #graph-front{
+    opacity:1;
+    stroke:#424242;
+      stroke-dasharray:50;
+  -moz-animation: dash-text 2s infinite linear;
+  -webkit-animation: dash-text 2s infinite linear;
+  animation: dash-text 2s infinite linear;
+  }
+    }
+  }
+}
+#ic-laptop, #ic-bulb, #ic-coin, #ic-chat, #ic-chart{
+  transition:cubic-bezier(.11,.65,.73,.66), .5s;
+}
+#ic-laptop{
+  #screen, #keyboard, #code, #angle-left, #angle-right, #screen-line{
+    transition:cubic-bezier(.11,.65,.73,.66), .2s;
+  }
+  #code{
+    opacity:0;
+  }
+}
+@keyframes angle-right-move {
+  from{
+   opacity:0; 
+  }
+  50%{
+    opacity:1;
+    transform:translateX(10px);
+  }
+  to {
+    transform:translateX(10px);
+  }
+}
+@keyframes angle-left-move {
+  from{
+   opacity:0; 
+  }
+  50%{
+    opacity:1;
+    transform:translateX(-10px);
+  }
+  to {
+    transform:translateX(-10px);
+  }
+}
+#ic-bulb{
+  #bulb{
+    transition:cubic-bezier(.11,.65,.73,.66), .2s;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: -800;
+  }
+}
+#ic-coin{
+  #coin{
+    transition:cubic-bezier(.11,.65,.73,.66), .2s;
+  }
+  #star-1, #star-2, #star-3{
+    opacity:0;
+  }
+}
+@keyframes star-wink {
+  from {
+    opacity:0;
+  }
+  50%{
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+#ic-chat{
+  #bubble{
+    transition:cubic-bezier(.11,.65,.73,.66), .2s;
+  }
+  #text-front{
+    opacity:0;
+  }
+}
+@keyframes dash-text {
+  to {
+    stroke-dashoffset:-200;
+  }
+}
+#ic-chart{
+  #liner{
+    transition:cubic-bezier(.11,.65,.73,.66), .2s;
+  }
+  #graph-front{
+    opacity:0;
+    transition:cubic-bezier(.11,.65,.73,.66), .2s;
+  }
+}

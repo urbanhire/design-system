@@ -1,0 +1,447 @@
+/*Content*/
+*,*:after, *::after,*:before, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::selection {
+    background: $c-1;
+    color: #fff;
+}
+::-moz-selection {
+    background: $c-1;
+    color: #fff;
+}
+body{
+	font-family:$font-regular;
+	margin:0;
+  	padding:0;
+  	color:#1a1a1a;
+    &.has-bg{
+        background-image:url('../img/background-u.svg');
+    background-repeat:no-repeat;
+    background-position:top right;
+    background-attachment: fixed;
+    background-size:50%;
+    }
+}
+header{
+	margin:0;
+  	padding:0;
+}
+p{
+	line-height: 1.5em;
+}
+a{
+	i{
+		//outline: solid 1px red;
+		line-height:40px;
+		&:before{
+			vertical-align: middle;
+		}
+	}
+}
+img{
+	max-width: 100%;
+}
+
+section{
+	position: relative;
+	z-index: 1;
+}
+.u-bg{
+	width:80%;
+	position:fixed;
+	z-index: 0;
+	top:0;
+	right:0;
+}
+
+@media all and (min-width:$screen-m){
+	.u-bg{
+	width:50%;
+	}
+}
+.section-title{
+	font-size:(36/16)+em;
+	color:$c-1;
+	margin:0 0 $margin 0;
+	padding:0;
+	line-height: 1.5em;
+	font-weight: 500;
+	letter-spacing: .01em;
+}
+.section-text{
+    color:$c-1;
+     font-size:1.4em;
+    font-weight: 300;
+    margin:0 0 60px 0;
+    line-height:1.5em;
+}
+
+
+/*Section Products*/
+.section-products{
+	padding:$margin *3 0;
+	background:$c-9;
+	min-height:50vh;
+}
+/*Section Usp*/
+.section-usp{
+	padding:$margin *3 0;
+    background:$c-0;
+}
+.list-usp{
+	li{
+		//outline: solid 1px red;
+		margin:$margin 0;
+
+	}
+}
+
+/*Section Showcase*/
+.section-showcase{
+    //outline: solid 1px green;
+	position: relative;
+    overflow: hidden;
+	min-height: 90vh;
+	background: $c-9;
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,235,238,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(231,235,238,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,235,238,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,235,238,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,235,238,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(231,235,238,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7ebee', GradientType=0 );
+	&:before, &:after{
+		content: '';
+		display: block;
+		position: absolute;
+		border-radius: 50%;
+		transition:cubic-bezier(.11,.65,.73,.66), .2s;
+	}
+	&:before{	
+		width:40vh;
+		height:40vh;
+		background: rgba($c-2, .2);
+		left:20%;
+		top:35%;
+  		animation: move-circle 5s infinite linear;
+	}
+	&:after{
+		width:20vh;
+		height: 20vh;
+		background: rgba($c-2, .2);
+		right:12%;
+		top:25%;
+		animation: move-circle 3s infinite linear;
+	}
+
+}
+@keyframes move-circle {
+    from {@include transform-translateY(4%)}
+    25% {@include transform-translateY(0%)}
+    50% {@include transform-translateY(4%)}
+    75% {@include transform-translateY(0%)}
+    to {@include transform-translateY(4%)}
+}
+
+.dashed-circle{
+	position: absolute;
+	border-radius: 50%;
+	transition:cubic-bezier(.11,.65,.73,.66), .2s;
+	display: block;
+	width:30vh;
+	height:30vh;
+	border-style: dashed;
+	border-color: $c-1;
+	border-width: .3em;
+	left:25%;
+	top:40%;
+}
+@keyframes zoom-circle {
+    from {@include transform-scale(1.2)}
+    25% {@include transform-scale(1.0)}
+    50% {@include transform-scale(1.2)}
+    75% {@include transform-scale(1.0)}
+    to {@include transform-scale(1.2)}
+}
+.img-showcase{
+	position:absolute;
+	z-index: 1;
+    right: 120px;
+    top:0;
+    width:70%;
+    //outline: solid 1px red;
+}
+.container-offset{
+	position: absolute;
+	//outline: solid 1px blue;
+	z-index: 4;
+	left:0;
+	right:0;
+    top:3em;
+	margin: auto;
+}
+@media all and (max-width: $screen-l){
+    .section-showcase{
+        min-height: 80vh;
+    }
+}
+@media all and (max-width: $screen-ml){
+    .section-showcase{
+        min-height: 70vh;
+    }
+}
+/*Buttons*/
+.btn{
+	display:inline-block;
+	line-height:40px;
+	margin:0;
+	padding:0 1.25em;
+	border:none;
+	background:$c-9;
+	text-decoration: none;
+	color:$c-4;
+	text-align: center;
+	letter-spacing: .5px;
+	@include border-radius(4px);
+	&.is-lg{
+		line-height:50px;
+		font-size: 18px;
+	}
+	&:hover{
+		@include box-shadow(0 0 0 3px (rgba(black, .05)));
+		transition:cubic-bezier(.71,.14,.23,1.01) .25s;
+	}
+	&:active{
+		@include box-shadow(0 0 0 4px (rgba(black, .10)));
+	}
+	&.btn-1{
+		color:white;
+		background:$c-1;
+		&:hover{
+			background:lighten($c-1, 5%);
+		}
+		&:active{
+			background:darken($c-1, 0%);
+		}
+	}
+	&.btn-2{
+		color:white;
+		background:$c-2;
+		&:hover{
+			background:lighten($c-2, 5%);
+		}
+		&:active{
+			background:darken($c-2, 0%);
+		}
+	}
+	&.btn-3{
+		color:white;
+		background:$c-3;
+		&:hover{
+			background:lighten($c-3, 5%);
+		}
+		&:active{
+			background:darken($c-3, 0%);
+		}
+	}
+	&.btn-4{
+		color:white;
+		background:$c-4;
+		&:hover{
+			background:lighten($c-4, 5%);
+		}
+		&:active{
+			background:darken($c-4, 0%);
+		}
+	}
+	&.btn-5{
+		color:white;
+		background:$c-5;
+		&:hover{
+			background:lighten($c-5, 5%);
+		}
+		&:active{
+			background:darken($c-5, 0%);
+		}
+	}
+	&.btn-6{
+		color:white;
+		background:$c-6;
+		&:hover{
+			background:lighten($c-6, 5%);
+		}
+		&:active{
+			background:darken($c-6, 0%);
+		}
+	}
+}
+
+.boxanima{
+	display: block;
+	position: absolute;
+	z-index:0;
+	top:0;
+	right:0;
+	width:40em;
+	height:40em;
+	border:solid 6em $c-1;
+	border-radius:3em;
+	transform: rotate(-315deg);
+	opacity:.05;
+}
+/*Migrated newuh*/
+/*section-hilite*/
+.section-hilite{
+    padding:$margin*2 0;
+    background-color: rgb(245,245,245);
+    background-color: rgba($c-1, .07);
+    background-image: url(../img/img-briefcase.svg);
+    background-position: 4em 0;
+    background-repeat: no-repeat;
+}
+@media all and (min-width:$screen-l){
+	.section-hilite{
+		padding:8em 0;
+	}
+}
+.section-clients{
+    padding:$margin*3 0;
+    background:$c-0;
+    div{
+        text-align: center;
+        padding:$margin-m;
+    }
+    img{
+        max-width:100%;
+        max-height: 100px;
+        text-align: center;
+        padding:$margin-m;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        transition:cubic-bezier(.71,.14,.23,1.01) .25s;
+        &:hover{
+            -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%);
+        }
+    }
+}
+@media all and (max-width: 768px){
+    .section-clients{
+        .col-sm-2{
+            width:33.33333333%;
+            float:left;
+        }
+    }
+}
+
+.text-xl{
+    font-size:3em;
+}
+.text-md{
+    font-size:1.5em;
+}
+.text-s{
+    font-size:.8em;
+}
+/*end migrated*/
+
+
+/*Formats*/
+.hide{
+	display: none;
+}
+.content{
+	padding:$margin;
+	text-align:left;
+	position: relative;
+}
+
+.content-title{
+	color:lighten($c-1, 20%);
+	padding:$margin/2 0 $margin 0;
+	display: block;
+	//border:solid 1px red;
+}
+.outer {
+  width: 100%;
+  height: 100%;
+  display: table; }
+
+.middle {
+  display: table-cell;
+  vertical-align: middle; }
+
+.inner {
+  display: block;
+  text-align: center; }
+.m-t{
+	margin-top:$margin;
+}
+.m-r{
+	margin-right:$margin;
+}
+.m-b{
+	margin-bottom:$margin;
+}
+.m-l{
+	margin-left:$margin;
+}
+.m-all{
+	margin:$margin;
+}
+.padd-lg-tb{
+	padding:$margin*2 0;
+}
+.align-center{
+    text-align:center;
+}
+.align-ltr,
+.align-ltc,
+.align-left{
+    text-align:left;
+}
+.align-rtl,
+.align-rtc,
+.align-right{
+    text-align:right;
+}
+@media all and (max-width:$screen-m){
+    
+    .align-rtl{
+        text-align:left;
+    }
+    .align-ltr{
+        text-align:right;
+    }
+    .align-rtc,
+    .align-ltc{
+        text-align:center;
+    }
+    
+}
+
+
+/*Mobile menu settings*/
+.m-show-b,
+.m-show{
+    display:none;
+}
+.m-hide{
+    display:initial;
+}
+@media all and (max-width:$mobile-view){
+    .m-show{
+        display:initial;
+    }
+    .m-show-b{
+        display:block;
+    }
+    .m-hide{
+        display:none;
+    }
+}
+
