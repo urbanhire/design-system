@@ -1294,7 +1294,7 @@ section {
 }
 
 .u-bg {
-  width: 90%;
+  width: 80%;
   position: fixed;
   z-index: 0;
   top: 0;
@@ -1461,9 +1461,46 @@ section {
 .img-showcase {
   position: absolute;
   z-index: 1;
-  right: 120px;
+  right: 3rem;
   top: 0;
-  width: 70%;
+  width: 72%;
+}
+
+.ic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 4;
+  max-width: 190px;
+  animation: move-circle 5s infinite linear;
+}
+.ic.ic-1 {
+  left: 20rem;
+  bottom: -40rem;
+  animation-delay: 0.2s;
+}
+.ic.ic-2 {
+  left: 30rem;
+  bottom: -20rem;
+  animation-delay: 0.1s;
+}
+.ic.ic-3 {
+  left: 55rem;
+  bottom: -30rem;
+  animation-delay: 0.35s;
+}
+.ic.ic-4 {
+  left: 60rem;
+  bottom: -5rem;
+  animation-delay: 0.25s;
+}
+.ic.ic-5 {
+  left: 90rem;
+  bottom: -5rem;
+  animation-delay: 0.15s;
 }
 
 .container-offset {
