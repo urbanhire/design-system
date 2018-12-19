@@ -110,4 +110,16 @@ jQuery(document).ready(function () {
     //
     clickMouse();
 
+    var uModal = function(){
+        $(".modal-box").click(function (e) {
+        e.stopPropagation();
+    });
+    $(".modal-container").click(function (e) {
+        $('body').toggleClass('disabled');
+        $('.overlay').toggleClass('is-active');
+        $('.modal').toggleClass('is-active');
+    });
+    };
+    uModal();
+
 });

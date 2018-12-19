@@ -352,6 +352,52 @@ section{
     }
 }
 
+/*Modal*/
+ body.disabled {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index:9998;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+  .overlay.is-active {
+    visibility: visible; }
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:9999;
+  overflow: auto;
+  visibility: hidden;
+}
+  .modal.is-active {
+    visibility: visible; }
+
+.modal-container {
+  padding: 40px; }
+
+.modal-box {
+  width:560px;
+  min-height: 300px;
+  background: white;
+  padding:$margin;
+  margin: auto;
+  @include border-radius(4px);
+}
+.modal-box-toggle-height{
+  height: 1300px;
+}
+
 .text-xl{
     font-size:3em;
 }
