@@ -71,6 +71,9 @@ section{
 	font-weight: 500;
 	letter-spacing: .01em;
 }
+@media all and (max-width:$screen-m){
+
+}
 .section-text{
     color:$c-1;
      font-size:1.4em;
@@ -449,7 +452,7 @@ section{
 .align-right{
     text-align:right;
 }
-@media all and (max-width:$screen-m){
+@media all and (max-width:$screen-ml - 1){
     
     .align-rtl{
         text-align:left;

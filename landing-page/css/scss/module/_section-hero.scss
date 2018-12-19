@@ -30,7 +30,14 @@
 		line-height:1.5em;
 	}
 }
-@media all and (min-width:$screen-ml){
+@media all and (max-width:$screen-ml - 1){
+    .img-hero-wrapper{
+    -ms-flex-order: -1;
+    -webkit-box-ordinal-group: 0;
+    order: -1;
+}
+}
+@media all and (min-width:$screen-ml + 1){
     /*mouse animated*/
     .mouse {
         position: absolute;
