@@ -12,6 +12,31 @@
 	}
 
 }
+.list-inline{
+    margin:0;
+    padding:0;
+    li{
+        list-style-type:none;
+        display:inline-block;
+        padding:0 $margin/4;
+        a{
+            color:lighten($c-4, 20%);
+            display:inline-block;
+            margin:$margin/4 0;
+            text-decoration: none;
+            &:hover{
+                text-decoration:none;
+                color:lighten($c-1, 10%);
+            }
+        }
+    }
+}
+.contact-info{
+	padding-top:$margin-m;
+	p{
+		line-height:1.3rem;
+	}
+}
 .top-footer{
 	padding:$margin*3 0;
 	border-top:solid 1px $c-border;
@@ -27,6 +52,8 @@
 	border-top:solid 1px $c-border;
 	padding:$margin 0;
 	font-weight: 300;
+	position: relative;
+	z-index: 2;
 	ul{
 		li{
 			a{
@@ -35,17 +62,13 @@
 				text-decoration: none;
 				&:hover{
 					color:lighten($c-4, 30%);
+					cursor:pointer;
 					text-decoration:underline;
 				}
 				&:active{
 					color:lighten($c-4, 10%);
 				}
 			}
-		}
-	}
-	.socmed{
-		li a{
-			font-size: 18px;
 		}
 	}
 }
@@ -66,25 +89,6 @@
             &:hover{
                 text-decoration:underline;
                 color:lighten($c-4, 10%);
-            }
-        }
-    }
-}
-.list-inline{
-    margin:0;
-    padding:0;
-    li{
-        list-style-type:none;
-        display:inline-block;
-        padding:0 $margin/4;
-        a{
-            color:lighten($c-4, 20%);
-            display:inline-block;
-            margin:$margin/4 0;
-            text-decoration: none;
-            &:hover{
-                text-decoration:none;
-                color:lighten($c-1, 10%);
             }
         }
     }

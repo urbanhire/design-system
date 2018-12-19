@@ -163,69 +163,37 @@ section{
 	left:25%;
 	top:40%;
 }
-@keyframes zoom-circle {
-    from {@include transform-scale(1.2)}
-    25% {@include transform-scale(1.0)}
-    50% {@include transform-scale(1.2)}
-    75% {@include transform-scale(1.0)}
-    to {@include transform-scale(1.2)}
-}
 
 .img-showcase{
+	position:relative;
+	z-index: 1;
+	margin-top:-80px;
+}
+
+@media all and (min-width: $mobile-view){
+	.img-showcase{
 	position:absolute;
 	z-index: 1;
     right: 3rem;
     top:0;
     width:72%;
-    //outline: solid 1px red;
-}
-.showcase-wrapper{
-	//position: absolute;
-}
-.ic{
-	position: absolute;
-	top:0;
-	right:0;
-	left:0;
-	bottom: 0;
-	margin: auto;
-	z-index:4;
-	max-width:190px;
-	animation: move-circle 5s infinite linear;
-	&.ic-1{
-		left:20rem;
-		bottom:-40rem;
-		animation-delay: .2s;
 	}
-	&.ic-2{
-		left:30rem;
-		bottom:-20rem;
-		animation-delay: .1s;
-	}
-	&.ic-3{
-		left:55rem;
-		bottom:-30rem;
-		animation-delay: .35s;
-	}
-	&.ic-4{
-		left:60rem;
-		bottom:-5rem;
-		animation-delay: .25s;
-	}
-	&.ic-5{
-		left:90rem;
-		bottom:-5rem;
-		animation-delay: .15s;
+	.container-offset{
+		position: absolute;
+		//outline: solid 1px blue;
+		z-index: 4;
+		left:0;
+		right:0;
+	    top:3em;
+		margin: auto;
 	}
 }
-.container-offset{
-	position: absolute;
-	//outline: solid 1px blue;
-	z-index: 4;
-	left:0;
-	right:0;
-    top:3em;
-	margin: auto;
+@media all and (max-width: $screen-m){
+	.container-offset{
+	.section-text{
+		margin:0 0 0 0;
+		}
+	}
 }
 @media all and (max-width: $screen-l){
     .section-showcase{
@@ -236,6 +204,9 @@ section{
     .section-showcase{
         min-height: 70vh;
     }
+    .container-offset{
+	position: static;
+	}
 }
 /*Buttons*/
 .btn{
