@@ -384,9 +384,11 @@ section{
     visibility: visible; }
 
 .modal-container {
-  padding: 40px; }
+  padding: 40px;
+}
 
 .modal-box {
+	position: relative;
   width:560px;
   min-height: 300px;
   background: white;
@@ -396,6 +398,32 @@ section{
 }
 .modal-box-toggle-height{
   height: 1300px;
+}
+.modal-close{
+	width:40px;
+	height:40px;
+	display: block;
+	position: absolute;
+	top:$margin-m;
+	right:$margin-m;
+	z-index: 2;
+	//background: grey;
+	font-size: 24px;
+	text-align: center;
+	line-height: 50px;
+	color:lighten($c-font, 20%);
+	@include border-radius(4px);
+	&:hover{
+		cursor: pointer;
+		background:rgba(black, .05);
+	}
+	&:hover{
+		@include box-shadow(0 0 0 3px (rgba(black, .05)));
+		transition:cubic-bezier(.71,.14,.23,1.01) .25s;
+	}
+	&:active{
+		@include box-shadow(0 0 0 4px (rgba(black, .10)));
+	}
 }
 
 .text-xl{

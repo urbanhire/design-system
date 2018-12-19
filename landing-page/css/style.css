@@ -1675,6 +1675,7 @@ body.disabled {
 }
 
 .modal-box {
+  position: relative;
   width: 560px;
   min-height: 300px;
   background: white;
@@ -1687,6 +1688,40 @@ body.disabled {
 
 .modal-box-toggle-height {
   height: 1300px;
+}
+
+.modal-close {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  color: #757575;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.modal-close:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.05);
+}
+.modal-close:hover {
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.25s;
+}
+.modal-close:active {
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .text-xl {
