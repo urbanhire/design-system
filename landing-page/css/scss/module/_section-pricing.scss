@@ -1,0 +1,78 @@
+/*Section Pricing*/
+
+.section-pricing{
+	background-image: url("../img/img-backgroundcity.svg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-color: #FFFFFF;
+	background-position:0 35vh;
+	background-attachment:fixed;
+	//opacity: 0.4;
+	width:100%;
+	height: 100vh;
+}
+
+@media all and ($max-width:$mobile-view){
+
+
+}
+
+.section-plan{
+	background-color: #FFFFFF;
+	background-position: center;
+	margin-top: 50%;
+	position: relative;
+	flex: wrap;
+}
+
+
+.main-title{
+	margin-top: 35vh;
+	position: relative;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 600px;
+
+}
+
+h4{
+	font-size: 30px;
+	font-color: #797979;
+
+}
+
+.outline{
+	//outline:solid 0.5px red;
+}
+
+.price-card{
+	padding: 10px;
+	width: 245px;
+	height: 420px;
+	margin-top: 10vh;
+	background-color: white;
+	overflow: visible;
+}
+
+.btn{
+}
+
+.free-trial-outline{
+	position: bottom;
+	text-align: center;
+}
+
+.pc-list{
+	position: bottom;
+	text-align: left;
+	padding: 10px;
+	margin-top: 24vh;
+	margin-left: 5px;
+	margin-right: 5px;
+	line-height: 2; 
+}
+
+
