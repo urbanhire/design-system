@@ -17,7 +17,7 @@
                 <circle id="circle-7" fill="#2791D9" cx="36" cy="1040" r="8"></circle>
                 <path d="M98.5,1016 C116.449254,1016 131,1001.44925 131,983.5 C131,965.550746 116.449254,951 98.5,951 C80.5507456,951 66,965.550746 66,983.5 C66,1001.44925 80.5507456,1016 98.5,1016 Z" id="circle-6" stroke="url(#linearGradient-1)" stroke-width="2" stroke-dasharray="12,12"></path>
                 <path d="M1033,229 C1045.15026,229 1055,219.150264 1055,207 C1055,194.849736 1045.15026,185 1033,185 C1020.84974,185 1011,194.849736 1011,207 C1011,219.150264 1020.84974,229 1033,229 Z" id="circle-5" stroke="#FF5252" stroke-width="2" stroke-dasharray="12,12"></path>
-                <circle id="circle-4" fill="#2791D9" cx="982" cy="142" r="8">
+                <circle id="circle-4" fill="#2791D9" cx="982" cy="142" r="8" fill-opacity="0.5">
                     <animateTransform
                        attributeName="transform"
                        begin="0s"
@@ -31,7 +31,7 @@
                 <path d="M45,179 C69.8528137,179 90,158.852814 90,134 C90,109.147186 69.8528137,89 45,89 C20.1471863,89 0,109.147186 0,134 C0,158.852814 20.1471863,179 45,179 Z" id="circle-3" stroke="url(#linearGradient-1)" stroke-width="2" stroke-dasharray="12,12">
                     
                 </path>
-                <circle id="circle-2" fill="#17CCD5" cx="55" cy="50" r="11">
+                <circle id="circle-2" fill="#17CCD5" cx="55" cy="50" r="11" fill-opacity="0.7">
                     <animateTransform
                        attributeName="transform"
                        begin="0s"
@@ -42,7 +42,7 @@
                        repeatCount="indefinite" 
                             />
                 </circle>
-                <circle id="circle-1" fill="#2791D9" cx="98" cy="8" r="8">
+                <circle id="circle-1" fill="#2791D9" cx="98" cy="8" r="8" fill-opacity="0.7">
                     <animateTransform
                        attributeName="transform"
                        begin="01s"

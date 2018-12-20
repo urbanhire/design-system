@@ -1307,7 +1307,7 @@ section {
 }
 
 @media all and (min-width: 800px) {
-  .u-bg {
+  .bg-u {
     width: 50%;
   }
 }
