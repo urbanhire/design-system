@@ -211,18 +211,18 @@ section{
 /*Buttons*/
 .btn{
 	display:inline-block;
-	line-height:40px;
+	line-height:36px;
 	margin:0;
 	padding:0 1.25em;
-	border:none;
-	background:$c-9;
+	border:solid 2px rgba($c-10, 0);
+	background:$c-10;
 	text-decoration: none;
 	color:$c-4;
 	text-align: center;
 	letter-spacing: .5px;
 	@include border-radius(4px);
 	&.is-lg{
-		line-height:50px;
+		line-height:46px;
 		font-size: 18px;
 	}
 	&:hover{
@@ -235,6 +235,7 @@ section{
 	&.btn-1{
 		color:white;
 		background:$c-1;
+		border:solid 2px rgba($c-1, 0);
 		&:hover{
 			background:lighten($c-1, 5%);
 		}
@@ -245,6 +246,7 @@ section{
 	&.btn-2{
 		color:white;
 		background:$c-2;
+		border:solid 2px rgba($c-2, 0);
 		&:hover{
 			background:lighten($c-2, 5%);
 		}
@@ -255,6 +257,7 @@ section{
 	&.btn-3{
 		color:white;
 		background:$c-3;
+		border:solid 2px rgba($c-3, 0);
 		&:hover{
 			background:lighten($c-3, 5%);
 		}
@@ -265,6 +268,7 @@ section{
 	&.btn-4{
 		color:white;
 		background:$c-4;
+		border:solid 2px rgba($c-4, 0);
 		&:hover{
 			background:lighten($c-4, 5%);
 		}
@@ -275,6 +279,7 @@ section{
 	&.btn-5{
 		color:white;
 		background:$c-5;
+		border:solid 2px rgba($c-5, 0);
 		&:hover{
 			background:lighten($c-5, 5%);
 		}
@@ -285,6 +290,7 @@ section{
 	&.btn-6{
 		color:white;
 		background:$c-6;
+		border:solid 2px rgba($c-6, 0);
 		&:hover{
 			background:lighten($c-6, 5%);
 		}
@@ -295,6 +301,7 @@ section{
 	&.btn-7{
 		color:white;
 		background:$c-7;
+		border:solid 2px rgba($c-7, 0);
 		&:hover{
 			background:lighten($c-7, 5%);
 		}
@@ -305,6 +312,7 @@ section{
 	&.btn-8{
 		color:white;
 		background:$c-8;
+		border:solid 2px rgba($c-8, 0);
 		&:hover{
 			background:lighten($c-8, 5%);
 		}
@@ -312,14 +320,28 @@ section{
 			background:darken($c-8, 0%);
 		}
 	}
-	&.btn-trial{
+	&.btn-9, &.btn-trial{
 		color:white;
-		background:#FF5252;
+		background:$c-9;
+		border:solid 2px rgba($c-9, 0);
 		&:hover{
-			background:lighten(#FF5252, 5%);
+			background:lighten($c-9, 5%);
 		}
 		&:active{
-			background:darken(#FF5252, 0%);
+			background:darken($c-9, 0%);
+		}
+	}
+	&.btn-2-stroke{
+		color:$c-2;
+		background:none;
+		border:solid 2px rgba($c-2, 1);
+		&:hover{
+			color:lighten($c-2, 5%);
+			background:rgba($c-2, .05);
+		}
+		&:active{
+			color:darken($c-2, 0%);
+			background:rgba($c-2, .1);
 		}
 	}
 }

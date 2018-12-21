@@ -1332,7 +1332,7 @@ section {
 /*Section Products*/
 .section-products {
   padding: 60px 0;
-  background: #f5f5f5;
+  background: #FF5252;
   min-height: 50vh;
 }
 
@@ -1351,7 +1351,7 @@ section {
   position: relative;
   overflow: hidden;
   min-height: 90vh;
-  background: #f5f5f5;
+  background: #FF5252;
   background: white;
   background: -moz-linear-gradient(top, white 0%, #e7ebee 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(100%, #e7ebee));
@@ -1482,10 +1482,10 @@ section {
 /*Buttons*/
 .btn {
   display: inline-block;
-  line-height: 40px;
+  line-height: 36px;
   margin: 0;
   padding: 0 1.25em;
-  border: none;
+  border: solid 2px rgba(245, 245, 245, 0);
   background: #f5f5f5;
   text-decoration: none;
   color: #424242;
@@ -1496,7 +1496,7 @@ section {
   border-radius: 4px;
 }
 .btn.is-lg {
-  line-height: 50px;
+  line-height: 46px;
   font-size: 18px;
 }
 .btn:hover {
@@ -1515,6 +1515,7 @@ section {
 .btn.btn-1 {
   color: white;
   background: #173155;
+  border: solid 2px rgba(23, 49, 85, 0);
 }
 .btn.btn-1:hover {
   background: #1c3d69;
@@ -1525,6 +1526,7 @@ section {
 .btn.btn-2 {
   color: white;
   background: #2791D9;
+  border: solid 2px rgba(39, 145, 217, 0);
 }
 .btn.btn-2:hover {
   background: #3d9cdd;
@@ -1535,6 +1537,7 @@ section {
 .btn.btn-3 {
   color: white;
   background: #33BEEF;
+  border: solid 2px rgba(51, 190, 239, 0);
 }
 .btn.btn-3:hover {
   background: #4bc6f1;
@@ -1545,6 +1548,7 @@ section {
 .btn.btn-4 {
   color: white;
   background: #424242;
+  border: solid 2px rgba(66, 66, 66, 0);
 }
 .btn.btn-4:hover {
   background: #4f4f4f;
@@ -1555,6 +1559,7 @@ section {
 .btn.btn-5 {
   color: white;
   background: #17CCD5;
+  border: solid 2px rgba(23, 204, 213, 0);
 }
 .btn.btn-5:hover {
   background: #1fdde7;
@@ -1565,6 +1570,7 @@ section {
 .btn.btn-6 {
   color: white;
   background: #07BC4C;
+  border: solid 2px rgba(7, 188, 76, 0);
 }
 .btn.btn-6:hover {
   background: #08d556;
@@ -1575,6 +1581,7 @@ section {
 .btn.btn-7 {
   color: white;
   background: #F5A623;
+  border: solid 2px rgba(245, 166, 35, 0);
 }
 .btn.btn-7:hover {
   background: #f6b03b;
@@ -1585,6 +1592,7 @@ section {
 .btn.btn-8 {
   color: white;
   background: #D51717;
+  border: solid 2px rgba(213, 23, 23, 0);
 }
 .btn.btn-8:hover {
   background: #e71f1f;
@@ -1592,15 +1600,29 @@ section {
 .btn.btn-8:active {
   background: #d51717;
 }
-.btn.btn-trial {
+.btn.btn-9, .btn.btn-trial {
   color: white;
   background: #FF5252;
+  border: solid 2px rgba(255, 82, 82, 0);
 }
-.btn.btn-trial:hover {
+.btn.btn-9:hover, .btn.btn-trial:hover {
   background: #ff6c6c;
 }
-.btn.btn-trial:active {
+.btn.btn-9:active, .btn.btn-trial:active {
   background: #ff5252;
+}
+.btn.btn-2-stroke {
+  color: #2791D9;
+  background: none;
+  border: solid 2px #2791d9;
+}
+.btn.btn-2-stroke:hover {
+  color: #3d9cdd;
+  background: rgba(39, 145, 217, 0.05);
+}
+.btn.btn-2-stroke:active {
+  color: #2791d9;
+  background: rgba(39, 145, 217, 0.1);
 }
 
 .boxanima {
@@ -2146,6 +2168,17 @@ body.disabled {
 .price-card:hover:before {
   opacity: 1;
 }
+.price-card.is-fav {
+  background-image: url("../img/ic-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: left 10px top;
+}
+.price-card h3 {
+  color: #22487d;
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+}
 
 .price-card-img {
   height: 100px;
@@ -2158,6 +2191,35 @@ body.disabled {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.the-price {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.the-price.is-shown p {
+  font-size: 2.1rem;
+  color: #173155;
+  font-weight: 500;
+  color: #0c1a2d;
+}
+.the-price.is-shown p sup {
+  font-size: 1rem;
+}
+.the-price.is-shown p sub {
+  font-size: 0.825rem;
+  color: #2791D9;
+  font-weight: 400;
+}
+.the-price p {
+  font-size: 0.925em;
+  color: #757575;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
 }
 
 .free-trial-outline {

@@ -106,6 +106,17 @@
 			opacity: 1;
 		}
 	}
+	&.is-fav{
+		background-image:url('../img/ic-bookmark.svg');
+		background-repeat:no-repeat;
+		background-position: left $margin-m top;
+	}
+	h3{
+		color:lighten($c-1, 10%);
+		font-size:1.2rem;
+		letter-spacing: 0.15rem;
+		font-weight: 500;
+	}
 }
 .price-card-img{
 	height:100px;
@@ -119,6 +130,37 @@
 		margin:auto;
 	}
 
+}
+.the-price{
+	//outline: solid 1px red;
+	min-height: 70px;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	&.is-shown{
+		p{
+		font-size:2.1rem;
+		color:$c-1;
+		font-weight: 500;
+		color:darken($c-1, 10%);
+		sup{
+			font-size:1rem;
+		}
+		sub{
+			font-size:.825rem;
+			color: $c-2;
+			font-weight:400;
+		}
+	}
+	}
+	p{
+		font-size:0.925em;
+		color:lighten($c-font, 20%);
+		text-align: center;
+		padding:0;
+		margin:0;
+		font-weight: 300;
+	}
 }
 .free-trial-outline{
 	position: bottom;
