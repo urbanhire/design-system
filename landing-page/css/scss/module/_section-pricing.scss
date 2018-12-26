@@ -39,11 +39,15 @@
 
 
 .section-plan{
-	background-color:rgba(white, .5);
-	background-position: center;
-	margin-top: 50%;
 	position: relative;
-	flex: wrap;
+	//border-top:solid 1px red;
+	//border-bottom:solid 1px red;
+	padding:$margin*3 0;
+	//min-height: 80vh;
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 
@@ -117,6 +121,7 @@
 		letter-spacing: 0.15rem;
 		font-weight: 500;
 	}
+
 }
 .price-card-img{
 	height:100px;
@@ -173,5 +178,103 @@
 	padding: 10px;
 	line-height: 2; 
 }
+@media all and (min-width:$screen-l){
+	.price-card-wrapper{
+		margin-bottom: 150px;
+		position: relative;
+		&:before{
+			display:block;
+			content: '';
+			background:$c-5;
+			position: absolute;
+			width:2px;
+			height:50px;
+			left:0;
+			right:0;
+			bottom:-140px;
+			margin:auto;
+		}
+	}
+	.leading-lines{
+	position: relative;
+	&:before, &:after{
+		display:block;
+		content: '';
+		background:$c-5;
+		position: absolute;
+	}
+	&:before{
+		height: 100px;
+		width:2px;
+		bottom:-90px;
+		left:0;
+		right:0;
+		margin:auto;
+	}
+	&:after{
+		width:100%;
+		height:2px;
+		bottom:-90px;
+		right:-50%;
+	}
+	&:nth-child(3), &:nth-child(4){
+		&:after{
+			left:-50%;
+		}
+	}
+}
 
+}
 
+.list-plans{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	li{
+		font-size:(21/16)+em;
+		line-height:1.5em;
+		margin:$margin-m 0;
+		//outline:solid 1px red;
+		padding-left:$margin*2;
+		position:relative;
+		&:before{
+			display:block;
+			content:'';
+			width:24px;
+			height:24px;
+			position:absolute;
+			top:0;
+			left:0;
+			bottom:0;
+			margin-top:auto;
+			margin-bottom:auto;
+			//outline:solid 1px green;
+			background-image:url('../img/ic-checklist.svg');
+			background-repeat:no-repeat;
+			background-position:center center;
+		}
+	}
+}
+.border-b{
+	border-bottom:solid 1px $c-border;
+}
+.section-feature-comparison{
+	border-top:solid 1px $c-border;
+	min-height:60vh;
+	background:$c-0;
+	padding:$margin*3 0;
+}
+.ic-available, .ic-not-available{
+	display:block;
+	background-repeat:no-repeat;
+	background-position:center center;
+	width:22px;
+	height:22px;
+	//height:50px;
+}
+.ic-available{
+	background-image:url('../img/ic-checklist.svg');
+}
+.ic-not-available{
+	background-image:url('../img/ic-not-available.svg');
+}
