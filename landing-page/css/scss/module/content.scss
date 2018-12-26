@@ -441,12 +441,18 @@ section{
 
 .modal-box {
 	position: relative;
-  width:560px;
-  min-height: 300px;
+  width:90%;
   background: white;
   padding:$margin;
   margin: auto;
   @include border-radius(4px);
+}
+@media all and (min-width:$screen-m){
+	.modal-box {
+	position: relative;
+  	width:560px;
+  	min-height: 300px;
+	}
 }
 .modal-box-toggle-height{
   height: 1300px;
