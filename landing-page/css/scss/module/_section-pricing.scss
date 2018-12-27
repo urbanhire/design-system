@@ -223,7 +223,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		}
 	}
 }
-
+.feature-list{
+	position:relative;
+	&:before{
+		min-width: 100%;
+		width:calc(100% + 40px);
+		height:100%;
+		content:'';
+		display:block;
+		position: absolute;
+		background:$c-10;
+		background:rgba($c-1, .05);
+		left:-20px;
+		top:0;
+		opacity:0;
+		z-index:0;
+		@include transition-cubic-bezier();
+		@include border-radius(40px);
+	}
+	&:hover{
+		&:before{
+			opacity:1;
+		}
+	}
+	}
+	.sticky {
+	  position: fixed;
+	  top: 80px;
+	  width: 473.3px;
+	  z-index: 88;
+	  @include box-shadow(0 5px 20px rgba(black, .25));
+	  @include transform-translateX(662px);
+	}
 }
 
 .list-plans{
@@ -248,24 +279,56 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			bottom:0;
 			margin-top:auto;
 			margin-bottom:auto;
-			//outline:solid 1px green;
 			background-image:url('../img/ic-checklist.svg');
 			background-repeat:no-repeat;
 			background-position:center center;
 		}
 	}
 }
-.border-b{
+.feature-list-header{
+	border-bottom:solid 2px $c-1;
+	.feature-plans{
+	background:$c-2;
+	color:$c-0;
+	padding:$margin 0;
+	text-align: center;
+background: -moz-linear-gradient(left, $c-2 0%, lighten($c-1, 20%) 100%);
+background: -webkit-linear-gradient(left, $c-2 0%,lighten($c-1, 20%) 100%); 
+background: linear-gradient(to right, $c-2 0%,lighten($c-1, 20%) 100%);
+@include border-radius-top(4px);
+	}
+}
+.feature-list{
+	position:relative;
 	border-bottom:solid 1px $c-border;
+	border-bottom:solid 1px rgba($c-1, .234);
+	font-size:0.925rem;
+}
+.feature-info{
+	[class*="col-"]{
+		&:nth-child(1){
+			background:lighten($c-2, 48%);
+		}
+		&:nth-child(2){
+			background:lighten($c-2, 45%);
+		}
+		&:nth-child(3){
+			background:lighten($c-2, 42%);
+		}
+		&:nth-child(4){
+			background:lighten($c-2, 39%);
+		}
+	}
 }
 .section-feature-comparison{
 	border-top:solid 1px $c-border;
 	min-height:60vh;
 	background:$c-0;
 	padding:$margin*3 0;
+	position: relative;
 }
 .ic-available, .ic-not-available{
-	display:block;
+	display:inline-block;
 	background-repeat:no-repeat;
 	background-position:center center;
 	width:22px;
