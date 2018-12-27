@@ -34,8 +34,15 @@ p{
 }
 a{
 	i{
-		//outline: solid 1px red;
 		line-height:40px;
+		&:before{
+			vertical-align: middle;
+		}
+	}
+}
+i{
+	&.is-fit{
+		overflow: hidden;
 		&:before{
 			vertical-align: middle;
 		}
@@ -502,6 +509,16 @@ section{
 }
 .content{
 	padding:$margin;
+	text-align:left;
+	position: relative;
+}
+.content-v{
+	padding:$margin 0;
+	text-align:left;
+	position: relative;
+}
+.content-h{
+	padding:0 $margin;
 	text-align:left;
 	position: relative;
 }
