@@ -47,47 +47,6 @@ jQuery(document).ready(function () {
     };
     mobileNav();
 	
-    var textSlide = function (){
-    	var heading1 = $('.heading-slide-1');
-		setTimeout(function() {
-			heading1.addClass('enter-animate');
-		}, 1000);
-		setTimeout(function() {
-			heading1.addClass('enter-text');
-		}, 1250);
-		setTimeout(function() {
-			heading1.addClass('exit-animate');
-		}, 1500);
-		
-	};
-	//init function
-	textSlide();
-
-	var textSlide2 = function (){
-		var heading2 = $('.heading-slide-2');
-		setTimeout(function() {
-			heading2.addClass('enter-animate');
-		}, 1250);
-		setTimeout(function() {
-			heading2.addClass('enter-text');
-		}, 1500);
-		setTimeout(function() {
-			heading2.addClass('exit-animate');
-		}, 1750);
-		
-	};
-	//init function
-	textSlide2();
-
-	var lineSlide = function (){
-		var line = $('.heading-wrap');
-		setTimeout(function() {
-			line.addClass('enter-line');
-		}, 1250);
-		
-	};
-	//init function
-	lineSlide();
 
 	$(window).scroll(function () {
             var scroll = $(window).scrollTop();
@@ -111,14 +70,15 @@ jQuery(document).ready(function () {
     clickMouse();
 
     var uModal = function(){
-        $(".modal-box").click(function (e) {
+    $(".modal-box").click(function (e) {
         e.stopPropagation();
     });
-    $(".modal-container, .fn-close-modal").click(function (e) {
+    $(".fn-close-modal, .modal").click(function (e) {
         $('body').toggleClass('disabled');
         $('.overlay').toggleClass('is-active');
         $('.modal').toggleClass('is-active');
     });
+
     };
     uModal();
 

@@ -504,6 +504,16 @@ section{
 
 
 /*Formats*/
+.link{
+	color:$c-2;
+	text-decoration: none;
+	&:hover{
+		color:darken($c-2, 10%);
+	}
+	&:active{
+		color:darken($c-2, 20%);
+	}
+}
 .hide{
 	display: none;
 }

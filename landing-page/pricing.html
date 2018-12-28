@@ -11,7 +11,23 @@
      <link rel="stylesheet" href="https://uh-font-cdn.urbanhire.com/uh-font.min.css">
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicon-->
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body class="bg-circles">
     <!--start header-->
@@ -28,23 +44,14 @@
                     <span>Menu</span>
                 </div>
                 <ul class="menu">
-                  <li><a class="active" href="index.html">Home</a></li>
-                    <li class="has-children">
-                      <a>Products</a>
-              <ul>
-                <li><a href="#">Recruitment Platform</a></li>
-                    <li><a href="#">Online Assessment</a></li>
-                    <li><a href="#">Integration Marketplace</a></li>
-                    <li><a href="#">Referral System</a></li>
-                    <li><a href="#">Resume Search</a></li>
-              </ul>
-                    </li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Partners</a></li>
-                     <li><a href="#">Jobs Search</a></li>
-                     <li><a href="contact.html">Log In</a></li>
-                     <li><a class="btn btn-6" href="#">Try for Free</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="https://www.urbanhire.com/employers/features">Features</a></li>
+                  <li><a class="active" href="pricing.html">Pricing</a></li>
+                  <li><a href="https://www.urbanhire.com/employers/customer">Customers</a></li>
+                  <li><a href="https://resources.urbanhire.com/" target="_blank">Resources</a></li>
+                  <li><a href="https://www.urbanhire.com/">Search Job</a></li>
+                  <li><a href="https://pro.urbanhire.com/signin/">Log In</a></li>
+                  <li><a class="btn btn-6" href="https://pro.urbanhire.com/signup">Try for Free</a></li>
                 </ul>
             </nav>
       </div>
@@ -60,9 +67,9 @@
           <div class="inner">
             <div class="container">
               <div class="content-v align-center">
-                <h1 class="main-title">Affordable, Simple Pricing</h1>
-                <h2 class="sub-title">Urbanhire makes it really easy. Try all our premium features for 15 days.</h2>
-                <a href="#" class="btn btn-9 is-lg m-t">Try for Free</a>
+                <h1 class="main-title" data-aos="fade-up">Affordable, Simple Pricing</h1>
+                <h2 class="sub-title" data-aos="fade-up" data-aos-delay="50">Urbanhire makes it really easy. Try all our premium features for 15 days.</h2>
+                <a href="#" class="btn btn-9 is-lg m-t" data-aos="fade-up" data-aos-delay="100">Try for Free</a>
               </div>
             </div>
           </div>
@@ -1083,9 +1090,10 @@
     <footer class="site-footer">
   <div class="top-footer">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="img/logo.svg" alt="">
+      <div class="row center-xs">
+        <div class="col-lg-4 col-md-12">
+          <div class="content">
+            <img src="img/logo.svg" alt="">
           <p><br>Urbanhire makes hiring simple and effective. Our cloud solution allows employers to post jobs within minutes of signing up. Urbanhire is a collaborative platform empowering applicant-tracking and resume search by multiple users.</p>
           <br>
           <ul class="list-inline">
@@ -1098,10 +1106,12 @@
               <img class="img-partner" src="img/ic-mongodb.jpg" alt="">
             </li>
           </ul>
+          </div>
         </div>
-        <div class="col-lg-8">
-          <div class="row">
-                <div class="div col-lg-3">
+        <div class="col-lg-8 col-md-12">
+          <div class="content">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-xs-6">
                   <h4>JOBSEEKERS</h4>
                   <ul class="list">
                     <li><a href="#">Job Search</a></li>
@@ -1110,7 +1120,7 @@
                     <li><a href="#">Career Fair</a></li>
                   </ul>
                 </div>
-                <div class="div col-lg-3">
+                <div class="col-lg-3 col-md-3 col-xs-6">
                   <h4>PRODUCT</h4>
                   <ul class="list">
                     <li><a href="#">Recruitment Platform</a></li>
@@ -1122,7 +1132,7 @@
                     <li><a href="#">HR Resources</a></li>
                   </ul>
                 </div>
-                <div class="div col-lg-3">
+                <div class="col-lg-3 col-md-3 col-xs-6">
                   <h4>COMPANY</h4>
                   <ul class="list">
                     <li><a href="#">About</a></li>
@@ -1131,12 +1141,17 @@
                     <li><a href="#">Press</a></li>
                   </ul>
                 </div>
-                <div class="div col-lg-3">
+                <div class="col-lg-3 col-md-3 col-xs-6">
                   <h4>CONTACT</h4>
                   <ul class="list">
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Help</a></li>
+                    <li class="contact-info text-s">
+                      <p>Contact Sales: 9am - 7pm</p>
+                      <p><i class="icon-phone"></i> +62 (21) 2751 8857</p>
+                      <p><i class="icon-mail"></i> support@urbanhire.com</p>
+                    </li>
                   </ul>
                   <br>
                   <h4>FOLLOW US</h4>
@@ -1148,22 +1163,24 @@
                   </ul>
                 </div>
               </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="bottom-footer">
     <div class="container">
-    <div class="row">
-      <div class="col-md-6 align-ltc">
-        <p class="copyright">&copy; Urbanhire 2019. All Rights Reserved.</p>
-      </div>
-      <div class="col-md-6 align-rtc">
+    <div class="row center-md">
+      <div class="col-md-6 col-xs-12 align-rtc last-md">
         <ul class="list-inline">
           <li><a href="#">Terms & Conditions</a></li>
           <li><a href="#">Privacy Policy</a></li>
         </ul>
       </div>
+      <div class="col-md-6 col-xs-12 align-ltc">
+        <p class="copyright">&copy; Urbanhire 2019. All Rights Reserved.</p>
+      </div>
+      
     </div>
     </div>
   </div>
@@ -1175,12 +1192,13 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/functions.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   jQuery(document).ready(function () {
 
     var scrollFix = function(){
         $(window).scroll(function(){
-        if ($(window).scrollTop() >= 1727) {
+        if ($(window).scrollTop() >= 1757) {
             $('.feature-plans').addClass('sticky');
         }
         else {
@@ -1190,5 +1208,7 @@
     };
     scrollFix();
   });
+
+  AOS.init();
 </script>
   </body>
