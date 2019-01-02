@@ -233,6 +233,7 @@ section{
 		font-size: 18px;
 	}
 	&:hover{
+		cursor:pointer;
 		@include box-shadow(0 0 0 3px (rgba(black, .05)));
 		transition:cubic-bezier(.71,.14,.23,1.01) .25s;
 	}
