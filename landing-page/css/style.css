@@ -2281,11 +2281,26 @@ body.disabled {
     background: #17CCD5;
     position: absolute;
     width: 2px;
-    height: 50px;
+    height: 60px;
     left: 0;
     right: 0;
-    bottom: -140px;
+    bottom: -150px;
     margin: auto;
+  }
+  .price-card-wrapper:after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(23, 204, 213, 0.5);
+    content: "";
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -170px;
+    position: absolute;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
   }
 
   .leading-lines {

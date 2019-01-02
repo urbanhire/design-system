@@ -188,11 +188,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			background:$c-5;
 			position: absolute;
 			width:2px;
-			height:50px;
+			height:60px;
 			left:0;
 			right:0;
-			bottom:-140px;
+			bottom:-150px;
 			margin:auto;
+		}
+		&:after{
+			display:block;
+			width:20px;
+			height: 20px;
+			background:rgba($c-5, .5);
+			content:'';
+			left:0;
+			right:0;
+			margin:auto;
+			bottom:-170px;
+			position: absolute;
+			@include border-radius(20px);
 		}
 	}
 	.leading-lines{
