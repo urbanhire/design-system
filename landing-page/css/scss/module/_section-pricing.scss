@@ -309,6 +309,33 @@ background: linear-gradient(to right, $c-2 0%,lighten($c-1, 20%) 100%);
 		}
 	}
 }
+@media all and (max-width:$screen-sm){
+	.section-feature-comparison{
+		overflow: hidden;
+	}
+	.feature-list-header{
+		.feature-plans{
+			background:none;
+		.col-xs-3{
+			position: relative;
+		}
+			span{
+				transform: rotate(-90deg);
+		  		transform-origin: 26% 70%;
+		  		position: relative;
+		  		display: inline-block;
+		  			min-width:120px;
+		  		min-height:30px;
+		  		text-align: left;
+		  		line-height: 30px;
+		  		padding: 0 10px;
+		  		background: -moz-linear-gradient(left, $c-2 0%, lighten($c-1, 20%) 100%);
+		background: -webkit-linear-gradient(left, $c-2 0%,lighten($c-1, 20%) 100%); 
+		background: linear-gradient(to right, $c-2 0%,lighten($c-1, 20%) 100%);
+			}
+		}
+	}
+}
 .feature-list{
 	position:relative;
 	border-bottom:solid 1px $c-border;
