@@ -8,6 +8,7 @@ html {
 }
 body{
 	font-family:$font-stack;
+	color:$c-grey-6;
 }
 button,
 input,
@@ -65,4 +66,22 @@ h6{
 }
 .align-right{
 	text-align:right;
+}
+
+.card-employee{
+	figure{
+		img{
+
+		}
+	}
+
+	p{
+
+	}
+	h6{
+
+	}
+	h6 + p{
+
+	}
 }

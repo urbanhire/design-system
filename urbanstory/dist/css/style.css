@@ -8,6 +8,7 @@ html {
 
 body {
   font-family: "Barlow", sans-serif;
+  color: #212121;
 }
 
 button,
@@ -183,7 +184,7 @@ h6 {
 }
 .btn.btn-small {
   font-size: 12px;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   line-height: 28px;
 }
 .btn.btn-medium {
@@ -1102,6 +1103,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  vertical-align: inherit;
+  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-vertical-spacing: 0;
 }
 table thead {
   background: #F5F5F5;
