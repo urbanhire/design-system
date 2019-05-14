@@ -21,10 +21,10 @@
 		border:solid 1px $c-firm-1;
 		color:white;
 		&:hover{
-			background-color:darken($c-firm-1, 8);
+			background-color:$c-firm-2;
 		}
 		&:focus{
-			background-color:darken($c-firm-1, 16);
+			background-color:$c-firm-3;
 	      	@include box-shadow(0 0 0 3px rgba($c-firm-1 ,.25));
 	    }
 	}
@@ -45,10 +45,10 @@
 		border:solid 1px $c-median-1;
 		color:white;
 		&:hover{
-			background-color:darken($c-median-1, 8);
+			background-color:$c-median-2;
 		}
 		&:focus{
-			background-color:darken($c-median-1, 16);
+			background-color:$c-median-3;
 	      @include box-shadow(0 0 0 3px rgba($c-median-1 ,.25));
 	    }
 	}
@@ -57,10 +57,10 @@
 		border:solid 1px $c-prime-1;
 		color:white;
 		&:hover{
-			background-color:darken($c-prime-2, 8);
+			background-color:$c-prime-2;
 		}
 		&:focus{
-			background-color:darken($c-prime-2, 16);
+			background-color:$c-prime-3;
 	      @include box-shadow(0 0 0 3px rgba($c-prime-1 ,.25));
 	    }
 	}
@@ -69,10 +69,12 @@
 		border:solid 1px $c-green-1;
 		color:white;
 		&:hover{
-			background-color:darken($c-green-1, 8);
+			background-color:$c-green-2;
+			//background-color:$c-green-2;
 		}
 		&:focus{
-			background-color:darken($c-green-1, 16);
+			background-color:$c-green-3;
+			//background-color:$c-green-3;
 	      @include box-shadow(0 0 0 3px rgba($c-green-1 ,.25));
 	    }
 	}
@@ -81,10 +83,10 @@
 		border:solid 1px $c-red-1;
 		color:white;
 		&:hover{
-			background-color:darken($c-red-1, 8);
+			background-color:$c-red-2;
 		}
 		&:focus{
-			background-color:darken($c-red-1, 16);
+			background-color:$c-red-3;
 	      @include box-shadow(0 0 0 3px rgba($c-red-1 ,.25));
 	    }
 	}

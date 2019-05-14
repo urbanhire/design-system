@@ -19,14 +19,6 @@ textarea {
   font-family: "Barlow", sans-serif;
 }
 
-ul:not(.browser-default) {
-  padding-left: 0;
-  list-style-type: none;
-}
-ul:not(.browser-default) > li {
-  list-style-type: none;
-}
-
 a {
   color: #2791D9;
   text-decoration: none;
@@ -78,6 +70,10 @@ h6 {
   text-align: right;
 }
 
+article p {
+  line-height: 1.5rem;
+}
+
 .btn {
   background-color: #F5F5F5;
   font-size: 14px;
@@ -110,10 +106,10 @@ h6 {
   color: white;
 }
 .btn.btn-firm:hover {
-  background-color: #000720;
+  background-color: #010b2f;
 }
 .btn.btn-firm:focus {
-  background-color: black;
+  background-color: #000516;
   -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
   box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
@@ -138,10 +134,10 @@ h6 {
   color: white;
 }
 .btn.btn-median:hover {
-  background-color: #207ab7;
+  background-color: #2283c4;
 }
 .btn.btn-median:focus {
-  background-color: #1a6394;
+  background-color: #1f74ae;
   -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
   box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
@@ -152,10 +148,10 @@ h6 {
   color: white;
 }
 .btn.btn-prime:hover {
-  background-color: #1f7391;
+  background-color: #1bb6ed;
 }
 .btn.btn-prime:focus {
-  background-color: #185970;
+  background-color: #11a8de;
   -webkit-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
   box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
@@ -166,10 +162,10 @@ h6 {
   color: white;
 }
 .btn.btn-success:hover {
-  background-color: #279c77;
+  background-color: #2aa980;
 }
 .btn.btn-success:focus {
-  background-color: #1f7c5e;
+  background-color: #259471;
   -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
   box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
@@ -180,10 +176,10 @@ h6 {
   color: white;
 }
 .btn.btn-danger:hover {
-  background-color: #ec1d1f;
+  background-color: #ed2c2d;
 }
 .btn.btn-danger:focus {
-  background-color: #cf1213;
+  background-color: #eb1415;
   -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
   box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
@@ -215,10 +211,10 @@ h6 {
   color: #2791D9;
 }
 .link-primary:hover {
-  color: #1D6CA2;
+  color: #2283c4;
 }
 .link-primary:active {
-  color: #13486C;
+  color: #1f74ae;
 }
 
 .link-secondary {
