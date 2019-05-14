@@ -1,13 +1,29 @@
+/* Styles for guideline layout only */
 pre {
   overflow-x: auto;
-  padding: 1.25em;
-  border: 1px solid #e6e6e6;
-  border-left-width: 5px;
+  padding: 1.25em 1.25em 1.25em 2em;
+  border: 1px solid #D6D6D6;
   margin: 1.6em 0;
   font-size: 0.875em;
-  background: #fcfcfc;
   white-space: pre;
   word-wrap: normal;
+  line-height: 1.25em;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+pre:before {
+  display: block;
+  position: absolute;
+  content: "Code";
+  background: #D6D6D6;
+  padding: 2px 8px;
+  font-size: 11px;
+  left: -11px;
+  top: 10px;
+  color: #757575;
+  transform: rotate(-90deg);
 }
 
 code {

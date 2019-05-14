@@ -35,6 +35,11 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
+  line-height: 1.5rem;
+  margin: 1rem 0 1rem 0;
+}
+h1.gutter-reset, h2.gutter-reset, h3.gutter-reset, h4.gutter-reset, h5.gutter-reset, h6.gutter-reset {
+  margin: 0;
 }
 
 h1 {
@@ -81,6 +86,8 @@ h6 {
   border: solid 1px #F5F5F5;
   letter-spacing: 0.01em;
   outline: none;
+  display: inline-block;
+  text-decoration: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -92,7 +99,7 @@ h6 {
 .btn:hover {
   cursor: pointer;
 }
-.btn:active {
+.btn:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
@@ -103,10 +110,10 @@ h6 {
   color: white;
 }
 .btn.btn-firm:hover {
-  background-color: #000C35;
+  background-color: #000720;
 }
-.btn.btn-firm:active {
-  background-color: #000823;
+.btn.btn-firm:focus {
+  background-color: black;
   -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
   box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
@@ -119,7 +126,8 @@ h6 {
 .btn.btn-firm-o:hover {
   background-color: rgba(1, 17, 72, 0.05);
 }
-.btn.btn-firm-o:active {
+.btn.btn-firm-o:focus {
+  background-color: rgba(1, 17, 72, 0.15);
   -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
   box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
@@ -130,9 +138,10 @@ h6 {
   color: white;
 }
 .btn.btn-median:hover {
-  background-color: #1D6CA2;
+  background-color: #207ab7;
 }
-.btn.btn-median:active {
+.btn.btn-median:focus {
+  background-color: #1a6394;
   -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
   box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
@@ -143,9 +152,10 @@ h6 {
   color: white;
 }
 .btn.btn-prime:hover {
-  background-color: #268EB3;
+  background-color: #1f7391;
 }
-.btn.btn-prime:active {
+.btn.btn-prime:focus {
+  background-color: #185970;
   -webkit-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
   box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
@@ -156,9 +166,10 @@ h6 {
   color: white;
 }
 .btn.btn-success:hover {
-  background-color: #238D6B;
+  background-color: #279c77;
 }
-.btn.btn-success:active {
+.btn.btn-success:focus {
+  background-color: #1f7c5e;
   -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
   box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
@@ -169,9 +180,10 @@ h6 {
   color: white;
 }
 .btn.btn-danger:hover {
-  background-color: #B33232;
+  background-color: #ec1d1f;
 }
-.btn.btn-danger:active {
+.btn.btn-danger:focus {
+  background-color: #cf1213;
   -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
   box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
@@ -202,10 +214,22 @@ h6 {
   text-decoration: underline;
   color: #2791D9;
 }
+.link-primary:hover {
+  color: #1D6CA2;
+}
+.link-primary:active {
+  color: #13486C;
+}
 
 .link-secondary {
   text-decoration: underline;
   color: #A3A3A3;
+}
+.link-secondary:hover {
+  color: #757575;
+}
+.link-secondary:active {
+  color: #212121;
 }
 
 /* Uncomment and set these variables to customize the grid. */

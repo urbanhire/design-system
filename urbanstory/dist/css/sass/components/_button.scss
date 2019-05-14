@@ -6,12 +6,14 @@
 	border:solid 1px $c-grey-1;
 	letter-spacing:0.01em;
 	outline:none;
+	display:inline-block;
+	text-decoration: none;
 	@include radius;
 	@include transition(cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s);
 	&:hover{
 		cursor: pointer;
 	}
-	&:active{
+	&:focus{
       @include box-shadow(0 0 0 3px rgba(black ,.25));
     }
 	&.btn-firm{
@@ -19,10 +21,10 @@
 		border:solid 1px $c-firm-1;
 		color:white;
 		&:hover{
-			background-color:$c-firm-2;
+			background-color:darken($c-firm-1, 8);
 		}
-		&:active{
-			background-color:$c-firm-3;
+		&:focus{
+			background-color:darken($c-firm-1, 16);
 	      	@include box-shadow(0 0 0 3px rgba($c-firm-1 ,.25));
 	    }
 	}
@@ -33,7 +35,8 @@
 		&:hover{
 			background-color:rgba($c-firm-1, .05);
 		}
-		&:active{
+		&:focus{
+			background-color:rgba($c-firm-1, .15);
 	      @include box-shadow(0 0 0 3px rgba($c-firm-1 ,.25));
 	    }
 	}
@@ -42,9 +45,10 @@
 		border:solid 1px $c-median-1;
 		color:white;
 		&:hover{
-			background-color:$c-median-2;
+			background-color:darken($c-median-1, 8);
 		}
-		&:active{
+		&:focus{
+			background-color:darken($c-median-1, 16);
 	      @include box-shadow(0 0 0 3px rgba($c-median-1 ,.25));
 	    }
 	}
@@ -53,9 +57,10 @@
 		border:solid 1px $c-prime-1;
 		color:white;
 		&:hover{
-			background-color:$c-prime-2;
+			background-color:darken($c-prime-2, 8);
 		}
-		&:active{
+		&:focus{
+			background-color:darken($c-prime-2, 16);
 	      @include box-shadow(0 0 0 3px rgba($c-prime-1 ,.25));
 	    }
 	}
@@ -64,9 +69,10 @@
 		border:solid 1px $c-green-1;
 		color:white;
 		&:hover{
-			background-color:$c-green-2;
+			background-color:darken($c-green-1, 8);
 		}
-		&:active{
+		&:focus{
+			background-color:darken($c-green-1, 16);
 	      @include box-shadow(0 0 0 3px rgba($c-green-1 ,.25));
 	    }
 	}
@@ -75,9 +81,10 @@
 		border:solid 1px $c-red-1;
 		color:white;
 		&:hover{
-			background-color:$c-red-2;
+			background-color:darken($c-red-1, 8);
 		}
-		&:active{
+		&:focus{
+			background-color:darken($c-red-1, 16);
 	      @include box-shadow(0 0 0 3px rgba($c-red-1 ,.25));
 	    }
 	}
@@ -108,8 +115,20 @@
 .link-primary{
 	text-decoration:underline;
 	color:$c-median-1;
+	&:hover{
+		color: $c-median-2;
+	}
+	&:active{
+		color: $c-median-3;
+	}
 }
 .link-secondary{
 	text-decoration:underline;
 	color:$c-grey-4;
+	&:hover{
+		color: $c-grey-5;
+	}
+	&:active{
+		color: $c-grey-6;
+	}
 }
