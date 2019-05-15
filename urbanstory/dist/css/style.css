@@ -1170,7 +1170,6 @@ table.table-spacy tbody td {
 }
 .avatar img {
   max-width: 100%;
-  min-height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -1189,7 +1188,7 @@ table.table-spacy tbody td {
   right: 0;
   bottom: 0;
   margin: auto;
-  font-size: 1.5rem;
+  font-size: 0.825rem;
   line-height: 2rem;
   color: black;
   color: #C2C2C2;
@@ -1197,9 +1196,6 @@ table.table-spacy tbody td {
 .avatar.is-md {
   width: 32px;
   height: 32px;
-}
-.avatar.is-md span {
-  font-size: 0.825rem;
 }
 .avatar.is-lg {
   width: 96px;
