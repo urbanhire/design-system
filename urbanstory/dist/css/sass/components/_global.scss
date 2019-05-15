@@ -22,6 +22,17 @@ body{
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: $c-grey-3;
 }
+
+::selection {
+  background: $c-median-1;
+  /* Safari */
+  color: #fff; }
+
+::-moz-selection {
+  background: $c-median-1;
+  /* Firefox */
+  color: #fff; }
+
 button,
 input,
 optgroup,

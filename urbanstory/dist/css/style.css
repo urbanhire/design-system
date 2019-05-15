@@ -28,6 +28,18 @@ body {
   color: #C2C2C2;
 }
 
+::selection {
+  background: #2791D9;
+  /* Safari */
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #2791D9;
+  /* Firefox */
+  color: #fff;
+}
+
 button,
 input,
 optgroup,
@@ -99,7 +111,7 @@ article p {
   padding: 8px;
 }
 
-.padd-l {
+.padd-l, .alert {
   padding: 16px;
 }
 
@@ -212,6 +224,10 @@ article p {
   -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
   box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
+}
+.btn.btn-flat {
+  background: none;
+  border: solid 1px transparent;
 }
 .btn.btn-disabled {
   background-color: #D6D6D6;
@@ -1368,6 +1384,74 @@ input[type=search]:focus {
 
 .dropdown {
   width: 220px;
+}
+
+.alert {
+  overflow: auto;
+  background: rgba(214, 214, 214, 0.2);
+  border: 1px solid rgba(194, 194, 194, 0.2);
+  line-height: 1.5rem;
+  position: relative;
+  color: #212121;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.alert.has-img {
+  padding-left: 4rem;
+}
+.alert.has-img img {
+  float: left;
+  width: 2rem;
+  margin-left: -3rem;
+}
+.alert.is-info {
+  background: rgba(39, 145, 217, 0.2);
+  border: 1px solid rgba(31, 116, 174, 0.2);
+  color: #1f74ae;
+}
+.alert.is-info .alert-close {
+  color: rgba(31, 116, 174, 0.75);
+}
+.alert.is-success {
+  background: rgba(47, 189, 144, 0.2);
+  border: 1px solid rgba(37, 148, 113, 0.2);
+  color: #259471;
+}
+.alert.is-success .alert-close {
+  color: rgba(37, 148, 113, 0.75);
+}
+.alert.is-warning {
+  background: rgba(255, 206, 7, 0.2);
+  border: 1px solid rgba(211, 169, 0, 0.2);
+  color: #d3a900;
+}
+.alert.is-warning .alert-close {
+  color: rgba(211, 169, 0, 0.75);
+}
+.alert.is-danger {
+  background: rgba(239, 67, 68, 0.2);
+  border: 1px solid rgba(235, 20, 21, 0.2);
+  color: rgba(188, 16, 17, 0.8);
+  color: #eb1415;
+}
+.alert.is-danger .alert-close {
+  color: rgba(235, 20, 21, 0.75);
+}
+.alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+  margin-top: 0;
+  padding-right: 16px;
+}
+.alert p {
+  margin: 0;
+  padding: 0;
+}
+
+.alert-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: rgba(0, 0, 0, 0.35);
 }
 
 /*# sourceMappingURL=style.css.map */
