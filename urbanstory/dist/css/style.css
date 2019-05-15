@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
   color: #212121;
 }
 
@@ -16,7 +16,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
 }
 
 a {
@@ -1153,6 +1153,67 @@ table.table-spacy thead th {
 }
 table.table-spacy tbody td {
   padding: 16px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+  background: #F5F5F5;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.avatar img {
+  max-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.avatar span {
+  display: inline;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: black;
+  color: #C2C2C2;
+}
+.avatar.is-md {
+  width: 32px;
+  height: 32px;
+}
+.avatar.is-md span {
+  font-size: 0.825rem;
+}
+.avatar.is-lg {
+  width: 96px;
+  height: 96px;
+}
+.avatar.is-lg span {
+  font-size: 2rem;
+}
+.avatar.is-xl {
+  width: 128px;
+  height: 128px;
+}
+.avatar.is-xl span {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

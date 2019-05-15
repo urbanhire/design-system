@@ -1,0 +1,56 @@
+.avatar{
+	width:32px;
+	height:32px;
+	position:relative;
+	overflow: hidden;
+	background:$c-grey-1;
+	@include border-radius(100%);
+	@include box-shadow(inset 0 0 0 1px rgba(black , .05));
+	img{
+		max-width:100%;
+		min-height:100%;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom: 0;
+		margin:auto;
+	}
+	span{
+		display:inline;
+		position:absolute;
+		width: 100%;
+		height:2rem;
+		text-align:center;
+		top:0;
+		left:0;
+		right:0;
+		bottom: 0;
+		margin:auto;
+		font-size: 1.5rem;
+		line-height:2rem;
+		color: black;
+		color:$c-grey-3;
+	}
+	&.is-md{
+		width:32px;
+		height:32px;
+		span{
+			font-size: 0.825rem;
+		}
+	}
+	&.is-lg{
+		width:96px;
+		height:96px;
+		span{
+			font-size: 2rem;
+		}
+	}
+	&.is-xl{
+		width:128px;
+		height:128px;
+		span{
+			font-size: 2rem;
+		}
+	}
+}
