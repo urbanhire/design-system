@@ -1286,11 +1286,14 @@ input[type=search]:focus {
 
 .avatar-group .avatar {
   display: inline-block;
+  position: relative;
+  z-index: 1;
   -webkit-box-shadow: 0 0 0 2px white;
   -moz-box-shadow: 0 0 0 2px white;
   box-shadow: 0 0 0 2px white;
 }
 .avatar-group .avatar:hover {
+  z-index: 2;
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
