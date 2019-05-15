@@ -10,6 +10,18 @@ body{
 	font-family:$font-stack;
 	color:$c-grey-6;
 }
+::placeholder {
+  color: $c-grey-3;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: $c-grey-3;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: $c-grey-3;
+}
 button,
 input,
 optgroup,
@@ -77,4 +89,13 @@ article{
 	p{
 		line-height:1.5rem;
 	}
+}
+.padd-s{
+	padding:$gutter-s;
+}
+.padd-m{
+	padding:$gutter-m;
+}
+.padd-l{
+	padding:$gutter-l;
 }
