@@ -1188,14 +1188,24 @@ table.table-spacy tbody td {
   right: 0;
   bottom: 0;
   margin: auto;
-  font-size: 0.825rem;
+  font-size: 0.75rem;
   line-height: 2rem;
   color: black;
   color: #C2C2C2;
 }
+.avatar.is-sm {
+  width: 48px;
+  height: 48px;
+}
+.avatar.is-sm span {
+  font-size: 1rem;
+}
 .avatar.is-md {
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
+}
+.avatar.is-md span {
+  font-size: 1.5rem;
 }
 .avatar.is-lg {
   width: 96px;
@@ -1210,6 +1220,16 @@ table.table-spacy tbody td {
 }
 .avatar.is-xl span {
   font-size: 2rem;
+}
+.avatar.is-square {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.avatar.is-o {
+  -webkit-box-shadow: 0 0 0 2px white;
+  -moz-box-shadow: 0 0 0 2px white;
+  box-shadow: 0 0 0 2px white;
 }
 
 /*# sourceMappingURL=style.css.map */

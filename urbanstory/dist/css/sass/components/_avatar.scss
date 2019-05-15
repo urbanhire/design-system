@@ -9,7 +9,6 @@
 
 	img{
 		max-width:100%;
-		//min-height:100%;
 		position: absolute;
 		top:0;
 		left:0;
@@ -28,16 +27,23 @@
 		right:0;
 		bottom: 0;
 		margin:auto;
-		font-size: 0.825rem;
+		font-size: (12/16)+rem;
 		line-height:2rem;
 		color: black;
 		color:$c-grey-3;
 	}
-	&.is-md{
-		width:32px;
-		height:32px;
+	&.is-sm{
+		width:48px;
+		height:48px;
 		span{
-			
+			font-size: 1rem;
+		}
+	}
+	&.is-md{
+		width:64px;
+		height:64px;
+		span{
+			font-size: 1.5rem;
 		}
 	}
 	&.is-lg{
@@ -53,5 +59,11 @@
 		span{
 			font-size: 2rem;
 		}
+	}
+	&.is-square{
+		@include border-radius(0);
+	}
+	&.is-o{
+		@include box-shadow(0 0 0 2px white);
 	}
 }
