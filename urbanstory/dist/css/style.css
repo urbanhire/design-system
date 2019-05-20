@@ -1200,6 +1200,7 @@ table.table-spacy tbody td {
   padding: 16px;
 }
 
+textarea,
 input[type=text],
 input[type=password],
 input[type=email],
@@ -1209,7 +1210,15 @@ input[type=search] {
   -o-transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   outline: none;
+  border: solid 1px #C2C2C2;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
+textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
@@ -1217,6 +1226,103 @@ input[type=search]:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+.input-form label:first-of-type {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+.input-form.width-auto textarea, .input-form.width-auto input {
+  width: auto;
+}
+.input-form textarea,
+.input-form input {
+  width: 100%;
+}
+.input-form textarea + label,
+.input-form input + label {
+  display: block;
+  color: #A3A3A3;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+.input-form.is-danger label {
+  color: #EF4344;
+}
+.input-form.is-danger textarea,
+.input-form.is-danger input[type=text],
+.input-form.is-danger input[type=password],
+.input-form.is-danger input[type=email],
+.input-form.is-danger input[type=search] {
+  border: solid 1px #EF4344;
+}
+.input-form.is-danger textarea:focus,
+.input-form.is-danger input[type=text]:focus,
+.input-form.is-danger input[type=password]:focus,
+.input-form.is-danger input[type=email]:focus,
+.input-form.is-danger input[type=search]:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
+  -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
+  box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
+}
+.input-form.is-warning label {
+  color: #FFCE07;
+}
+.input-form.is-warning textarea,
+.input-form.is-warning input[type=text],
+.input-form.is-warning input[type=password],
+.input-form.is-warning input[type=email],
+.input-form.is-warning input[type=search] {
+  border: solid 1px #FFCE07;
+}
+.input-form.is-warning textarea:focus,
+.input-form.is-warning input[type=text]:focus,
+.input-form.is-warning input[type=password]:focus,
+.input-form.is-warning input[type=email]:focus,
+.input-form.is-warning input[type=search]:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.25);
+  -moz-box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.25);
+  box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.25);
+}
+.input-form.is-success label {
+  color: #2FBD90;
+}
+.input-form.is-success textarea,
+.input-form.is-success input[type=text],
+.input-form.is-success input[type=password],
+.input-form.is-success input[type=email],
+.input-form.is-success input[type=search] {
+  border: solid 1px #2FBD90;
+}
+.input-form.is-success textarea:focus,
+.input-form.is-success input[type=text]:focus,
+.input-form.is-success input[type=password]:focus,
+.input-form.is-success input[type=email]:focus,
+.input-form.is-success input[type=search]:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
+  -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
+  box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
+}
+.input-form.is-info label {
+  color: #2791D9;
+}
+.input-form.is-info textarea,
+.input-form.is-info input[type=text],
+.input-form.is-info input[type=password],
+.input-form.is-info input[type=email],
+.input-form.is-info input[type=search] {
+  border: solid 1px #2791D9;
+}
+.input-form.is-info textarea:focus,
+.input-form.is-info input[type=text]:focus,
+.input-form.is-info input[type=password]:focus,
+.input-form.is-info input[type=email]:focus,
+.input-form.is-info input[type=search]:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
+  -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
+  box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
 }
 
 .avatar {
@@ -1450,6 +1556,58 @@ input[type=search]:focus {
 .alert-close {
   position: absolute;
   top: 8px;
+  right: 8px;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+/*Toast*/
+.toast {
+  padding: 0 16px;
+  overflow: auto;
+  background: rgba(214, 214, 214, 0.2);
+  border: 1px solid rgba(194, 194, 194, 0.2);
+  position: relative;
+  color: #212121;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.toast.is-info {
+  background: rgba(39, 145, 217, 0.2);
+  border: 1px solid rgba(31, 116, 174, 0.2);
+  color: #1f74ae;
+}
+.toast.is-info .alert-close {
+  color: rgba(31, 116, 174, 0.75);
+}
+.toast.is-success {
+  background: rgba(47, 189, 144, 0.2);
+  border: 1px solid rgba(37, 148, 113, 0.2);
+  color: #259471;
+}
+.toast.is-success .alert-close {
+  color: rgba(37, 148, 113, 0.75);
+}
+.toast.is-warning {
+  background: rgba(255, 206, 7, 0.2);
+  border: 1px solid rgba(211, 169, 0, 0.2);
+  color: #d3a900;
+}
+.toast.is-warning .alert-close {
+  color: rgba(211, 169, 0, 0.75);
+}
+.toast.is-danger {
+  background: rgba(239, 67, 68, 0.2);
+  border: 1px solid rgba(235, 20, 21, 0.2);
+  color: rgba(188, 16, 17, 0.8);
+  color: #eb1415;
+}
+.toast.is-danger .alert-close {
+  color: rgba(235, 20, 21, 0.75);
+}
+.toast .toast-close {
+  position: absolute;
+  top: 12px;
   right: 8px;
   color: rgba(0, 0, 0, 0.35);
 }
