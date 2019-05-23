@@ -1,0 +1,152 @@
+//Default styles
+
+html {
+ box-sizing: border-box;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+body{
+	font-family:$font-stack;
+	color:$c-grey-6;
+}
+::placeholder {
+  color: $c-grey-3;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: $c-grey-3;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: $c-grey-3;
+}
+
+::selection {
+  background: $c-median-1;
+  /* Safari */
+  color: #fff; }
+
+::-moz-selection {
+  background: $c-median-1;
+  /* Firefox */
+  color: #fff; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-stack;
+}
+.rounded{
+	@include radius;
+}
+.box-shadow{
+	@include box-shadow(0 8px 16px rgba(black, .05));
+}
+// ul {
+//   &:not(.browser-default) {
+//     padding-left: 0;
+//     list-style-type: none;
+
+//     & > li {
+//       list-style-type: none;
+//     }
+//   }
+// }
+
+a {
+	color:$c-median-1;
+	text-decoration: none;
+
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:600;
+	line-height:1.5rem;
+	margin:1rem 0 1rem 0;
+	&.gutter-reset{
+		margin:0;
+	}
+}
+h1{
+	font-size: (36/16)+rem;
+}
+h2{
+	font-size: (32/16)+rem;
+}
+h3{
+	font-size: (24/16)+rem;
+}
+h4{
+	font-size: (20/16)+rem;
+}
+h5{
+	font-size: (18/16)+rem;
+}
+h6{
+	font-size: (16/16)+rem;
+}
+// text formating
+.align-center{
+	text-align:center;
+}
+.align-left{
+	text-align:left;
+}
+.align-right{
+	text-align:right;
+}
+article{
+	p{
+		line-height:1.5rem;
+	}
+}
+.padd-s{
+	padding:$gutter-s;
+}
+.padd-s-vertical{
+	padding:$gutter-s 0;
+}
+.padd-s-horizontal{
+	padding:0 $gutter-s;
+}
+.padd-m{
+	padding:$gutter-m;
+}
+.padd-m-vertical{
+	padding:$gutter-m 0;
+}
+.padd-m-horizontal{
+	padding:0 $gutter-m;
+}
+.padd-l{
+	padding:$gutter-l;
+}
+.padd-l-vertical{
+	padding:$gutter-l 0;
+}
+.padd-m-horizontal{
+	padding:0 $gutter-l;
+}	
+
+figure{
+	width: 100%;
+	margin: 0;
+	padding:0;
+}
+img{
+	max-width:100%;
+}
+figcaption{
+	font-size:12px;
+	color:$c-grey-5;
+	font-style: italic;
+}
+.img-wrapper{
+	@extend .rounded;
+	@extend .box-shadow;
+}

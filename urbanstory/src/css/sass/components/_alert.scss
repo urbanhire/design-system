@@ -1,0 +1,69 @@
+//alert
+
+.alert{
+	//@extend .card;
+	@extend .padd-l;
+	overflow: auto;
+	background: rgba($c-grey-2, .20);
+	border: 1px solid rgba($c-grey-3,0.20);
+	line-height:1.5rem;
+	position:relative;
+	color:$c-grey-6;
+	@include radius;
+	&.has-img{
+		padding-left:4rem;
+		img{
+			float:left;
+			width:2rem;
+			margin-left:-3rem;
+		}
+	}
+	&.is-info{
+		background: rgba($c-median-1, .20);
+		border: 1px solid rgba($c-median-3,0.20);
+		//color:rgba($c-median-2, .75);
+		color:$c-median-3;
+		.alert-close{
+			color:rgba($c-median-3, .75);
+		}
+	}
+	&.is-success{
+		background: rgba($c-green-1, .20);
+		border: 1px solid rgba($c-green-3,0.20);
+		color:$c-green-3;
+		.alert-close{
+			color:rgba($c-green-3, .75);
+		}
+	}
+	&.is-warning{
+		background: rgba($c-yellow-1, .20);
+		border: 1px solid rgba($c-yellow-3,0.20);
+		color:$c-yellow-3;
+		.alert-close{
+			color:rgba($c-yellow-3, .75);
+		}
+	}
+	&.is-danger{
+		background: rgba($c-red-1, .20);
+		border: 1px solid rgba($c-red-3,0.20);
+		color:rgba(darken($c-red-1, 20), .80);
+		color:$c-red-3;
+		.alert-close{
+			color:rgba($c-red-3, .75);
+		}
+	}
+	h1, h2, h3, h4, h5, h6{
+		margin-top:0;
+		padding-right:$gutter-l;
+	}
+	p{
+		margin:0;
+		padding:0;
+	}
+}
+.alert-close{
+	position:absolute;
+	top:$gutter-m;
+	right:$gutter-m;
+	color:rgba(black, .35);
+}

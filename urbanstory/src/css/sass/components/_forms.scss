@@ -1,0 +1,105 @@
+// forms
+textarea,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search]{
+	@include transition(cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s);
+	outline: none;
+	border: solid 1px $c-grey-3;
+	line-height: 40px;
+	font-size:14px;
+	padding:0 $gutter-m;
+	@include radius;
+	&:focus{
+      @include box-shadow(0 0 0 3px rgba(black ,.25));
+    }
+}
+.input-form{
+	label:first-of-type{
+		display:block;
+		font-size: (14/16)+rem;
+		margin-bottom:$gutter-m;
+		margin-top:$gutter-l;
+	}
+	&.width-auto{
+		textarea, input{
+			width: auto;
+		}
+	}
+	textarea,
+	input{
+		width: 100%;
+		& + label{
+			display:block;
+			color:$c-grey-4;
+			font-size: (12/16)+rem;
+			margin-top:$gutter-s;
+		}
+	}
+	&.is-danger{
+		label{
+			color:$c-red-1;
+		}
+		textarea,
+		input[type=text],
+		input[type=password],
+		input[type=email],
+		input[type=search]{
+			border: solid 1px $c-red-1;
+			&:focus{
+		      @include box-shadow(0 0 0 3px rgba($c-red-1 ,.25));
+		    }
+		    
+		}
+	}
+	&.is-warning{
+		label{
+			color:$c-yellow-1;
+		}
+		textarea,
+		input[type=text],
+		input[type=password],
+		input[type=email],
+		input[type=search]{
+			border: solid 1px $c-yellow-1;
+			&:focus{
+		      @include box-shadow(0 0 0 3px rgba($c-yellow-1 ,.25));
+		    }
+		    
+		}
+	}
+	&.is-success{
+		label{
+			color:$c-green-1;
+		}
+		textarea,
+		input[type=text],
+		input[type=password],
+		input[type=email],
+		input[type=search]{
+			border: solid 1px $c-green-1;
+			&:focus{
+		      @include box-shadow(0 0 0 3px rgba($c-green-1 ,.25));
+		    }
+		    
+		}
+	}
+	&.is-info{
+		label{
+			color:$c-median-1;
+		}
+		textarea,
+		input[type=text],
+		input[type=password],
+		input[type=email],
+		input[type=search]{
+			border: solid 1px $c-median-1;
+			&:focus{
+		      @include box-shadow(0 0 0 3px rgba($c-median-1 ,.25));
+		    }
+		    
+		}
+	}
+	
+}
