@@ -1256,7 +1256,8 @@ textarea,
 input[type=text],
 input[type=password],
 input[type=email],
-input[type=search] {
+input[type=search],
+select {
   -webkit-transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   -moz-transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   -o-transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
@@ -1274,10 +1275,26 @@ textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
-input[type=search]:focus {
+input[type=search]:focus,
+select:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+textarea[disabled],
+input[type=text][disabled],
+input[type=password][disabled],
+input[type=email][disabled],
+input[type=search][disabled],
+select[disabled] {
+  border: solid 1px #D6D6D6;
+  cursor: not-allowed;
+}
+
+select {
+  height: 40px;
+  width: 100%;
+  background: white;
 }
 
 .input-form label:first-of-type {
@@ -1286,8 +1303,15 @@ input[type=search]:focus {
   margin-bottom: 8px;
   margin-top: 16px;
 }
-.input-form.width-auto textarea, .input-form.width-auto input {
+.input-form.width-auto textarea, .input-form.width-auto input, .input-form.width-auto select {
   width: auto;
+}
+.input-form textarea {
+  resize: vertical;
+  overflow: auto;
+  line-height: 1rem;
+  padding: 8px;
+  min-height: 64px;
 }
 .input-form textarea,
 .input-form input {
