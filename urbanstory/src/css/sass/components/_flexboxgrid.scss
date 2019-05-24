@@ -3,8 +3,8 @@
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: $gutter-xl;
+  padding-left: $gutter-xl;
 }
 
 .row {
@@ -21,8 +21,8 @@
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -($gutter-l);
-  margin-left: -($gutter-l);
+  margin-right: -($gutter-m);
+  margin-left: -($gutter-m);
 }
 
 .row.reverse {

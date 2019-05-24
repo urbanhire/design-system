@@ -2,6 +2,19 @@
 .page-hero {
   padding: 2em 0;
 }
+.page-hero + section {
+  margin: 32px 0 64px 0;
+}
+
+.border-bottom {
+  border-bottom: solid 1px #D6D6D6;
+}
+
+.text-giant {
+  font-size: 6rem;
+  line-height: 6rem;
+  margin: 32px 0;
+}
 
 .color-box {
   width: 100%;
@@ -224,6 +237,39 @@ code {
     display: block;
     visibility: visible;
   }
+}
+.characters {
+  letter-spacing: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-semibold-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.fill {
+  background: #F5F5F5;
+  padding: 16px;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=index.css.map */

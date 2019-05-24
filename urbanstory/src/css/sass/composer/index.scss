@@ -5,6 +5,18 @@
 
 .page-hero{
   padding:2em 0;
+  & + section{
+    margin:$gutter-xl 0 $gutter-xxl 0;
+  }
+}
+.border-bottom{
+  border-bottom:solid 1px $c-border;
+}
+.text-giant{
+  font-size:6rem;
+  line-height:6rem;
+  //outline: solid 1px red;
+  margin:$gutter-xl 0;
 }
 .color-box{
   width:100%;
@@ -208,4 +220,31 @@ code {
     display: block;
     visibility: visible;
   }
+}
+.characters{
+  letter-spacing: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+.font-italic{
+  font-style: italic;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.font-semibold-italic{
+  font-weight: 600;
+  font-style: italic;
+}
+.font-bold{
+  font-weight: 700;
+}
+.font-bold-italic{
+  font-weight: 700;
+  font-style: italic;
+}
+.fill{
+  background: $c-grey-1;
+  padding:$gutter-l;
+  border-radius:4px;
 }
