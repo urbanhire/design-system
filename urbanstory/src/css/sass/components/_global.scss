@@ -1,0 +1,100 @@
+//Default styles
+
+html {
+ box-sizing: border-box;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+body{
+	font-family:$font-stack;
+	color:$c-grey-6;
+}
+::placeholder {
+  color: $c-grey-3;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: $c-grey-3;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: $c-grey-3;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-stack;
+}
+
+// ul {
+//   &:not(.browser-default) {
+//     padding-left: 0;
+//     list-style-type: none;
+
+//     & > li {
+//       list-style-type: none;
+//     }
+//   }
+// }
+
+a {
+	color:$c-median-1;
+	text-decoration: none;
+
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:600;
+	line-height:1.5rem;
+	margin:1rem 0 1rem 0;
+	&.gutter-reset{
+		margin:0;
+	}
+}
+h1{
+	font-size: (36/16)+rem;
+}
+h2{
+	font-size: (32/16)+rem;
+}
+h3{
+	font-size: (24/16)+rem;
+}
+h4{
+	font-size: (20/16)+rem;
+}
+h5{
+	font-size: (18/16)+rem;
+}
+h6{
+	font-size: (16/16)+rem;
+}
+// text formating
+.align-center{
+	text-align:center;
+}
+.align-left{
+	text-align:left;
+}
+.align-right{
+	text-align:right;
+}
+article{
+	p{
+		line-height:1.5rem;
+	}
+}
+.padd-s{
+	padding:$gutter-s;
+}
+.padd-m{
+	padding:$gutter-m;
+}
+.padd-l{
+	padding:$gutter-l;
+}
