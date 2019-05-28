@@ -22,7 +22,6 @@ body{
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: $c-grey-3;
 }
-<<<<<<< HEAD
 
 ::selection {
   background: $c-median-1;
@@ -34,8 +33,6 @@ body{
   /* Firefox */
   color: #fff; }
 
-=======
->>>>>>> evelyn
 button,
 input,
 optgroup,
@@ -43,16 +40,12 @@ select,
 textarea {
   font-family: $font-stack;
 }
-<<<<<<< HEAD
 .rounded{
 	@include radius;
 }
 .box-shadow{
 	@include box-shadow(0 8px 16px rgba(black, .05));
 }
-=======
-
->>>>>>> evelyn
 // ul {
 //   &:not(.browser-default) {
 //     padding-left: 0;
@@ -115,7 +108,6 @@ article{
 .padd-s{
 	padding:$gutter-s;
 }
-<<<<<<< HEAD
 .padd-s-vertical{
 	padding:$gutter-s 0;
 }
@@ -157,11 +149,4 @@ figcaption{
 .img-wrapper{
 	@extend .rounded;
 	@extend .box-shadow;
-=======
-.padd-m{
-	padding:$gutter-m;
-}
-.padd-l{
-	padding:$gutter-l;
->>>>>>> evelyn
 }

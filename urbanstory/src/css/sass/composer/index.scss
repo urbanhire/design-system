@@ -2,7 +2,6 @@
 
 @import "../components/variables";
 @import "../components/mixin";
-<<<<<<< HEAD
 
 .page-hero{
   padding:2em 0;
@@ -18,12 +17,6 @@
   line-height:6rem;
   //outline: solid 1px red;
   margin:$gutter-xl 0;
-=======
-@import "../components/evelyn";
-
-.page-hero{
-  padding:2em 0;
->>>>>>> evelyn
 }
 .color-box{
   width:100%;
@@ -227,7 +220,6 @@ code {
     display: block;
     visibility: visible;
   }
-<<<<<<< HEAD
 }
 .characters{
   letter-spacing: 1rem;
@@ -255,6 +247,4 @@ code {
   background: $c-grey-1;
   padding:$gutter-l;
   border-radius:4px;
-=======
->>>>>>> evelyn
 }
