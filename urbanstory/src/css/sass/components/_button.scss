@@ -90,17 +90,23 @@
 	      @include box-shadow(0 0 0 3px rgba($c-red-1 ,.25));
 	    }
 	}
+<<<<<<< HEAD
 	&.btn-flat{
 		background:none;
 		border:solid 1px transparent;
 	}
+=======
+>>>>>>> evelyn
 	&.btn-disabled{
 		background-color:$c-grey-2;
 		border:solid 1px $c-grey-2;
 		color:$c-grey-1;
 		cursor:not-allowed;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> evelyn
 	// button sizes
 	&.btn-small{
 		font-size:12px;

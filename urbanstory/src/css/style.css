@@ -28,6 +28,7 @@ body {
   color: #C2C2C2;
 }
 
+<<<<<<< HEAD
 ::selection {
   background: #2791D9;
   /* Safari */
@@ -40,6 +41,8 @@ body {
   color: #fff;
 }
 
+=======
+>>>>>>> evelyn
 button,
 input,
 optgroup,
@@ -48,6 +51,7 @@ textarea {
   font-family: "Barlow", Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 .rounded, .img-wrapper {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -60,6 +64,8 @@ textarea {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
 }
 
+=======
+>>>>>>> evelyn
 a {
   color: #2791D9;
   text-decoration: none;
@@ -119,6 +125,7 @@ article p {
   padding: 4px;
 }
 
+<<<<<<< HEAD
 .padd-s-vertical {
   padding: 4px 0;
 }
@@ -127,10 +134,13 @@ article p {
   padding: 0 4px;
 }
 
+=======
+>>>>>>> evelyn
 .padd-m {
   padding: 8px;
 }
 
+<<<<<<< HEAD
 .padd-m-vertical {
   padding: 8px 0;
 }
@@ -167,6 +177,12 @@ figcaption {
   font-style: italic;
 }
 
+=======
+.padd-l {
+  padding: 16px;
+}
+
+>>>>>>> evelyn
 .btn {
   background-color: #F5F5F5;
   font-size: 14px;
@@ -277,10 +293,13 @@ figcaption {
   -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
   box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
 }
+<<<<<<< HEAD
 .btn.btn-flat {
   background: none;
   border: solid 1px transparent;
 }
+=======
+>>>>>>> evelyn
 .btn.btn-disabled {
   background-color: #D6D6D6;
   border: solid 1px #D6D6D6;
@@ -329,8 +348,13 @@ figcaption {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
+<<<<<<< HEAD
   padding-right: 32px;
   padding-left: 32px;
+=======
+  padding-right: 2rem;
+  padding-left: 2rem;
+>>>>>>> evelyn
 }
 
 .row {
@@ -347,8 +371,13 @@ figcaption {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+<<<<<<< HEAD
   margin-right: -8px;
   margin-left: -8px;
+=======
+  margin-right: -1rem;
+  margin-left: -1rem;
+>>>>>>> evelyn
 }
 
 .row.reverse {
@@ -382,8 +411,13 @@ figcaption {
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
   flex: 0 0 auto;
+<<<<<<< HEAD
   padding-right: 8px;
   padding-left: 8px;
+=======
+  padding-right: 1rem;
+  padding-left: 1rem;
+>>>>>>> evelyn
 }
 
 .col-xs {
@@ -596,8 +630,13 @@ figcaption {
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+<<<<<<< HEAD
     padding-right: 8px;
     padding-left: 8px;
+=======
+    padding-right: 1rem;
+    padding-left: 1rem;
+>>>>>>> evelyn
   }
 
   .col-sm {
@@ -810,8 +849,13 @@ figcaption {
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+<<<<<<< HEAD
     padding-right: 8px;
     padding-left: 8px;
+=======
+    padding-right: 1rem;
+    padding-left: 1rem;
+>>>>>>> evelyn
   }
 
   .col-md {
@@ -1024,8 +1068,13 @@ figcaption {
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+<<<<<<< HEAD
     padding-right: 8px;
     padding-left: 8px;
+=======
+    padding-right: 1rem;
+    padding-left: 1rem;
+>>>>>>> evelyn
   }
 
   .col-lg {
@@ -1252,17 +1301,25 @@ table.table-spacy tbody td {
   padding: 16px;
 }
 
+<<<<<<< HEAD
 textarea,
 input[type=text],
 input[type=password],
 input[type=email],
 input[type=search],
 select {
+=======
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search] {
+>>>>>>> evelyn
   -webkit-transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   -moz-transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   -o-transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
   outline: none;
+<<<<<<< HEAD
   border: solid 1px #C2C2C2;
   line-height: 40px;
   font-size: 14px;
@@ -1277,10 +1334,18 @@ input[type=password]:focus,
 input[type=email]:focus,
 input[type=search]:focus,
 select:focus {
+=======
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=search]:focus {
+>>>>>>> evelyn
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
 }
+<<<<<<< HEAD
 textarea[disabled],
 input[type=text][disabled],
 input[type=password][disabled],
@@ -1410,6 +1475,8 @@ select {
   -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
   box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
 }
+=======
+>>>>>>> evelyn
 
 .avatar {
   width: 32px;
@@ -1578,6 +1645,7 @@ select {
   width: 220px;
 }
 
+<<<<<<< HEAD
 .alert {
   overflow: auto;
   background: rgba(214, 214, 214, 0.2);
@@ -1719,4 +1787,6 @@ select {
   margin-bottom: 0;
 }
 
+=======
+>>>>>>> evelyn
 /*# sourceMappingURL=style.css.map */
