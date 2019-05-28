@@ -1,0 +1,253 @@
+/* Styles for guideline layout only */
+
+@import "../components/variables";
+@import "../components/mixin";
+
+.page-hero{
+  padding:2em 0;
+  & + section{
+    margin:$gutter-xl 0 $gutter-xxl 0;
+  }
+}
+.border-bottom{
+  border-bottom:solid 1px $c-border;
+}
+.text-giant{
+  font-size:6rem;
+  line-height:6rem;
+  //outline: solid 1px red;
+  margin:$gutter-xl 0;
+}
+.card-base{
+  min-height:25vh;
+}
+.color-box{
+  width:100%;
+  height:48px;
+  color:white;
+  line-height:48px;
+  padding:0 $gutter-l;
+  &.firm-1{
+    background:$c-firm-1;
+  }
+  &.firm-2{
+    background:$c-firm-2;
+  }
+  &.firm-3{
+    background:$c-firm-3;
+  }
+  &.median-1{
+    background:$c-median-1;
+  }
+  &.median-2{
+    background:$c-median-2;
+  }
+  &.median-3{
+    background:$c-median-3;
+  }
+  &.prime-1{
+    background:$c-prime-1;
+  }
+  &.prime-2{
+    background:$c-prime-2;
+  }
+  &.prime-3{
+    background:$c-prime-3;
+  }
+  &.success-1{
+    background:$c-green-1;
+  }
+  &.success-2{
+    background:$c-green-2;
+  }
+  &.success-3{
+    background:$c-green-3;
+  }
+  &.warning-1{
+    background:$c-yellow-1;
+  }
+  &.warning-2{
+    background:$c-yellow-2;
+  }
+  &.warning-3{
+    background:$c-yellow-3;
+  }
+  &.danger-1{
+    background:$c-red-1;
+  }
+  &.danger-2{
+    background:$c-red-2;
+  }
+  &.danger-3{
+    background:$c-red-3;
+  }
+  &.grey-1{
+    background:$c-grey-1;
+    color:$c-grey-5;
+  }
+  &.grey-2{
+    background:$c-grey-2;
+    color:$c-grey-5;
+  }
+  &.grey-3{
+    background:$c-grey-3;
+    color:$c-grey-5;
+  }
+  &.grey-4{
+    background:$c-grey-4;
+  }
+  &.grey-5{
+    background:$c-grey-5;
+  }
+  &.grey-6{
+    background:$c-grey-6;
+  }
+}
+
+pre {
+  overflow-x: auto;
+  padding:1.25em 1.25em 1.25em 2em;
+  border: 1px solid $c-grey-2;
+  //border-left-width: 5px;
+  margin: 1.6em 0;
+  font-size: 0.875em;
+  //background: $c-grey-1;
+  white-space: pre;
+  word-wrap: normal;
+  line-height:1.25em;
+  position:relative;
+  @include radius;
+  &:before{
+    display: block;
+    position:absolute;
+    content:'Code';
+    //top:0;
+    background:$c-grey-2;
+    padding:2px 8px;
+    font-size: 11px;
+    left:-11px;
+    top:10px;
+    color: $c-grey-5;
+    transform: rotate(-90deg);
+  }
+}
+code {
+  color:$c-red-1;
+}
+.box-row,
+.box-first,
+.box-nested,
+.box-large,
+.box {
+  box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1rem;
+  margin-bottom: 0;
+  background: $c-median-1;
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  background:$c-median-1;
+  color:white;
+  padding:$gutter-l;
+}
+.box-row {
+  margin-bottom: 1rem;
+}
+.box-first {
+  background: $c-median-2;
+  border-color: $c-median-1;
+}
+.box-nested {
+  background: $c-median-3;
+  border-color: $c-median-1;
+}
+.box-large {
+  height: 8rem;
+}
+.box-container {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+.page-footer {
+  box-sizing: border-box;
+  padding-bottom: 3rem;
+}
+.tag {
+  color: #000;
+  font-weight: normal;
+}
+.end {
+  text-align: end;
+}
+.invisible-xs {
+  display: none;
+  visibility: hidden;
+}
+.visible-xs {
+  display: block;
+  visibility: visible;
+}
+@media only screen and (min-width: 48rem) {
+  body {
+    font-size: 16px;
+  }
+  .slide-menu {
+    width: 25%;
+  }
+  .open {
+    transform: translate3d(0, 0, 0);
+  }
+  .hero-headline {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  .hero-copy {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .box-row,
+  .box-first,
+  .box-nested,
+  .box-large,
+  .box {
+    padding: 1rem;
+  }
+  .invisible-md {
+    display: none;
+    visibility: hidden;
+  }
+  .visible-md {
+    display: block;
+    visibility: visible;
+  }
+}
+.characters{
+  letter-spacing: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+.font-italic{
+  font-style: italic;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.font-semibold-italic{
+  font-weight: 600;
+  font-style: italic;
+}
+.font-bold{
+  font-weight: 700;
+}
+.font-bold-italic{
+  font-weight: 700;
+  font-style: italic;
+}
+.fill{
+  background: $c-grey-1;
+  padding:$gutter-l;
+  border-radius:4px;
+}

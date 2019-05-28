@@ -1,0 +1,57 @@
+.uh-tab{
+    background: $c-bg-color;
+    @include box-shadow($card-box-shadow);
+    display: block;
+    width: auto;
+    color: $c-grey-5;
+   
+    &-nav{
+      @include box-shadow(0 1px 0 0 rgb(221, 221, 221));
+      position : relative;
+      @include flexbox;
+      .nav-item{
+        flex: 1;
+        text-align: center;
+        padding: $gutter-l;
+        position: relative;
+        &.no-grow{
+            // flex: .5;
+            max-width: 64px;
+        }
+        &::before{
+            width: 0%;
+            height: 3px;
+            content: '';
+            display: block;
+            background: rgba($c-firm-1, .7);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            @extend .transition;
+        }
+        &:hover{
+            color:rgba($c-firm-1, .7);
+            &::before{
+                width: 100%;
+            }
+        }
+        &.active{
+          color : $c-firm-1;
+          &::before{
+              width: 100%;
+              background: rgba($c-firm-1, 1);
+          }
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    } 
+    .uh-tab-item {
+      padding: $gutter-l;
+      position: relative;
+      display: none;
+    }
+  }
