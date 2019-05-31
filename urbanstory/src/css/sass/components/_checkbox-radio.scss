@@ -1,0 +1,116 @@
+.uh-input{
+    // background-color: $bg-color;
+    margin: $gutter-l 0px;
+    input{
+            padding: 12px 20px;
+            width: 100%;
+            border: 1px solid #ccc;
+    }
+    /* Customize the label (the container) */
+    .container {
+        &-checkbox {
+            display: block;
+            position: relative;
+            padding-left: $gutter-l + 10;
+            margin-bottom: 10px;
+            cursor: pointer;
+            // @include user-select(none);
+        
+            /* Hide the browser's default checkbox */
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                /* Show the checkmark when checked */
+                &:checked ~ .checkmark:after {
+                    display: block;
+                }
+                    /* When the checkbox is checked, add a blue background */
+                &:checked ~ .checkmark {
+                    background-color: $c-firm-1;
+                }
+            } 
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: $gutter-l+2;
+                width: $gutter-l+2;
+                background-color: $c-white;
+                border: 1px solid $c-grey-5;
+                @include border-radius(2px);
+                /* Create the checkmark/indicator (hidden when not checked) */
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                /* Style the checkmark/indicator */
+                &:after {
+                    left: 6px;
+                    top: 2px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    // @include transform (rotate(45deg));
+                }
+            }
+        }
+        /* Customize the label (the container) */
+        &-radio {
+            display: block;
+            position: relative;
+            padding-left: $gutter-l + 10;
+            margin-bottom: 12px;
+            cursor: pointer;
+            // @include user-select(none);
+            /* Hide the browser's default radio button */
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                    /* When the radio button is checked, add a blue background */
+                &:checked ~ .checkmark {
+                    background-color: $c-firm-1;
+                }
+                /* Show the indicator (dot/circle) when checked */
+                &:checked ~ .checkmark:after {
+                    display: block;
+                }
+            }
+            /* Create a custom radio button */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: $gutter-l + 2;
+                width: $gutter-l + 2;
+                background-color: $c-white;
+                border: 1px solid $c-grey-5;
+                @include border-radius(50%);
+                /* Create the indicator (the dot/circle - hidden when not checked) */
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                /* Style the indicator (dot/circle) */
+                &:after {
+                    left: 6px;
+                    top: 2px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    // @include transform (rotate(45deg));
+                }
+            }
+        }   
+    }
+}

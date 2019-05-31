@@ -179,6 +179,15 @@ select, .btn {
   transition: cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s;
 }
 
+dl dt {
+  color: #212121;
+  padding: 4px 0;
+}
+dl dd {
+  color: #757575;
+  padding: 4px 0;
+}
+
 .btn {
   background-color: #F5F5F5;
   font-size: 14px;
@@ -1795,6 +1804,121 @@ select {
   padding: 16px;
   position: relative;
   display: none;
+}
+
+.uh-input {
+  margin: 16px 0px;
+  /* Customize the label (the container) */
+}
+.uh-input input {
+  padding: 12px 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.uh-input .container {
+  /* Customize the label (the container) */
+}
+.uh-input .container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+}
+.uh-input .container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  /* Show the checkmark when checked */
+  /* When the checkbox is checked, add a blue background */
+}
+.uh-input .container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.uh-input .container-checkbox input:checked ~ .checkmark {
+  background-color: #011148;
+}
+.uh-input .container-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 1px solid #757575;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Style the checkmark/indicator */
+}
+.uh-input .container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.uh-input .container-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}
+.uh-input .container-radio {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+}
+.uh-input .container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  /* When the radio button is checked, add a blue background */
+  /* Show the indicator (dot/circle) when checked */
+}
+.uh-input .container-radio input:checked ~ .checkmark {
+  background-color: #011148;
+}
+.uh-input .container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+.uh-input .container-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 1px solid #757575;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Style the indicator (dot/circle) */
+}
+.uh-input .container-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.uh-input .container-radio .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

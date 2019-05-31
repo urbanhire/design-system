@@ -153,3 +153,13 @@ figcaption{
 .transition{
 	@include transition(cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s);
 }
+dl{
+	dt{
+		color:$c-grey-6;
+		padding:$gutter-s 0;
+	}
+	dd{
+		color:$c-grey-5;
+		padding:$gutter-s 0;
+	}
+}
