@@ -276,4 +276,43 @@ code {
   border-radius: 4px;
 }
 
+/*evelyn's visual language css!*/
+/*--------starthere--------*/
+.page-illustrations {
+  overflow: auto;
+  clear: left;
+}
+
+.lists {
+  position: relative;
+  float: left;
+  overflow: auto;
+  margin: 0px 0px 0px 10px;
+}
+
+.cards-1 {
+  position: relative;
+  float: left;
+  align-content: center;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.cards-2 {
+  position: relative;
+  float: left;
+  align-content: center;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.gambar {
+  float: left;
+  margin-right: 10px;
+}
+
+/*evelyn's visual language css!*/
+/*---------ends here--------*/
+
 /*# sourceMappingURL=index.css.map */
