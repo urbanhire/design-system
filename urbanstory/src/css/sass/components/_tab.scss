@@ -15,7 +15,6 @@
         padding: $gutter-l;
         position: relative;
         &.no-grow{
-            // flex: .5;
             max-width: 64px;
         }
         &::before{

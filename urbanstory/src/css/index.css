@@ -131,7 +131,7 @@ pre:before {
 }
 
 code {
-  color: #EF4344;
+  color: #2791D9;
 }
 
 .box-row,
@@ -274,6 +274,45 @@ code {
   background: #F5F5F5;
   padding: 16px;
   border-radius: 4px;
+}
+
+.hierarchy {
+  font-size: 0.925rem;
+}
+.hierarchy dt {
+  color: #011148;
+  font-weight: 700;
+}
+.hierarchy dd:before {
+  content: "|_";
+  color: #C2C2C2;
+  letter-spacing: -1px;
+  margin-right: 4px;
+  display: inline-block;
+  transform: translateY(-6px);
+}
+.hierarchy dd.hie-parent {
+  color: #011148;
+}
+.hierarchy dd.hie-parent:before {
+  content: "--";
+  transform: translateY(0px);
+}
+.hierarchy dd.hie-parent ~ dd {
+  padding-left: 16px;
+}
+.hierarchy dd.hie-parent ~ dd.hie-parent {
+  padding-left: 0;
+}
+
+.o-list {
+  margin-bottom: 16px;
+  font-size: 0.925rem;
+  color: #212121;
+}
+.o-list ol {
+  margin-bottom: 16px;
+  margin-top: 8px;
 }
 
 /*evelyn's visual language css!*/

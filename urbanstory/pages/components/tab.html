@@ -16,11 +16,69 @@
 <pre><code>&lt;div class=&quot;card uh-tab&quot;&gt;
     &lt;nav class=&quot;uh-tab-nav&quot;&gt;
         &lt;div class=&quot;nav-item active&quot;&gt;TAB 1&lt;/div&gt;
-        &lt;div class=&quot;nav-item &quot;&gt;TAB 2&lt;/div&gt;
-        &lt;div class=&quot;nav-item &quot;&gt;TAB 3&lt;/div&gt;
-        &lt;div class=&quot;nav-item &quot;&gt;TAB 4&lt;/div&gt;
-        &lt;div class=&quot;nav-item &quot;&gt;TAB 5&lt;/div&gt;
+        &lt;div class=&quot;nav-item&quot;&gt;TAB 2&lt;/div&gt;
+        &lt;div class=&quot;nav-item&quot;&gt;TAB 3&lt;/div&gt;
+        &lt;div class=&quot;nav-item&quot;&gt;TAB 4&lt;/div&gt;
+        &lt;div class=&quot;nav-item no-grow&quot;&gt;TAB 5&lt;/div&gt;
     &lt;/nav&gt;
 &lt;/div&gt;</code></pre>
+    </section>
+    <section>
+        <h4>SASS</h4>
+        <pre><code>.uh-tab {
+    background: $c-bg-color;
+    @include box-shadow($card-box-shadow);
+    display: block;
+    width: auto;
+    color: $c-grey-5;
+    &amp;-nav {
+        @include box-shadow(0 1px 0 0 rgb(221, 221, 221));
+        position: relative;
+        @include flexbox;
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            padding: $gutter-l;
+            position: relative;
+            &amp;.no-grow {
+                max-width: 64px;
+            }
+            &amp;::before {
+                width: 0%;
+                height: 3px;
+                content: '';
+                display: block;
+                background: rgba($c-firm-1, .7);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                @extend .transition;
+            }
+            &amp;:hover {
+                color: rgba($c-firm-1, .7);
+                &amp;::before {
+                    width: 100%;
+                }
+            }
+            &amp;.active {
+                color: $c-firm-1;
+                &amp;::before {
+                    width: 100%;
+                    background: rgba($c-firm-1, 1);
+                }
+            }
+            &amp;:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .uh-tab-item {
+        padding: $gutter-l;
+        position: relative;
+        display: none;
+    }
+}</code></pre>
     </section>
 </div>

@@ -132,7 +132,7 @@ pre {
   }
 }
 code {
-  color:$c-red-1;
+  color:$c-median-1;
 }
 .box-row,
 .box-first,
@@ -252,6 +252,49 @@ code {
   border-radius:4px;
 }
 
+.hierarchy{
+  font-size: 0.925rem;
+  dt{
+    color:$c-firm-1;
+    font-weight: 700;
+  }
+  dd{
+    &:before{
+      content: '|_';
+      color: $c-grey-3;
+      letter-spacing: -1px;
+      margin-right: 4px;
+      display: inline-block;
+      transform: translateY(-6px);
+    }
+    &.hie-parent{
+      color: $c-firm-1;
+      
+      &:before{
+        content: '--';
+        transform: translateY(0px);
+      }
+      & ~ dd{
+        // outline: solid 1px red;
+        padding-left: 16px;
+        &.hie-parent{
+          padding-left:0;
+        }
+      }
+    }
+  }
+}
+
+.o-list{
+  margin-bottom:$gutter-l;
+  // outline: solid 1px red;
+  font-size:0.925rem;
+  color: $c-grey-6;
+  ol{
+    margin-bottom:$gutter-l;
+    margin-top:$gutter-m;
+  }
+}
 
 /*evelyn's visual language css!*/
 /*--------starthere--------*/
