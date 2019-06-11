@@ -276,7 +276,6 @@ code {
   border-radius: 4px;
 }
 
-<<<<<<< HEAD
 .hierarchy {
   font-size: 0.925rem;
 }
@@ -318,16 +317,12 @@ code {
 
 /*evelyn's visual language css!*/
 /*--------starthere--------*/
-=======
-/*evelyn's visual language css!--start*/
->>>>>>> master
 .page-illustrations {
   overflow: auto;
   clear: left;
 }
 
 .lists {
-  /*border: 1px solid red;*/
   position: relative;
   float: left;
   overflow: auto;
@@ -335,7 +330,6 @@ code {
 }
 
 .cards-1 {
-  /*border: 1px solid red;*/
   position: relative;
   float: left;
   align-content: center;
@@ -345,7 +339,6 @@ code {
 }
 
 .cards-2 {
-  /*border: 1px solid red;*/
   position: relative;
   float: left;
   align-content: center;
@@ -358,95 +351,7 @@ code {
   margin-right: 10px;
 }
 
-/*evelyn's visual language css!--end*/
-
-/*evelyn's logo css!--start*/
-.page-content{
-  /*border: 1px solid red;*/
-  overflow: auto;
-}
-
-.text-box{
-  /*border: 1px solid red;*/
-  float: left;
-  width: 400px;
-  overflow: auto;
-  font-size: 11pt;
-  margin: 0px 20px 0px 30px;
-}
-
-.cards-style{
-  margin-right: 20px; 
-  border-width: 1px;
-  border-style: dashed;
-  border-color: rgba(8, 20, 55, 0.2);
-}
-
-.cards-style-negative{
-  margin-right: 20px;
-  border: 1px solid;
-  border-color: rgba(8, 20, 55, 0.2);
-  background-color: rgba(8, 20, 55, 0.2); 
-}
-
-.space {
-  /*border: 1px solid red;*/
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.ve-line{
-  /*border: 1px solid red;*/
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 10px;
-  float: left;
-  position: relative;
-  height: 100px;
-  width: 2px;
-  background-color: rgba(8, 20, 55, 0.2);
-}
-
-.logohero{
-  margin: 10px 10px 10px 10px;
-}
-
-.list-2{
-  /*border: 1px solid red;*/
-  float: left;
-  position: relative;
-  overflow: auto;
-  margin-left: 10px; 
-  padding: 20px 20px 20px 20px;
-}
-
-.explanation{
-  /*border: 1px solid red;*/
-  float: left;
-  width: 400px;
-  overflow: auto;
-  font-size: 11pt;
-  margin: 10px 10px 10px 10px;
-}
-
-.ho-line{
-  /*border: 1px solid red;*/
-  float: left;
-  position: relative;
-  width: 100%;
-  height: 2px;
-  background-color: rgba(8, 20, 55, 0.2);
-}
-
-.subheadline{
-  margin-left: 20px;
-}
-
-
-
-
-/*evelyn's logo css--end*/
+/*evelyn's visual language css!*/
 /*---------ends here--------*/
-
 
 /*# sourceMappingURL=index.css.map */
