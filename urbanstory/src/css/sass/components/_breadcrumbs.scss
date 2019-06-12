@@ -1,0 +1,45 @@
+.breadcrumb {
+    display: flex;
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    .breadcrumb-item {
+        height: 18px;
+        color: $c-prime-1;
+        font-size: 14px;
+        line-height: 18px;
+
+        &:not(:last-child) {
+            a {
+                margin-right: 4px;
+            }
+        }
+
+        &:not(:first-child) {
+            a {
+                margin-left: 4px;
+            }
+        }
+
+        &>a:hover {
+            color: $c-grey-4;
+            transition: 0.5s;
+        }
+
+        &:not(:last-child):after {
+            color: $c-grey-3;
+            content: ">";
+        }
+
+    }
+
+    .active {
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+
+        a {
+            color: $c-grey-4;
+        }
+    }
+}
