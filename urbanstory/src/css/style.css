@@ -1921,4 +1921,112 @@ select {
   border-width: 0 2px 2px 0;
 }
 
+/* Labels */
+.labels-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.labels {
+  height: 20px;
+  width: 84px;
+  border: 1px solid #C2C2C2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.labels p {
+  color: #757575;
+  font-family: "Barlow", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.flat-grey {
+  border: 1px solid #D6D6D6;
+  background-color: #D6D6D6;
+}
+.flat-grey p {
+  color: #757575;
+}
+
+.primary {
+  border: 1px solid #011148;
+  background-color: #011148;
+}
+.primary p {
+  color: white;
+}
+
+.success {
+  border: 1px solid #2FBD90;
+  background-color: #2FBD90;
+}
+.success p {
+  color: white;
+}
+
+.sub-title {
+  color: #757575;
+}
+
+.sub-section:not(:last-of-type) {
+  margin-bottom: 64px;
+}
+
+.list {
+  cursor: pointer;
+  color: #757575;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  width: 280px;
+}
+.list .list-item {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  transition: 0.5s;
+  font-size: 12px;
+  padding: 0 1rem;
+}
+.list .list-item:hover {
+  background-color: rgba(39, 145, 217, 0.1);
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.check-box .list-item {
+  padding: 0 0;
+}
+.check-box .list-item .check-box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.check-box .list-item p {
+  font-size: 14px;
+  color: #757575;
+}
+
+.active {
+  border: 1px solid rgba(39, 145, 217, 0.1);
+  border-radius: 4px;
+  background-color: rgba(39, 145, 217, 0.1);
+}
+.active .check-box-icon .icon {
+  width: 14px;
+  height: 14px;
+  content: url(../../src/img/list/check.svg);
+}
+
 /*# sourceMappingURL=style.css.map */
