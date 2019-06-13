@@ -40,8 +40,9 @@ $c-grey-6:#212121;
 $c-border:$c-grey-2;
 
 $c-white:rgb(255, 255, 255);
-$c-bg-color : rgba(white,0.8);
-$card-box-shadow : 0 0 0 1px rgba(black, .05), 0 2px 5px 0 rgba(black, .05);
+$c-bg-color : rgba(white, 0.8);
+$card-box-shadow : 0 0 0 1px rgba(black, .05),
+0 2px 5px 0 rgba(black, .05);
 
 $gutter-xxl:64px;
 $gutter-xl:32px;
@@ -49,5 +50,7 @@ $gutter-l:16px;
 $gutter-m:8px;
 $gutter-s:4px;
 
-$font-stack:'Barlow', Arial, sans-serif;
+$font-stack:'Barlow',
+Arial,
+sans-serif;
 $font-icon:urbanfont;
