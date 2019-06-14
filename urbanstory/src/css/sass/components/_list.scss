@@ -1,0 +1,57 @@
+/* List */
+
+.sub-title {
+  color: $c-grey-5;
+}
+
+.sub-section:not(:last-of-type) {
+  margin-bottom: $gutter-xxl;
+}
+
+.list {
+  // cursor: pointer;
+  color: $c-grey-5;
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  &.has-icon{
+    a{
+      padding-left:0;
+      &:before{
+        @extend .transition;
+        @include flex-middle;
+        display: inline-flex;
+        justify-content: center;
+        font-family: $font-icon;
+        min-width: $c-height;
+        height: $c-height;
+        content:"\E01D";
+        visibility: hidden;
+        color: $c-firm-1;
+      }
+      &.active{
+        color: $c-firm-1;
+        &:before{
+          visibility: visible;
+        }
+      }
+    }
+  }
+  a {
+    @include flexbox;
+    @include flex-middle;
+    @extend .transition;
+    color:$c-grey-5;
+    height: $c-height;
+    font-size: 12px;
+    padding: 0 $gutter-l;
+    @include radius;
+    &:hover {
+      background-color:$c-grey-1;
+      
+    }
+    &:focus{
+      @include box-shadow(0 0 0 3px rgba(black ,.09));
+    }
+  } 
+}

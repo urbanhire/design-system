@@ -1,1 +1,18 @@
-<link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,600,600i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,600,600i,700,700i" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://uh-font-cdn.urbanhire.com/uh-font.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Script for List page -->
+<script>
+    $(document).ready(function () {
+        $(".list.has-icon a").click(function () {
+            let elem = $(this);
+            if (!elem.hasClass("active")) {
+                elem.addClass("active");
+            } else {
+            	elem.removeClass("active");
+            }
+
+        });
+    });
+</script>

@@ -1,0 +1,32 @@
+/* Breadcrumbs */
+.breadcrumb {
+  a {
+    height: $br-height;
+    display: inline-block;
+    color: $c-grey-5;
+    font-size: 14px;
+    line-height: $br-height;
+    @extend .transition;
+
+    &:hover {
+      color: $c-grey-4;
+      @extend .transition;
+    }
+
+    &:not(:last-child):after {
+      color: $c-grey-3;
+      font-family: $font-icon;
+      content:"\E005";
+      display: inline-block;
+      margin: 0 4px;
+      vertical-align: bottom;
+    }
+  }
+
+  .active {
+    @include border-radius(0);
+    border: none;
+    background-color: transparent;
+    color: $c-grey-3;
+  }
+}

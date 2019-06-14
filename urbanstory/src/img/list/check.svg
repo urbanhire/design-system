@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10.9705627,25.9705627 L10.9705627,11.9705627 C10.9705627,10.8659932 10.0751322,9.97056275 8.97056275,9.97056275 C7.86599325,9.97056275 6.97056275,10.8659932 6.97056275,11.9705627 L6.97056275,27.9705627 C6.97056275,29.0751322 7.86599325,29.9705627 8.97056275,29.9705627 L40.9705627,29.9705627 C42.0751322,29.9705627 42.9705627,29.0751322 42.9705627,27.9705627 C42.9705627,26.8659932 42.0751322,25.9705627 40.9705627,25.9705627 L10.9705627,25.9705627 Z" id="Path-5" fill="#011148" fill-rule="nonzero" transform="translate(24.970563, 19.970563) rotate(-45.000000) translate(-24.970563, -19.970563) "></path>
+    </g>
+</svg>
