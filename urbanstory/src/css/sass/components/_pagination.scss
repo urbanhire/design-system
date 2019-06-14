@@ -20,7 +20,7 @@
   min-width: $c-height * 3;
   border: 1px solid rgba(221, 221, 221, 0.1);
   @include box-shadow(0 1px 3px 0 $pg-box-shadow-color);
-  @include border-radius(2);
+  @include border-radius(2px);
 
   a {
     display: inline-block;
