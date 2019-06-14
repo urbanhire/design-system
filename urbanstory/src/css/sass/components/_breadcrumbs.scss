@@ -1,17 +1,9 @@
 /* Breadcrumbs */
 .breadcrumb {
-<<<<<<< HEAD
-  @include flexbox;
-
-  a {
-    height: $br-height;
-    color: $c-prime-1;
-=======
   a {
     height: $br-height;
     display: inline-block;
     color: $c-grey-5;
->>>>>>> dikaseva
     font-size: 14px;
     line-height: $br-height;
     @extend .transition;
@@ -23,17 +15,11 @@
 
     &:not(:last-child):after {
       color: $c-grey-3;
-<<<<<<< HEAD
-      content: ">";
-      display: inline-block;
-      margin: 0 4px;
-=======
       font-family: $font-icon;
-      content:"\E005";
+      content: "\E005";
       display: inline-block;
       margin: 0 4px;
       vertical-align: bottom;
->>>>>>> dikaseva
     }
   }
 
@@ -41,10 +27,6 @@
     @include border-radius(0);
     border: none;
     background-color: transparent;
-<<<<<<< HEAD
-    color: $c-grey-4;
-=======
     color: $c-grey-3;
->>>>>>> dikaseva
   }
 }

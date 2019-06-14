@@ -9,73 +9,14 @@
 }
 
 .list {
-<<<<<<< HEAD
-  cursor: pointer;
   color: $c-grey-5;
   list-style-type: none;
-  padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  width: 280px;
-  max-width: 280px;
-
-  .list-item {
-    @include flexbox;
-    @include flex-middle;
-    @extend .transition;
-    height: $c-height;
-    font-size: 12px;
-    padding: 0 1rem;
-
-    &:hover {
-      background-color: $list-bg-color;
-      @include radius;
-      @extend .transition;
-    }
-  }
-
-  .active {
-    @include radius;
-    border: 1px solid $list-bg-color;
-    background-color: $list-bg-color;
-
-    .check-box-icon:after {
-      background-image: url(../../src/img/list/check.svg);
-      background-size: $icon-size $icon-size;
-      width: $icon-size;
-      height: $icon-size;
-      content: "";
-    }
-  }
-
-  &.check-box {
-    .list-item {
-      padding: 0 0;
-
-      .check-box-icon {
-        @include flexbox;
-        @include flex-middle;
-        justify-content: center;
-        width: $c-height;
-        height: $c-height;
-      }
-
-      p {
-        font-size: 14px;
-        color: $c-grey-5;
-      }
-    }
-  }
-=======
-  // cursor: pointer;
-  color: $c-grey-5;
-  list-style-type: none;
-  margin:0;
-  padding:0;
-  &.has-icon{
-    a{
-      padding-left:0;
-      &:before{
+  margin: 0;
+  padding: 0;
+  &.has-icon {
+    a {
+      padding-left: 0;
+      &:before {
         @extend .transition;
         @include flex-middle;
         display: inline-flex;
@@ -83,13 +24,13 @@
         font-family: $font-icon;
         min-width: $c-height;
         height: $c-height;
-        content:"\E01D";
+        content: "\E01D";
         visibility: hidden;
         color: $c-firm-1;
       }
-      &.active{
+      &.active {
         color: $c-firm-1;
-        &:before{
+        &:before {
           visibility: visible;
         }
       }
@@ -99,18 +40,16 @@
     @include flexbox;
     @include flex-middle;
     @extend .transition;
-    color:$c-grey-5;
+    color: $c-grey-5;
     height: $c-height;
     font-size: 12px;
     padding: 0 $gutter-l;
     @include radius;
     &:hover {
-      background-color:$c-grey-1;
-      
+      background-color: $c-grey-1;
     }
-    &:focus{
-      @include box-shadow(0 0 0 3px rgba(black ,.09));
+    &:focus {
+      @include box-shadow(0 0 0 3px rgba(black, 0.09));
     }
-  } 
->>>>>>> dikaseva
+  }
 }
