@@ -29,13 +29,21 @@ body {
 }
 
 ::selection {
+<<<<<<< HEAD
   background: #2791d9;
+=======
+  background: #011148;
+>>>>>>> dikaseva
   /* Safari */
   color: #fff;
 }
 
 ::-moz-selection {
+<<<<<<< HEAD
   background: #2791d9;
+=======
+  background: #011148;
+>>>>>>> dikaseva
   /* Firefox */
   color: #fff;
 }
@@ -167,7 +175,11 @@ figcaption {
   font-style: italic;
 }
 
+<<<<<<< HEAD
 .transition, .pagination a:focus, .pagination a:hover, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list .list-item:hover, .list .list-item, .uh-tab-nav .nav-item::before, .avatar, textarea,
+=======
+.transition, .pagination a:focus, .pagination a:hover, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .uh-tab-nav .nav-item::before, .avatar, textarea,
+>>>>>>> dikaseva
 input[type=text],
 input[type=password],
 input[type=email],
@@ -1977,6 +1989,7 @@ select {
 }
 
 .list {
+<<<<<<< HEAD
   cursor: pointer;
   color: #757575;
   list-style-type: none;
@@ -2028,6 +2041,36 @@ select {
   padding: 0 0;
 }
 .list.check-box .list-item .check-box-icon {
+=======
+  color: #757575;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.list.has-icon a {
+  padding-left: 0;
+}
+.list.has-icon a:before {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  font-family: urbanfont;
+  min-width: 40px;
+  height: 40px;
+  content: "";
+  visibility: hidden;
+  color: #011148;
+}
+.list.has-icon a.active {
+  color: #011148;
+}
+.list.has-icon a.active:before {
+  visibility: visible;
+}
+.list a {
+>>>>>>> dikaseva
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -2041,6 +2084,7 @@ select {
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
+<<<<<<< HEAD
   justify-content: center;
   width: 40px;
   height: 40px;
@@ -2066,6 +2110,30 @@ select {
 .breadcrumb a {
   height: 18px;
   color: #33beef;
+=======
+  color: #757575;
+  height: 40px;
+  font-size: 12px;
+  padding: 0 16px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.list a:hover {
+  background-color: #f5f5f5;
+}
+.list a:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.09);
+}
+
+/* Breadcrumbs */
+.breadcrumb a {
+  height: 18px;
+  display: inline-block;
+  color: #757575;
+>>>>>>> dikaseva
   font-size: 14px;
   line-height: 18px;
 }
@@ -2074,9 +2142,17 @@ select {
 }
 .breadcrumb a:not(:last-child):after {
   color: #c2c2c2;
+<<<<<<< HEAD
   content: ">";
   display: inline-block;
   margin: 0 4px;
+=======
+  font-family: urbanfont;
+  content: "";
+  display: inline-block;
+  margin: 0 4px;
+  vertical-align: bottom;
+>>>>>>> dikaseva
 }
 .breadcrumb .active {
   -webkit-border-radius: 0;
@@ -2084,7 +2160,11 @@ select {
   border-radius: 0;
   border: none;
   background-color: transparent;
+<<<<<<< HEAD
   color: #a3a3a3;
+=======
+  color: #c2c2c2;
+>>>>>>> dikaseva
 }
 
 /* Pagination */
