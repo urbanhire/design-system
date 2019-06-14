@@ -1,14 +1,14 @@
-<link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,600,600i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,600,600i,700,700i" rel="stylesheet" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 <!-- Script for List page -->
 <script>
     $(document).ready(function () {
-        $('.check-box .list-item').click(function () {
+        $(".check-box .list-item").click(function () {
             let elem = $(this);
-            if (!elem.hasClass('active')) {
-                elem.siblings().removeClass('active');
-                elem.addClass('active');
+            if (!elem.hasClass("active")) {
+                elem.siblings().removeClass("active");
+                elem.addClass("active");
             }
         });
     });
