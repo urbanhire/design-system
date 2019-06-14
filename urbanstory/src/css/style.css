@@ -1987,14 +1987,6 @@ select {
 }
 
 /* List */
-.sub-title {
-  color: #757575;
-}
-
-.sub-section:not(:last-of-type) {
-  margin-bottom: 64px;
-}
-
 .list {
   color: #757575;
   list-style-type: none;
@@ -2083,19 +2075,6 @@ select {
 }
 
 /* Pagination */
-.sub-section-pagination {
-  margin-bottom: 23px;
-}
-.sub-section-pagination h5 {
-  height: 22px;
-  color: #1a1a1a;
-  font-size: 18px;
-  line-height: 22px;
-}
-.sub-section-pagination:last-of-type {
-  margin-bottom: 81px;
-}
-
 .pagination {
   display: inline-block;
   height: 40px;
