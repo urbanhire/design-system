@@ -1,71 +1,68 @@
 /* Pagination */
-$pagination-height: 40px;
-$radius: 4px;
-
 .sub-section-pagination {
-    margin-bottom: 23px;
+  margin-bottom: 23px;
 
-    h5 {
-        height: 22px;
-        color: #1A1A1A;
-        font-size: 18px;
-        line-height: 22px;
-    }
+  h5 {
+    height: 22px;
+    color: #1a1a1a;
+    font-size: 18px;
+    line-height: 22px;
+  }
 
-    &:last-of-type {
-        margin-bottom: 81px;
-    }
+  &:last-of-type {
+    margin-bottom: 81px;
+  }
 }
 
 .pagination {
+  display: inline-block;
+  height: $c-height;
+  min-width: $c-height * 3;
+  border: 1px solid rgba(221, 221, 221, 0.1);
+  @include box-shadow(0 1px 3px 0 $pg-box-shadow-color);
+  @include border-radius(2);
+
+  a {
     display: inline-block;
-    height: $pagination-height;
-    min-width: $pagination-height * 3;
-    border: 1px solid rgba(221, 221, 221, 0.1);
-    border-radius: $radius / 2;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    @include radius;
+    width: $c-height;
+    height: $c-height;
+    text-align: center;
+    line-height: $c-height;
+    font-size: 14px;
+    color: $c-grey-4;
+    @extend .transition;
 
-    a {
-        display: inline-block;
-        border-radius: $radius;
-        width: $pagination-height;
-        height: $pagination-height;
-        text-align: center;
-        line-height: $pagination-height;
-        font-size: 14px;
-        color: $c-grey-4;
-        @extend .transition;
-
-        &:hover {
-            background-color: #000C35;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-            color: white;
-            @extend .transition;
-        }
-
-        &:focus {
-            background-color: #000823;
-            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-            color: white;
-            @extend .transition;
-        }
-
-        &.active {
-            background-color: $c-firm-1;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-            color: white;
-        }
-
-        &.hovered {
-            background-color: #000C35;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-            color: white;
-        }
-
-        &.focused {
-            color: white;
-            background-color: #000823;
-            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-        }
+    &:hover {
+      background-color: #000c35;
+      @include box-shadow(0 0 0 2px $pg-box-shadow-color);
+      color: white;
+      @extend .transition;
     }
+
+    &:focus {
+      background-color: #000823;
+      @include box-shadow(0 0 0 4px $pg-box-shadow-color);
+      color: white;
+      @extend .transition;
+    }
+
+    &.active {
+      background-color: $c-firm-1;
+      @include box-shadow(0 2px 2px 0 $pg-box-shadow-color);
+      color: white;
+    }
+
+    &.hovered {
+      background-color: #000c35;
+      @include box-shadow(0 0 0 2px $pg-box-shadow-color);
+      color: white;
+    }
+
+    &.focused {
+      color: white;
+      background-color: #000823;
+      @include box-shadow(0 0 0 4px $pg-box-shadow-color);
+    }
+  }
 }

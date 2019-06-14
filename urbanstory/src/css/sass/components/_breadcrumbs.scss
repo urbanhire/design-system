@@ -1,33 +1,31 @@
 /* Breadcrumbs */
-$br-height: 18px;
-
 .breadcrumb {
-    display: flex;
+  @include flexbox;
 
-    a {
-        height: $br-height;
-        color: $c-prime-1;
-        font-size: 14px;
-        line-height: $br-height;
-        @extend .transition;
+  a {
+    height: $br-height;
+    color: $c-prime-1;
+    font-size: 14px;
+    line-height: $br-height;
+    @extend .transition;
 
-        &:hover {
-            color: $c-grey-4;
-            @extend .transition;
-        }
-
-        &:not(:last-child):after {
-            color: $c-grey-3;
-            content: ">";
-            display: inline-block;
-            margin: 0 4px;
-        }
+    &:hover {
+      color: $c-grey-4;
+      @extend .transition;
     }
 
-    .active {
-        border: none;
-        border-radius: 0;
-        background-color: transparent;
-        color: $c-grey-4;
+    &:not(:last-child):after {
+      color: $c-grey-3;
+      content: ">";
+      display: inline-block;
+      margin: 0 4px;
     }
+  }
+
+  .active {
+    @include border-radius(0);
+    border: none;
+    background-color: transparent;
+    color: $c-grey-4;
+  }
 }

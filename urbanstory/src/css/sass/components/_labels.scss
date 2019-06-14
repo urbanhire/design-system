@@ -1,52 +1,50 @@
 /* Labels */
-$label-height: 20px;
-
 .label {
-    border: 1px solid $c-grey-3;
-    border-radius: $label-height / 2;
+  border: 1px solid $c-grey-3;
+  @include border-radius(10px);
+  color: $c-grey-5;
+  display: inline-block;
+  font-size: 11px;
+  height: $label-height;
+  line-height: $label-height - 2;
+  min-width: $label-height * 2;
+  margin-left: $gutter-s;
+  padding: 0 $gutter-m;
+  @extend .align-center;
+
+  &.label-firm {
+    background-color: $c-firm-1;
+    border: 1px solid $c-firm-1;
+    color: $c-white;
+  }
+
+  &.label-success {
+    background-color: $c-green-1;
+    border: 1px solid $c-green-1;
+    color: $c-white;
+  }
+
+  &.label-grey {
+    background-color: $c-grey-2;
+    border: 1px solid $c-grey-2;
     color: $c-grey-5;
-    display: inline-block;
-    font-size: 11px;
-    height: $label-height;
-    line-height: $label-height - 2;
-    min-width: $label-height * 2;
-    margin-left: $gutter-s;
-    padding: 0 $gutter-m;
-    text-align: center;
+  }
 
-    &.label-firm {
-        background-color: $c-firm-1;
-        border: 1px solid $c-firm-1;
-        color: $c-white;
-    }
+  &.label-danger {
+    background-color: $c-red-1;
+    border: 1px solid $c-red-1;
+    color: $c-white;
+  }
 
-    &.label-success {
-        background-color: $c-green-1;
-        border: 1px solid $c-green-1;
-        color: $c-white;
-    }
+  &.label-warning {
+    background-color: $c-yellow-1;
+    border: 1px solid $c-yellow-1;
+    color: $c-white;
+  }
 
-    &.label-grey {
-        background-color: $c-grey-2;
-        border: 1px solid $c-grey-2;
-        color: $c-grey-5;
-    }
-
-    &.label-danger {
-        background-color: $c-red-1;
-        border: 1px solid $c-red-1;
-        color: $c-white;
-    }
-
-    &.label-warning {
-        background-color: $c-yellow-1;
-        border: 1px solid $c-yellow-1;
-        color: $c-white;
-    }
-
-    &.label-median {
-        background-color: $c-median-1;
-        border: 1px solid $c-median-1;
-        color: $c-white;
-    }
+  &.label-median {
+    background-color: $c-median-1;
+    border: 1px solid $c-median-1;
+    color: $c-white;
+  }
 }
