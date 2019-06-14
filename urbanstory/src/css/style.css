@@ -3,7 +3,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -29,21 +31,13 @@ body {
 }
 
 ::selection {
-<<<<<<< HEAD
-  background: #2791d9;
-=======
   background: #011148;
->>>>>>> dikaseva
   /* Safari */
   color: #fff;
 }
 
 ::-moz-selection {
-<<<<<<< HEAD
-  background: #2791d9;
-=======
   background: #011148;
->>>>>>> dikaseva
   /* Firefox */
   color: #fff;
 }
@@ -74,12 +68,22 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.5rem;
   margin: 1rem 0 1rem 0;
 }
-h1.gutter-reset, h2.gutter-reset, h3.gutter-reset, h4.gutter-reset, h5.gutter-reset, h6.gutter-reset {
+h1.gutter-reset,
+h2.gutter-reset,
+h3.gutter-reset,
+h4.gutter-reset,
+h5.gutter-reset,
+h6.gutter-reset {
   margin: 0;
 }
 
@@ -175,11 +179,7 @@ figcaption {
   font-style: italic;
 }
 
-<<<<<<< HEAD
-.transition, .pagination a:focus, .pagination a:hover, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list .list-item:hover, .list .list-item, .uh-tab-nav .nav-item::before, .avatar, textarea,
-=======
 .transition, .pagination a:focus, .pagination a:hover, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .uh-tab-nav .nav-item::before, .avatar, textarea,
->>>>>>> dikaseva
 input[type=text],
 input[type=password],
 input[type=email],
@@ -1328,7 +1328,9 @@ select {
   margin-bottom: 8px;
   margin-top: 16px;
 }
-.input-form.width-auto textarea, .input-form.width-auto input, .input-form.width-auto select {
+.input-form.width-auto textarea,
+.input-form.width-auto input,
+.input-form.width-auto select {
   width: auto;
 }
 .input-form textarea {
@@ -1532,7 +1534,7 @@ select {
 }
 
 .card {
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1661,7 +1663,12 @@ select {
 .alert.is-danger .alert-close {
   color: rgba(235, 20, 21, 0.75);
 }
-.alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+.alert h1,
+.alert h2,
+.alert h3,
+.alert h4,
+.alert h5,
+.alert h6 {
   margin-top: 0;
   padding-right: 16px;
 }
@@ -1989,59 +1996,6 @@ select {
 }
 
 .list {
-<<<<<<< HEAD
-  cursor: pointer;
-  color: #757575;
-  list-style-type: none;
-  padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  width: 280px;
-  max-width: 280px;
-}
-.list .list-item {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -ms-flex-align: center;
-  -webkit-box-align: center;
-  align-items: center;
-  height: 40px;
-  font-size: 12px;
-  padding: 0 1rem;
-}
-.list .list-item:hover {
-  background-color: rgba(39, 145, 217, 0.1);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.list .active {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid rgba(39, 145, 217, 0.1);
-  background-color: rgba(39, 145, 217, 0.1);
-}
-.list .active .check-box-icon:after {
-  background-image: url(../../src/img/list/check.svg);
-  background-size: 14px 14px;
-  width: 14px;
-  height: 14px;
-  content: "";
-}
-.list.check-box .list-item {
-  padding: 0 0;
-}
-.list.check-box .list-item .check-box-icon {
-=======
   color: #757575;
   list-style-type: none;
   margin: 0;
@@ -2070,7 +2024,6 @@ select {
   visibility: visible;
 }
 .list a {
->>>>>>> dikaseva
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -2084,33 +2037,6 @@ select {
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-<<<<<<< HEAD
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-}
-.list.check-box .list-item p {
-  font-size: 14px;
-  color: #757575;
-}
-
-/* Breadcrumbs */
-.breadcrumb {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-.breadcrumb a {
-  height: 18px;
-  color: #33beef;
-=======
   color: #757575;
   height: 40px;
   font-size: 12px;
@@ -2133,7 +2059,6 @@ select {
   height: 18px;
   display: inline-block;
   color: #757575;
->>>>>>> dikaseva
   font-size: 14px;
   line-height: 18px;
 }
@@ -2142,17 +2067,11 @@ select {
 }
 .breadcrumb a:not(:last-child):after {
   color: #c2c2c2;
-<<<<<<< HEAD
-  content: ">";
-  display: inline-block;
-  margin: 0 4px;
-=======
   font-family: urbanfont;
   content: "";
   display: inline-block;
   margin: 0 4px;
   vertical-align: bottom;
->>>>>>> dikaseva
 }
 .breadcrumb .active {
   -webkit-border-radius: 0;
@@ -2160,11 +2079,7 @@ select {
   border-radius: 0;
   border: none;
   background-color: transparent;
-<<<<<<< HEAD
-  color: #a3a3a3;
-=======
   color: #c2c2c2;
->>>>>>> dikaseva
 }
 
 /* Pagination */
