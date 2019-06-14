@@ -353,5 +353,27 @@ code {
 
 /*evelyn's visual language css!*/
 /*---------ends here--------*/
+/* Label Page Styling */
+.sub-title {
+  color: #757575;
+}
+
+.sub-section:not(:last-of-type) {
+  margin-bottom: 64px;
+}
+
+/** Pagination Pages Styling */
+.sub-section-pagination {
+  margin-bottom: 23px;
+}
+.sub-section-pagination h5 {
+  height: 22px;
+  color: #1a1a1a;
+  font-size: 18px;
+  line-height: 22px;
+}
+.sub-section-pagination:last-of-type {
+  margin-bottom: 81px;
+}
 
 /*# sourceMappingURL=index.css.map */

@@ -344,3 +344,28 @@ code {
 
 /*evelyn's visual language css!*/
 /*---------ends here--------*/
+
+/* Label Page Styling */
+.sub-title {
+  color: $c-grey-5;
+}
+
+.sub-section:not(:last-of-type) {
+  margin-bottom: $gutter-xxl;
+}
+
+/** Pagination Pages Styling */
+.sub-section-pagination {
+  margin-bottom: 23px;
+
+  h5 {
+    height: 22px;
+    color: #1a1a1a;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 81px;
+  }
+}
