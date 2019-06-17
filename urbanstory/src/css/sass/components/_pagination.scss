@@ -8,6 +8,12 @@
   @include box-shadow(0 1px 3px 0 $pg-box-shadow-color);
   @include border-radius(2px);
 
+  i {
+    display: inline-block;
+    line-height: $c-height;
+    vertical-align: middle;
+  }
+
   a {
     display: inline-block;
     @include radius;
@@ -23,14 +29,12 @@
       background-color: #000c35;
       @include box-shadow(0 0 0 2px $pg-box-shadow-color);
       color: white;
-      @extend .transition;
     }
 
     &:focus {
       background-color: #000823;
       @include box-shadow(0 0 0 4px $pg-box-shadow-color);
       color: white;
-      @extend .transition;
     }
 
     &.active {

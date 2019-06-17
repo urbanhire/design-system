@@ -179,7 +179,7 @@ figcaption {
   font-style: italic;
 }
 
-.transition, .pagination a:focus, .pagination a:hover, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .uh-tab-nav .nav-item::before, .avatar, textarea,
+.transition, .chip button i, .chip button, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .uh-tab-nav .nav-item::before, .avatar, textarea,
 input[type=text],
 input[type=password],
 input[type=email],
@@ -2087,6 +2087,11 @@ select {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
+.pagination i {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+}
 .pagination a {
   display: inline-block;
   -webkit-border-radius: 4px;
@@ -2133,6 +2138,79 @@ select {
   -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chips*/
+.chip {
+  display: inline-flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background-color: #f5f5f5;
+  color: #a3a3a3;
+  font-size: 12px;
+  padding: 0 16px;
+  height: 32px;
+  min-width: 64px;
+  margin-right: 4px;
+}
+.chip i {
+  font-size: 12px;
+  color: #a3a3a3;
+}
+.chip button {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding: 0;
+  outline: none;
+  margin-right: -16px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
+}
+.chip button i {
+  color: rgba(0, 0, 0, 0.25);
+}
+.chip button i:before {
+  vertical-align: middle;
+}
+.chip button:hover {
+  cursor: pointer;
+}
+.chip button:hover i {
+  color: rgba(0, 0, 0, 0.4);
+}
+.chip button:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+.chip.chip-firm {
+  background-color: rgba(39, 145, 217, 0.1);
+  color: #011148;
+}
+.chip.chip-dashed {
+  background-color: white;
+  border: 1px dashed #757575;
+}
+.chip.chip-success {
+  background: #2fbd90;
+  color: white;
+}
+.chip.chip-danger {
+  background: #ef4344;
+  color: white;
+}
+.chip.chip-warning {
+  background: #ffce07;
+  color: white;
+}
+.chip.chip-median {
+  background: #2791d9;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
