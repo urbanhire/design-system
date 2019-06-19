@@ -10,6 +10,7 @@ import list from "./list.html";
 import breadcrumbs from "./breadcrumbs.html";
 import pagination from "./pagination.html";
 import chips from "./chips.html";
+import slider from "./slider.html";
 
 storiesOf("Components", module)
   .add("Alert", () => alert)
@@ -21,4 +22,5 @@ storiesOf("Components", module)
   .add("List", () => list)
   .add("Breadcrumbs", () => breadcrumbs)
   .add("Pagination", () => pagination)
-  .add("Chips", () => chips);
+  .add("Chips", () => chips)
+  .add("Slider", () => slider);

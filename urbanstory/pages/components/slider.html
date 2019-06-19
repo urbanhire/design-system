@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <section class="page-hero">
+        <h1>Slider</h1>
+    </section>
+    <section>
+        <div id="slider"></div>
+        <pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.css&quot; /&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+$(document).ready(function () {
+    let slider = document.getElementById('slider');
+
+    noUiSlider.create(slider, {
+    animate: true,
+    animationDuration: 200,
+    tooltips: [wNumb({
+        decimals: 0,
+        thousand: '.',
+        prefix: 'Rp',
+        suffix: ',-'
+    }), wNumb({
+        decimals: 0,
+        thousand: '.',
+        prefix: 'Rp',
+        suffix: ',-'
+    })],
+        start: [9000000, 80000000],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 100000000
+        }
+    });
+});
+&lt;/script&gt;
+
+&lt;div id=&quot;slider&quot;&gt;&lt;/div&gt;
+</code></pre>
+    </section>
+</div>
