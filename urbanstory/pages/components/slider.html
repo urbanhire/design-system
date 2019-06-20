@@ -13,8 +13,8 @@
         <h3>Dual Slider</h3>
         <br>
         <div class="range-slider dual">
-            <input type="range" min="1" max="100000000" step="100000" value="0">
-            <input type="range" min="1" max="100000000" step="100000" value="99999999">
+            <input type="range" min="0" max="100" step="1" value="5" oninput="lowerSlide()" id="lower">
+            <input type="range" min="0" max="100" step="1" value="45" oninput="upperSlide()" id="upper">
         </div>
         <pre><code>&lt;div class=&quot;range-slider&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;100000000&quot; step=&quot;100000&quot; value=&quot;0&quot; id=&quot;slider&quot;&gt;

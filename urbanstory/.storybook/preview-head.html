@@ -28,6 +28,37 @@
         })();
     });
 
+    function upperSlide() {
+        let lowerSlider = document.getElementById('lower'),
+            upperSlider = document.getElementById('upper');
+
+        lowerVal = parseInt(lowerSlider.value);
+        upperVal = parseInt(upperSlider.value);
+
+        if (upperVal < lowerVal + 3) {
+            lowerSlider.value = upperVal - 3;
+            if (lowerVal == lowerSlider.min) {
+                upperSlider.value = 3;
+            }
+        }
+    };
+
+    function lowerSlide() {
+        let lowerSlider = document.getElementById('lower'),
+            upperSlider = document.getElementById('upper');
+
+        lowerVal = parseInt(lowerSlider.value);
+        upperVal = parseInt(upperSlider.value);
+
+        if (lowerVal > upperVal - 3) {
+            upperSlider.value = lowerVal + 3;
+
+            if (upperVal == upperSlider.max) {
+                lowerSlider.value = parseInt(upperSlider.max) - 3;
+            }
+        }
+    };
+
     function onRangeChange() {
         let slider = document.getElementById("slider");
         let min = slider.getAttribute('min');
