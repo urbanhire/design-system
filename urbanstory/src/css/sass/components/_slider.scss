@@ -6,6 +6,16 @@
     -webkit-appearance: none;
     width: 100%;
     height: 10px;
+    background: -webkit-linear-gradient(left, $c-firm-1 0, $c-grey-2 0);
+    background: -moz-linear-gradient(left, $c-firm-1 0, $c-grey-2 0);
+    background: -o-linear-gradient(left, $c-firm-1 0, $c-grey-2 0);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, $c-firm-1),
+      color-stop(0, $c-grey-2)
+    );
     background: linear-gradient(90deg, $c-firm-1 0, $c-grey-2 0);
     outline: none;
     margin: 0;
