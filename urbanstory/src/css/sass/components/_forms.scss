@@ -14,7 +14,7 @@ select {
   // background:;
   @include radius;
   &:focus {
-    @include box-shadow(0 0 0 3px rgba(black, 0.25));
+    @include box-shadow(0 0 0 3px rgba(black, 0.15));
   }
   &[disabled] {
     border: solid 1px $c-grey-2;
@@ -70,7 +70,7 @@ select {
     input[type="search"] {
       border: solid 1px $c-red-1;
       &:focus {
-        @include box-shadow(0 0 0 3px rgba($c-red-1, 0.25));
+        @include box-shadow(0 0 0 3px rgba($c-red-1, 0.15));
       }
     }
   }
@@ -86,7 +86,7 @@ select {
     input[type="search"] {
       border: solid 1px $c-yellow-1;
       &:focus {
-        @include box-shadow(0 0 0 3px rgba($c-yellow-1, 0.25));
+        @include box-shadow(0 0 0 3px rgba($c-yellow-1, 0.15));
       }
     }
   }
@@ -102,7 +102,7 @@ select {
     input[type="search"] {
       border: solid 1px $c-green-1;
       &:focus {
-        @include box-shadow(0 0 0 3px rgba($c-green-1, 0.25));
+        @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
       }
     }
   }
@@ -118,7 +118,7 @@ select {
     input[type="search"] {
       border: solid 1px $c-median-1;
       &:focus {
-        @include box-shadow(0 0 0 3px rgba($c-median-1, 0.25));
+        @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
       }
     }
   }

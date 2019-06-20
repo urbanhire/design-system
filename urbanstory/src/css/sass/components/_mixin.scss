@@ -90,3 +90,8 @@
   -moz-border-radius-bottomright: $r;
   border-bottom-right-radius: $r;
 }
+@mixin transform($s...){
+  -webkit-transform: $s;
+  -moz-transform: $s;
+  transform: $s;
+}

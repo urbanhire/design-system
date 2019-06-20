@@ -14,7 +14,7 @@
     cursor: pointer;
   }
   &:focus {
-    @include box-shadow(0 0 0 3px rgba(black, 0.25));
+    @include box-shadow(0 0 0 3px rgba(black, 0.15));
   }
   &.btn-firm {
     background-color: $c-firm-1;
@@ -25,7 +25,7 @@
     }
     &:focus {
       background-color: $c-firm-3;
-      @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.25));
+      @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
     }
   }
   &.btn-firm-o {
@@ -37,7 +37,7 @@
     }
     &:focus {
       background-color: rgba($c-firm-1, 0.15);
-      @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.25));
+      @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
     }
   }
   &.btn-median {
@@ -49,7 +49,7 @@
     }
     &:focus {
       background-color: $c-median-3;
-      @include box-shadow(0 0 0 3px rgba($c-median-1, 0.25));
+      @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
     }
   }
   &.btn-prime {
@@ -61,7 +61,7 @@
     }
     &:focus {
       background-color: $c-prime-3;
-      @include box-shadow(0 0 0 3px rgba($c-prime-1, 0.25));
+      @include box-shadow(0 0 0 3px rgba($c-prime-1, 0.15));
     }
   }
   &.btn-success {
@@ -75,7 +75,7 @@
     &:focus {
       background-color: $c-green-3;
       //background-color:$c-green-3;
-      @include box-shadow(0 0 0 3px rgba($c-green-1, 0.25));
+      @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
     }
   }
   &.btn-danger {
@@ -87,7 +87,7 @@
     }
     &:focus {
       background-color: $c-red-3;
-      @include box-shadow(0 0 0 3px rgba($c-red-1, 0.25));
+      @include box-shadow(0 0 0 3px rgba($c-red-1, 0.15));
     }
   }
   &.btn-flat {
