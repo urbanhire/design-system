@@ -469,7 +469,32 @@ code {
 }
 
 .glyphs.css-mapping input {
-  max-width: 100px;
+  max-width: 128px;
+}
+
+.urbanstory-tagline {
+  font-size: 18px;
+  color: #757575;
+  position: relative;
+  padding-top: 16px;
+}
+.urbanstory-tagline:before {
+  content: "";
+  height: 4px;
+  width: 20%;
+  background: #d6d6d6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.urbanstory-author {
+  color: #c2c2c2;
+  font-size: 14px;
+}
+
+.urbanstory-hero {
+  min-height: 90vh;
 }
 
 /*# sourceMappingURL=index.css.map */

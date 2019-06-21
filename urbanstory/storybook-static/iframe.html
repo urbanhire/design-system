@@ -76,4 +76,89 @@
         //init function
         listCheck();
 
-    });</script></head><body><div class="sb-nopreview sb-wrapper"><div class="sb-nopreview_main"><h1 class="sb-nopreview_heading sb-heading">No Preview</h1><p>Sorry, but you either have no stories or none are selected somehow.</p><ul><li>Please check the Storybook config.</li><li>Try reloading the page.</li></ul><p>If the problem persists, check the browser console, or the terminal you've run Storybook from.</p></div></div><div class="sb-errordisplay sb-wrapper"><div id="error-message" class="sb-heading"></div><pre class="sb-errordisplay_code"><code id="error-stack"></code></pre></div><div id="root"></div><script src="runtime~main.3b7281fe6f0ffb764710.bundle.js"></script><script src="vendors~main.3b7281fe6f0ffb764710.bundle.js"></script><script src="main.3b7281fe6f0ffb764710.bundle.js"></script></body></html>
+    });</script><script>$(document).ready(function () {
+        (function () {
+            let slider = document.getElementById("slider");
+            let min = slider.getAttribute('min');
+            let max = slider.getAttribute('max');
+            let value = (slider.value - min) / (max - min) * 100;
+            slider.style.background = `linear-gradient(90deg, #011148 ${value}%, #d6d6d6 ${value}%)`;
+        })();
+
+        (function () {
+            let upper = document.getElementById("upper");
+            let lower = document.getElementById("lower");
+            let upperMin = upper.getAttribute('min');
+            let upperMax = upper.getAttribute('max');
+            let lowerMin = lower.getAttribute("min");
+            let lowerMax = lower.getAttribute("max");
+            let upperValue = (upper.value - upperMin) / (upperMax - upperMin) * 100;
+            let lowerValue = (lower.value - lowerMin) / (lowerMax - lowerMin) * 100;
+
+            upper.style.background = `linear-gradient(90deg, #d6d6d6 0,
+            #d6d6d6 ${lowerValue}%,
+            #011148 ${lowerValue}%,
+            #011148 ${upperValue}%,
+            #d6d6d6 ${upperValue}%,
+            #d6d6d6 100%`;
+        })();
+    });
+
+    function upperSlide() {
+        let lowerSlider = document.getElementById('lower'),
+            upperSlider = document.getElementById('upper');
+
+        lowerVal = parseInt(lowerSlider.value);
+        upperVal = parseInt(upperSlider.value);
+
+        if (upperVal < lowerVal + 3) {
+            lowerSlider.value = upperVal - 3;
+            if (lowerVal == lowerSlider.min) {
+                upperSlider.value = 3;
+            }
+        }
+        changeBarColor();
+    };
+
+    function lowerSlide() {
+        let lowerSlider = document.getElementById('lower'),
+            upperSlider = document.getElementById('upper');
+
+        lowerVal = parseInt(lowerSlider.value);
+        upperVal = parseInt(upperSlider.value);
+
+        if (lowerVal > upperVal - 3) {
+            upperSlider.value = lowerVal + 3;
+
+            if (upperVal == upperSlider.max) {
+                lowerSlider.value = parseInt(upperSlider.max) - 3;
+            }
+        }
+        changeBarColor();
+    };
+
+    function onRangeChange() {
+        let slider = document.getElementById("slider");
+        let min = slider.getAttribute('min');
+        let max = slider.getAttribute('max');
+        let value = (slider.value - min) / (max - min) * 100;
+        slider.style.background = `linear-gradient(90deg, #011148 ${value}%, #d6d6d6 ${value}%)`;
+    }
+
+    function changeBarColor() {
+        let upper = document.getElementById("upper");
+        let lower = document.getElementById("lower");
+        let upperMin = upper.getAttribute('min');
+        let upperMax = upper.getAttribute('max');
+        let lowerMin = lower.getAttribute("min");
+        let lowerMax = lower.getAttribute("max");
+        let upperValue = (upper.value - upperMin) / (upperMax - upperMin) * 100;
+        let lowerValue = (lower.value - lowerMin) / (lowerMax - lowerMin) * 100;
+
+        upper.style.background = `linear-gradient(90deg, #d6d6d6 0,
+        #d6d6d6 ${lowerValue}%,
+        #011148 ${lowerValue}%,
+        #011148 ${upperValue}%,
+        #d6d6d6 ${upperValue}%,
+        #d6d6d6 100%`;
+    }</script></head><body><div class="sb-nopreview sb-wrapper"><div class="sb-nopreview_main"><h1 class="sb-nopreview_heading sb-heading">No Preview</h1><p>Sorry, but you either have no stories or none are selected somehow.</p><ul><li>Please check the Storybook config.</li><li>Try reloading the page.</li></ul><p>If the problem persists, check the browser console, or the terminal you've run Storybook from.</p></div></div><div class="sb-errordisplay sb-wrapper"><div id="error-message" class="sb-heading"></div><pre class="sb-errordisplay_code"><code id="error-stack"></code></pre></div><div id="root"></div><script src="runtime~main.68986fceff37b15f9570.bundle.js"></script><script src="vendors~main.68986fceff37b15f9570.bundle.js"></script><script src="main.68986fceff37b15f9570.bundle.js"></script></body></html>
