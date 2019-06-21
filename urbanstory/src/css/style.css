@@ -2268,5 +2268,12 @@ select {
   position: absolute;
   top: 0;
 }
+.range-slider.dual #upper {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #d6d6d6), color-stop(1%, #d6d6d6), color-stop(1%, #011148), color-stop(1%, #011148), color-stop(1%, #d6d6d6), to(#d6d6d6));
+  background: -webkit-linear-gradient(left, #d6d6d6 0, #d6d6d6 1%, #011148 1%, #011148 1%, #d6d6d6 1%, #d6d6d6 100%);
+  background: -moz-linear-gradient(left, #d6d6d6 0, #d6d6d6 1%, #011148 1%, #011148 1%, #d6d6d6 1%, #d6d6d6 100%);
+  background: -o-linear-gradient(left, #d6d6d6 0, #d6d6d6 1%, #011148 1%, #011148 1%, #d6d6d6 1%, #d6d6d6 100%);
+  background: linear-gradient(90deg, #d6d6d6 0, #d6d6d6 1%, #011148 1%, #011148 1%, #d6d6d6 1%, #d6d6d6 100%);
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -26,6 +26,24 @@
             let value = (slider.value - min) / (max - min) * 100;
             slider.style.background = `linear-gradient(90deg, #011148 ${value}%, #d6d6d6 ${value}%)`;
         })();
+
+        (function () {
+            let upper = document.getElementById("upper");
+            let lower = document.getElementById("lower");
+            let upperMin = upper.getAttribute('min');
+            let upperMax = upper.getAttribute('max');
+            let lowerMin = lower.getAttribute("min");
+            let lowerMax = lower.getAttribute("max");
+            let upperValue = (upper.value - upperMin) / (upperMax - upperMin) * 100;
+            let lowerValue = (lower.value - lowerMin) / (lowerMax - lowerMin) * 100;
+
+            upper.style.background = `linear-gradient(90deg, #d6d6d6 0,
+            #d6d6d6 ${lowerValue}%,
+            #011148 ${lowerValue}%,
+            #011148 ${upperValue}%,
+            #d6d6d6 ${upperValue}%,
+            #d6d6d6 100%`;
+        })();
     });
 
     function upperSlide() {
@@ -41,6 +59,7 @@
                 upperSlider.value = 3;
             }
         }
+        changeBarColor();
     };
 
     function lowerSlide() {
@@ -57,6 +76,7 @@
                 lowerSlider.value = parseInt(upperSlider.max) - 3;
             }
         }
+        changeBarColor();
     };
 
     function onRangeChange() {
@@ -65,5 +85,23 @@
         let max = slider.getAttribute('max');
         let value = (slider.value - min) / (max - min) * 100;
         slider.style.background = `linear-gradient(90deg, #011148 ${value}%, #d6d6d6 ${value}%)`;
+    }
+
+    function changeBarColor() {
+        let upper = document.getElementById("upper");
+        let lower = document.getElementById("lower");
+        let upperMin = upper.getAttribute('min');
+        let upperMax = upper.getAttribute('max');
+        let lowerMin = lower.getAttribute("min");
+        let lowerMax = lower.getAttribute("max");
+        let upperValue = (upper.value - upperMin) / (upperMax - upperMin) * 100;
+        let lowerValue = (lower.value - lowerMin) / (lowerMax - lowerMin) * 100;
+
+        upper.style.background = `linear-gradient(90deg, #d6d6d6 0,
+        #d6d6d6 ${lowerValue}%,
+        #011148 ${lowerValue}%,
+        #011148 ${upperValue}%,
+        #d6d6d6 ${upperValue}%,
+        #d6d6d6 100%`;
     }
 </script>
