@@ -494,7 +494,10 @@ code {
 }
 
 .urbanstory-hero {
-  min-height: 90vh;
+  min-height: calc(100vh - 20px);
+}
+.urbanstory-hero img {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -489,5 +489,8 @@ code {
   font-size:14px;
 }
 .urbanstory-hero{
-  min-height: 90vh;
+  min-height: calc(100vh - 20px);
+  img{
+    max-width: 100%;
+  }
 }
