@@ -218,9 +218,9 @@ dl dd {
   cursor: pointer;
 }
 .btn:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 .btn.btn-firm {
   background-color: #011148;
@@ -232,9 +232,9 @@ dl dd {
 }
 .btn.btn-firm:focus {
   background-color: #000516;
-  -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
-  box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
+  box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
 }
 .btn.btn-firm-o {
   background-color: white;
@@ -246,9 +246,9 @@ dl dd {
 }
 .btn.btn-firm-o:focus {
   background-color: rgba(1, 17, 72, 0.15);
-  -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
-  box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
+  box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
 }
 .btn.btn-median {
   background-color: #2791d9;
@@ -260,9 +260,9 @@ dl dd {
 }
 .btn.btn-median:focus {
   background-color: #1f74ae;
-  -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
-  box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
+  box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
 }
 .btn.btn-prime {
   background-color: #33beef;
@@ -274,9 +274,9 @@ dl dd {
 }
 .btn.btn-prime:focus {
   background-color: #11a8de;
-  -webkit-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
-  box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.15);
+  box-shadow: 0 0 0 3px rgba(51, 190, 239, 0.15);
 }
 .btn.btn-success {
   background-color: #2fbd90;
@@ -288,9 +288,9 @@ dl dd {
 }
 .btn.btn-success:focus {
   background-color: #259471;
-  -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
-  box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
+  box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
 }
 .btn.btn-danger {
   background-color: #ef4344;
@@ -302,9 +302,9 @@ dl dd {
 }
 .btn.btn-danger:focus {
   background-color: #eb1415;
-  -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
-  box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.15);
+  box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.15);
 }
 .btn.btn-flat {
   background: none;
@@ -1302,9 +1302,9 @@ input[type=password]:focus,
 input[type=email]:focus,
 input[type=search]:focus,
 select:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 textarea[disabled],
 input[type=text][disabled],
@@ -1370,9 +1370,9 @@ select {
 .input-form.is-danger input[type=password]:focus,
 .input-form.is-danger input[type=email]:focus,
 .input-form.is-danger input[type=search]:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
-  box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.15);
+  box-shadow: 0 0 0 3px rgba(239, 67, 68, 0.15);
 }
 .input-form.is-warning label {
   color: #ffce07;
@@ -1391,9 +1391,9 @@ select {
 .input-form.is-warning input[type=password]:focus,
 .input-form.is-warning input[type=email]:focus,
 .input-form.is-warning input[type=search]:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.25);
-  box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 206, 7, 0.15);
 }
 .input-form.is-success label {
   color: #2fbd90;
@@ -1412,9 +1412,9 @@ select {
 .input-form.is-success input[type=password]:focus,
 .input-form.is-success input[type=email]:focus,
 .input-form.is-success input[type=search]:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
-  box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
+  box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
 }
 .input-form.is-info label {
   color: #2791d9;
@@ -1433,9 +1433,9 @@ select {
 .input-form.is-info input[type=password]:focus,
 .input-form.is-info input[type=email]:focus,
 .input-form.is-info input[type=search]:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
-  -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
-  box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.25);
+  -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
+  box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
 }
 
 .avatar {
@@ -1868,7 +1868,7 @@ select {
   height: 18px;
   width: 18px;
   background-color: white;
-  border: 1px solid #757575;
+  border: 2px solid rgba(0, 0, 0, 0.35);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -1881,12 +1881,15 @@ select {
   display: none;
 }
 .uh-input .container-checkbox .checkmark:after {
-  left: 6px;
-  top: 2px;
+  left: 5px;
+  top: 1px;
   width: 5px;
   height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .uh-input .container-radio {
   display: block;
@@ -1919,7 +1922,7 @@ select {
   height: 18px;
   width: 18px;
   background-color: white;
-  border: 1px solid #757575;
+  border: 2px solid rgba(0, 0, 0, 0.35);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1932,12 +1935,19 @@ select {
   display: none;
 }
 .uh-input .container-radio .checkmark:after {
-  left: 6px;
-  top: 2px;
+  left: 5px;
+  top: 1px;
   width: 5px;
   height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type=checkbox]:focus {
+  outline: #3b99fc auto 5px !important;
 }
 
 /* Labels */

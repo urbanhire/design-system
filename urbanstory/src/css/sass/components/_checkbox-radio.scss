@@ -40,7 +40,7 @@
         height: $gutter-l + 2;
         width: $gutter-l + 2;
         background-color: $c-white;
-        border: 1px solid $c-grey-5;
+        border: 2px solid rgba(black, .35);
         @include border-radius(2px);
         /* Create the checkmark/indicator (hidden when not checked) */
         &:after {
@@ -50,13 +50,13 @@
         }
         /* Style the checkmark/indicator */
         &:after {
-          left: 6px;
-          top: 2px;
+          left: 5px;
+          top: 1px;
           width: 5px;
           height: 10px;
           border: solid white;
           border-width: 0 2px 2px 0;
-          // @include transform (rotate(45deg));
+          @include transform (rotate(45deg));
         }
       }
     }
@@ -92,7 +92,7 @@
         height: $gutter-l + 2;
         width: $gutter-l + 2;
         background-color: $c-white;
-        border: 1px solid $c-grey-5;
+        border: 2px solid rgba(black, .35);
         @include border-radius(50%);
         /* Create the indicator (the dot/circle - hidden when not checked) */
         &:after {
@@ -102,15 +102,19 @@
         }
         /* Style the indicator (dot/circle) */
         &:after {
-          left: 6px;
-          top: 2px;
+          left: 5px;
+          top: 1px;
           width: 5px;
           height: 10px;
           border: solid white;
           border-width: 0 2px 2px 0;
-          // @include transform (rotate(45deg));
+          @include transform (rotate(45deg));
         }
       }
     }
   }
+}
+
+input[type="checkbox"]:focus {
+    outline: rgb(59, 153, 252) auto 5px!important;
 }
