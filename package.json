@@ -5,6 +5,12 @@
   "scripts": {
     "start": "cd urbanstory/ && npm start",
     "build": "cd urbanstory/ && npm run build",
+<<<<<<< HEAD
+=======
+    "comm1": "cd urbanstory/ && npm run deploy",
+    "comm2": "cd ../git add -A && git commit -m \"$0\"",
+    "comm3": "git push origin HEAD",
+>>>>>>> 93935586d78f421f287fe7bf93de7a60ed7fe27b
     "deploy": "cd urbanstory/ && npm run deploy && cd ../ && bash -c 'git add -A && git commit -m \"${0-update}\" && git push origin HEAD'"
   },
   "keywords": [],
