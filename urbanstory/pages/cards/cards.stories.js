@@ -1,9 +1,8 @@
 import { document, console } from 'global';
 import { storiesOf } from '@storybook/html';
 import searchbar from './searchbar.html';
-import cardbase from './cardbase.html';
+import card from './card.html';
 
-storiesOf('Cards', module)
-	.add('Card Base', () => cardbase)
+storiesOf('DEVELOPER|Cards', module)
+	.add('Card', () => card)
 	.add('Search Bars', () => searchbar)
-

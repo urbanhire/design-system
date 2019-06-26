@@ -5,7 +5,7 @@ import textarea from './textarea.html';
 import select from './select.html';
 import checkbox from './checkbox.html';
 
-storiesOf('Forms', module)
+storiesOf('DEVELOPER|Forms', module)
 	.add('Input', () => forms)
 	.add('Textarea', () => textarea)
 	.add('Select', () => select)

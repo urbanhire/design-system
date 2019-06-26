@@ -6,7 +6,7 @@ import color from './color.html';
 import typography from './typography.html';
 import icons from './icons.html';
 
-storiesOf('Style', module)
+storiesOf('GLOBAL|Style', module)
 	.add('Color', () => color)
 	.add('Logo', () => logo)
 	.add('Visual Language', () => visuallanguage)
