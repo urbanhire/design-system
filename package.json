@@ -8,7 +8,7 @@
     "comm1": "cd urbanstory/ && npm run deploy",
     "comm2": "cd ../git add -A && git commit -m \"$0\"",
     "comm3": "git push origin HEAD",
-    "deploy": "cd urbanstory/ && npm run deploy && cd ../ && git add -A && git commit -m \"${1-update}\" && git push origin HEAD"
+    "deploy": "cd urbanstory/ && npm run deploy && cd ../ && git add -A && git commit -m ${1-update} && git push origin HEAD"
   },
   "keywords": [],
   "author": "",
