@@ -12,7 +12,7 @@ import pagination from "./pagination.html";
 import chips from "./chips.html";
 import slider from "./slider.html";
 
-storiesOf("Components", module)
+storiesOf("DEVELOPER|Components", module)
   .add("Alert", () => alert)
   .add("Toast", () => toast)
   .add("Avatar", () => avatar)
