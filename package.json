@@ -1,0 +1,14 @@
+{
+  "name": "urbanhire.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "cd urbanstory/ && npm start",
+    "build": "cd urbanstory/ && npm run build",
+    "deploy": "cd urbanstory/ && npm run deploy && cd ../ && bash -c 'git add -A && git commit -m \"${0-update}\" && git push origin HEAD'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
