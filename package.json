@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cd urbanstory/ && npm start",
     "build": "cd urbanstory/ && npm run build",
-    "deploy": "cd urbanstory/ && npm run deploy && cd ../ && git add -A && git commit -m '$0' && git push origin HEAD"
+    "deploy": "cd urbanstory/ && npm run deploy && cd ../ && git add -A && git commit -m \"$0\" && git push origin HEAD"
   },
   "keywords": [],
   "author": "",
