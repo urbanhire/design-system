@@ -4,13 +4,81 @@
     width: 100%;
     margin: 0;
     padding: 0;
-  }</style><script>/* globals window */
-  /* eslint-disable no-underscore-dangle */
+  }</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>/* globals window */
+	/* eslint-disable no-underscore-dangle */
+
   try {
     if (window.parent !== window) {
       window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
       window.__VUE_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__VUE_DEVTOOLS_GLOBAL_HOOK__;
-    }
+	}
+	$('document').ready(function(){
+		loginPage()
+	});
+
+	function loginPage () {
+		var accessToken = getCookie("login");
+		console.log(accessToken)
+		if(accessToken === "true"){
+			return true;
+		}else{
+			let email = window.prompt('Input email?', '')
+			let password = window.prompt('Input password?', '')
+			if(email === '' || password === '' || email === null || password === null){
+				location.reload();
+			}else{
+				getAuth(email, password)
+			}
+		}
+	
+	}
+	
+	function setCookie(cname, cvalue, exhour) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exhour*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	function getCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+			}
+			}
+			return "";
+	}
+	function getAuth($email, $username){
+		
+		let url = "http://api.urbanhire.co:6789/v1/users/login"
+		$.ajax({
+			type: 'POST',
+			url: url,
+			headers: {
+					"Content-Type":"application/x-www-form-urlencoded",
+					"Authorization":"X-URBANHIRE-WEBAPP"
+			},
+			data: {
+				email : $email,
+				password: $username
+			},
+		}).done(function(data) {
+			console.log('data done', data) 
+			setCookie("login", true, 1)
+
+		}).fail(function(error){
+			console.log('data failed', error)
+			return loginPage()
+		});
+	}    
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('unable to connect to parent frame for connecting dev tools');
