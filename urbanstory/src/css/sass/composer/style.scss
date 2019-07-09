@@ -1,22 +1,25 @@
 // library
-@import "../components/variables";
-@import "../components/mixin";
+@import "../components-global/variables";
+@import "../components-global/mixin";
 
 // main css
-@import "../components/global";
-@import "../components/button";
-@import "../components/flexboxgrid";
-@import "../components/table";
-@import "../components/forms";
-@import "../components/avatar";
-@import "../components/components";
-@import "../components/alert";
-@import "../components/toast";
-@import "../components/tab";
-@import "../components/_checkbox-radio";
-@import "../components/labels";
-@import "../components/list";
-@import "../components/breadcrumbs";
-@import "../components/pagination";
-@import "../components/chips";
-@import "../components/slider";
+@import "../components-global/global";
+@import "../components-global/button";
+@import "../components-global/flexboxgrid";
+@import "../components-global/table";
+@import "../components-global/forms";
+@import "../components-global/avatar";
+@import "../components-global/components";
+@import "../components-global/alert";
+@import "../components-global/toast";
+@import "../components-global/tab";
+@import "../components-global/_checkbox-radio";
+@import "../components-global/labels";
+@import "../components-global/list";
+@import "../components-global/breadcrumbs";
+@import "../components-global/pagination";
+@import "../components-global/chips";
+@import "../components-global/slider";
+
+// cards
+@import "../components-global/img-showcase";

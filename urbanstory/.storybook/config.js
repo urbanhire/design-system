@@ -19,7 +19,7 @@ import '../src/css/style.css';
 
 
 //css only for storybook
-import '../src/css/index.css';
+import '../src/css/urbanstory.css';
 
 
 

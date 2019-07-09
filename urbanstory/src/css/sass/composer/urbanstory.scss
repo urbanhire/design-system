@@ -1,7 +1,7 @@
 /* Styles for guideline layout only */
 
-@import "../components/variables";
-@import "../components/mixin";
+@import "../components-global/variables";
+@import "../components-global/mixin";
 
 .page-hero {
   padding: 2em 0;
@@ -493,4 +493,35 @@ code {
   img{
     max-width: 100%;
   }
+}
+
+.urbanstory-list{
+  list-style-type: none;
+  li{
+    padding:$gutter-m 0;
+    i{
+      vertical-align: middle;
+    }
+  }
+  ul{
+    list-style-type: none;
+  }
+}
+.urbanstory-font-xxl{
+  font-size: 24px;
+}
+.urbanstory-font-xl{
+  font-size: 20px;
+}
+.urbanstory-font-l{
+  font-size: 16px;
+}
+.urbanstory-font-m{
+  font-size: 14px;
+}
+.urbanstory-font-s{
+  font-size: 12px;
+}
+.urbanstory-font-xs{
+  font-size: 11px;
 }

@@ -2286,4 +2286,14 @@ input[type=checkbox]:focus {
   background: linear-gradient(90deg, #d6d6d6 0, #d6d6d6 1%, #011148 1%, #011148 1%, #d6d6d6 1%, #d6d6d6 100%);
 }
 
+.uh-img-showcase img {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
 /*# sourceMappingURL=style.css.map */

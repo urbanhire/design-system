@@ -500,4 +500,41 @@ code {
   max-width: 100%;
 }
 
-/*# sourceMappingURL=index.css.map */
+.urbanstory-list {
+  list-style-type: none;
+}
+.urbanstory-list li {
+  padding: 8px 0;
+}
+.urbanstory-list li i {
+  vertical-align: middle;
+}
+.urbanstory-list ul {
+  list-style-type: none;
+}
+
+.urbanstory-font-xxl {
+  font-size: 24px;
+}
+
+.urbanstory-font-xl {
+  font-size: 20px;
+}
+
+.urbanstory-font-l {
+  font-size: 16px;
+}
+
+.urbanstory-font-m {
+  font-size: 14px;
+}
+
+.urbanstory-font-s {
+  font-size: 12px;
+}
+
+.urbanstory-font-xs {
+  font-size: 11px;
+}
+
+/*# sourceMappingURL=urbanstory.css.map */
