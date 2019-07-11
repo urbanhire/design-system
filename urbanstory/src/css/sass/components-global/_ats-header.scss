@@ -1,0 +1,150 @@
+.card-header{
+    background: $c-white;
+    height: 50px;
+    padding: $gutter-m;
+    @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
+
+    img{ max-height: 70px; width: 20%; }
+}
+
+.flex{@include flexbox}
+
+.ats-nav{ display: inline-flex; justify-content: center; }
+
+.left-side , .right-side{
+    //justify-content: flex-start;
+    display: flex;
+    margin: 0 5px;
+    outline: 1px solid lightcoral;   
+}
+
+.right-side{
+    right: 0;
+}
+
+.ats-header-menu{
+    list-style-type: none;
+    margin: 6px 5px;
+    padding: 0 0 0 10px;
+} 
+
+.ats-header-sub-menu{
+    display: inline-block;
+    padding: 0 10px;
+    justify-content: center;
+    
+    a{ font-size: 0.875rem; color: $c-grey-7; }
+
+    .icon-coin{ color: $c-yellow-1 }
+
+    .icon-calendar-2{ padding: 0 10px}
+
+    span { margin: 0px 5px }
+}
+
+.ats-header-content{
+    display: inline-flex;
+}
+
+.company-name{
+    display: inline-block;
+    white-space: nowrap; 
+    width: 150px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+#ats-menu-button{
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+   
+}
+
+#ats-menu-button span {
+    background: black;
+    display: block;
+    width: 20px;
+    height: 2px;
+    position: relative;
+    left: 10px;
+    border-radius: 1px;
+    transition: transform .2s ease-in-out;
+}
+
+#ats-menu-button span::after, #ats-menu-button span::before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: black;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+    transition: transform .2s ease-in-out;
+}
+
+#ats-menu-button span::before{
+    top: 7px;
+}
+
+#ats-menu-button span::after{
+    top: -7px;
+}
+
+// .ats-navbar-dashboard{
+//     height: 50px;
+//     padding: 0 25px;
+//     @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
+// }
+
+// .ats-header-logo{ float: left }
+
+// .ats-uh-logo{ 
+//     padding: 10px 10px 0 0;
+//     height: auto;
+//     img{ width: 158px }
+// }
+
+// .ats-nav-toggle{
+//     float: none;
+//     text-align: center;
+// }
+
+// .ats-navbar-menu{
+//     float: left;
+//     margin: 0;
+//     list-style-type: none;
+// }
+
+// .ats-navbar-menu > li{ float: left }
+
+// .nav>li {
+//     position: relative;
+//     display: block;
+// }
+
+
+// #ats-menu-button span::before {
+//     top: 7px;
+//     display: block;
+//     content: '';
+//     width: 20px;
+//     height: 2px;
+//     background: black;
+//     border-radius: 1px;
+//     position: absolute;
+//     left: 0;
+//     transition: transform .2s ease-in-out;
+// }    
+
+
+
+
+
+
+
+
+
+
+

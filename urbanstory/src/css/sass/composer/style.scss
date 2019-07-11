@@ -1,6 +1,6 @@
 // library
-@import "../components-global/variables";
-@import "../components-global/mixin";
+@import "../global/variables";
+@import "../global/mixin";
 
 // main css
 @import "../components-global/global";
@@ -20,6 +20,7 @@
 @import "../components-global/pagination";
 @import "../components-global/chips";
 @import "../components-global/slider";
+@import "../components-global/_ats-header";
 
 // cards
 @import "../components-global/img-showcase";
