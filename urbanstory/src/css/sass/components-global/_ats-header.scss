@@ -1,144 +1,177 @@
 .card-header{
-    background: $c-white;
-    height: 50px;
-    padding: $gutter-m;
+    background        : $c-white;
+    height            : 50px;
+    padding           : 0 25px;
+    -ms-flex-align    : center;
+    -webkit-box-align : center;
+    align-items       : center;
     @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
-
-    img{ max-height: 70px; width: 20%; }
 }
 
-.flex{@include flexbox}
 
-.ats-nav{ display: inline-flex; justify-content: center; }
 
-.left-side , .right-side{
-    //justify-content: flex-start;
-    display: flex;
-    margin: 0 5px;
-    outline: 1px solid lightcoral;   
+.flex{ @include flexbox }
+
+.ats-nav-content{
+    display           : inline-flex;
+    width             : -webkit-fill-available;
+    justify-content   : space-between;
+    -ms-flex-align    : center;
+    -webkit-box-align : center;
+    align-items       : center;
+    height            : 50px;
+
+    ul{
+        display        : flex;
+        justify-content: flex-start;
+        padding        : 0;
+        margin         : 0;
+        -ms-flex-align    : center;
+        -webkit-box-align : center;
+        align-items       : center;
+
+        li{
+            display    : inline-block;
+            padding    : 0 15px;
+            font-size  : 0.875rem;
+            
+            a { 
+                color: $c-grey-7; 
+                cursor: pointer;
+                position: relative;
+
+                &:before {
+                    @include radius;
+                    transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.35s;
+                    content: "";
+                    background: $c-firm-1;
+                    width: 0%;
+                    height: 3px;
+                    display: inline-block;
+                    margin-top: 32px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                    color: $c-firm-1;
+                    &:before {
+                        width: 100%;
+                    }
+                }  
+            }
+            a.active {
+                color: $c-firm-1;
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            .icon-coin{ color: $c-yellow-1 }
+
+            span { 
+                margin: 0px 5px;
+                display: inline-block;
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+
+            .company-name{ width: 150px }
+
+            .coin-amt{ width:35px }
+        }
+    }
 }
 
-.right-side{
-    right: 0;
-}
-
-.ats-header-menu{
-    list-style-type: none;
-    margin: 6px 5px;
-    padding: 0 0 0 10px;
-} 
-
-.ats-header-sub-menu{
-    display: inline-block;
-    padding: 0 10px;
-    justify-content: center;
-    
-    a{ font-size: 0.875rem; color: $c-grey-7; }
-
-    .icon-coin{ color: $c-yellow-1 }
-
-    .icon-calendar-2{ padding: 0 10px}
-
-    span { margin: 0px 5px }
-}
-
-.ats-header-content{
-    display: inline-flex;
-}
-
-.company-name{
-    display: inline-block;
-    white-space: nowrap; 
-    width: 150px; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-
-#ats-menu-button{
+.ats-menu-button{
     position: relative;
     cursor: pointer;
-    padding: 10px;
-   
+    padding: 10px; 
+    margin-bottom: 20px;
 }
 
-#ats-menu-button span {
-    background: black;
-    display: block;
-    width: 20px;
-    height: 2px;
-    position: relative;
-    left: 10px;
-    border-radius: 1px;
-    transition: transform .2s ease-in-out;
-}
-
-#ats-menu-button span::after, #ats-menu-button span::before {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 2px;
-    background: black;
-    border-radius: 1px;
+.ats-menu-button span {
     position: absolute;
+    right: 0;
     left: 0;
-    transition: transform .2s ease-in-out;
+    display: block;
+    width: 60%;
+    height: 2px;
+    margin: auto;
+    background: $c-grey-6;
+    @include radius;
 }
 
-#ats-menu-button span::before{
-    top: 7px;
+.ats-menu-button span:nth-child(1) { top: 4px }
+
+.ats-menu-button span:nth-child(2) { top: 10px }
+
+.ats-menu-button span:nth-child(3) { top: 16px }
+
+@media (max-width: 1167px){
+    .ats-menu-button{ margin-bottom: 25px }
+
+    .card-header { 	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1) }
+
+    .left-side { display: none }
+
+    .ats-nav-content{ justify-content: flex-end }
+    
+    .right-side ul li:nth-child(1) , .right-side ul li:nth-child(4) { display: none }
 }
 
-#ats-menu-button span::after{
-    top: -7px;
+li.has-children {
+    color: $c-firm-1;
+    &:after {
+        content: '\e003';
+        margin-right: 10px;
+        margin-left: -10px;
+        padding: 0;
+        font-size: 0.725em;
+        column-rule: $c-firm-1;
+    }
+    ul {
+        width: 200px;
+        position: absolute;
+        z-index: 4;
+        display: none;
+        background: #ffffff;
+        top: 81px;
+        border-top: solid 1px #ddd;
+        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        @include radius;
+        li {
+            display: block;
+            float: none;
+            width: 100%;
+            a {
+                display: block;
+                line-height: 1em;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                &:hover {
+                    background: #f5f5f5;
+                }
+                &:active {
+                    background: #f5f5f5;
+                }
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
 }
-
-// .ats-navbar-dashboard{
-//     height: 50px;
-//     padding: 0 25px;
-//     @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
-// }
-
-// .ats-header-logo{ float: left }
-
-// .ats-uh-logo{ 
-//     padding: 10px 10px 0 0;
-//     height: auto;
-//     img{ width: 158px }
-// }
-
-// .ats-nav-toggle{
-//     float: none;
-//     text-align: center;
-// }
-
-// .ats-navbar-menu{
-//     float: left;
-//     margin: 0;
-//     list-style-type: none;
-// }
-
-// .ats-navbar-menu > li{ float: left }
-
-// .nav>li {
-//     position: relative;
-//     display: block;
-// }
-
-
-// #ats-menu-button span::before {
-//     top: 7px;
-//     display: block;
-//     content: '';
-//     width: 20px;
-//     height: 2px;
-//     background: black;
-//     border-radius: 1px;
-//     position: absolute;
-//     left: 0;
-//     transition: transform .2s ease-in-out;
-// }    
-
-
+li.has-children.is-active {
+    ul {
+        display: block;
+    }
+}
 
 
 

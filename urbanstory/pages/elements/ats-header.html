@@ -1,58 +1,53 @@
 <div class="container-fluid">
 	<section class="page-hero">
-        <h1>ATS Header</h1>
-    </section>
-    <section>
-        <header class="card-header flex ats-header">
-            <nav class="ats-nav"> 
-                <div class="ats-header-content">              
-                    <div class="left-side">
-                        <img src="https://winter-cdn.urbanhire.com/img/logo.svg" alt="Urbanhire">
-                        <ul class="ats-header-menu">
-                            <li class="ats-header-sub-menu">
-                                <a href="">DASHBOARD</a>
-                            </li>
-                            <li class="ats-header-sub-menu">
-                                <a href="">APLICANTS</a>
-                            </li>
-                            <li class="ats-header-sub-menu">
-                                <a href="">REPORTS</a>
-                            </li>
-                            <li class="ats-header-sub-menu">
-                                <a href="">REFERAL</a>
-                            </li>
-                            <li class="ats-header-sub-menu">
-                                <a href="">RESUME SEARCH</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="right-side">
-                        <ul class="ats-header-menu">
-                            <li class="ats-header-sub-menu">
-                                <i class="icon-coin"></i><span>999</span><i class="icon-angle-down"></i>
-                            </li>
-                            <li class="ats-header-sub-menu">
-                                <i class="icon-calendar-2"></i>
-                            </li>
-                            <li class="ats-header-sub-menu">
-                                <i class="icon-notification"></i>
-                            </li>
-                            <li class="ats-header-sub-menu">
-                                <i class="icon-company"></i><span class="company-name">PT URBAN TEKNOLOGI di;NJNDNdnd[nx[dcdalnc;NC;Nc;nc'nwenec</span>
-                            </li>
-                            <li id="ats-menu-button" class="ats-header-sub-menu">
-                                <span></span>
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
-            </nav>
-        </header>
-    </section>
+    <h1>ATS Header</h1>
+  </section>
+  <section>
+    <header class="card-header flex"> 
+      <a href=""><img src="https://winter-cdn.urbanhire.com/img/logo.svg" alt="Urbanhire"></a> 
+      <nav class="ats-nav-content">
+        <div class="left-side">
+          <ul>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Applicants</a></li>
+            <li><a href="">Reports</a></li>
+            <li><a href="">Referal</a></li>
+            <li><a href="">Resume Search</a></li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <ul class="ats-header-menu">
+            <li class="has-children">
+              <a href="#">  
+                <i class="icon-coin"></i><span class="coin-amt">999109</span><i class="icon-angle-down"></i>
+              </a>
+              <ul>
+                <li><a href="#">Topup Coin</a></li>
+                <li><a href="#">Coin History</a></li>
+              </ul>
+            </li>
+            <li><a href=""><i class="icon-calendar-2"></i></a></li>
+            <li><a href=""><i class="icon-notification"></i></a></li>
+            <li>
+              <i class="icon-company"></i>
+              <span class="company-name">PT Urban Teknologi didnkeNJNDNdnd[nx[dcdalnc;NC;Nc;nc'nwenec</span>
+            </li>
+            <li class="ats-menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </section>
 
 
 
-    <!-- a(href=CONFIG.BASE_URL + '/', title=CONFIG.APP.name + ' Home page')
+  <!-- header.site-header
+  .container-fluid
+    a(href=CONFIG.BASE_URL + '/', title=CONFIG.APP.name + ' Home page')
       img.logo.m-r(src=CONFIG.WINTER_CDN + '/img/logo.svg', title=CONFIG.APP.name, alt=CONFIG.APP.name)
     a.menu-toggle.m-show
       span
@@ -75,7 +70,7 @@
           li
             a(href=CONFIG.BASE_URL + '/applicant-tracking-system-pricing', title=CONFIG.APP.name + ' ATS pricing', class=activeClassChecker('/applicant-tracking-system-pricing')) Pricing
           li
-            a(href=CONFIG.BASE_URL + '/customers', title=CONFIG.APP.name + ' ATS customers', class=activeClassChecker('/customers')) Customers
+            a(href=CONFIG.BASE_URL + '/customers', title=CONFIG.APP.name + ' ATS customers', class=activeClassChecker('/customer')) Customers
           li.has-children#jobs
             a(href='/jobs', class=activeClassChecker('/jobs')) Job Search
             ul
