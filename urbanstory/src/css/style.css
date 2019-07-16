@@ -2297,6 +2297,11 @@ input[type=checkbox]:focus {
   -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
+.card-header img {
+  max-height: 70px;
+  width: 60%;
+  margin-top: 5px;
+}
 
 .flex {
   display: -webkit-box;
@@ -2319,6 +2324,7 @@ input[type=checkbox]:focus {
   -webkit-box-align: center;
   align-items: center;
   height: 50px;
+  margin-left: -100px;
 }
 .ats-nav-content ul {
   display: flex;
@@ -2353,6 +2359,7 @@ input[type=checkbox]:focus {
   position: absolute;
   left: 0;
   right: 0;
+  margin: 32px auto 0px;
 }
 .ats-nav-content ul li a:hover {
   cursor: pointer;
@@ -2406,7 +2413,7 @@ input[type=checkbox]:focus {
 }
 
 .ats-menu-button span:nth-child(1) {
-  top: 4px;
+  top: 5px;
 }
 
 .ats-menu-button span:nth-child(2) {
@@ -2417,13 +2424,13 @@ input[type=checkbox]:focus {
   top: 16px;
 }
 
-@media (max-width: 1167px) {
+@media (max-width: 1230px) {
   .ats-menu-button {
     margin-bottom: 25px;
   }
 
   .card-header {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
   }
 
   .left-side {
@@ -2440,14 +2447,7 @@ input[type=checkbox]:focus {
 }
 li.has-children {
   color: #011148;
-}
-li.has-children:after {
-  content: "";
-  margin-right: 10px;
-  margin-left: -10px;
-  padding: 0;
-  font-size: 0.725em;
-  column-rule: #011148;
+  position: relative;
 }
 li.has-children ul {
   width: 200px;
@@ -2455,7 +2455,7 @@ li.has-children ul {
   z-index: 4;
   display: none;
   background: #ffffff;
-  top: 81px;
+  top: 35px;
   border-top: solid 1px #ddd;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -2470,17 +2470,17 @@ li.has-children ul li {
   float: none;
   width: 100%;
 }
+li.has-children ul li:hover {
+  background: #f5f5f5;
+}
+li.has-children ul li:active {
+  background: #f5f5f5;
+}
 li.has-children ul li a {
   display: block;
   line-height: 1em;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-li.has-children ul li a:hover {
-  background: #f5f5f5;
-}
-li.has-children ul li a:active {
-  background: #f5f5f5;
 }
 li.has-children ul li a:before {
   display: none;
@@ -2488,6 +2488,13 @@ li.has-children ul li a:before {
 
 li.has-children.is-active ul {
   display: block;
+}
+
+.ats-menu-button.menu-button-active span:nth-child(1) {
+  left: -5px;
+}
+.ats-menu-button.menu-button-active span:nth-child(3) {
+  left: 5px;
 }
 
 .uh-img-showcase img {
