@@ -2289,7 +2289,7 @@ input[type=checkbox]:focus {
 .card-header {
   background: white;
   height: 50px;
-  padding: 0 25px;
+  padding: 0 32px;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
@@ -2298,7 +2298,7 @@ input[type=checkbox]:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 .card-header img {
-  max-height: 70px;
+  max-height: 50px;
   width: 50%;
   margin-top: 5px;
 }
@@ -2337,29 +2337,34 @@ input[type=checkbox]:focus {
 }
 .ats-nav-content ul li {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0;
   font-size: 0.875rem;
 }
 .ats-nav-content ul li a {
-  color: #1A1A1A;
+  color: #757575;
   cursor: pointer;
   position: relative;
+  display: inline-flex;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 16px;
 }
 .ats-nav-content ul li a:before {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.35s;
+  transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.25s;
   content: "";
   background: #011148;
   width: 0%;
   height: 3px;
   display: inline-block;
-  margin-top: 32px;
   position: absolute;
   left: 0;
   right: 0;
-  margin: 32px auto 0px;
+  bottom: 0;
+  margin: 0 auto;
+  opacity: 0.5;
 }
 .ats-nav-content ul li a:hover {
   cursor: pointer;
@@ -2373,6 +2378,7 @@ input[type=checkbox]:focus {
 }
 .ats-nav-content ul li a.active:before {
   width: 100%;
+  opacity: 1;
 }
 .ats-nav-content ul li .icon-coin {
   color: #ffce07;
@@ -2389,6 +2395,74 @@ input[type=checkbox]:focus {
 }
 .ats-nav-content ul li .coin-amt {
   width: 35px;
+}
+.ats-nav-content ul li.has-icon {
+  padding: 0;
+}
+.ats-nav-content ul li.has-icon a {
+  display: inline-flex;
+  height: 50px;
+  padding: 0 8px;
+  position: relative;
+}
+.ats-nav-content ul li.has-icon a i {
+  display: block;
+  width: 40px;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.ats-nav-content ul li.has-icon a:after {
+  content: "";
+  background: rgba(1, 17, 72, 0.05);
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  visibility: hidden;
+}
+.ats-nav-content ul li.has-icon a:hover:after {
+  visibility: visible;
+}
+.ats-nav-content ul li.has-icon a.active:after {
+  visibility: visible;
+}
+
+.menu-drawer {
+  outline: solid 1px red;
+  height: 50px;
+  width: 50px;
+}
+.menu-drawer span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  outline: solid 1px red;
+  position: relative;
+}
+.menu-drawer span:before, .menu-drawer span:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background: red;
+  width: 40px;
+  height: 2px;
+  left: 0;
+  right: 0;
+}
+.menu-drawer span:before {
+  top: 0;
+}
+.menu-drawer span:after {
+  bottom: 0;
 }
 
 .ats-menu-button {
@@ -2407,21 +2481,10 @@ input[type=checkbox]:focus {
   height: 2px;
   margin: auto;
   background: #212121;
+  outline: solid 1px red;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-}
-
-.ats-menu-button span:nth-child(1) {
-  top: 4px;
-}
-
-.ats-menu-button span:nth-child(2) {
-  top: 10px;
-}
-
-.ats-menu-button span:nth-child(3) {
-  top: 16px;
 }
 
 @media (max-width: 1230px) {
@@ -2459,7 +2522,6 @@ li.has-children ul {
   z-index: 4;
   display: none;
   background: #ffffff;
-  top: 35px;
   border-top: solid 1px #ddd;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -2499,6 +2561,53 @@ li.has-children.is-active ul {
 }
 .ats-menu-button.menu-button-active span:nth-child(3) {
   left: 5px;
+}
+
+li .menu-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0;
+}
+li .menu-icon:before {
+  display: none;
+}
+li .menu-icon:after {
+  content: "";
+  background: rgba(1, 17, 72, 0.5);
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+li .menu-icon:hover {
+  cursor: pointer;
+  color: #011148;
+}
+li .menu-icon:hover:before {
+  transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.35s;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+}
+li .menu-icon.active {
+  color: #011148;
+}
+li .menu-icon.active:before {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 .uh-img-showcase img {

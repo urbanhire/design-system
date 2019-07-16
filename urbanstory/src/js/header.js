@@ -18,24 +18,26 @@ $(document).ready(function () {
     var activePage = function(){
     $(".ats-nav-content li a").click(function() {
         $(".ats-nav-content li a").not(this).removeClass("active");
+        $(".menu-icon").not(this).removeClass("menu-icon-active");
         $(this).toggleClass("active");
       });
     }
     activePage();
 });
 
-// /* active page icon */
-// $(document).ready(function () {
-//     var activeIcon = function(){
-//     $(".menu-icon").hover(function() {
-//         console.log('icon clicked')
-//         $(this).removeClass("active");
-//         $(".menu-icon").not(this).removeClass("menu-icon-active");
-//         $(this).toggleClass("menu-icon-active");
-//       });
-//     }
-//     activeIcon();
-// });
+/* active page icon */
+
+$(document).ready(function () {
+    var activeIcon = function(){
+    $(".has-icon").click(function() {
+        console.log('icon clicked')
+        $(".ats-nav-content li a ").removeClass("active");
+        $(".has-icon a").not(this).removeClass("active");
+        $(this).toggleClass("active");
+      });
+    }
+    activeIcon();
+});
 
 /*menu toggle*/
 $(document).ready(function () {
