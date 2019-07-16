@@ -2299,7 +2299,7 @@ input[type=checkbox]:focus {
 }
 .card-header img {
   max-height: 70px;
-  width: 60%;
+  width: 50%;
   margin-top: 5px;
 }
 
@@ -2324,7 +2324,7 @@ input[type=checkbox]:focus {
   -webkit-box-align: center;
   align-items: center;
   height: 50px;
-  margin-left: -100px;
+  margin-left: -120px;
 }
 .ats-nav-content ul {
   display: flex;
@@ -2413,7 +2413,7 @@ input[type=checkbox]:focus {
 }
 
 .ats-menu-button span:nth-child(1) {
-  top: 5px;
+  top: 4px;
 }
 
 .ats-menu-button span:nth-child(2) {
@@ -2425,6 +2425,10 @@ input[type=checkbox]:focus {
 }
 
 @media (max-width: 1230px) {
+  .card-header {
+    padding: 0 10px;
+  }
+
   .ats-menu-button {
     margin-bottom: 25px;
   }

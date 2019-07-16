@@ -1,5 +1,4 @@
 /* Navbar drop down menu */
-
 $(document).ready(function () {
     var desktopNav = function() {
         $('.has-children').hover(function(e) {
@@ -13,22 +12,39 @@ $(document).ready(function () {
     desktopNav();
 });
 
+
+/* active page */
+$(document).ready(function () {
+    var activePage = function(){
+    $(".ats-nav-content li a").click(function() {
+        $(".ats-nav-content li a").not(this).removeClass("active");
+        $(this).toggleClass("active");
+      });
+    }
+    activePage();
+});
+
+// /* active page icon */
+// $(document).ready(function () {
+//     var activeIcon = function(){
+//     $(".menu-icon").hover(function() {
+//         console.log('icon clicked')
+//         $(this).removeClass("active");
+//         $(".menu-icon").not(this).removeClass("menu-icon-active");
+//         $(this).toggleClass("menu-icon-active");
+//       });
+//     }
+//     activeIcon();
+// });
+
 /*menu toggle*/
 $(document).ready(function () {
     var menuToggle = function() {
         var toggle = $('.ats-menu-button');
-        //var overlay = $('.menu-overlay');
         toggle.click(function(e) {
             $(this).toggleClass('menu-button-active');
-            $(this).next().toggleClass('ats-nav-content-active');
-            $('#jobs > ul').addClass('show-sub-menu');
-            overlay.toggleClass('active');
+            
         })
-        // overlay.click(function(e) {
-        //     toggle.toggleClass('menu-toggle-active');
-        //     toggle.next().toggleClass('uh-site-nav-active');
-        //     overlay.toggleClass('active');
-        // });
     }
     menuToggle();
 });
