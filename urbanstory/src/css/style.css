@@ -10,7 +10,7 @@ html, * {
 }
 
 body {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
   color: #212121;
 }
 
@@ -46,7 +46,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
 }
 
 input[type=submit],
@@ -726,7 +726,7 @@ select, .btn {
 
 @media only screen and (min-width: 48em) {
   .container {
-    width: 46rem;
+    width: 46em;
   }
 
   .col-sm,
@@ -940,7 +940,7 @@ select, .btn {
 }
 @media only screen and (min-width: 62em) {
   .container {
-    width: 61rem;
+    width: 61em;
   }
 
   .col-md,
@@ -1154,7 +1154,7 @@ select, .btn {
 }
 @media only screen and (min-width: 75em) {
   .container {
-    width: 71rem;
+    width: 71em;
   }
 
   .col-lg,
