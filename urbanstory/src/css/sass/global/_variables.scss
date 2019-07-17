@@ -35,6 +35,7 @@ $c-grey-3: #c2c2c2;
 $c-grey-4: #a3a3a3;
 $c-grey-5: #757575;
 $c-grey-6: #212121;
+$c-grey-7: #1A1A1A;
 
 $c-border: $c-grey-2;
 
@@ -50,6 +51,15 @@ $gutter-s: 4px;
 
 $font-stack: "Barlow", Arial, sans-serif;
 $font-icon: urbanfont;
+
+
+$screen-s: 48em; // 768
+$screen-md: 62em; // 992
+$screen-lg: 75em; // 1200
+
+
+//customs
+$ats-header-height: 50px;
 
 $icon-size: 14px;
 

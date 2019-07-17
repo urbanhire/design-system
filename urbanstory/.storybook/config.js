@@ -21,6 +21,9 @@ import '../src/css/style.css';
 //css only for storybook
 import '../src/css/urbanstory.css';
 
+import '../src/js/header.js';
+
+
 
 
 // automatically import all files ending in *.stories.js
