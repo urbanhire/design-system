@@ -1,7 +1,11 @@
 /* Styles for guideline layout only */
 
-@import "../global/variables";
-@import "../global/mixin";
+// global variables & mixins
+@import "../global/_variables";
+@import "../global/_mixin";
+
+//global class
+@import "../global/_global";
 
 .page-hero {
   padding: 2em 0;

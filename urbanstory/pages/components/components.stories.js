@@ -11,6 +11,7 @@ import breadcrumbs from "./breadcrumbs.html";
 import pagination from "./pagination.html";
 import chips from "./chips.html";
 import slider from "./slider.html";
+import preloader from "./preloader.html";
 
 storiesOf("DEVELOPER|Components", module)
   .add("Alert", () => alert)
@@ -23,4 +24,5 @@ storiesOf("DEVELOPER|Components", module)
   .add("Breadcrumbs", () => breadcrumbs)
   .add("Pagination", () => pagination)
   .add("Chips", () => chips)
-  .add("Slider", () => slider);
+  .add("Slider", () => slider)
+  .add("Preloader", () => preloader)

@@ -35,19 +35,54 @@ $c-grey-3: #c2c2c2;
 $c-grey-4: #a3a3a3;
 $c-grey-5: #757575;
 $c-grey-6: #212121;
-$c-grey-7: #1A1A1A;
+// Sub color
+$sc-danger:#FCD9DA;
+$sc-success:#D5F2E9;
+$sc-warning:#FFF5CD;
+$sc-median:#D4E9F7;
+$sc-grey:#F3F3F3;
 
 $c-border: $c-grey-2;
+
+
+
+
+$c-grey-7: #1A1A1A;
 
 $c-white: rgb(255, 255, 255);
 $c-bg-color: rgba(white, 0.8);
 $card-box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 5px 0 rgba(black, 0.05);
 
+// gutter sizes
 $gutter-xxl: 64px;
 $gutter-xl: 32px;
 $gutter-l: 16px;
 $gutter-m: 8px;
 $gutter-s: 4px;
+
+// font family
+$font-heading: "Barlow", Arial, sans-serif;
+$font-stack: "Source Sans Pro", Arial, sans-serif;
+$font-icon: urbanfont;
+
+//font sizes
+$font-xl: 24px;
+$font-l: 18px;
+$font-m: 16px;
+$font-s: 14px;
+$font-xs: 12px;
+$font-xxs: 11px;
+
+
+
+// customs
+$c-white: #fff;
+$c-bg-color: rgba(white, 0.8);
+$card-box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 5px 0 rgba(black, 0.05);
+
+$icon-size: 14px;
+
+$br-height: 18px;
 
 $font-stack: "Barlow", Arial, sans-serif;
 $font-icon: urbanfont;
@@ -60,10 +95,6 @@ $screen-lg: 75em; // 1200
 
 //customs
 $ats-header-height: 50px;
-
-$icon-size: 14px;
-
-$br-height: 18px; // breadcrumb height
 $c-height: 40px;
 $label-height: 20px;
 $chip-height: 32px;
