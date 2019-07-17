@@ -1,25 +1,35 @@
+@charset "UTF-8";
+
+// Example of build sass on terminal
+// sass -I global -I components-global --watch composer:../
+// Meaning include folder global, include folder components-global then compile into folder composer
+
 // library
-@import "../components-global/variables";
-@import "../components-global/mixin";
+@import "../global/_variables";
+@import "../global/_mixin";
+
+// global css
+@import "../global/_global";
 
 // main css
-@import "../components-global/global";
-@import "../components-global/button";
-@import "../components-global/flexboxgrid";
-@import "../components-global/table";
-@import "../components-global/forms";
-@import "../components-global/avatar";
-@import "../components-global/components";
-@import "../components-global/alert";
-@import "../components-global/toast";
-@import "../components-global/tab";
+@import "../components-global/_extends";
+@import "../components-global/_button";
+@import "../components-global/_flexboxgrid";
+@import "../components-global/_table";
+@import "../components-global/_forms";
+@import "../components-global/_avatar";
+@import "../components-global/_components";
+@import "../components-global/_alert";
+@import "../components-global/_toast";
+@import "../components-global/_tab";
 @import "../components-global/_checkbox-radio";
-@import "../components-global/labels";
-@import "../components-global/list";
-@import "../components-global/breadcrumbs";
-@import "../components-global/pagination";
-@import "../components-global/chips";
-@import "../components-global/slider";
+@import "../components-global/_labels";
+@import "../components-global/_list";
+@import "../components-global/_breadcrumbs";
+@import "../components-global/_pagination";
+@import "../components-global/_chips";
+@import "../components-global/_slider";
+@import "../components-global/_preloader";
 
 // cards
-@import "../components-global/img-showcase";
+@import "../components-global/_img-showcase";

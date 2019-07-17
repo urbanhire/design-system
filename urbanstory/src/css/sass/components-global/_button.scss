@@ -1,141 +1,221 @@
 .btn {
-  background-color: $c-grey-1;
-  font-size: 14px;
-  padding: 0 1rem;
-  line-height: 38px;
-  border: solid 1px $c-grey-1;
-  letter-spacing: 0.01em;
-  outline: none;
-  display: inline-block;
-  text-decoration: none;
-  @include radius;
-  @extend .transition;
-  &:hover {
-    cursor: pointer;
-  }
-  &:focus {
-    @include box-shadow(0 0 0 3px rgba(black, 0.15));
-  }
-  &.btn-firm {
-    background-color: $c-firm-1;
-    border: solid 1px $c-firm-1;
-    color: white;
+    background-color: $c-grey-1;
+    font-size: $font-s;
+    color: $c-grey-5;
+    padding: 0 1rem;
+    line-height: 38px;
+    border: solid 1px transparent;
+    letter-spacing: 0.035em;
+    outline: none;
+    display: inline-block;
+    display: inline-flex;
+    text-decoration: none;
+    @include radius;
+    @extend .transition;
     &:hover {
-      background-color: $c-firm-2;
+        cursor: pointer;
+        background-color: darken($c-grey-1, 2%);
     }
     &:focus {
-      background-color: $c-firm-3;
-      @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
+        background-color: darken($c-grey-1, 4%);
+        @include box-shadow(0 0 0 3px rgba($c-grey-6, 0.15));
     }
-  }
-  &.btn-firm-o {
-    background-color: white;
+}
+
+.btn-prime {
+    background-color: $c-prime-1;
+    color: white;
+    &:hover {
+        background-color: $c-prime-2;
+    }
+    &:focus {
+        background-color: $c-prime-3;
+        @include box-shadow(0 0 0 3px rgba($c-prime-1, 0.15));
+    }
+}
+
+.btn-success {
+    background-color: $c-green-1;
+    color: white;
+    &:hover {
+        background-color: $c-green-2;
+        //background-color:$c-green-2;
+    }
+    &:focus {
+        background-color: $c-green-3;
+        @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
+    }
+}
+
+.btn-danger {
+    background-color: $c-red-1;
+    color: white;
+    &:hover {
+        background-color: $c-red-2;
+    }
+    &:focus {
+        background-color: $c-red-3;
+        @include box-shadow(0 0 0 3px rgba($c-red-1, 0.15));
+    }
+}
+
+.btn-median {
+    background-color: $c-median-1;
+    color: white;
+    &:hover {
+        background-color: $c-median-2;
+    }
+    &:focus {
+        background-color: $c-median-3;
+        @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
+    }
+}
+
+.btn-firm {
+    background-color: $c-firm-1;
+    color: white;
+    &:hover {
+        background-color: $c-firm-2;
+    }
+    &:focus {
+        background-color: $c-firm-3;
+        @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
+    }
+}
+
+.btn-flat {
+    background: none;
+    color: $c-grey-5;
+    border: solid 1px transparent;
+}
+
+.btn-flat-firm {
+    background-color: rgba($c-firm-1, .035);
     border: solid 1px $c-firm-1;
     color: $c-firm-1;
     &:hover {
-      background-color: rgba($c-firm-1, 0.05);
+        background-color: rgba($c-firm-1, 0.08);
     }
     &:focus {
-      background-color: rgba($c-firm-1, 0.15);
-      @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
+        background-color: rgba($c-firm-1, 0.15);
+        @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
     }
-  }
-  &.btn-median {
-    background-color: $c-median-1;
+}
+.btn-flat-median {
+    background-color: rgba($c-median-1, .035);
     border: solid 1px $c-median-1;
-    color: white;
+    color: $c-median-1;
     &:hover {
-      background-color: $c-median-2;
+        background-color: rgba($c-median-1, 0.08);
     }
     &:focus {
-      background-color: $c-median-3;
-      @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
+        background-color: rgba($c-median-1, 0.15);
+        @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
     }
-  }
-  &.btn-prime {
-    background-color: $c-prime-1;
-    border: solid 1px $c-prime-1;
-    color: white;
-    &:hover {
-      background-color: $c-prime-2;
-    }
-    &:focus {
-      background-color: $c-prime-3;
-      @include box-shadow(0 0 0 3px rgba($c-prime-1, 0.15));
-    }
-  }
-  &.btn-success {
-    background-color: $c-green-1;
-    border: solid 1px $c-green-1;
-    color: white;
-    &:hover {
-      background-color: $c-green-2;
-      //background-color:$c-green-2;
-    }
-    &:focus {
-      background-color: $c-green-3;
-      //background-color:$c-green-3;
-      @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
-    }
-  }
-  &.btn-danger {
-    background-color: $c-red-1;
-    border: solid 1px $c-red-1;
-    color: white;
-    &:hover {
-      background-color: $c-red-2;
-    }
-    &:focus {
-      background-color: $c-red-3;
-      @include box-shadow(0 0 0 3px rgba($c-red-1, 0.15));
-    }
-  }
-  &.btn-flat {
-    background: none;
-    border: solid 1px transparent;
-  }
-  &.btn-disabled {
-    background-color: $c-grey-2;
-    border: solid 1px $c-grey-2;
-    color: $c-grey-1;
-    cursor: not-allowed;
-  }
+}
 
-  // button sizes
-  &.btn-small {
-    font-size: 12px;
+.btn-flat-prime {
+    background-color: rgba($c-prime-1, .035);
+    border: solid 1px $c-prime-1;
+    color: $c-prime-1;
+    &:hover {
+        background-color: rgba($c-prime-1, 0.08);
+    }
+    &:focus {
+        background-color: rgba($c-prime-1, 0.15);
+        @include box-shadow(0 0 0 3px rgba($c-prime-1, 0.15));
+    }
+}
+.btn-flat-success {
+    background-color: rgba($c-green-1, .035);
+    border: solid 1px $c-green-1;
+    color: $c-green-1;
+    &:hover {
+        background-color: rgba($c-green-1, 0.08);
+    }
+    &:focus {
+        background-color: rgba($c-green-1, 0.15);
+        @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
+    }
+}
+
+.btn-flat-grey {
+    background-color: rgba($c-grey-4, .035);
+    border: solid 1px $c-grey-5;
+    color: $c-grey-5;
+    &:hover {
+        background-color: rgba($c-grey-4, 0.08);
+    }
+    &:focus {
+        background-color: rgba($c-grey-4, 0.15);
+        @include box-shadow(0 0 0 3px rgba($c-grey-4, 0.15));
+    }
+}
+
+
+.btn-flat-danger {
+    background-color: rgba($c-red-1, .035);
+    border: solid 1px $c-red-1;
+    color: $c-red-1;
+    &:hover {
+        background-color: rgba($c-red-1, 0.08);
+    }
+    &:focus {
+        background-color: rgba($c-red-1, 0.15);
+        @include box-shadow(0 0 0 3px rgba($c-red-1, 0.15));
+    }
+}
+
+.btn[disabled="true"],
+.btn-disabled {
+    background-color: $c-grey-2;
+    color: $c-grey-3;
+    cursor: not-allowed;
+    &:hover {
+        background-color: $c-grey-2;
+        color: $c-grey-3;
+        cursor: not-allowed;
+    }
+    &:focus {
+        background-color: $c-grey-2;
+        @include box-shadow(0 0 0 3px rgba($c-grey-5, 0.15));
+    }
+}
+
+.btn-small {
+    font-size: $font-s;
     padding: 0 0.5rem;
     line-height: 28px;
-  }
-  &.btn-medium {
-    font-size: 14px;
-    padding: 0 1rem;
-    line-height: 38px;
-  }
-  &.btn-large {
-    font-size: 18px;
-    padding: 0 1rem;
-    line-height: 48px;
-  }
 }
 
-.link-primary {
-  text-decoration: underline;
-  color: $c-median-1;
-  &:hover {
-    color: $c-median-2;
-  }
-  &:active {
-    color: $c-median-3;
-  }
+.btn-medium {
+    font-size: $font-m;
+    padding: 0 1rem;
+    line-height: 38px;
 }
-.link-secondary {
-  text-decoration: underline;
-  color: $c-grey-4;
-  &:hover {
-    color: $c-grey-5;
-  }
-  &:active {
-    color: $c-grey-6;
-  }
+
+.btn-large {
+    font-size: $font-l;
+    padding: 0 1rem;
+    line-height: 48px;
+}
+
+.link {
+    text-decoration: underline;
+    color: $c-median-1;
+    &:hover {
+        color: $c-median-2;
+    }
+    &:active {
+        color: $c-median-3;
+    }
+    &.is-grey {
+        color: $c-grey-4;
+        &:hover {
+            color: $c-grey-5;
+        }
+        &:active {
+            color: $c-grey-6;
+        }
+    }
 }
