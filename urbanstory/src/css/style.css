@@ -2350,9 +2350,6 @@ input[type=checkbox]:focus {
   padding: 0 16px;
 }
 .ats-nav-content ul li a:before {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.25s;
   content: "";
   background: #011148;

@@ -55,7 +55,6 @@
                 padding    : 0 $gutter-l;
             
                 &:before {
-                    @include radius;
                     transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.25s;
                     content   : "";
                     background: $c-firm-1;
