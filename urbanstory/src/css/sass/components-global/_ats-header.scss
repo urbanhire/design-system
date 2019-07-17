@@ -27,7 +27,7 @@
     -webkit-box-align : center;
     align-items       : center;
     height            : $ats-header-height;
-    margin-left       : -120px;
+    margin-left       : -140px;
 
     ul{
         display           : flex;
@@ -114,8 +114,8 @@
                     
                     position: relative;
                     i{
-                        margin-top    : 1px;
-                        display       :block;
+                        margin-top    : 2px;
+                        display       : block;
                         width         : 40px;
                         height        : 100%;
                         text-align    : center;
@@ -157,9 +157,10 @@
 }
 .menu-drawer{
     height  : $ats-header-height;
-    width   : $ats-header-height;
+    width   : 30px ;
     display : block;
     position: relative;
+    cursor  : pointer;
     &::before{
         content : '';
         display : block;
@@ -177,18 +178,37 @@
     } 
 }
 
-.menu-drawer.menu-button-active{
-    span:nth-child(1){ left : -5px;}
-    span:nth-child(3){ left : 5px;}
+.menu-drawer.menu-drawer-active{
+    &::before{
+        box-shadow: -5px -7px 0 #011148, 5px 7px 0 #011148;
+    }
 }
 
+@media (max-width: $screen-lg + 2.5){
+
+    .card-header { 
+        padding : 0 10px 
+    }
+
+    .ats-nav-content{ 
+        ul li {
+            a {
+                padding: 0 $gutter-m - 3;
+            }
+        }  
+    }
+    
+    .ats-nav-content ul li.has-icon a i {
+        width: 25px;
+    }
+
+    li.menu-drawer{
+        width: 30px;
+    }
+}
 
 @media (max-width: $screen-md){
-    .card-header { padding : 0 10px }
-    .ats-menu-button{ margin-bottom: 25px }
-
-    .card-header {  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1) }
-
+    
     .left-side { display: none }
 
     .ats-nav-content{ justify-content: flex-end }
@@ -197,11 +217,17 @@
     
 }
 
-@media (max-width : 1264px){
-    .ats-nav-content ul li a{
-        padding: 0 $gutter-m;
+@media (max-width: $screen-s){
+    .ats-nav-content ul li.has-icon a i {
+        width: 30px;
+    }
+
+    li.menu-drawer{
+        width: 40px;
     }
 }
+
+
 li.has-children {
     color: $c-firm-1;
     position: relative;
@@ -242,34 +268,3 @@ li.has-children.is-active {
         display: block;
     }
 }
-
-
-
-
-
-// .menu-icon-active{
-    
-//     &:hover{
-//         &::before{
-//             transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.35s;
-//             content: "";
-//             width: 40px;
-//             height: 40px;
-//             background: $c-firm-1; 
-//             -moz-border-radius: 20px; 
-//             -webkit-border-radius: 20px; 
-//             opacity: 0.5 ;
-//             border-radius: 20px;
-//             background: $c-firm-1;
-//         }
-//     }
-
-    // &:hover {
-    //     cursor: pointer;
-    //     color: $c-firm-1;
-    //     a:before {
-    //         width: 100%;
-    //     }
-    // } 
-
-

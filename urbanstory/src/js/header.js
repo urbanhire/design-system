@@ -42,9 +42,9 @@ $(document).ready(function () {
 /*menu toggle*/
 $(document).ready(function () {
     var menuToggle = function() {
-        var toggle = $('.ats-menu-button');
+        var toggle = $('.menu-drawer');
         toggle.click(function(e) {
-            $(this).toggleClass('menu-button-active');
+            $(this).toggleClass('menu-drawer-active');
             
         })
     }
