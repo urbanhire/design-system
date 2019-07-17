@@ -605,7 +605,7 @@ dl dd {
 
 @media only screen and (min-width: 48em) {
   .container {
-    width: 46rem;
+    width: 46em;
   }
 
   .col-sm,
@@ -819,7 +819,7 @@ dl dd {
 }
 @media only screen and (min-width: 62em) {
   .container {
-    width: 61rem;
+    width: 61em;
   }
 
   .col-md,
@@ -1033,7 +1033,7 @@ dl dd {
 }
 @media only screen and (min-width: 75em) {
   .container {
-    width: 71rem;
+    width: 71em;
   }
 
   .col-lg,
@@ -2402,15 +2402,19 @@ input[type=checkbox]:focus {
 .ats-nav-content ul li.has-icon a {
   display: inline-flex;
   height: 50px;
-  padding: 0 8px;
+  padding: 0 4px;
   position: relative;
 }
 .ats-nav-content ul li.has-icon a i {
+  margin-top: 1px;
   display: block;
   width: 40px;
   height: 100%;
   text-align: center;
   vertical-align: middle;
+}
+.ats-nav-content ul li.has-icon a::before {
+  display: none;
 }
 .ats-nav-content ul li.has-icon a:after {
   content: "";
@@ -2437,57 +2441,37 @@ input[type=checkbox]:focus {
 }
 
 .menu-drawer {
-  outline: solid 1px red;
   height: 50px;
   width: 50px;
-}
-.menu-drawer span {
   display: block;
-  width: 40px;
-  height: 40px;
-  outline: solid 1px red;
   position: relative;
 }
-.menu-drawer span:before, .menu-drawer span:after {
-  position: absolute;
-  display: block;
+.menu-drawer::before {
   content: "";
-  background: red;
-  width: 40px;
-  height: 2px;
-  left: 0;
-  right: 0;
-}
-.menu-drawer span:before {
-  top: 0;
-}
-.menu-drawer span:after {
-  bottom: 0;
-}
-
-.ats-menu-button {
-  position: relative;
-  cursor: pointer;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.ats-menu-button span {
-  position: absolute;
-  right: 0;
-  left: 0;
   display: block;
-  width: 60%;
-  height: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
-  background: #212121;
-  outline: solid 1px red;
+  height: 2px;
+  width: 20px;
+  background: #011148;
+  box-shadow: 0 -7px 0 #011148, 0 7px 0 #011148;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 
-@media (max-width: 1230px) {
+.menu-drawer.menu-button-active span:nth-child(1) {
+  left: -5px;
+}
+.menu-drawer.menu-button-active span:nth-child(3) {
+  left: 5px;
+}
+
+@media (max-width: 62em) {
   .card-header {
     padding: 0 10px;
   }
@@ -2510,6 +2494,11 @@ input[type=checkbox]:focus {
 
   .right-side ul li:nth-child(1), .right-side ul li:nth-child(4) {
     display: none;
+  }
+}
+@media (max-width: 1264px) {
+  .ats-nav-content ul li a {
+    padding: 0 8px;
   }
 }
 li.has-children {
@@ -2553,60 +2542,6 @@ li.has-children ul li a:before {
 }
 
 li.has-children.is-active ul {
-  display: block;
-}
-
-.ats-menu-button.menu-button-active span:nth-child(1) {
-  left: -5px;
-}
-.ats-menu-button.menu-button-active span:nth-child(3) {
-  left: 5px;
-}
-
-li .menu-icon {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-  padding: 0;
-}
-li .menu-icon:before {
-  display: none;
-}
-li .menu-icon:after {
-  content: "";
-  background: rgba(1, 17, 72, 0.5);
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-li .menu-icon:hover {
-  cursor: pointer;
-  color: #011148;
-}
-li .menu-icon:hover:before {
-  transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.35s;
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.1);
-}
-li .menu-icon.active {
-  color: #011148;
-}
-li .menu-icon.active:before {
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.1);
   display: block;
 }
 

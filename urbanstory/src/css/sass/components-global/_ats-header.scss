@@ -15,7 +15,9 @@
     }
 }
 
-.flex{ @include flexbox }
+.flex{ 
+    @include flexbox
+}
 
 .ats-nav-content{
     display           : inline-flex;
@@ -28,119 +30,120 @@
     margin-left       : -120px;
 
     ul{
-        display        : flex;
-        justify-content: flex-start;
-        padding        : 0;
-        margin         : 0;
+        display           : flex;
+        justify-content   : flex-start;
+        padding           : 0;
+        margin            : 0;
         -ms-flex-align    : center;
         -webkit-box-align : center;
         align-items       : center;
         
 
         li{
-            display    : inline-block;
-            padding    : 0;
-            font-size  : 0.875rem;
+            display        : inline-block;
+            padding        : 0;
+            font-size      : 0.875rem;
             
             
             a { 
-                color: $c-grey-5; 
-                cursor: pointer;
-                // outline: solid 1px red;
-                position: relative;
-                display: inline-flex;
-                height: $ats-header-height;
+                color      : $c-grey-5; 
+                cursor     : pointer;
+                position   : relative;
+                display    : inline-flex;
+                height     : $ats-header-height;
                 line-height:$ats-header-height;
-                padding: 0 $gutter-l;
+                padding    : 0 $gutter-l;
             
                 &:before {
                     @include radius;
                     transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.25s;
-                    content: "";
+                    content   : "";
                     background: $c-firm-1;
-                    width: 0%;
-                    height: 3px;
-                    display: inline-block;
-                    // margin-top: 32px;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    margin: 0 auto;
-                    opacity: .5;
+                    width     : 0%;
+                    height    : 3px;
+                    display   : inline-block;
+                    position  : absolute;
+                    left      : 0;
+                    right     : 0;
+                    bottom    : 0;
+                    margin    : 0 auto;
+                    opacity   : .5;
                 }
                 &:hover {
-                    cursor: pointer;
-                    color: $c-firm-1;
+                    cursor    : pointer;
+                    color     : $c-firm-1;
                     &:before {
-                        width: 100%;
+                        width : 100%;
                     }
                 }
                 &.active {
-                    color: $c-firm-1;
+                    color     : $c-firm-1;
                     &:before {
-                        width: 100%;
+                        width : 100%;
                         opacity: 1;
                     }
                 }  
             }
 
-            .icon-coin{ color: $c-yellow-1 }
+            .icon-coin{ 
+                color         : $c-yellow-1 
+            }
 
             span { 
-                margin: 0px 5px;
-                display: inline-block;
-                white-space: nowrap; 
-                overflow: hidden;
-                text-overflow: ellipsis; 
+                margin        : 0px 5px;
+                display       : inline-block;
+                white-space   : nowrap; 
+                overflow      : hidden;
+                text-overflow : ellipsis; 
             }
 
             .company-name{ 
-                width: $ats-header-height * 3;
+                width         : $ats-header-height * 3;
             }
 
             .coin-amt{
-                width:35px
+                width         :35px
             }
 
             &.has-icon{
-                padding:0;
+                padding       :0;
                 a{
-                    display: inline-flex;
-                    height: $ats-header-height;
-                    padding: 0 $gutter-m;
+                    display   : inline-flex;
+                    height    : $ats-header-height;
+                    padding   : 0 $gutter-s;
                     
                     position: relative;
                     i{
-                        
-                        display:block;
-                        width: 40px;
-                        height: 100%;
-                        text-align: center;
+                        margin-top    : 1px;
+                        display       :block;
+                        width         : 40px;
+                        height        : 100%;
+                        text-align    : center;
                         vertical-align: middle;
                     }
+                    &::before{
+                        display       : none;
+                    }
                     &:after{
-                        content: "";
-                        background: rgba($c-firm-1, .05);
-                        width:40px;
-                        height: 40px;
+                        content       : "";
+                        background    : rgba($c-firm-1, .05);
+                        width         : 40px;
+                        height        : 40px;
                         @include border-radius(20px);
-                        display: block;
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
-                        margin: auto ;
-                        visibility: hidden;
-                        // transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.35s;
+                        display       : block;
+                        position      : absolute;
+                        left          : 0;
+                        right         : 0;
+                        top           : 0;
+                        bottom        : 0;
+                        margin        : auto ;
+                        visibility    : hidden;
                     }
                     &:hover{
                         &:after{
                             visibility:visible;
                         }
                     }
-
                     &.active {
                         &:after {
                             visibility:visible;  
@@ -153,61 +156,34 @@
     }
 }
 .menu-drawer{
-    outline: solid 1px red;
-    height: $ats-header-height;
-    width: $ats-header-height;
-    span{
-        display: block;
-        width: 40px;
-        height: 40px;
-        outline: solid 1px red;
-        position: relative;
-        &:before,
-        &:after{
-            position: absolute;
-            display: block;
-            content: '';
-            background: red;
-            width: 40px;
-            height: 2px;
-            left:0;
-            right:0;
-        }
-        &:before{
-            top:0;
-        }
-        &:after{
-            bottom: 0;
-        }
-    }
-}
-.ats-menu-button{
+    height  : $ats-header-height;
+    width   : $ats-header-height;
+    display : block;
     position: relative;
-    cursor: pointer;
-    padding: 10px; 
-    margin-bottom: 20px;
+    &::before{
+        content : '';
+        display : block;
+        position: absolute;
+        top     : 0;
+        bottom  : 0;
+        left    : 0;
+        right   : 0;
+        margin  : auto;
+        height  : 2px;
+        width   : 20px;
+        background: $c-firm-1;
+        box-shadow: 0 -7px 0 $c-firm-1, 0 7px 0 $c-firm-1;
+        @include radius;
+    } 
 }
 
-.ats-menu-button span {
-    position: absolute;
-    right: 0;
-    left: 0;
-    display: block;
-    width: 60%;
-    height: 2px;
-    margin: auto;
-    background: $c-grey-6;
-    outline: solid 1px red;
-    @include radius;
+.menu-drawer.menu-button-active{
+    span:nth-child(1){ left : -5px;}
+    span:nth-child(3){ left : 5px;}
 }
 
-// .ats-menu-button span:nth-child(1) { top: 4px }
 
-// .ats-menu-button span:nth-child(2) { top: 10px }
-
-// .ats-menu-button span:nth-child(3) { top: 16px }
-
-@media (max-width: 1230px){
+@media (max-width: $screen-md){
     .card-header { padding : 0 10px }
     .ats-menu-button{ margin-bottom: 25px }
 
@@ -220,6 +196,12 @@
     .right-side ul li:nth-child(1) , .right-side ul li:nth-child(4) { display: none }
     
 }
+
+@media (max-width : 1264px){
+    .ats-nav-content ul li a{
+        padding: 0 $gutter-m;
+    }
+}
 li.has-children {
     color: $c-firm-1;
     position: relative;
@@ -230,7 +212,6 @@ li.has-children {
         z-index: 4;
         display: none;
         background: #ffffff;
-        // top: 35px;
         border-top: solid 1px #ddd;
         -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
         -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -262,62 +243,8 @@ li.has-children.is-active {
     }
 }
 
-.ats-menu-button.menu-button-active{
-    span:nth-child(1){ left : -5px;}
-    span:nth-child(3){ left : 5px;}
-}
 
 
-li .menu-icon{
-    width:40px;
-    height: 40px;
-    position: relative;
-    vertical-align: middle;
-    text-align: center;
-    padding: 0;
-
-    a{
-        //top: 12px;
-    }
-
-    &:before {
-        display: none;
-    }
-    &:after {    
-        content: "";
-        background: rgba($c-firm-1, .5);
-        width:40px;
-        height: 40px;
-        @include border-radius(20px);
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-
-        
-    }
-    &:hover {
-        cursor: pointer;
-        color: $c-firm-1;
-        &:before {
-            transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.35s;
-            width: 40px;
-            height: 40px;
-            background: darken(rgba(0,0,0,0.1), 30);
-        }
-    }
-    &.active {
-        color: $c-firm-1;
-        &:before { width: 40px;
-            height: 40px;
-            background: darken(rgba(0,0,0,0.1), 30);
-            display: block; 
-            }
-    }  
-}
 
 
 // .menu-icon-active{
