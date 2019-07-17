@@ -102,7 +102,7 @@
             }
 
             .coin-amt{
-                width         :35px
+                width         : 35px
             }
 
             &.has-icon{
@@ -138,15 +138,18 @@
                         bottom        : 0;
                         margin        : auto ;
                         visibility    : hidden;
+                        opacity       : 0;
                     }
                     &:hover{
                         &:after{
                             visibility:visible;
+                            opacity: 1;
                         }
                     }
                     &.active {
                         &:after {
-                            visibility:visible;  
+                            visibility: visible;
+                            opacity: 1;
                         }
                     }
                 }
@@ -213,8 +216,9 @@
     }
     
     .ats-nav-content ul li.has-icon a i {
-        width: 25px;
+        width: 40px;
     }
+    
 
     li.menu-drawer{
         width: 30px;

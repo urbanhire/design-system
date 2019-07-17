@@ -29,11 +29,11 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var activeIcon = function(){
-    $(".has-icon").click(function() {
+    $(".has-icon a").click(function() {
         console.log('icon clicked')
         $(".ats-nav-content li a ").removeClass("active");
         $(".has-icon a").not(this).removeClass("active");
-        $(this).toggleClass("active");
+        $(this).addClass("active");
       });
     }
     activeIcon();
@@ -44,8 +44,7 @@ $(document).ready(function () {
     var menuToggle = function() {
         var toggle = $('.menu-drawer');
         toggle.click(function(e) {
-            $(this).toggleClass('active');
-            
+            $(this).toggleClass('active');   
         })
     }
     menuToggle();

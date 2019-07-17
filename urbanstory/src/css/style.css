@@ -2432,12 +2432,15 @@ input[type=checkbox]:focus {
   bottom: 0;
   margin: auto;
   visibility: hidden;
+  opacity: 0;
 }
 .ats-nav-content ul li.has-icon a:hover:after {
   visibility: visible;
+  opacity: 1;
 }
 .ats-nav-content ul li.has-icon a.active:after {
   visibility: visible;
+  opacity: 1;
 }
 .ats-nav-content ul li.ats-company a:before {
   display: none;
@@ -2481,7 +2484,7 @@ input[type=checkbox]:focus {
   }
 
   .ats-nav-content ul li.has-icon a i {
-    width: 25px;
+    width: 40px;
   }
 
   li.menu-drawer {
