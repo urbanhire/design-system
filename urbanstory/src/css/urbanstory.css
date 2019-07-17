@@ -10,7 +10,7 @@ html, * {
 }
 
 body {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
   color: #212121;
 }
 
@@ -46,7 +46,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
 }
 
 input[type=submit],
