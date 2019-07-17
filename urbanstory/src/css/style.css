@@ -2297,7 +2297,7 @@ input[type=checkbox]:focus {
   -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
-.card-header img {
+.card-header .ats-logo {
   max-height: 50px;
   width: 50%;
   margin-top: 5px;
@@ -2467,8 +2467,7 @@ input[type=checkbox]:focus {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-
-.menu-drawer.menu-drawer-active::before {
+.menu-drawer.active::before {
   box-shadow: -5px -7px 0 #011148, 5px 7px 0 #011148;
 }
 

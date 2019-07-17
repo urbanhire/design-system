@@ -8,7 +8,7 @@
     align-items       : center;
     @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
 
-    img{
+    .ats-logo{
         max-height: $ats-header-height;
         width: 50%;
         margin-top:5px;
@@ -185,14 +185,18 @@
         background: $c-firm-1;
         box-shadow: 0 -7px 0 $c-firm-1, 0 7px 0 $c-firm-1;
         @include radius;
-    } 
-}
-
-.menu-drawer.menu-drawer-active{
-    &::before{
-        box-shadow: -5px -7px 0 #011148, 5px 7px 0 #011148;
+    }
+    
+    &.active{
+        &::before{
+            box-shadow: -5px -7px 0 #011148, 5px 7px 0 #011148;
+        }
     }
 }
+
+// .menu-drawer.menu-drawer-active{
+    
+// }
 
 @media (max-width: $screen-lg + 2.5){
 

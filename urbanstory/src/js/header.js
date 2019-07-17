@@ -44,7 +44,7 @@ $(document).ready(function () {
     var menuToggle = function() {
         var toggle = $('.menu-drawer');
         toggle.click(function(e) {
-            $(this).toggleClass('menu-drawer-active');
+            $(this).toggleClass('active');
             
         })
     }
