@@ -8,10 +8,12 @@
     align-items       : center;
     @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
 
+    
+
     .ats-logo{
         max-height: $ats-header-height;
-        width: 50%;
         margin-top:5px;
+        width: 180px;
     }
 }
 
@@ -27,7 +29,6 @@
     -webkit-box-align : center;
     align-items       : center;
     height            : $ats-header-height;
-    margin-left       : -140px;
 
     ul{
         display           : flex;
