@@ -152,7 +152,17 @@
                 }
             }
 
+            &.ats-company{
+                a{
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+
         }
+
+
     }
 }
 .menu-drawer{
