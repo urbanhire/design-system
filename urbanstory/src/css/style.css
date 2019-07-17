@@ -2299,8 +2299,8 @@ input[type=checkbox]:focus {
 }
 .card-header .ats-logo {
   max-height: 50px;
-  margin-top: 5px;
   width: 180px;
+  padding: 5px 5px 0 0;
 }
 
 .flex {
@@ -2359,7 +2359,7 @@ input[type=checkbox]:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0 auto;
+  margin: auto;
   opacity: 0.5;
 }
 .ats-nav-content ul li a:hover {
