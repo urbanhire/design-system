@@ -2696,7 +2696,8 @@ input[type=checkbox]:focus {
     justify-content: flex-end;
   }
 
-  .right-side ul li:nth-child(1), .right-side ul li:nth-child(4) {
+  .right-side ul li:nth-child(1),
+.right-side ul li:nth-child(4) {
     display: none;
   }
 }
