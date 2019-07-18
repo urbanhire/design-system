@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // Example of build sass on terminal
-// sass -I global -I components-global --watch composer:../
+// sass -I global -I components-ats -I components-global --watch composer:../
 // Meaning include folder global, include folder components-global then compile into folder composer
 
 // library
@@ -33,3 +33,7 @@
 
 // cards
 @import "../components-global/_img-showcase";
+
+
+//ats 
+@import "../components-ats/_ats-header";
