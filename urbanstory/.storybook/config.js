@@ -22,6 +22,7 @@ import '../src/css/style.css';
 import '../src/css/urbanstory.css';
 
 import '../src/js/header.js';
+import '../src/js/tooltip.js';
 
 
 

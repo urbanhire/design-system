@@ -690,4 +690,18 @@ code {
   font-size: 11px;
 }
 
+.urbanstory-tooltip-style {
+  height: 150px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+.urbanstory-tooltip-style button {
+  margin: 20px;
+}
+
+.display-off {
+  display: none;
+}
+
 /*# sourceMappingURL=urbanstory.css.map */
