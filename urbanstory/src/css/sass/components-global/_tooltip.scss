@@ -1,9 +1,8 @@
 /**
  * Tooltip Styles
  */
-
 /* Base styles for the element that has a tooltip */
-[data-tooltip], 
+[data-tooltip],
 .tooltip {
   position: relative;
   cursor: pointer;
@@ -13,7 +12,7 @@
 .tooltip-left,
 .tooltip-bottom,
 .tooltip-top{
-    color:$c-prime-1;
+    color:$c-white;
 }
 /* Base styles for the entire tooltip */
 [data-tooltip]:before,
@@ -131,8 +130,8 @@
 /* Left */
 .tooltip-left:before,
 .tooltip-left:after {
-  right: 90%;
-  bottom: 50%;
+  right: 100%;
+  bottom: 35%;
   left: auto;
 }
 
@@ -182,8 +181,8 @@
 /* Right */
 .tooltip-right:before,
 .tooltip-right:after {
-  bottom: 50%;
-  left: 90%;
+  bottom: 35%;
+  left: 100%;
 }
 
 .tooltip-right:before {
@@ -203,15 +202,15 @@
   transform:         translateX(12px); 
 }
 
-/* Move directional arrows down a bit for left/right tooltips */
-.tooltip-left:before,
-.tooltip-right:before {
-  top: 3px;
-}
+// /* Move directional arrows down a bit for left/right tooltips */
+// .tooltip-left:before,
+// .tooltip-right:before {
+//   top: 3px;
+// }
 
 /* Vertically center tooltip content for left/right tooltips */
 .tooltip-left:after,
 .tooltip-right:after {
   margin-left: 0;
-  margin-bottom: -16px;
+  margin-bottom: -20px;
 }

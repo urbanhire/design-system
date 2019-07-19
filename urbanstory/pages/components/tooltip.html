@@ -5,33 +5,23 @@
     <section>
         <div class="urbanstory-tooltip-style">
             <h4>Tootltip <small>(Default)</small></h4>
-            <span class="tooltip" data-tooltip='Using 3 UH coins per candidate invitation.'>
-                <button class="btn btn-firm">Hover me</button>
-            </span> 
+            <button class="btn btn-firm tooltip" data-tooltip='Using 3 UH coins per candidate invitation.'>Hover me</button>
         </div> 
         <div class="urbanstory-tooltip-style">
             <h4>Tootltip <code>.tooltip-right</code></h4>
-            <span class="tooltip-right" data-tooltip='Using 3 UH coins per candidate invitation.'>
-                <button class="btn btn-firm">Hover me</button>
-            </span>
+            <button class="btn btn-firm tooltip-right" data-tooltip='Using 3 UH coins per candidate invitation.'>Hover me</button>
         </div>
         <div class="urbanstory-tooltip-style">
             <h4>Tootltip <code>.tooltip-left</code></h4>
-            <span class="tooltip-left" data-tooltip='Using 3 UH coins per candidate invitation.'>
-                <button class="btn btn-firm">Hover me</button>
-            </span> 
+            <button class="btn btn-firm tooltip-left" data-tooltip='Using 3 UH coins per candidate invitation.'>Hover me</button>
         </div>
         <div class="urbanstory-tooltip-style">
             <h4>Tootltip <code>.tooltip-top</code></h4>
-            <span class="tooltip-top" data-tooltip='Using 3 UH coins per candidate invitation.'>
-                <button class="btn btn-firm">Hover me</button>
-            </span>
+            <button class="btn btn-firm tooltip-top" data-tooltip='Using 3 UH coins per candidate invitation.'>Hover me</button>
         </div>
         <div class="urbanstory-tooltip-style">
             <h4>Tootltip <code>.tooltip-bottom</code></h4>
-            <span class="tooltip-bottom" data-tooltip='Using 3 UH coins per candidate invitation.'>
-                <button class="btn btn-firm">Hover me</button>
-            </span>
+            <button class="btn btn-firm tooltip-bottom" data-tooltip='Using 3 UH coins per candidate invitation.'>Hover me</button>
         </div>
     </section>
 </div>
@@ -43,7 +33,8 @@
         </nav>
     </div>
     <pre id="sass">
-        <code>
+        <button class="btn btn-firm" onclick="copyToClipboard('#texttocopy')"><i class="icon-code"></i>Copy</button>
+        <code class="language-scss" id="texttocopy">
             [data-tooltip], 
             .tooltip {
                 position: relative;
@@ -259,7 +250,7 @@
         </code>
     </pre>
     <pre id="html">
-        <code>
+        <code class="language-html"> 
             &lt;span class=&quot;tooltip&quot; data-tooltip='Using 3 UH coins per candidate invitation.'&gt;
                 &lt;button class=&quot;btn btn-firm&quot;&gt;Hover me&lt;/button&gt;
             &lt;/span&gt;
