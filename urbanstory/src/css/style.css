@@ -164,7 +164,6 @@ pre[class*=language-] {
   color: black;
   background: none;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
   text-align: left;
   white-space: pre;
@@ -2817,6 +2816,171 @@ input[type=checkbox]:focus {
 .tooltip-right:after {
   margin-left: 0;
   margin-bottom: -20px;
+}
+
+.steps-block {
+  height: 100px;
+  display: inline-flex;
+  background: #f5f5f5;
+}
+
+.step-block-item {
+  display: inline-block;
+  min-height: 100px;
+  padding: 1rem;
+  background: #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.step-block-item.active {
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.step-block-item.active h4 {
+  color: #011148;
+}
+.step-block-item.active p {
+  color: #2791d9;
+}
+.step-block-item h4 {
+  margin: 0 0 6px 0;
+  color: #212121;
+}
+.step-block-item p {
+  font-size: 12px;
+  color: #757575;
+}
+
+.steps-progress {
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  display: flex;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.steps-progress > .row {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.steps-progress .step-item {
+  padding: 0 8px;
+}
+.steps-progress .step-item.is-active span {
+  color: #2791d9;
+}
+.steps-progress .step-item.is-done i {
+  color: #2791d9;
+}
+.steps-progress .step-item span {
+  display: inline-flex;
+  height: 60px;
+  line-height: 60px;
+  padding: 2px;
+  color: #c2c2c2;
+}
+.steps-progress .step-item span p {
+  margin: 0 5px;
+}
+.steps-progress .step-item span i {
+  margin-top: 2px;
+}
+.steps-progress .step-counter {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: #d4e9f7;
+  border-radius: 100%;
+  margin: 8px;
+}
+.steps-progress .step-counter span {
+  position: absolute;
+  line-height: 44px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+.steps-progress .progress {
+  width: 100%;
+  height: 4px;
+  background: #f1f1f1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.steps-progress .progress div {
+  background: #2791d9;
+  height: 4px;
+}
+
+.steps-points {
+  position: relative;
+  height: 142px;
+  outline: 1px solid indianred;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+}
+.steps-points .row:nth-child(1) {
+  position: relative;
+  height: 3rem;
+  display: inline-flex;
+  position: absolute;
+  width: 80%;
+  margin: 0;
+}
+.steps-points .row:nth-child(1) .step-point {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background: #d6d6d6;
+  border-radius: 1.5rem;
+}
+.steps-points .row:nth-child(1) .step-item {
+  outline: 1px solid salmon;
+  display: flex;
+}
+.steps-points .row:nth-child(1) .step-item h4, .steps-points .row:nth-child(1) .step-item p {
+  text-align: center;
+}
+.steps-points .row:nth-child(1) .step-item p {
+  font-size: 0.75rem;
+}
+.steps-points .row:nth-child(1) .step-item:nth-child(3) {
+  justify-content: center;
+}
+.steps-points .row:nth-child(1) .step-item:nth-child(4) {
+  justify-content: flex-end;
+}
+.steps-points .row:nth-child(1) .col-xs-4 {
+  padding: 0;
+}
+.steps-points .row:nth-child(1) .progress-connector {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  height: 8px;
+  width: 100%;
+  background: #f5f5f5;
+}
+.steps-points .row:nth-child(2) {
+  outline: 1px solid yellowgreen;
+  height: 94px;
 }
 
 .uh-img-showcase img {

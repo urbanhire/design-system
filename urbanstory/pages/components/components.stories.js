@@ -13,6 +13,7 @@ import chips from "./chips.html";
 import slider from "./slider.html";
 import preloader from "./preloader.html";
 import tooltip from "./tooltip.html";
+import steps from "./steps.html";
 
 storiesOf("DEVELOPER|Components", module)
   .add("Alert", () => alert)
@@ -28,3 +29,4 @@ storiesOf("DEVELOPER|Components", module)
   .add("Slider", () => slider)
   .add("Preloader", () => preloader)
   .add("Tooltip", () => tooltip)
+  .add("Steps", () => steps)

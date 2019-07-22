@@ -1,0 +1,190 @@
+.steps-block{
+    height: 100px;
+    display: inline-flex;
+    background: $c-grey-1;
+}
+
+.step-block-item {
+    display: inline-block;
+    min-height: 100px;
+    padding: 1rem;
+    background: $c-grey-1;
+    @include radius;
+
+    &.active{
+        background: $c-white;
+        @include  box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
+
+        h4{
+            color: $c-firm-1;
+        }
+
+        p{
+            color: $c-median-1;
+        }
+    }
+
+    h4{
+        margin : 0 0 6px 0;
+        color: $c-grey-6;
+    }
+
+    p{
+        font-size: $font-xs;
+        color: $c-grey-5;
+    }
+}
+
+//steps progress with grid
+$counter-width: 44px;
+.steps-progress{
+    width:100%;
+    height:60px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    @include radius;
+    @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
+    overflow: hidden;
+    // background: grey;
+    &.has-counter{
+        // padding-right:$counter-width; 
+    }
+    > .row{
+        width: 100%;
+        height: 100%;
+        margin:0;
+        
+    }
+
+   
+    .step-item{
+        padding: 0 8px;
+        &.is-active{
+            span{
+                color: $c-median-1;
+            }
+        }
+
+        &.is-done{
+            i{
+                color: $c-median-1;
+            }
+        }
+    
+        span{
+            display: inline-flex;
+            height: 60px;
+            line-height: 60px;
+            padding: 2px;
+            color: $c-grey-3;
+            p{
+                margin: 0 5px;
+            } 
+
+            i{
+                margin-top: 2px;
+            }
+        }
+    }
+    .step-counter{
+        position: relative;
+        width: $counter-width;
+        height: $counter-width;
+        background: $c-info-alert; 
+        border-radius: 100%;
+        margin: 8px;
+        span{
+            position: absolute;
+            line-height: 44px ;
+            left:0;
+            right:0;
+            margin:auto;
+            text-align: center;
+            
+        }
+    }
+    .progress{
+        width: 100%;
+        height: 4px;
+        background: #f1f1f1;
+        position: absolute;
+        top: 0;
+        left:0;
+        margin:0;
+        padding:0;
+        div{
+            background: $c-median-1;
+            height: 4px;
+        }
+
+        
+    }
+}
+
+.steps-points{
+    position: relative;
+    height: 142px;
+    outline: 1px solid indianred;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    .row:nth-child(1){
+        position: relative;
+        height: 3rem;
+        display: inline-flex;
+        position: absolute;
+        width:80%;  
+        margin: 0;
+
+        .step-point{
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            background: $c-grey-2; 
+            border-radius: 1.5rem;
+        }
+
+        .step-item{
+            outline: 1px solid salmon;
+            display: flex;
+            h4, p{
+                text-align: center; 
+            }
+            p{
+               font-size: 0.75rem; 
+            }
+
+            &:nth-child(3){
+                justify-content: center;
+            }
+            &:nth-child(4){
+                justify-content: flex-end;
+            }
+        }
+
+        .col-xs-4{
+            padding: 0;
+        }
+
+        .progress-connector{
+            position: absolute;
+            top:0;
+            bottom: 0;
+            margin: auto;
+            display: block;
+            height: 8px;
+            width:100%;
+            background: $c-grey-1;
+        }
+
+        
+    }
+
+    .row:nth-child(2){
+        outline: 1px solid yellowgreen;
+        height: 94px;
+    }
+
+    
+}
