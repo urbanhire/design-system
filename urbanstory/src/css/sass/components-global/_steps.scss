@@ -1,5 +1,4 @@
 .steps-block{
-    height: 100px;
     display: inline-flex;
     background: $c-grey-1;
 }
@@ -39,7 +38,6 @@
 $counter-width: 44px;
 .steps-progress{
     width:100%;
-    height:60px;
     padding: 0;
     display: flex;
     position: relative;
@@ -121,70 +119,86 @@ $counter-width: 44px;
         
     }
 }
-
+$step-point-width: 180px;
 .steps-points{
     position: relative;
-    height: 142px;
-    outline: 1px solid indianred;
+    margin: 0;
+    padding: 0;
     display: inline-flex;
     width: 100%;
     justify-content: center;
-    .row:nth-child(1){
-        position: relative;
-        height: 3rem;
-        display: inline-flex;
-        position: absolute;
-        width:80%;  
-        margin: 0;
-
-        .step-point{
-            position: absolute;
-            width: 3rem;
-            height: 3rem;
-            background: $c-grey-2; 
-            border-radius: 1.5rem;
-        }
-
-        .step-item{
-            outline: 1px solid salmon;
-            display: flex;
-            h4, p{
-                text-align: center; 
-            }
-            p{
-               font-size: 0.75rem; 
-            }
-
-            &:nth-child(3){
-                justify-content: center;
-            }
-            &:nth-child(4){
-                justify-content: flex-end;
-            }
-        }
-
-        .col-xs-4{
-            padding: 0;
-        }
-
-        .progress-connector{
-            position: absolute;
-            top:0;
-            bottom: 0;
-            margin: auto;
-            display: block;
-            height: 8px;
-            width:100%;
-            background: $c-grey-1;
-        }
-
-        
-    }
-
-    .row:nth-child(2){
-        outline: 1px solid yellowgreen;
-        height: 94px;
-    }
-
+    position: relative;
+    width:100%;
+    justify-content: center;
     
+
+    .step-point{
+        position: relative;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        background: $c-grey-2; 
+        border-radius: 1.5rem;
+        margin: auto;
+        text-align: center;
+
+        span{
+            color: $c-white;
+            // position: absolute;
+            line-height: 3rem;
+            left:0;
+            right:0;
+            margin:auto;
+            
+        }
+    }
+
+    .col-xs-4 {
+        padding: 0;
+    }
+    .step-item{
+        position: relative;
+
+        &.is-active{
+            .step-point{
+                background: $c-median-1;
+            }
+        }
+        &.is-done{
+            .step-point{
+                background: $c-median-1;
+            }
+            &:before{
+                background:$c-median-1;
+            }
+        }
+        
+        h4, p{
+            text-align: center; 
+        }
+        p{
+           font-size: 0.75rem; 
+        }
+
+        &:before{
+            content:"";
+            display: block;
+            width: 100% ;
+            height: 8px;
+            background: red;
+            background: $c-grey-2;
+            position: absolute;
+            top:20px;
+            left: 50%;
+            bottom: 0;
+            z-index: 0;
+        }
+        &:last-child{
+            &::before{
+                display: none;
+            }
+        }
+    }
+   
 }
+.step-content{}

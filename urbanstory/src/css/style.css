@@ -2819,7 +2819,6 @@ input[type=checkbox]:focus {
 }
 
 .steps-block {
-  height: 100px;
   display: inline-flex;
   background: #f5f5f5;
 }
@@ -2856,7 +2855,6 @@ input[type=checkbox]:focus {
 
 .steps-progress {
   width: 100%;
-  height: 60px;
   padding: 0;
   display: flex;
   position: relative;
@@ -2928,59 +2926,68 @@ input[type=checkbox]:focus {
 
 .steps-points {
   position: relative;
-  height: 142px;
-  outline: 1px solid indianred;
+  margin: 0;
+  padding: 0;
   display: inline-flex;
   width: 100%;
   justify-content: center;
-}
-.steps-points .row:nth-child(1) {
   position: relative;
-  height: 3rem;
-  display: inline-flex;
-  position: absolute;
-  width: 80%;
-  margin: 0;
+  width: 100%;
+  justify-content: center;
 }
-.steps-points .row:nth-child(1) .step-point {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
+.steps-points .step-point {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
   background: #d6d6d6;
   border-radius: 1.5rem;
-}
-.steps-points .row:nth-child(1) .step-item {
-  outline: 1px solid salmon;
-  display: flex;
-}
-.steps-points .row:nth-child(1) .step-item h4, .steps-points .row:nth-child(1) .step-item p {
+  margin: auto;
   text-align: center;
 }
-.steps-points .row:nth-child(1) .step-item p {
-  font-size: 0.75rem;
+.steps-points .step-point span {
+  color: #fff;
+  line-height: 3rem;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-.steps-points .row:nth-child(1) .step-item:nth-child(3) {
-  justify-content: center;
-}
-.steps-points .row:nth-child(1) .step-item:nth-child(4) {
-  justify-content: flex-end;
-}
-.steps-points .row:nth-child(1) .col-xs-4 {
+.steps-points .col-xs-4 {
   padding: 0;
 }
-.steps-points .row:nth-child(1) .progress-connector {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  display: block;
-  height: 8px;
-  width: 100%;
-  background: #f5f5f5;
+.steps-points .step-item {
+  position: relative;
 }
-.steps-points .row:nth-child(2) {
-  outline: 1px solid yellowgreen;
-  height: 94px;
+.steps-points .step-item.is-active .step-point {
+  background: #2791d9;
+}
+.steps-points .step-item.is-done .step-point {
+  background: #2791d9;
+}
+.steps-points .step-item.is-done:before {
+  background: #2791d9;
+}
+.steps-points .step-item h4, .steps-points .step-item p {
+  text-align: center;
+}
+.steps-points .step-item p {
+  font-size: 0.75rem;
+}
+.steps-points .step-item:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 8px;
+  background: red;
+  background: #d6d6d6;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  bottom: 0;
+  z-index: 0;
+}
+.steps-points .step-item:last-child::before {
+  display: none;
 }
 
 .uh-img-showcase img {
