@@ -152,6 +152,144 @@ dl dd {
   padding: 4px 0;
 }
 
+/* PrismJS 1.16.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+scss+sass */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*=language-],
+pre[class*=language-] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection,
+code[class*=language-]::-moz-selection, code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*=language-]::selection, pre[class*=language-] ::selection,
+code[class*=language-]::selection, code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*=language-],
+pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: white;
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #9a6e3a;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function,
+.token.class-name {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
 .padd-s {
   padding: 4px;
 }
@@ -2475,6 +2613,387 @@ input[type=checkbox]:focus {
     transform: rotate(360deg);
   }
 }
+/**
+ * Tooltip Styles
+ */
+/* Base styles for the element that has a tooltip */
+[data-tooltip],
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip,
+.tooltip-right,
+.tooltip-left,
+.tooltip-bottom,
+.tooltip-top {
+  color: #fff;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before,
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after,
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 10px;
+  width: 160px;
+  background-color: #000;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  line-height: 1rem;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* Directions */
+/* Top (default) */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after,
+.tooltip-top:before,
+.tooltip-top:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+[data-tooltip]:before,
+.tooltip:before,
+.tooltip-top:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: rgba(51, 51, 51, 0.9);
+}
+
+/* Horizontally align top/bottom tooltips */
+[data-tooltip]:after,
+.tooltip:after,
+.tooltip-top:after {
+  margin-left: -80px;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after,
+.tooltip-top:hover:before,
+.tooltip-top:hover:after,
+.tooltip-top:focus:before,
+.tooltip-top:focus:after {
+  -webkit-transform: translateY(-12px);
+  -moz-transform: translateY(-12px);
+  transform: translateY(-12px);
+}
+
+/* Left */
+.tooltip-left:before,
+.tooltip-left:after {
+  right: 100%;
+  bottom: 35%;
+  left: auto;
+}
+
+.tooltip-left:before {
+  margin-left: 0;
+  margin-right: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-left-color: #000;
+  border-left-color: rgba(51, 51, 51, 0.9);
+}
+
+.tooltip-left:hover:before,
+.tooltip-left:hover:after,
+.tooltip-left:focus:before,
+.tooltip-left:focus:after {
+  -webkit-transform: translateX(-12px);
+  -moz-transform: translateX(-12px);
+  transform: translateX(-12px);
+}
+
+/* Bottom */
+.tooltip-bottom:before,
+.tooltip-bottom:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+}
+
+.tooltip-bottom:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  border-bottom-color: rgba(51, 51, 51, 0.9);
+}
+
+.tooltip-bottom:hover:before,
+.tooltip-bottom:hover:after,
+.tooltip-bottom:focus:before,
+.tooltip-bottom:focus:after {
+  -webkit-transform: translateY(12px);
+  -moz-transform: translateY(12px);
+  transform: translateY(12px);
+}
+
+/* Right */
+.tooltip-right:before,
+.tooltip-right:after {
+  bottom: 35%;
+  left: 100%;
+}
+
+.tooltip-right:before {
+  margin-bottom: 0;
+  margin-left: -12px;
+  border-top-color: transparent;
+  border-right-color: #000;
+  border-right-color: rgba(51, 51, 51, 0.9);
+}
+
+.tooltip-right:hover:before,
+.tooltip-right:hover:after,
+.tooltip-right:focus:before,
+.tooltip-right:focus:after {
+  -webkit-transform: translateX(12px);
+  -moz-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+/* Vertically center tooltip content for left/right tooltips */
+.tooltip-left:after,
+.tooltip-right:after {
+  margin-left: 0;
+  margin-bottom: -20px;
+}
+
+/*Styling for steps block*/
+.steps-block {
+  display: inline-flex;
+  width: 100%;
+  background: #f5f5f5;
+}
+.steps-block .step-item {
+  padding: 1rem;
+  background: #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.steps-block .step-item.is-active, .steps-block .step-item:hover {
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 0;
+}
+.steps-block .step-item.is-active h4, .steps-block .step-item:hover h4 {
+  color: #011148;
+}
+.steps-block .step-item.is-active p, .steps-block .step-item:hover p {
+  color: #2791d9;
+}
+.steps-block .step-item h4 {
+  margin: 0;
+  color: #212121;
+}
+.steps-block .step-item p {
+  font-size: 12px;
+  color: #757575;
+  word-break: break-word;
+}
+
+/*Styling for steps progress*/
+.steps-progress {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.steps-progress > .row {
+  width: 100%;
+  margin: 0;
+  padding: 0 4px;
+}
+.steps-progress .step-item {
+  display: flex;
+  padding: 0 8px;
+}
+.steps-progress .step-item.is-active span {
+  color: #2791d9;
+}
+.steps-progress .step-item.is-done i {
+  color: #2791d9;
+}
+.steps-progress .step-item span {
+  width: 100%;
+  display: inline-flex;
+  color: #c2c2c2;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.steps-progress .step-item span p {
+  margin: 0 4px;
+  word-break: break-word;
+}
+.steps-progress .step-item span i {
+  margin-top: 2px;
+}
+.steps-progress .step-counter {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: #d4e9f7;
+  border-radius: 100%;
+  margin: 8px;
+}
+.steps-progress .step-counter span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  line-height: 44px;
+  text-align: center;
+}
+.steps-progress .progress {
+  width: 100%;
+  height: 4px;
+  background: #f1f1f1;
+  position: absolute;
+}
+.steps-progress .progress div {
+  background: #2791d9;
+  height: 4px;
+}
+
+/*Styling for steps points*/
+.steps-points {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+}
+.steps-points .step-point {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  background: #d6d6d6;
+  border-radius: 1.5rem;
+  margin: auto;
+  text-align: center;
+}
+.steps-points .step-point span {
+  color: #fff;
+  line-height: 3rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.steps-points .col-xs-4 {
+  padding: 0;
+}
+.steps-points .step-item {
+  position: relative;
+}
+.steps-points .step-item.is-active .step-point {
+  background: #2791d9;
+}
+.steps-points .step-item.is-done .step-point {
+  background: #2791d9;
+}
+.steps-points .step-item.is-done:before {
+  background: #2791d9;
+}
+.steps-points .step-item h4, .steps-points .step-item p {
+  text-align: center;
+}
+.steps-points .step-item h4 {
+  color: #212121;
+}
+.steps-points .step-item p {
+  font-size: 0.75rem;
+  color: #757575;
+}
+.steps-points .step-item:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 8px;
+  background: #d6d6d6;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  bottom: 0;
+  z-index: 0;
+}
+.steps-points .step-item:last-child::before {
+  display: none;
+}
+
 .uh-img-showcase img {
   background: #FFFFFF;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
@@ -2485,8 +3004,6 @@ input[type=checkbox]:focus {
   border-radius: 8px;
 }
 
-<<<<<<< HEAD
-=======
 .card-header {
   background: #fff;
   height: 50px;
@@ -2499,8 +3016,10 @@ input[type=checkbox]:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 .card-header .ats-logo {
+  width: 180px;
+}
+.card-header .ats-logo img {
   max-height: 50px;
-  width: 50%;
   margin-top: 5px;
 }
 
@@ -2525,7 +3044,6 @@ input[type=checkbox]:focus {
   -webkit-box-align: center;
   align-items: center;
   height: 50px;
-  margin-left: -140px;
 }
 .ats-nav-content ul {
   display: flex;
@@ -2760,5 +3278,4 @@ li.has-children.is-active ul {
   display: block;
 }
 
->>>>>>> dikaseva
 /*# sourceMappingURL=style.css.map */

@@ -7,6 +7,10 @@
 //global class
 @import "../global/_global";
 
+
+//pre code color highlight
+@import "../global/_prism";
+
 hr{
   border:none;
   height: 1px;
@@ -117,6 +121,7 @@ hr{
 }
 
 pre {
+  max-height: 500px;
   overflow-x: auto;
   padding: 1.25em 1.25em 1.25em 2em;
   border: 1px solid $c-grey-2;
@@ -141,6 +146,22 @@ pre {
     top: 10px;
     color: $c-grey-5;
     transform: rotate(-90deg);
+  }
+
+  button{
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin : auto;
+    display: flex;
+    justify-content: center;
+
+    i{
+      position: relative;
+      margin: 3px 7px 0 0px;
+      
+    }
   }
 }
 code {
@@ -544,3 +565,19 @@ code {
 .urbanstory-font-xs{
   font-size: 11px;
 }
+
+.urbanstory-tooltip-style{
+  height: 150px;
+  padding: 10px;
+  display:block;
+  text-align: center;
+
+  button{
+    margin: 20px;    
+  }
+}
+
+.display-off{
+  display:none;
+}
+

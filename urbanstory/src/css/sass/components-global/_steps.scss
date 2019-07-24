@@ -1,0 +1,203 @@
+/*Styling for steps block*/
+.steps-block{
+    display:inline-flex;
+    width:100%;
+    background: $c-grey-1;
+
+    .step-item {
+        padding: 1rem;
+        background: $c-grey-1;
+        @include radius;
+        
+
+        &.is-active, &:hover{
+            background: $c-white;
+            @include  box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
+            width: 0;
+    
+            h4{
+                color: $c-firm-1;
+            }
+    
+            p{
+                color: $c-median-1;
+            }
+        }
+    
+        h4{
+            margin : 0;
+            color: $c-grey-6;
+        }
+    
+        p{
+            font-size: $font-xs;
+            color: $c-grey-5;
+            word-break: break-word;
+        }
+    }
+}
+
+/*Styling for steps progress*/
+$counter-width: 44px;
+.steps-progress{
+    width:100%;
+    padding: 0;
+    display: flex;
+    position: relative;
+    @include radius;
+    @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
+    overflow: hidden;
+    
+    > .row{
+        width: 100%;
+        margin:0;
+        padding: 0 $gutter-s;
+    }
+   
+    .step-item{
+        display:flex;
+        padding: 0 $gutter-m;
+       
+        &.is-active{
+            span{
+                color: $c-median-1;
+            }
+        }
+
+        &.is-done{
+            i{
+                color: $c-median-1;
+            }
+        }
+    
+        span{
+            width:100%;
+            display: inline-flex;
+            color: $c-grey-3;
+            top:0;
+            bottom: 0;
+            margin: auto;
+
+            p{
+                margin: 0 $gutter-s;
+                word-break: break-word;
+            } 
+
+            i{
+                margin-top: 2px;
+            }
+        }
+    }
+    .step-counter{
+        position: relative;
+        width: $counter-width;
+        height: $counter-width;
+        background: $c-info-alert; 
+        border-radius: 100%;
+        margin: $gutter-m;
+        span{
+            position: absolute;
+            left:0;
+            right:0;
+            line-height: 44px;
+            text-align: center;
+            
+        }
+    }
+    .progress{
+        width: 100%;
+        height: 4px;
+        background: #f1f1f1;
+        position: absolute;
+        div{
+            background: $c-median-1;
+            height: 4px;
+        }  
+    }
+}
+
+/*Styling for steps points*/
+$step-point-width: 180px;
+.steps-points{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    width:100%;
+    justify-content: center;
+    
+
+    .step-point{
+        position: relative;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        background: $c-grey-2; 
+        border-radius: 1.5rem;
+        margin: auto;
+        text-align: center;
+
+        span{
+            color: $c-white;
+            line-height: 3rem;
+            left:0;
+            right:0;
+            margin:auto; 
+        }
+    }
+
+    .col-xs-4 {
+        padding: 0;
+    }
+    .step-item{
+        position: relative;
+
+        &.is-active{
+            .step-point{
+                background: $c-median-1;
+            }
+        }
+        &.is-done{
+            .step-point{
+                background: $c-median-1;
+            }
+            &:before{
+                background:$c-median-1;
+            }
+        }
+        
+        h4, p{
+            text-align: center; 
+        }
+
+        h4{
+            color: $c-grey-6;
+        }
+        p{
+           font-size: 0.75rem;
+           color: $c-grey-5;
+        }
+
+        &:before{
+            content:"";
+            display: block;
+            width: 100% ;
+            height: 8px;
+            background: $c-grey-2;
+            position: absolute;
+            top:20px;
+            left: 50%;
+            bottom: 0;
+            z-index: 0;
+        }
+        &:last-child{
+            &::before{
+                display: none;
+            }
+        }
+    }
+   
+}

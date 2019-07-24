@@ -1,51 +1,58 @@
-.card-header {
-    background: $c-white;
-    height: $ats-header-height;
-    padding: 0 $gutter-xl;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    @include box-shadow(0 0 0 1px rgba(0, 0, 0, 0.1));
-    .ats-logo {
-        max-height: $ats-header-height;
-        width: 50%;
-        margin-top: 5px;
-    }
-}
+
+.card-header{
+    background        : $c-white;
+    height            : $ats-header-height;
+    padding           : 0 $gutter-xl;
+    -ms-flex-align    : center;
+    -webkit-box-align : center;
+    align-items       : center;
+    @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
+
+ 
+    .ats-logo{
+        width: 180px;
+        img{
+            max-height: $ats-header-height;
+            margin-top:5px;
+        }
 
 .flex {
     @include flexbox
 }
 
-.ats-nav-content {
-    display: inline-flex;
-    width: -webkit-fill-available;
-    justify-content: space-between;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    height: $ats-header-height;
-    margin-left: -140px;
-    ul {
-        display: flex;
-        justify-content: flex-start;
-        padding: 0;
-        margin: 0;
-        -ms-flex-align: center;
-        -webkit-box-align: center;
-        align-items: center;
-        li {
-            display: inline-block;
-            padding: 0;
-            font-size: 0.875rem;
-            a {
-                color: $c-grey-5;
-                cursor: pointer;
-                position: relative;
-                display: inline-flex;
-                height: $ats-header-height;
-                line-height: $ats-header-height;
-                padding: 0 $gutter-l;
+.ats-nav-content{
+    display           : inline-flex;
+    width             : -webkit-fill-available;
+    justify-content   : space-between;
+    -ms-flex-align    : center;
+    -webkit-box-align : center;
+    align-items       : center;
+    height            : $ats-header-height;
+    
+    ul{
+        display           : flex;
+        justify-content   : flex-start;
+        padding           : 0;
+        margin            : 0;
+        -ms-flex-align    : center;
+        -webkit-box-align : center;
+        align-items       : center;
+        
+
+        li{
+            display        : inline-block;
+            padding        : 0;
+            font-size      : 0.875rem;
+            
+            
+            a { 
+                color      : $c-grey-5; 
+                cursor     : pointer;
+                position   : relative;
+                display    : inline-flex;
+                height     : $ats-header-height;
+                line-height:$ats-header-height;
+                padding    : 0 $gutter-l;
                 &:before {
                     transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.25s;
                     content: "";
