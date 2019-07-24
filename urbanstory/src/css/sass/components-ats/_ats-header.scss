@@ -170,6 +170,7 @@
         background: $c-firm-1;
         box-shadow: 0 -7px 0 $c-firm-1, 0 7px 0 $c-firm-1;
         @include radius;
+        @include transition(cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s);
     }
     &.active {
         &::before {

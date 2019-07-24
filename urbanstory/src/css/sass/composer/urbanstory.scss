@@ -7,6 +7,14 @@
 //global class
 @import "../global/_global";
 
+hr{
+  border:none;
+  height: 1px;
+  width: 100%;
+  background: $c-grey-2;
+}
+
+
 .page-hero {
   padding: 2em 0;
   & + section {
@@ -232,6 +240,13 @@ code {
   letter-spacing: 1rem;
   font-size: 1.5rem;
   line-height: 1.5em;
+  
+}
+.font-heading{
+  font-family: $font-heading;
+}
+.font-body{
+  font-family: $font-stack;
 }
 .font-italic {
   font-style: italic;
