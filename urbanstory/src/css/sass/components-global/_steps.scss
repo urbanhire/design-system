@@ -1,40 +1,43 @@
+/*Styling for steps block*/
 .steps-block{
-    display: inline-flex;
+    display:inline-flex;
+    width:100%;
     background: $c-grey-1;
-}
 
-.step-block-item {
-    display: inline-block;
-    min-height: 100px;
-    padding: 1rem;
-    background: $c-grey-1;
-    @include radius;
+    .step-item {
+        padding: 1rem;
+        background: $c-grey-1;
+        @include radius;
+        
 
-    &.active{
-        background: $c-white;
-        @include  box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
-
+        &.is-active, &:hover{
+            background: $c-white;
+            @include  box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
+            width: 0;
+    
+            h4{
+                color: $c-firm-1;
+            }
+    
+            p{
+                color: $c-median-1;
+            }
+        }
+    
         h4{
-            color: $c-firm-1;
+            margin : 0;
+            color: $c-grey-6;
         }
-
+    
         p{
-            color: $c-median-1;
+            font-size: $font-xs;
+            color: $c-grey-5;
+            word-break: break-word;
         }
-    }
-
-    h4{
-        margin : 0 0 6px 0;
-        color: $c-grey-6;
-    }
-
-    p{
-        font-size: $font-xs;
-        color: $c-grey-5;
     }
 }
 
-//steps progress with grid
+/*Styling for steps progress*/
 $counter-width: 44px;
 .steps-progress{
     width:100%;
@@ -44,20 +47,17 @@ $counter-width: 44px;
     @include radius;
     @include box-shadow(0 0 0 1px rgba(0,0,0,0.1));
     overflow: hidden;
-    // background: grey;
-    &.has-counter{
-        // padding-right:$counter-width; 
-    }
+    
     > .row{
         width: 100%;
-        height: 100%;
         margin:0;
-        
+        padding: 0 $gutter-s;
     }
-
    
     .step-item{
-        padding: 0 8px;
+        display:flex;
+        padding: 0 $gutter-m;
+       
         &.is-active{
             span{
                 color: $c-median-1;
@@ -71,13 +71,16 @@ $counter-width: 44px;
         }
     
         span{
+            width:100%;
             display: inline-flex;
-            height: 60px;
-            line-height: 60px;
-            padding: 2px;
             color: $c-grey-3;
+            top:0;
+            bottom: 0;
+            margin: auto;
+
             p{
-                margin: 0 5px;
+                margin: 0 $gutter-s;
+                word-break: break-word;
             } 
 
             i{
@@ -91,13 +94,12 @@ $counter-width: 44px;
         height: $counter-width;
         background: $c-info-alert; 
         border-radius: 100%;
-        margin: 8px;
+        margin: $gutter-m;
         span{
             position: absolute;
-            line-height: 44px ;
             left:0;
             right:0;
-            margin:auto;
+            line-height: 44px;
             text-align: center;
             
         }
@@ -107,18 +109,14 @@ $counter-width: 44px;
         height: 4px;
         background: #f1f1f1;
         position: absolute;
-        top: 0;
-        left:0;
-        margin:0;
-        padding:0;
         div{
             background: $c-median-1;
             height: 4px;
-        }
-
-        
+        }  
     }
 }
+
+/*Styling for steps points*/
 $step-point-width: 180px;
 .steps-points{
     position: relative;
@@ -144,12 +142,10 @@ $step-point-width: 180px;
 
         span{
             color: $c-white;
-            // position: absolute;
             line-height: 3rem;
             left:0;
             right:0;
-            margin:auto;
-            
+            margin:auto; 
         }
     }
 
@@ -176,8 +172,13 @@ $step-point-width: 180px;
         h4, p{
             text-align: center; 
         }
+
+        h4{
+            color: $c-grey-6;
+        }
         p{
-           font-size: 0.75rem; 
+           font-size: 0.75rem;
+           color: $c-grey-5;
         }
 
         &:before{
@@ -185,7 +186,6 @@ $step-point-width: 180px;
             display: block;
             width: 100% ;
             height: 8px;
-            background: red;
             background: $c-grey-2;
             position: absolute;
             top:20px;
@@ -201,4 +201,3 @@ $step-point-width: 180px;
     }
    
 }
-.step-content{}

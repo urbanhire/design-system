@@ -2818,41 +2818,43 @@ input[type=checkbox]:focus {
   margin-bottom: -20px;
 }
 
+/*Styling for steps block*/
 .steps-block {
   display: inline-flex;
+  width: 100%;
   background: #f5f5f5;
 }
-
-.step-block-item {
-  display: inline-block;
-  min-height: 100px;
+.steps-block .step-item {
   padding: 1rem;
   background: #f5f5f5;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.step-block-item.active {
+.steps-block .step-item.is-active, .steps-block .step-item:hover {
   background: #fff;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 0;
 }
-.step-block-item.active h4 {
+.steps-block .step-item.is-active h4, .steps-block .step-item:hover h4 {
   color: #011148;
 }
-.step-block-item.active p {
+.steps-block .step-item.is-active p, .steps-block .step-item:hover p {
   color: #2791d9;
 }
-.step-block-item h4 {
-  margin: 0 0 6px 0;
+.steps-block .step-item h4 {
+  margin: 0;
   color: #212121;
 }
-.step-block-item p {
+.steps-block .step-item p {
   font-size: 12px;
   color: #757575;
+  word-break: break-word;
 }
 
+/*Styling for steps progress*/
 .steps-progress {
   width: 100%;
   padding: 0;
@@ -2868,10 +2870,11 @@ input[type=checkbox]:focus {
 }
 .steps-progress > .row {
   width: 100%;
-  height: 100%;
   margin: 0;
+  padding: 0 4px;
 }
 .steps-progress .step-item {
+  display: flex;
   padding: 0 8px;
 }
 .steps-progress .step-item.is-active span {
@@ -2881,14 +2884,16 @@ input[type=checkbox]:focus {
   color: #2791d9;
 }
 .steps-progress .step-item span {
+  width: 100%;
   display: inline-flex;
-  height: 60px;
-  line-height: 60px;
-  padding: 2px;
   color: #c2c2c2;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 .steps-progress .step-item span p {
-  margin: 0 5px;
+  margin: 0 4px;
+  word-break: break-word;
 }
 .steps-progress .step-item span i {
   margin-top: 2px;
@@ -2903,10 +2908,9 @@ input[type=checkbox]:focus {
 }
 .steps-progress .step-counter span {
   position: absolute;
-  line-height: 44px;
   left: 0;
   right: 0;
-  margin: auto;
+  line-height: 44px;
   text-align: center;
 }
 .steps-progress .progress {
@@ -2914,16 +2918,13 @@ input[type=checkbox]:focus {
   height: 4px;
   background: #f1f1f1;
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
 }
 .steps-progress .progress div {
   background: #2791d9;
   height: 4px;
 }
 
+/*Styling for steps points*/
 .steps-points {
   position: relative;
   margin: 0;
@@ -2970,15 +2971,18 @@ input[type=checkbox]:focus {
 .steps-points .step-item h4, .steps-points .step-item p {
   text-align: center;
 }
+.steps-points .step-item h4 {
+  color: #212121;
+}
 .steps-points .step-item p {
   font-size: 0.75rem;
+  color: #757575;
 }
 .steps-points .step-item:before {
   content: "";
   display: block;
   width: 100%;
   height: 8px;
-  background: red;
   background: #d6d6d6;
   position: absolute;
   top: 20px;

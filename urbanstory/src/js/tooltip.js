@@ -10,6 +10,7 @@ $(".nav-item").click(function() {
     });
 }
 
+
 var activeHtml = function(){
 
     $("#html-tab.nav-item").click(function() {
@@ -26,7 +27,16 @@ var activeSass = function(){
     
         });
     }
+
+var activeStep = function(){
+    $(".step-item").click(function() {
+        $(".step-item").not(this).removeClass("is-active");
+        $(this).addClass("is-active");
     
+        });
+    }
+    
+activeStep();  
 activeTab();
 activeHtml();
 activeSass();
