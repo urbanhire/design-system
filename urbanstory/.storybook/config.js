@@ -16,6 +16,9 @@ addParameters({
 // css library
 import '../src/css/style.css';
 
+// ats library
+import '../src/css/ats.css';
+
 //css only for storybook
 import '../src/css/urbanstory.css';
 
