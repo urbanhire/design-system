@@ -11,9 +11,6 @@
 // global css
 @import "../global/_global";
 
-//pre code color highlight
-@import "../global/_prism";
-
 // main css
 @import "../components-global/_extends";
 @import "../components-global/_button";
@@ -38,7 +35,3 @@
 
 // cards
 @import "../components-global/_img-showcase";
-
-
-//ats 
-@import "../components-ats/_ats-header";

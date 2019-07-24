@@ -16,6 +16,10 @@
             margin-top:5px;
         }
 
+    }
+
+}
+
 .flex {
     @include flexbox
 }
@@ -58,7 +62,7 @@
                     content: "";
                     background: $c-firm-1;
                     width: 0%;
-                    height: 3px;
+                    height: 2px;
                     display: inline-block;
                     position: absolute;
                     left: 0;
@@ -186,8 +190,6 @@
     }
 }
 
-// .menu-drawer.menu-drawer-active{
-// }
 @media (max-width: $screen-lg + 2.5) {
     .card-header {
         padding: 0 10px
