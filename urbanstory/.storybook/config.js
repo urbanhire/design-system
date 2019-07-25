@@ -15,7 +15,6 @@ addParameters({
 
 // css library
 import '../src/css/style.css';
-
 // ats library
 import '../src/css/ats.css';
 

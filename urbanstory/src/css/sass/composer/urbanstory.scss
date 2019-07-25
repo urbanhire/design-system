@@ -6,10 +6,8 @@
 
 //global class
 @import "../global/_global";
-
-
-//pre code color highlight
 @import "../global/_prism";
+
 
 hr{
   border:none;
@@ -121,12 +119,13 @@ hr{
 }
 
 pre {
+  display: none;
   max-height: 500px;
   overflow-x: auto;
   padding: 1.25em 1.25em 1.25em 2em;
   border: 1px solid $c-grey-2;
   //border-left-width: 5px;
-  margin: 1.6em 0;
+  margin: 0;
   font-size: 0.875em;
   //background: $c-grey-1;
   white-space: pre;
@@ -577,7 +576,11 @@ code {
   }
 }
 
-.display-off{
-  display:none;
+.display-on{
+  display:block;
+}
+
+.code-preview{
+  margin: 1em 0 0 0;
 }
 

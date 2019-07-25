@@ -114,12 +114,28 @@
         #d6d6d6 100%`;
     }
 </script>
+
+<!-- Script for copy code snippet to clipboard -->
 <script>
     function copyToClipboard(element) {
-        var $temp = $("<input>");
+        var $temp = $("<textarea>");
+        var brRegex = /\r?\n\s*[\/]?>/gi;
         $("body").append($temp);
-        $temp.val($(element).html()).select();
+        $temp.val($(element).html().replace(brRegex, "<br />")).select();
         document.execCommand("copy");
         $temp.remove();
-   }
+  }
 </script>
+<!-- <script>
+    function showCode(cityName) {
+        var i;
+        var x = document.getElementsByClassName("code-snippet");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        document.getElementById(cityName).style.display = "block";  
+    }
+</script> -->
+
+
+  
