@@ -3,7 +3,6 @@
     <h1>ATS Header</h1>
   </section>
   <section>
-
     <header class="card-header flex"> 
       <a class="ats-logo" href=""><img  src="https://winter-cdn.urbanhire.com/img/logo.svg" alt="Urbanhire"></a> 
       <nav class="ats-nav-content">
@@ -46,9 +45,14 @@
     </header>
   </section>
 
-  <section>
-    <h4>HTML</h4>
-    <pre><code>&lt;header class=&quot;card-header flex&quot;&gt;
+  <section class="code-preview">
+		<div class="card uh-tab">
+			<nav class="uh-tab-nav">
+				<a  class="nav-item nav-fit-content active" href="#html" id="html-tab">HTML</a>
+				<a  class="nav-item nav-fit-content" href="#sass" id="sass-tab">SASS</a>
+			</nav>
+		</div>
+    <pre class="code-snippet display-on" id="html"><code>&lt;header class=&quot;card-header flex&quot;&gt;
         &lt;a href=&quot;&quot;&gt;&lt;img class=&quot;ats-logo&quot; src=&quot;https://winter-cdn.urbanhire.com/img/logo.svg&quot; alt=&quot;Urbanhire&quot;&gt;&lt;/a&gt;
         &lt;nav class=&quot;ats-nav-content&quot;&gt;
             &lt;div class=&quot;left-side&quot;&gt;
@@ -88,4 +92,273 @@
             &lt;/div&gt;
         &lt;/nav&gt;
     &lt;/header&gt;</code></pre>
+    <pre class="code-snippet" id="sass"><code>
+.card-header {
+  background: $c-white;
+  height: $ats-header-height;
+  padding: 0 $gutter-xl;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  @include box-shadow(0 0 0 1px rgba(0, 0, 0, 0.1));
+  .ats-logo {
+    width: 180px;
+    img {
+      max-height: $ats-header-height;
+      margin-top: 5px;
+    }
+  }
+}
+
+.flex {
+  @include flexbox
+}
+
+.ats-nav-content {
+  display: inline-flex;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: $ats-header-height;
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    li {
+      display: inline-block;
+      padding: 0;
+      font-size: 0.875rem;
+      a {
+        color: $c-grey-5;
+        cursor: pointer;
+        position: relative;
+        display: inline-flex;
+        height: $ats-header-height;
+        line-height: $ats-header-height;
+        padding: 0 $gutter-l;
+        &:before {
+          transition: cubic-bezier(0.71, 0.14, 0.23, 1.01) 0.25s;
+          content: "";
+          background: $c-firm-1;
+          width: 0%;
+          height: 2px;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0 auto;
+          opacity: .5;
+        }
+        &:hover {
+          cursor: pointer;
+          color: $c-firm-1;
+          &:before {
+            width: 100%;
+          }
+        }
+        &.active {
+          color: $c-firm-1;
+          &:before {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+      }
+      .icon-coin {
+        color: $c-yellow-1
+      }
+      span {
+        margin: 0px 5px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .company-name {
+        width: $ats-header-height * 3;
+      }
+      .coin-amt {
+        width: 35px
+      }
+      &.has-icon {
+        padding: 0;
+        a {
+          display: inline-flex;
+          height: $ats-header-height;
+          padding: 0 $gutter-s;
+          position: relative;
+          i {
+            margin-top: 2px;
+            display: block;
+            width: 40px;
+            height: 100%;
+            text-align: center;
+            vertical-align: middle;
+          }
+          &::before {
+            display: none;
+          }
+          &:after {
+            content: "";
+            background: rgba($c-firm-1, .05);
+            width: 40px;
+            height: 40px;
+            @include border-radius(20px);
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            visibility: hidden;
+            opacity: 0;
+          }
+          &:hover {
+            &:after {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          &.active {
+            &:after {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &.ats-company {
+        a {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-drawer {
+  height: $ats-header-height;
+  width: 30px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 2px;
+    width: 20px;
+    background: $c-firm-1;
+    box-shadow: 0 -7px 0 $c-firm-1, 0 7px 0 $c-firm-1;
+    @include radius;
+    @include transition(cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s);
+  }
+  &.active {
+    &::before {
+      box-shadow: -5px -7px 0 #011148, 5px 7px 0 #011148;
+    }
+  }
+}
+
+@media (max-width: $screen-lg + 2.5) {
+  .card-header {
+    padding: 0 10px
+  }
+  .ats-nav-content {
+    ul li {
+      a {
+        padding: 0 $gutter-m - 3;
+      }
+    }
+  }
+  .ats-nav-content ul li.has-icon a i {
+    width: 40px;
+  }
+  li.menu-drawer {
+    width: 30px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .left-side {
+    display: none
+  }
+  .ats-nav-content {
+    justify-content: flex-end
+  }
+  .right-side ul li:nth-child(1),
+  .right-side ul li:nth-child(4) {
+    display: none
+  }
+}
+
+@media (max-width: $screen-s) {
+  .ats-nav-content ul li.has-icon a i {
+    width: 30px;
+  }
+  li.menu-drawer {
+    width: 40px;
+  }
+}
+
+li.has-children {
+  color: $c-firm-1;
+  position: relative;
+  ul {
+    width: 200px;
+    position: absolute;
+    z-index: 4;
+    display: none;
+    background: #ffffff;
+    border-top: solid 1px #ddd;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    @include radius;
+    li {
+      display: block;
+      float: none;
+      width: 100%;
+      &:hover {
+        background: #f5f5f5
+      }
+      &:active {
+        background: #f5f5f5;
+      }
+      a {
+        display: block;
+        line-height: 1em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+li.has-children.is-active {
+  ul {
+    display: block;
+  }
+}
+    </code></pre>
   </section>
+</div>

@@ -22,7 +22,67 @@
                 <p>Promotional Advertising Specialty You Ve Waited Long Enough</p>
             </a>
         </div>
-        <h4>Steps-progress <samll>(with grid)</samll></h4>
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html-1"><code>&lt;div class=&quot;steps-block&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-3&quot;&gt;
+        &lt;h4&gt;Step 1&lt;/h4&gt;
+        &lt;p&gt;Promotional Advertising Specialty You Ve Waited Long Enough&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-3&quot;&gt;
+        &lt;h4&gt;Step 2&lt;/h4&gt;
+        &lt;p&gt;Study 800 Numbers Still Popular With Advertisers&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-3&quot;&gt;
+        &lt;h4&gt;Step 3&lt;/h4&gt;
+        &lt;p&gt;Promotional Advertising Specialty You Ve Waited Long Enough&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-3&quot;&gt;
+        &lt;h4&gt;Step 4&lt;/h4&gt;
+        &lt;p&gt;Promotional Advertising Specialty You Ve Waited Long Enough&lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+            </code></pre>
+            <pre class="code-snippet" id="sass-1"><code>
+.steps-block {
+    display: inline-flex;
+    width: 100%;
+    background: $c-grey-1;
+    .step-item {
+        padding: 1rem;
+        background: $c-grey-1;
+        @include radius;
+        &.is-active,
+        &:hover {
+            background: $c-white;
+            @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
+            width: 0;
+            h4 {
+                color: $c-firm-1;
+            }
+            p {
+                color: $c-median-1;
+            }
+        }
+        h4 {
+            margin: 0;
+            color: $c-grey-6;
+        }
+        p {
+            font-size: $font-xs;
+            color: $c-grey-5;
+            word-break: break-word;
+        }
+    }
+}
+            </code></pre>
+        </section>
+        <h4>Steps-progress <small>(with grid)</small></h4>
         <div class="steps-progress">
             <div class="progress"><div style="width:64%;"></div></div>
             <div class="row">
@@ -38,7 +98,104 @@
             </div>
             <div class="step-counter"><span>64%</span></div>
         </div>
-        <h4>Steps-progress <samll>(without grid)</samll></h4>
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html-2" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass-2" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html-2"><code>&lt;div class=&quot;steps-progress&quot;&gt;
+    &lt;div class=&quot;progress&quot;&gt;
+        &lt;div style=&quot;width:64%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4 is-done&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;&lt;p&gt;1. Register&lt;/p&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4 is-active&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-draft&quot;&gt;&lt;/i&gt;&lt;p&gt;2. Complete your profile&lt;/p&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-draft&quot;&gt;&lt;/i&gt;&lt;p&gt;3. Complete your preferences&lt;/p&gt;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-counter&quot;&gt;&lt;span&gt;64%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            <pre class="code-snippet" id="sass-2"><code>
+$counter-width: 44px;
+.steps-progress {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    position: relative;
+    @include radius;
+    @include box-shadow(0 0 0 1px rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    >.row {
+        width: 100%;
+        margin: 0;
+        padding: 0 $gutter-s;
+    }
+    .step-item {
+        display: flex;
+        padding: 0 $gutter-m;
+        &.is-active {
+            span {
+                color: $c-median-1;
+            }
+        }
+        &.is-done {
+            i {
+                color: $c-median-1;
+            }
+        }
+        span {
+            width: 100%;
+            display: inline-flex;
+            color: $c-grey-3;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            p {
+                margin: 0 $gutter-s;
+                word-break: break-word;
+            }
+            i {
+                margin-top: 2px;
+            }
+        }
+    }
+    .step-counter {
+        position: relative;
+        width: $counter-width;
+        height: $counter-width;
+        background: $c-info-alert;
+        border-radius: 100%;
+        margin: $gutter-m;
+        span {
+            position: absolute;
+            left: 0;
+            right: 0;
+            line-height: 44px;
+            text-align: center;
+        }
+    }
+    .progress {
+        width: 100%;
+        height: 4px;
+        background: #f1f1f1;
+        position: absolute;
+        div {
+            background: $c-median-1;
+            height: 4px;
+        }
+    }
+}
+            </code></pre>
+        </section>
+        <h4>Steps-progress <small>(without grid)</small></h4>
         <div class="steps-progress">
             <div class="progress"><div style="width:64%;"></div></div>
             <div class="row">
@@ -54,30 +211,237 @@
             </div>
             <div class="step-counter"><span>64%</span></div>
         </div>
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html-3" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass-3" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html-3"><code>&lt;div class=&quot;steps-progress&quot;&gt;
+    &lt;div class=&quot;progress&quot;&gt;
+        &lt;div style=&quot;width:64%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;step-item is-done&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;&lt;p&gt;1. Register&lt;/p&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;step-item is-active&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-draft&quot;&gt;&lt;/i&gt;&lt;p&gt;2. Complete your profile&lt;/p&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;step-item &quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-draft&quot;&gt;&lt;/i&gt;&lt;p&gt;3. Complete your preferences&lt;/p&gt;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-counter&quot;&gt;&lt;span&gt;64%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            <pre class="code-snippet" id="sass-3"><code>
+$counter-width: 44px;
+.steps-progress {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    position: relative;
+    @include radius;
+    @include box-shadow(0 0 0 1px rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    >.row {
+        width: 100%;
+        margin: 0;
+        padding: 0 $gutter-s;
+    }
+    .step-item {
+        display: flex;
+        padding: 0 $gutter-m;
+        &.is-active {
+            span {
+                color: $c-median-1;
+            }
+        }
+        &.is-done {
+            i {
+                color: $c-median-1;
+            }
+        }
+        span {
+            width: 100%;
+            display: inline-flex;
+            color: $c-grey-3;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            p {
+                margin: 0 $gutter-s;
+                word-break: break-word;
+            }
+            i {
+                margin-top: 2px;
+            }
+        }
+    }
+    .step-counter {
+        position: relative;
+        width: $counter-width;
+        height: $counter-width;
+        background: $c-info-alert;
+        border-radius: 100%;
+        margin: $gutter-m;
+        span {
+            position: absolute;
+            left: 0;
+            right: 0;
+            line-height: 44px;
+            text-align: center;
+        }
+    }
+    .progress {
+        width: 100%;
+        height: 4px;
+        background: #f1f1f1;
+        position: absolute;
+        div {
+            background: $c-median-1;
+            height: 4px;
+        }
+    }
+}
+            </code></pre>
+        </section>
         <h4>Steps-points</h4>
         <div class="row steps-points">
-                <a href="#" class="step-item col-xs-4 is-active">
-                    <div class="step-point"><span>1</span></div>
-                    <div class="step-content">
-                            <h4><small>Register</small></h4>
-                            <p>Search Engine Optimization And Advertising</p>
-                    </div>
-                </a>
-                <a href="#" class="step-item col-xs-4">
-                    <div class="step-point"><span>2</span></div>
-                    <div class="step-content">
-                            <h4><small>Profile</small></h4>
-                            <p>Promotional Advertising Specialty You Ve Waited Long Enough</p>
-                    </div>
-                </a>
-                <a href="#" class="step-item col-xs-4">
-                    <div class="step-point"><span>3</span></div>
-                    <div class="step-content">
-                            <h4><small>Preferences</small></h4>
-                            <p>From Wetlands To Canals And Dams Amsterdam Is Alive</p>
-                    </div>
-                </a>
+            <a href="#" class="step-item col-xs-4 is-active">
+                <div class="step-point"><span>1</span></div>
+                <div class="step-content">
+                        <h4><small>Register</small></h4>
+                        <p>Search Engine Optimization And Advertising</p>
+                </div>
+            </a>
+            <a href="#" class="step-item col-xs-4">
+                <div class="step-point"><span>2</span></div>
+                <div class="step-content">
+                        <h4><small>Profile</small></h4>
+                        <p>Promotional Advertising Specialty You Ve Waited Long Enough</p>
+                </div>
+            </a>
+            <a href="#" class="step-item col-xs-4">
+                <div class="step-point"><span>3</span></div>
+                <div class="step-content">
+                        <h4><small>Preferences</small></h4>
+                        <p>From Wetlands To Canals And Dams Amsterdam Is Alive</p>
+                </div>
+            </a>
         </div>
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html-4" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass-4" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html-4"><code>&lt;div class=&quot;row steps-points&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4 is-active&quot;&gt;
+        &lt;div class=&quot;step-point&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;step-content&quot;&gt;
+            &lt;h4&gt;&lt;small&gt;Register&lt;/small&gt;&lt;/h4&gt;
+            &lt;p&gt;Search Engine Optimization And Advertising&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4&quot;&gt;
+        &lt;div class=&quot;step-point&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;step-content&quot;&gt;
+            &lt;h4&gt;&lt;small&gt;Profile&lt;/small&gt;&lt;/h4&gt;
+            &lt;p&gt;Promotional Advertising Specialty You Ve Waited Long Enough&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4&quot;&gt;
+        &lt;div class=&quot;step-point&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;step-content&quot;&gt;
+            &lt;h4&gt;&lt;small&gt;Preferences&lt;/small&gt;&lt;/h4&gt;
+            &lt;p&gt;From Wetlands To Canals And Dams Amsterdam Is Alive&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+            </code></pre>
+            <pre class="code-snippet" id="sass-4"><code>
+$step-point-width: 180px;
+.steps-points {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    .step-point {
+        position: relative;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        background: $c-grey-2;
+        border-radius: 1.5rem;
+        margin: auto;
+        text-align: center;
+        span {
+            color: $c-white;
+            line-height: 3rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+    .col-xs-4 {
+        padding: 0;
+    }
+    .step-item {
+        position: relative;
+        &.is-active {
+            .step-point {
+                background: $c-median-1;
+            }
+        }
+        &.is-done {
+            .step-point {
+                background: $c-median-1;
+            }
+            &:before {
+                background: $c-median-1;
+            }
+        }
+        h4,
+        p {
+            text-align: center;
+        }
+        h4 {
+            color: $c-grey-6;
+        }
+        p {
+            font-size: 0.75rem;
+            color: $c-grey-5;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 8px;
+            background: $c-grey-2;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            bottom: 0;
+            z-index: 0;
+        }
+        &:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+            </code></pre>
+        </section>
         <h4>Steps-points <small>(done-condition)</small></h4>
         <div class="row steps-points">
             <a class="step-item col-xs-4 is-active is-done">
@@ -101,7 +465,117 @@
                     <p>From Wetlands To Canals And Dams Amsterdam Is Alive</p>
                 </div>
             </a>
-        </div>   
+        </div>
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html-5" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass-5" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html-5"><code>&lt;div class=&quot;row steps-points&quot;&gt;
+    &lt;a class=&quot;step-item col-xs-4 is-active is-done&quot;&gt;
+        &lt;div class=&quot;step-point&quot;&gt;&lt;span&gt;&lt;i class=&quot;icon-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;step-content&quot;&gt;
+            &lt;h4&gt;&lt;small&gt;Register&lt;/small&gt;&lt;/h4&gt;
+            &lt;p&gt;Search Engine Optimization And Advertising&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4 is-active&quot;&gt;
+        &lt;div class=&quot;step-point&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;step-content&quot;&gt;
+            &lt;h4&gt;&lt;small&gt;Profile&lt;/small&gt;&lt;/h4&gt;
+            &lt;p&gt;Promotional Advertising Specialty You Ve Waited Long Enough&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;step-item col-xs-4&quot;&gt;
+        &lt;div class=&quot;step-point&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;step-content&quot;&gt;
+            &lt;h4&gt;&lt;small&gt;Preferences&lt;/small&gt;&lt;/h4&gt;
+            &lt;p&gt;From Wetlands To Canals And Dams Amsterdam Is Alive&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+            </code></pre>
+            <pre  class="code-snippet" id="sass-5"><code>
+$step-point-width: 180px;
+.steps-points {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    .step-point {
+        position: relative;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        background: $c-grey-2;
+        border-radius: 1.5rem;
+        margin: auto;
+        text-align: center;
+        span {
+            color: $c-white;
+            line-height: 3rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+    .col-xs-4 {
+        padding: 0;
+    }
+    .step-item {
+        position: relative;
+        &.is-active {
+            .step-point {
+                background: $c-median-1;
+            }
+        }
+        &.is-done {
+            .step-point {
+                background: $c-median-1;
+            }
+            &:before {
+                background: $c-median-1;
+            }
+        }
+        h4,
+        p {
+            text-align: center;
+        }
+        h4 {
+            color: $c-grey-6;
+        }
+        p {
+            font-size: 0.75rem;
+            color: $c-grey-5;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 8px;
+            background: $c-grey-2;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            bottom: 0;
+            z-index: 0;
+        }
+        &:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+            </code></pre>
+        </section>  
     </section>
 </div>
 

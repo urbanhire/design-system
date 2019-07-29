@@ -35,14 +35,24 @@
         <div class="col-xs-2 col-sm-6 col-md-4 col-lg-2">
             <div class="box-row"></div>
         </div>
-    </div><pre><code>&lt;div class="row">
+    </div>
+    <section class="code-preview">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
+				</nav>
+			</div>
+            <pre class="code-snippet display-on" id="html-1"><code>&lt;div class="row">
     &lt;div class="col-xs-12
                 col-sm-8
                 col-md-6
                 col-lg-4">
         &lt;div class="box">Responsive&lt;/div>
     &lt;/div>
-&lt;/div></code></pre></section>
+&lt;/div></code></pre>
+    </section>
+</section>
 <a name="fluid"></a>
 <section class="page-section">
     <br>
@@ -411,7 +421,15 @@
                 </div>
             </div>
         </div>
-    </div><pre><code>&lt;div class="row around-xs">
+    </div>
+    <section class="code-preview">
+        <div class="card uh-tab">
+            <nav class="uh-tab-nav">
+                <a  class="nav-item nav-fit-content active" href="#html-3" id="html-tab">HTML</a>
+                <a  class="nav-item nav-fit-content" href="#sass-3" id="sass-tab">SASS</a>
+            </nav>
+        </div>
+        <pre class="code-snippet display-on" id="html-3"><code>&lt;div class="row around-xs">
     &lt;div class="col-xs-2">
         &lt;div class="box">
             around
@@ -428,7 +446,14 @@
         &lt;/div>
     &lt;/div>
 &lt;/div>
-</code></pre>
+        </code></pre>
+        <pre class="code-snippet" id="sass-3"><code>
+.around-xs {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+        </code></pre>
+    </section>
     <h4><code>.between-</code></h4>
     <div class="row">
         <div class="col-xs-12">
@@ -446,7 +471,15 @@
                 </div>
             </div>
         </div>
-    </div><pre><code>&lt;div class="row between-xs">
+    </div>
+    <section class="code-preview">
+        <div class="card uh-tab">
+            <nav class="uh-tab-nav">
+                <a  class="nav-item nav-fit-content active" href="#html-4" id="html-tab">HTML</a>
+                <a  class="nav-item nav-fit-content" href="#sass-4" id="sass-tab">SASS</a>
+            </nav>
+        </div>
+        <pre class="code-snippet display-on" id="html-4"><code>&lt;div class="row between-xs">
     &lt;div class="col-xs-2">
         &lt;div class="box">
             between
@@ -463,7 +496,16 @@
         &lt;/div>
     &lt;/div>
 &lt;/div>
-</code></pre></section>
+        </code></pre>
+        <pre class="code-snippet" id="sass-4"><code>
+.between-xs {
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+        </code></pre>
+    </section>
+</section>
 <a name="reordering"></a>
 <section class="page-section">
     <h2>Reordering</h2>
@@ -494,7 +536,15 @@
                 </div>
             </div>
         </div>
-    </div><pre><code>&lt;div class="row">
+    </div>
+    <section class="code-preview">
+        <div class="card uh-tab">
+            <nav class="uh-tab-nav">
+                <a  class="nav-item nav-fit-content active" href="#html-5" id="html-tab">HTML</a>
+                <a  class="nav-item nav-fit-content" href="#sass-5" id="sass-tab">SASS</a>
+            </nav>
+        </div>
+        <pre class="code-snippet display-on" id="html-5"><code>&lt;div class="row">
     &lt;div class="col-xs-2">
         &lt;div class="box">
             1
@@ -511,7 +561,15 @@
         &lt;/div>
     &lt;/div>
 &lt;/div>
-</code></pre>
+        </code></pre>
+        <pre class="code-snippet" id="sass-5"><code>
+.first-xs {
+    -ms-flex-order: -1;
+    -webkit-box-ordinal-group: 0;
+    order: -1;
+}
+        </code></pre>
+    </section>
     <h4><code>.last-</code></h4>
     <div class="row">
         <div class="col-xs-12">
@@ -538,7 +596,15 @@
                 </div>
             </div>
         </div>
-    </div><pre><code>&lt;div class="row">
+    </div>
+    <section class="code-preview">
+        <div class="card uh-tab">
+            <nav class="uh-tab-nav">
+                <a  class="nav-item nav-fit-content active" href="#html-6" id="html-tab">HTML</a>
+                <a  class="nav-item nav-fit-content" href="#sass-6" id="sass-tab">SASS</a>
+            </nav>
+        </div>
+        <pre class="code-snippet display-on" id="html-6"><code>&lt;div class="row">
     &lt;div class="col-xs-2 last-xs">
         &lt;div class="box">
             1
@@ -555,7 +621,16 @@
         &lt;/div>
     &lt;/div>
 &lt;/div>
-</code></pre></section>
+        </code></pre>
+        <pre class="code-snippet" id="sass-6"><code>
+.last-xs {
+    -ms-flex-order: 1;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+}
+        </code></pre>
+    </section>
+</section>
 <a name="reversing"></a>
 <section class="page-section">
     <h2>Reversing</h2>
@@ -585,24 +660,51 @@
                 </div>
             </div>
         </div>
-    </div><pre><code>&lt;div class="row reverse">
-    &lt;div class="col-xs-2">
-        &lt;div class="box">
-            1
-        &lt;/div>
-    &lt;/div>
-    &lt;div class="col-xs-2">
-        &lt;div class="box">
-            2
-        &lt;/div>
-    &lt;/div>
-    &lt;div class="col-xs-2">
-        &lt;div class="box">
-            3
-        &lt;/div>
-    &lt;/div>
-&lt;/div>
-</code></pre></section>
+    </div>
+    <section class="code-preview">
+        <div class="card uh-tab">
+            <nav class="uh-tab-nav">
+                <a  class="nav-item nav-fit-content active" href="#html-7" id="html-tab">HTML</a>
+                <a  class="nav-item nav-fit-content" href="#sass-7" id="sass-tab">SASS</a>
+            </nav>
+        </div>
+        <pre class="code-snippet display-on" id="html-7"><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-12&quot;&gt;
+        &lt;div class=&quot;box box-container&quot;&gt;
+            &lt;div class=&quot;row reverse&quot;&gt;
+                &lt;div class=&quot;col-xs-2&quot;&gt;
+                    &lt;div class=&quot;box-nested&quot;&gt;1&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-2&quot;&gt;
+                    &lt;div class=&quot;box-nested&quot;&gt;2&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-2&quot;&gt;
+                    &lt;div class=&quot;box-nested&quot;&gt;3&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-2&quot;&gt;
+                    &lt;div class=&quot;box-nested&quot;&gt;4&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-2&quot;&gt;
+                    &lt;div class=&quot;box-nested&quot;&gt;5&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-2&quot;&gt;
+                    &lt;div class=&quot;box-nested&quot;&gt;6&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+        <pre class="code-snippet" id="sass-7"><code>
+.row.reverse {
+    -ms-flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+}
+        </code></pre>
+    </section>
+</section>
     <!-- end -->
 
 </main>

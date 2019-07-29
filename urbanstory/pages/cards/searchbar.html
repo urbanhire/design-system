@@ -8,10 +8,64 @@
 			<div class="dropdown padd-l">All Departments <i class="icon-caret-down"></i></div>
 			<button class="btn btn-large btn-firm">SEARCH</button>
 		</div>
-		<pre><code>&lt;div class=&quot;card flex search-bar&quot;&gt;
+		<section class="code-preview">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass" id="sass-tab">SASS</a>
+				</nav>
+			</div>
+			<pre class="code-snippet display-on" id="html"><code>&lt;div class=&quot;card flex search-bar&quot;&gt;
 	&lt;input type=&quot;text&quot; placeholder=&quot;Search 2.801 employee...&quot;&gt;
 	&lt;div class=&quot;dropdown padd-l&quot;&gt;All Departments &lt;i class=&quot;icon-caret-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
 	&lt;button class=&quot;btn btn-large btn-firm&quot;&gt;SEARCH&lt;/button&gt;
 &lt;/div&gt;</code></pre>
+			<pre class="code-snippet" id="sass"><code>
+.flex {
+	@include flexbox;
+}
+
+.search-bar {
+	font-size: 16px;
+	padding: $gutter-l;
+	height: 80px;
+	position: relative;
+	@include flex-middle;
+	&:before {
+		display: block;
+		font-family: $font-icon;
+		font-size: 18px;
+		content: "\E089";
+		color: $c-grey-3;
+		text-align: center;
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		line-height: 80px;
+		z-index: 0;
+	}
+	input {
+		width: 100%;
+		height: 80px;
+		border: none;
+		font-size: 16px;
+		padding: $gutter-l $gutter-l $gutter-l 80px;
+		margin-left: -16px;
+		margin-top: -16px;
+		margin-bottom: -16px;
+		background: none;
+		position: relative;
+		z-index: 1;
+		@include radius;
+	}
+}
+
+.dropdown {
+	width: 220px;
+}
+			</code></pre>
+		</section>
 	</section>
 </div>

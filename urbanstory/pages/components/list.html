@@ -21,7 +21,14 @@
             </ul>
 
         </div>
-        <pre><code>&lt;ul class=&quot;list has-icon&quot;&gt;
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html-1"><code>&lt;ul class=&quot;list has-icon&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List item item item item ioete&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List item 2&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List item 3&lt;/a&gt;&lt;/li&gt;
@@ -33,5 +40,53 @@
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List item&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List item&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+            <pre class="code-snippet" id="sass-1"><code>
+.list {
+    color: $c-grey-5;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &.has-icon {
+    a {
+        padding-left: 0;
+        &:before {
+        @extend .transition;
+        @include flex-middle;
+        display: inline-flex;
+        justify-content: center;
+        font-family: $font-icon;
+        min-width: $c-height;
+        height: $c-height;
+        content: "\E01D";
+        visibility: hidden;
+        color: $c-firm-1;
+        }
+        &.active {
+        color: $c-firm-1;
+        &:before {
+            visibility: visible;
+        }
+        }
+    }
+    }
+    a {
+    @include flexbox;
+    @include flex-middle;
+    @extend .transition;
+    color: $c-grey-5;
+    height: $c-height;
+    font-size: 12px;
+    padding: 0 $gutter-l;
+    @include radius;
+    &:hover {
+        background-color: $c-grey-1;
+    }
+    &:focus {
+        @include box-shadow(0 0 0 3px rgba(black, 0.09));
+    }
+    }
+}
+            </code></pre>
+        </section>
     </section>
 </div>

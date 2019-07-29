@@ -45,26 +45,38 @@ $(document).ready(function () {
 
 
 
-// var showCode = function(){
-//     $(".nav-item").click(function() {
-//         console.log("clicked")
-//         $("pre#sass").addClass("display-on")
-//         $("pre#html").removeClass("display-on")
-    
-//         });
-//     }
+var showToast = function(){
+    let num = 0
+    $(".toast-caller").click(function() {
+        num ++
+        var toastHTML = `<div class="toast is-danger toast-fixed"><p>${num} Fixed toast sample</p><button class="btn btn-flat btn-small toast-close"><i class="icon-close"></i></button></div>`; 
+        var htmlParse = $.parseHTML(toastHTML)
+        $("#toast-fixed-content").append(htmlParse)      
+        setTimeout(function() { 
+            $("#toast-fixed-content").children().last().remove()
+        }, 3000);
+    });        
+    }
 
 var activeStep = function(){
     $(".step-item").click(function() {
         $(".step-item").not(this).removeClass("is-active");
         $(this).addClass("is-active");
-        $(this).hre
     
         });
     }
+
+// var callToast = function(){
+//     $(".step-item").click(function() {
+//         $(".step-item").not(this).removeClass("is-active");
+//         $(this).addClass("is-active");
     
+//         });
+//     }
     
-activeStep();  
+
+activeStep(); 
+showToast(); 
 //activeTab();
 // activeHtml();
 // activeSass();
@@ -84,12 +96,7 @@ $(document).ready(function() {
         $myTabs.find("nav.uh-tab-nav a").click(function() {
             var $this = $(this);
             var hrefVal = $(this).attr("href");
-            $(hrefVal).addClass("display-on");
-            $("pre").not(hrefVal).removeClass("display-on");
-
-            console.log(hrefVal);
-            
-            
+            $(hrefVal).addClass("display-on").siblings().removeClass("display-on");
             
             $this.addClass("active").siblings().removeClass("active");
             $this.find(".code-snippet").hide();

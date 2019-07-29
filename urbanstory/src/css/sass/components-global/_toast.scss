@@ -70,4 +70,8 @@
       margin-bottom: 0;
     }
   }
+
+  .toast-fixed{
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
 }

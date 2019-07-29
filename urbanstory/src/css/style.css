@@ -1992,6 +1992,9 @@ select {
 .toast-fixed-wrapper .toast:last-child {
   margin-bottom: 0;
 }
+.toast-fixed-wrapper .toast-fixed {
+  transition: visibility 0s 2s, opacity 2s linear;
+}
 
 .uh-tab {
   background: rgba(255, 255, 255, 0.8);
