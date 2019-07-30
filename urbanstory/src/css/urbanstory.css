@@ -152,7 +152,6 @@ dl dd {
   padding: 4px 0;
 }
 
-
 /* PrismJS 1.16.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+scss+sass */
 /**
@@ -290,18 +289,18 @@ pre[class*=language-] {
 .token.entity {
   cursor: help;
 }
+
 hr {
   border: none;
   height: 1px;
   width: 100%;
   background: #d6d6d6;
-
 }
 
 .page-hero {
   padding: 2em 0;
 }
-.page-hero + section {
+.page-hero ~ section {
   margin: 32px 0 64px 0;
 }
 

@@ -21,8 +21,9 @@ hr{
 
 .page-hero {
   padding: 2em 0;
-  & + section {
+  & ~ section {
     margin: $gutter-xl 0 $gutter-xxl 0;
+    // border: solid 1px red;
   }
 }
 .border-bottom {
