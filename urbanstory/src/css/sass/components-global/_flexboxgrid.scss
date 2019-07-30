@@ -248,6 +248,14 @@
   order: 1;
 }
 
+.show-xs {
+  display: initial;
+}
+
+.hide-xs {
+  display: none;
+}
+
 @media only screen and (min-width: $screen-s) //768
 {
   .container {
@@ -678,6 +686,14 @@
     -webkit-box-ordinal-group: 2;
     order: 1;
   }
+
+  .show-md {
+    display: initial;
+  }
+
+  .hide-md {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $screen-lg) // 1200
@@ -893,5 +909,13 @@
     -ms-flex-order: 1;
     -webkit-box-ordinal-group: 2;
     order: 1;
+  }
+
+  .show-lg {
+    display: initial;
+  }
+
+  .hide-lg {
+    display: none;
   }
 }

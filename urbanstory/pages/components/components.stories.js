@@ -14,6 +14,7 @@ import slider from "./slider.html";
 import preloader from "./preloader.html";
 import tooltip from "./tooltip.html";
 import steps from "./steps.html";
+import uhSwitch from "./switch.html";
 
 storiesOf("DEVELOPER|Components", module)
   .add("Alert", () => alert)
@@ -30,3 +31,4 @@ storiesOf("DEVELOPER|Components", module)
   .add("Preloader", () => preloader)
   .add("Tooltip", () => tooltip)
   .add("Steps", () => steps)
+  .add("Switch", () => uhSwitch)

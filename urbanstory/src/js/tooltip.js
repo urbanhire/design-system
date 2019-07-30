@@ -46,17 +46,42 @@ $(document).ready(function () {
 
 
 var showToast = function(){
-    let num = 0
+    //let num = 0
     $(".toast-caller").click(function() {
-        num ++
-        var toastHTML = `<div class="toast is-danger toast-fixed"><p>${num} Fixed toast sample</p><button class="btn btn-flat btn-small toast-close"><i class="icon-close"></i></button></div>`; 
+        //num ++
+        var toastHTML = `<div class="toast is-danger toast-fixed"><p>Fixed toast sample</p><button class="btn btn-flat btn-small toast-close"><i class="icon-close"></i></button></div>`; 
         var htmlParse = $.parseHTML(toastHTML)
-        $("#toast-fixed-content").append(htmlParse)      
+        
+        // $(htmlParse).animate({
+            
+        //     opacity: 'show',
+        //     marginBottom : '10px',
+        // }, 500).appendTo($("#toast-fixed-content"))
+
+        $(htmlParse).appendTo($("#toast-fixed-content"))
+       
+        var children = $("#toast-fixed-content").children().toArray()
         setTimeout(function() { 
-            $("#toast-fixed-content").children().last().remove()
-        }, 3000);
+
+            /* Opsi 1 */
+            children.forEach(function(items) {
+                setTimeout(function(){
+                    $(items).addClass('hide');
+                    setTimeout(function(){
+                        $(items).remove();
+                    }, 500)
+                }, 500)
+                
+
+            });
+            
+            /* Opsi 2 */
+            // $("#toast-fixed-content").children().first().remove();
+         }, 5000);
     });        
     }
+
+
 
 var activeStep = function(){
     $(".step-item").click(function() {
@@ -65,7 +90,12 @@ var activeStep = function(){
     
         });
     }
-
+    
+var activeSwitch = function(){
+    $(".uh-switch-button").click(function() {
+        $(".handle").toggleClass("active");
+        });
+    }
 // var callToast = function(){
 //     $(".step-item").click(function() {
 //         $(".step-item").not(this).removeClass("is-active");
@@ -77,6 +107,7 @@ var activeStep = function(){
 
 activeStep(); 
 showToast(); 
+activeSwitch();
 //activeTab();
 // activeHtml();
 // activeSass();
