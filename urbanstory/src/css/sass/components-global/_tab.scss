@@ -14,6 +14,9 @@
       text-align: center;
       padding: $gutter-l;
       position: relative;
+      &.nav-fit-content{
+        flex: 0;
+      }
       &.no-grow {
         max-width: 64px;
       }

@@ -31,7 +31,14 @@
             <input type="text" name="" placeholder="Text input">
             <label>Success message</label>
         </div>
-        <pre><code>&lt;div class=&quot;input-form width-auto&quot;&gt;
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html"><code>&lt;div class=&quot;input-form width-auto&quot;&gt;
     &lt;label&gt;Text label&lt;/label&gt;
     &lt;input type=&quot;text&quot; name=&quot;&quot; placeholder=&quot;Text input&quot;&gt;
 &lt;/div&gt;
@@ -64,15 +71,13 @@
     &lt;input type=&quot;text&quot; name=&quot;&quot; placeholder=&quot;Text input&quot;&gt;
     &lt;label&gt;Success message&lt;/label&gt;
 &lt;/div&gt;</code></pre>
-    </section>
-    <section>
-        <h4>SCSS</h4>
-        <pre><code>// forms
+            <pre class="code-snippet" id="sass"><code>
+// forms
 textarea,
-input[type=&quot;text&quot;],
-input[type=&quot;password&quot;],
-input[type=&quot;email&quot;],
-input[type=&quot;search&quot;],
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
 select {
     @extend .transition;
     outline: none;
@@ -82,10 +87,10 @@ select {
     padding: 0 $gutter-m;
     // background:;
     @include radius;
-    &amp;:focus {
+    &:focus {
         @include box-shadow(0 0 0 3px rgba(black, 0.15));
     }
-    &amp;[disabled] {
+    &[disabled] {
         border: solid 1px $c-grey-2;
         cursor: not-allowed;
     }
@@ -104,7 +109,7 @@ select {
         margin-bottom: $gutter-m;
         margin-top: $gutter-l;
     }
-    &amp;.width-auto {
+    &.width-auto {
         textarea,
         input,
         select {
@@ -122,79 +127,81 @@ select {
     input,
     select {
         width: 100%;
-        &amp; + label {
+        &+label {
             display: block;
             color: $c-grey-4;
             font-size: (12/16) + rem;
             margin-top: $gutter-s;
         }
     }
-    &amp;.is-danger {
+    &.is-danger {
         label {
             color: $c-red-1;
         }
         select,
         textarea,
-        input[type=&quot;text&quot;],
-        input[type=&quot;password&quot;],
-        input[type=&quot;email&quot;],
-        input[type=&quot;search&quot;] {
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="search"] {
             border: solid 1px $c-red-1;
-            &amp;:focus {
+            &:focus {
                 @include box-shadow(0 0 0 3px rgba($c-red-1, 0.15));
             }
         }
     }
-    &amp;.is-warning {
+    &.is-warning {
         label {
             color: $c-yellow-1;
         }
         select,
         textarea,
-        input[type=&quot;text&quot;],
-        input[type=&quot;password&quot;],
-        input[type=&quot;email&quot;],
-        input[type=&quot;search&quot;] {
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="search"] {
             border: solid 1px $c-yellow-1;
-            &amp;:focus {
+            &:focus {
                 @include box-shadow(0 0 0 3px rgba($c-yellow-1, 0.15));
             }
         }
     }
-    &amp;.is-success {
+    &.is-success {
         label {
             color: $c-green-1;
         }
         select,
         textarea,
-        input[type=&quot;text&quot;],
-        input[type=&quot;password&quot;],
-        input[type=&quot;email&quot;],
-        input[type=&quot;search&quot;] {
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="search"] {
             border: solid 1px $c-green-1;
-            &amp;:focus {
+            &:focus {
                 @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
             }
         }
     }
-    &amp;.is-info {
+    &.is-info {
         label {
             color: $c-median-1;
         }
         select,
         textarea,
-        input[type=&quot;text&quot;],
-        input[type=&quot;password&quot;],
-        input[type=&quot;email&quot;],
-        input[type=&quot;search&quot;] {
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="search"] {
             border: solid 1px $c-median-1;
-            &amp;:focus {
+            &:focus {
                 @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
             }
         }
     }
 }
 
-// checkbox &amp; radio</code></pre>
+// checkbox & radio
+            </code></pre>
+        </section>
     </section>
 </div>

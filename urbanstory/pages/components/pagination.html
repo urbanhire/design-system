@@ -39,7 +39,14 @@
                 <a href="#"><i class="icon-angle-right"></i></a>
             </nav>
         </div>
-        <pre><code>&lt;nav class=&quot;pagination&quot;&gt;
+        <section class="code-preview">
+            <div class="card uh-tab">
+                <nav class="uh-tab-nav">
+                    <a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+                    <a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
+                </nav>
+            </div>
+            <pre class="code-snippet display-on" id="html-1"><code>&lt;nav class=&quot;pagination&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-angle-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
     &lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;2&lt;/a&gt;
@@ -48,5 +55,57 @@
     &lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;
     &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;/nav&gt;</code></pre>
+            <pre class="code-snippet" id="sass-1"><code>
+.pagination {
+    display: inline-block;
+    height: $c-height;
+    min-width: $c-height * 3;
+    border: 1px solid rgba(221, 221, 221, 0.1);
+    @include box-shadow(0 1px 3px 0 $pg-box-shadow-color);
+    @include border-radius(2px);
+    i {
+        display: inline-block;
+        line-height: $c-height;
+        vertical-align: middle;
+    }
+    a {
+        display: inline-block;
+        @include radius;
+        width: $c-height;
+        height: $c-height;
+        text-align: center;
+        line-height: $c-height;
+        font-size: 14px;
+        color: $c-grey-4;
+        @extend .transition;
+        &:hover {
+            background-color: #000c35;
+            @include box-shadow(0 0 0 2px $pg-box-shadow-color);
+            color: white;
+        }
+        &:focus {
+            background-color: #000823;
+            @include box-shadow(0 0 0 4px $pg-box-shadow-color);
+            color: white;
+        }
+        &.active {
+            background-color: $c-firm-1;
+            @include box-shadow(0 2px 2px 0 $pg-box-shadow-color);
+            color: white;
+        }
+        &.hovered {
+            background-color: #000c35;
+            @include box-shadow(0 0 0 2px $pg-box-shadow-color);
+            color: white;
+        }
+        &.focused {
+            color: white;
+            background-color: #000823;
+            @include box-shadow(0 0 0 4px $pg-box-shadow-color);
+        }
+    }
+}
+            </code></pre>
+        </section>
     </section>
 </div>

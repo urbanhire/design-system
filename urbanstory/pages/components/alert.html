@@ -12,11 +12,52 @@
 			communication.
 			<button class="btn btn-flat btn-small alert-close"><i class="icon-close"></i></button>
 		</div>
-		<pre><code>&lt;div class=&quot;alert&quot;&gt;
+		<section class="code-preview">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
+				</nav>
+			</div>
+			<pre class="code-snippet display-on" id="html-1"><code>&lt;div class=&quot;alert&quot;&gt;
 	&lt;h4&gt;Alert &lt;small&gt;(Default)&lt;/small&gt;&lt;/h4&gt;
 	Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
 	&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
 &lt;/div&gt;</code></pre>
+			<pre class="code-snippet" id="sass-1"><code>
+	.alert {
+		//@extend .card;
+		@extend .padd-l;
+		overflow: auto;
+		background: rgba($c-grey-2, 0.2);
+		border: 1px solid rgba($c-grey-3, 0.2);
+		line-height: 1.5rem;
+		position: relative;
+		color: $c-grey-6;
+		@include radius;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+			padding-right: $gutter-l;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.alert-close {
+		position: absolute;
+		top: $gutter-m;
+		right: $gutter-m;
+		color: rgba(black, 0.35);
+	}
+			</code></pre>
+		</section>
 
 		<h4>Alert <code>.is-danger</code></h4>
 		<div class="alert is-danger">
@@ -27,12 +68,61 @@
 			communication.
 			<button class="btn btn-flat btn-small alert-close"><i class="icon-close"></i></button>
 		</div>
-		<pre><code>&lt;div class=&quot;alert is-danger&quot;&gt;
-	&lt;h4&gt;Alert &lt;small&gt;(Default)&lt;/small&gt;&lt;/h4&gt;
-	Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
-	&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+		<section class="code-preview">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a class="nav-item nav-fit-content active" href="#html-2" id="html-tab">HTML</a>
+					<a class="nav-item nav-fit-content" href="#sass-2" id="sass-tab">SASS</a>
+				</nav>
+			</div>
+			<pre class="code-snippet display-on" id="html-2"><code>&lt;div class=&quot;alert is-danger&quot;&gt;
+		&lt;h4&gt;Alert &lt;small&gt;(Default)&lt;/small&gt;&lt;/h4&gt;
+		Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
+		&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+	&lt;/div&gt;</code></pre>
+			<pre class="code-snippet" id="sass-2"><code>
+	.alert {
+		//@extend .card;
+		@extend .padd-l;
+		overflow: auto;
+		background: rgba($c-grey-2, 0.2);
+		border: 1px solid rgba($c-grey-3, 0.2);
+		line-height: 1.5rem;
+		position: relative;
+		color: $c-grey-6;
+		@include radius;
+		&.is-danger {
+			background: rgba($c-red-1, 0.2);
+			border: 1px solid rgba($c-red-3, 0.2);
+			color: rgba(darken($c-red-1, 20), 0.8);
+			color: $c-red-3;
+			.alert-close {
+				color: rgba($c-red-3, 0.75);
+			}
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+			padding-right: $gutter-l;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
 
+	.alert-close {
+		position: absolute;
+		top: $gutter-m;
+		right: $gutter-m;
+		color: rgba(black, 0.35);
+	}
+			</code></pre>
+		</section>
 		<h4>Alert <code>.is-success</code></h4>
 		<div class="alert is-success">
 			<h4>Alert Success</h4>
@@ -42,12 +132,60 @@
 			communication.
 			<button class="btn btn-flat btn-small alert-close"><i class="icon-close"></i></button>
 		</div>
-		<pre><code>&lt;div class=&quot;alert is-success&quot;&gt;
-	&lt;h4&gt;Alert &lt;small&gt;(Default)&lt;/small&gt;&lt;/h4&gt;
-	Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
-	&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+		<section class="code-preview">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a class="nav-item nav-fit-content active" href="#html-3" id="html-tab">HTML</a>
+					<a class="nav-item nav-fit-content" href="#sass-3" id="sass-tab">SASS</a>
+				</nav>
+			</div>
+			<pre class="code-snippet display-on" id="html-3"><code>&lt;div class=&quot;alert is-success&quot;&gt;
+		&lt;h4&gt;Alert &lt;small&gt;(Default)&lt;/small&gt;&lt;/h4&gt;
+		Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
+		&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+	&lt;/div&gt;</code></pre>
+			<pre class="code-snippet" id="sass-3"><code>
+	.alert {
+		//@extend .card;
+		@extend .padd-l;
+		overflow: auto;
+		background: rgba($c-grey-2, 0.2);
+		border: 1px solid rgba($c-grey-3, 0.2);
+		line-height: 1.5rem;
+		position: relative;
+		color: $c-grey-6;
+		@include radius;
+		&.is-success {
+			background: rgba($c-green-1, 0.2);
+			border: 1px solid rgba($c-green-3, 0.2);
+			color: $c-green-3;
+			.alert-close {
+				color: rgba($c-green-3, 0.75);
+			}
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+			padding-right: $gutter-l;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
 
+	.alert-close {
+		position: absolute;
+		top: $gutter-m;
+		right: $gutter-m;
+		color: rgba(black, 0.35);
+	}
+			</code></pre>
+		</section>
 		<h4>Alert <code>.is-info</code></h4>
 		<div class="alert is-info">
 			<h4>Alert Info</h4>
@@ -57,12 +195,62 @@
 			communication.
 			<button class="btn btn-flat btn-small alert-close"><i class="icon-close"></i></button>
 		</div>
-		<pre><code>&lt;div class=&quot;alert is-info&quot;&gt;
-	&lt;h4&gt;Alert &lt;small&gt;(Default)&lt;/small&gt;&lt;/h4&gt;
-	Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
-	&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+		<section class="code-preview">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html-4" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass-4" id="sass-tab">SASS</a>
+				</nav>
+			</div>
+			<pre class="code-snippet display-on" id="html-4"><code>&lt;div class=&quot;alert is-info&quot;&gt;
+		&lt;h4&gt;Alert &lt;small&gt;(Default)&lt;/small&gt;&lt;/h4&gt;
+		Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
+		&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+	&lt;/div&gt;</code></pre>
+			<pre class="code-snippet" id="sass-4"><code>
+	.alert {
+		//@extend .card;
+		@extend .padd-l;
+		overflow: auto;
+		background: rgba($c-grey-2, 0.2);
+		border: 1px solid rgba($c-grey-3, 0.2);
+		line-height: 1.5rem;
+		position: relative;
+		color: $c-grey-6;
+		@include radius;
+		&.is-info {
+			background: rgba($c-median-1, 0.2);
+			border: 1px solid rgba($c-median-3, 0.2);
+			//color:rgba($c-median-2, .75);
+			color: $c-median-3;
+			.alert-close {
+				color: rgba($c-median-3, 0.75);
+			}
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+			padding-right: $gutter-l;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
 
+	.alert-close {
+		position: absolute;
+		top: $gutter-m;
+		right: $gutter-m;
+		color: rgba(black, 0.35);
+	}
+			</code></pre>
+		</section>
+		<h4>Alert <code>.is-danger</code></h4>
 		<div class="alert has-img is-danger">
 			<img
 				src="https://www.rhinocarhire.com/CorporateSite/media/Drive-Smart/Dash-Symbols/warning_symbol_in_red.png">
@@ -73,11 +261,69 @@
 			communication.
 			<button class="btn btn-flat btn-small alert-close"><i class="icon-close"></i></button>
 		</div>
-		<pre><code>&lt;div class=&quot;alert has-img is-danger&quot;&gt;
-	&lt;img src=&quot;https://www.rhinocarhire.com/CorporateSite/media/Drive-Smart/Dash-Symbols/warning_symbol_in_red.png&quot;&gt;
-	&lt;h3&gt;Warning&lt;/h3&gt;
-	Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
-	&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+		<section class="code-preview">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html-5" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass-5" id="sass-tab">SASS</a>
+				</nav>
+			</div>
+			<pre class="code-snippet display-on" id="html-5"><code>&lt;div class=&quot;alert has-img is-danger&quot;&gt;
+		&lt;img src=&quot;https://www.rhinocarhire.com/CorporateSite/media/Drive-Smart/Dash-Symbols/warning_symbol_in_red.png&quot;&gt;
+		&lt;h3&gt;Warning&lt;/h3&gt;
+		Most people learn to talk when they are relatively young. Gaining in verbal capacity as the get older and engage in conversation with more and more people throughout their lives. And while most people will spend their time constantly speaking, some never really learn to listen, which is the king of effective communication.
+		&lt;button class=&quot;btn btn-flat btn-small alert-close&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+	&lt;/div&gt;</code></pre>
+			<pre class="code-snippet" id="sass-5"><code>
+	.alert {
+		//@extend .card;
+		@extend .padd-l;
+		overflow: auto;
+		background: rgba($c-grey-2, 0.2);
+		border: 1px solid rgba($c-grey-3, 0.2);
+		line-height: 1.5rem;
+		position: relative;
+		color: $c-grey-6;
+		@include radius;
+		&.has-img {
+			padding-left: 4rem;
+			img {
+				float: left;
+				width: 2rem;
+				margin-left: -3rem;
+			}
+		}
+		&.is-danger {
+			background: rgba($c-red-1, 0.2);
+			border: 1px solid rgba($c-red-3, 0.2);
+			color: rgba(darken($c-red-1, 20), 0.8);
+			color: $c-red-3;
+			.alert-close {
+				color: rgba($c-red-3, 0.75);
+			}
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+			padding-right: $gutter-l;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.alert-close {
+		position: absolute;
+		top: $gutter-m;
+		right: $gutter-m;
+		color: rgba(black, 0.35);
+	}
+			</code></pre>
+		</section>
 	</section>
 </div>
