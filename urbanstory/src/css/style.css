@@ -3019,7 +3019,10 @@ input[type=checkbox]:focus {
   display: none;
 }
 
-.uh-switch .uh-switch-button {
+.uh-switch {
+  display: inline-block;
+}
+.uh-switch button {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -3032,7 +3035,8 @@ input[type=checkbox]:focus {
   background: #d6d6d6;
   outline: none;
 }
-.uh-switch .handle {
+.uh-switch span {
+  display: block;
   position: absolute;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -3044,7 +3048,10 @@ input[type=checkbox]:focus {
   left: 0;
   transition: left 0.2s;
 }
-.uh-switch .handle.active {
+.uh-switch.active button {
+  background: #D4E9F7;
+}
+.uh-switch.active span {
   left: 20px;
   background: #2791d9;
   transition: left 0.2s;

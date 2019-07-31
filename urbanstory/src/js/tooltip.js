@@ -92,8 +92,8 @@ var activeStep = function(){
     }
     
 var activeSwitch = function(){
-    $(".uh-switch-button").click(function() {
-        $(".handle").toggleClass("active");
+    $(".uh-switch").click(function() {
+        $(this).toggleClass("active");
         });
     }
 // var callToast = function(){
