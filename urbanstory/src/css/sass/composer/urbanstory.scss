@@ -120,7 +120,6 @@ hr{
 }
 
 pre {
-  display: none;
   max-height: 500px;
   overflow-x: auto;
   padding: 1.25em 1.25em 1.25em 2em;
@@ -166,6 +165,20 @@ pre {
 }
 code {
   color: $c-median-1;
+}
+
+.has-tab{
+  div{
+    display: block;
+  }
+}
+
+.display-off{
+  display:none;
+}
+
+.code-preview{
+  margin: 1em 0 0 0;
 }
 .box-row,
 .box-first,
@@ -577,11 +590,6 @@ code {
   }
 }
 
-.display-on{
-  display:block;
-}
 
-.code-preview{
-  margin: 1em 0 0 0;
-}
+
 

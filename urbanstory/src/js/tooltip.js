@@ -125,9 +125,10 @@ $(document).ready(function() {
 
 
         $myTabs.find("nav.uh-tab-nav a").click(function() {
+
             var $this = $(this);
             var hrefVal = $(this).attr("href");
-            $(hrefVal).addClass("display-on").siblings().removeClass("display-on");
+            $(hrefVal).removeClass("display-off").siblings().addClass("display-off");
             
             $this.addClass("active").siblings().removeClass("active");
             $this.find(".code-snippet").hide();

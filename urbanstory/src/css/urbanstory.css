@@ -152,9 +152,6 @@ dl dd {
   padding: 4px 0;
 }
 
-/* PrismJS 1.16.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+scss+sass */
-
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -382,7 +379,6 @@ hr {
 }
 
 pre {
-  display: none;
   max-height: 500px;
   overflow-x: auto;
   padding: 1.25em 1.25em 1.25em 2em;
@@ -425,6 +421,18 @@ pre button i {
 
 code {
   color: #2791d9;
+}
+
+.has-tab div {
+  display: block;
+}
+
+.display-off {
+  display: none;
+}
+
+.code-preview {
+  margin: 1em 0 0 0;
 }
 
 .box-row,
@@ -846,14 +854,6 @@ code {
 }
 .urbanstory-tooltip-style button {
   margin: 20px;
-}
-
-.display-on {
-  display: block;
-}
-
-.code-preview {
-  margin: 1em 0 0 0;
 }
 
 /*# sourceMappingURL=urbanstory.css.map */
