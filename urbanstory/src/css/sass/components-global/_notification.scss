@@ -1,0 +1,53 @@
+.notification{
+    width : 280px;
+    .card{
+        box-shadow:none;
+    }
+    .notification-base{
+        display: flex;
+        color: $c-grey-6;
+        padding: $gutter-m;
+        
+        &:hover, &.hover{
+            background-color: $c-grey-1;	
+            @include box-shadow(0 0 0 2px rgba(0,0,0,0.1));
+            z-index:1;
+        }
+
+        .avatar{
+            flex: 0 0 auto;
+            margin-right: $gutter-m + 2px;
+        }
+
+        .notification-content{
+            flex: 1 1 auto;
+        }
+
+        h6{
+            margin:0;
+            line-height: 21px;
+        }
+
+        p{
+          margin:0;
+          font-size: 0.75rem;
+          color: $c-grey-5;
+          line-height: 18px;
+        }
+
+        span{
+            margin-top: $gutter-s;
+            line-height: 16px;
+            display: inline-flex;
+            font-size: 0.6875rem;
+            color: $c-grey-4;
+            i{
+                margin-top:3px;
+            }
+            p{
+                color: $c-grey-4;
+                margin: 0 3px;
+            }
+        }
+    }
+}
