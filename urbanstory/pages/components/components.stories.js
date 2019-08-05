@@ -9,7 +9,6 @@ import labels from "./labels.html";
 import list from "./list.html";
 import breadcrumbs from "./breadcrumbs.html";
 import pagination from "./pagination.html";
-import chips from "./chips.html";
 import slider from "./slider.html";
 import preloader from "./preloader.html";
 import tooltip from "./tooltip.html";
@@ -26,7 +25,6 @@ storiesOf("DEVELOPER|Components", module)
   .add("List", () => list)
   .add("Breadcrumbs", () => breadcrumbs)
   .add("Pagination", () => pagination)
-  .add("Chips", () => chips)
   .add("Slider", () => slider)
   .add("Preloader", () => preloader)
   .add("Tooltip", () => tooltip)
