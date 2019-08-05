@@ -303,7 +303,7 @@ pre[class*=language-] {
   padding: 0 16px;
 }
 
-.align-center, .label {
+.align-center {
   text-align: center;
 }
 
@@ -327,7 +327,7 @@ pre[class*=language-] {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
 }
 
-.transition, .range-slider input[type=range], .chip button i, .chip button, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .uh-tab-nav .nav-item::before, .avatar, textarea,
+.transition, .range-slider input[type=range], .chip button i, .chip button, .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .label button i, .label-s button i, .label-xs button i, .label button, .label-s button, .label-xs button, .uh-tab-nav .nav-item::before, .avatar, textarea,
 input[type=text],
 input[type=password],
 input[type=email],
@@ -2236,45 +2236,117 @@ input[type=checkbox]:focus {
 
 /* Labels */
 .label {
-  border: 1px solid #c2c2c2;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  color: #757575;
-  display: inline-block;
-  font-size: 11px;
+  height: 32px;
+  font-size: 12px;
+  padding: 0 16px;
+}
+
+.label-s {
   height: 20px;
-  line-height: 18px;
-  min-width: 40px;
-  margin-left: 4px;
+  font-size: 11px;
   padding: 0 8px;
 }
-.label.label-firm {
+
+.label-xs {
+  height: 16px;
+  font-size: 10px;
+  padding: 0 4px;
+}
+
+.label, .label-s, .label-xs {
+  border: 1px solid #f5f5f5;
+  display: inline-flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  background-color: #f5f5f5;
+  color: #a3a3a3;
+  min-width: 64px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+}
+.label button, .label-s button, .label-xs button {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding: 0;
+  outline: none;
+  margin-right: -16px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
+}
+.label button i, .label-s button i, .label-xs button i {
+  color: rgba(0, 0, 0, 0.25);
+}
+.label button i:before, .label-s button i:before, .label-xs button i:before {
+  vertical-align: middle;
+}
+.label button:hover, .label-s button:hover, .label-xs button:hover {
+  cursor: pointer;
+}
+.label button:hover i, .label-s button:hover i, .label-xs button:hover i {
+  color: rgba(0, 0, 0, 0.4);
+}
+.label button:focus, .label-s button:focus, .label-xs button:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.label-outlined {
+  border: 1px solid #c2c2c2;
+  background-color: #fff;
+  color: #757575;
+}
+
+.label-sub-firm {
+  background-color: rgba(39, 145, 217, 0.1);
+  color: #011148;
+  border: 1px solid rgba(39, 145, 217, 0);
+}
+
+.label-dashed {
+  background-color: white;
+  border: 1px dashed #757575;
+}
+
+.label-firm {
   background-color: #011148;
   border: 1px solid #011148;
   color: #fff;
 }
-.label.label-success {
+.label-firm button i {
+  color: white;
+}
+
+.label-success {
   background-color: #2fbd90;
   border: 1px solid #2fbd90;
   color: #fff;
 }
-.label.label-grey {
+
+.label-grey {
   background-color: #d6d6d6;
   border: 1px solid #d6d6d6;
   color: #757575;
 }
-.label.label-danger {
+
+.label-danger {
   background-color: #ef4344;
   border: 1px solid #ef4344;
   color: #fff;
 }
-.label.label-warning {
+
+.label-warning {
   background-color: #ffce07;
   border: 1px solid #ffce07;
   color: #fff;
 }
-.label.label-median {
+
+.label-median {
   background-color: #2791d9;
   border: 1px solid #2791d9;
   color: #fff;
