@@ -1,7 +1,8 @@
-.notification{
+.notification, .notification-group{
     width : 280px;
     .card{
         box-shadow:none;
+        border-radius: 0;
     }
     .notification-base{
         display: flex;
@@ -11,6 +12,7 @@
         &:hover, &.hover{
             background-color: $c-grey-1;	
             @include box-shadow(0 0 0 2px rgba(0,0,0,0.1));
+            @include radius;
             z-index:1;
         }
 
@@ -48,6 +50,61 @@
                 color: $c-grey-4;
                 margin: 0 3px;
             }
+        }
+    }
+}
+
+
+.notification-group{
+    overflow: hidden;
+    @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
+    @include radius;
+    
+    .notification-container{
+        height: 375px;
+        overflow-x: auto;
+    }
+
+    .card{
+        border-bottom: 1px solid #D6D6D6;
+        &:last-child{
+            border-bottom: none; 
+        }
+
+    }
+
+    li.card{
+        cursor: pointer;
+        
+        border-top : 1px solid #D6D6D6;
+        justify-content: center;
+        p{
+            color: $c-median-1;
+        }
+    }
+
+
+    .notification-header{
+        justify-content: space-between;
+
+        li{
+            cursor: pointer;
+            color: $c-grey-4;
+            list-style: none;
+            font-size: 0.75rem;
+        }
+
+        &:hover{
+            background: $c-white;
+        }
+    }
+
+    .un-read {
+        background: $c-yellow-alert;
+
+        &:hover{
+            background: $c-yellow-alert;
+            cursor: pointer;
         }
     }
 }

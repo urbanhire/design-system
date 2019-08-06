@@ -3056,54 +3056,105 @@ input[type=checkbox]:focus {
   transition: left 0.2s;
 }
 
-.notification {
+.notification, .notification-group {
   width: 280px;
 }
-.notification .card {
+.notification .card, .notification-group .card {
   box-shadow: none;
+  border-radius: 0;
 }
-.notification .notification-base {
+.notification .notification-base, .notification-group .notification-base {
   display: flex;
   color: #212121;
   padding: 8px;
 }
-.notification .notification-base:hover, .notification .notification-base.hover {
+.notification .notification-base:hover, .notification .notification-base.hover, .notification-group .notification-base:hover, .notification-group .notification-base.hover {
   background-color: #f5f5f5;
   -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   z-index: 1;
 }
-.notification .notification-base .avatar {
+.notification .notification-base .avatar, .notification-group .notification-base .avatar {
   flex: 0 0 auto;
   margin-right: 10px;
 }
-.notification .notification-base .notification-content {
+.notification .notification-base .notification-content, .notification-group .notification-base .notification-content {
   flex: 1 1 auto;
 }
-.notification .notification-base h6 {
+.notification .notification-base h6, .notification-group .notification-base h6 {
   margin: 0;
   line-height: 21px;
 }
-.notification .notification-base p {
+.notification .notification-base p, .notification-group .notification-base p {
   margin: 0;
   font-size: 0.75rem;
   color: #757575;
   line-height: 18px;
 }
-.notification .notification-base span {
+.notification .notification-base span, .notification-group .notification-base span {
   margin-top: 4px;
   line-height: 16px;
   display: inline-flex;
   font-size: 0.6875rem;
   color: #a3a3a3;
 }
-.notification .notification-base span i {
+.notification .notification-base span i, .notification-group .notification-base span i {
   margin-top: 3px;
 }
-.notification .notification-base span p {
+.notification .notification-base span p, .notification-group .notification-base span p {
   color: #a3a3a3;
   margin: 0 3px;
+}
+
+.notification-group {
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.notification-group .notification-container {
+  height: 375px;
+  overflow-x: auto;
+}
+.notification-group .card {
+  border-bottom: 1px solid #D6D6D6;
+}
+.notification-group .card:last-child {
+  border-bottom: none;
+}
+.notification-group li.card {
+  cursor: pointer;
+  border-top: 1px solid #D6D6D6;
+  justify-content: center;
+}
+.notification-group li.card p {
+  color: #2791d9;
+}
+.notification-group .notification-header {
+  justify-content: space-between;
+}
+.notification-group .notification-header li {
+  cursor: pointer;
+  color: #a3a3a3;
+  list-style: none;
+  font-size: 0.75rem;
+}
+.notification-group .notification-header:hover {
+  background: #fff;
+}
+.notification-group .un-read {
+  background: #fff5cd;
+}
+.notification-group .un-read:hover {
+  background: #fff5cd;
+  cursor: pointer;
 }
 
 .uh-img-showcase img {
