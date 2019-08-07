@@ -1,19 +1,19 @@
-.notification, .notification-group{
+.notification, 
+.notification-group{
     width : 280px;
     .card{
         box-shadow:none;
         border-radius: 0;
+        word-break: break-all;
     }
     .notification-base{
         display: flex;
-        color: $c-grey-6;
         padding: $gutter-m;
         
         &:hover, &.hover{
             background-color: $c-grey-1;	
             @include box-shadow(0 0 0 2px rgba(0,0,0,0.1));
             @include radius;
-            z-index:1;
         }
 
         .avatar{
@@ -21,18 +21,17 @@
             margin-right: $gutter-m + 2px;
         }
 
-        .notification-content{
-            flex: 1 1 auto;
+        h6, 
+        p {
+            margin : 0;
         }
-
+        
         h6{
-            margin:0;
             line-height: 21px;
         }
 
         p{
-          margin:0;
-          font-size: 0.75rem;
+          font-size: $font-xs;
           color: $c-grey-5;
           line-height: 18px;
         }
@@ -41,7 +40,7 @@
             margin-top: $gutter-s;
             line-height: 16px;
             display: inline-flex;
-            font-size: 0.6875rem;
+            font-size: $font-xxs;
             color: $c-grey-4;
             i{
                 margin-top:3px;
