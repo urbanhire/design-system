@@ -15,6 +15,7 @@ import tooltip from "./tooltip.html";
 import steps from "./steps.html";
 import uhSwitch from "./switch.html";
 import notification from "./notification.html";
+import dropdown from"./dropdown.html";
 
 storiesOf("DEVELOPER|Components", module)
   .add("Alert", () => alert)
@@ -32,3 +33,4 @@ storiesOf("DEVELOPER|Components", module)
   .add("Steps", () => steps)
   .add("Switch", () => uhSwitch)
   .add("Notification", () => notification)
+  .add("Dropdown", () => dropdown)
