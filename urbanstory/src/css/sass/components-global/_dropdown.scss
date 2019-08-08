@@ -24,49 +24,70 @@
     // }  
 }
 
-.has-children {
-    cursor: pointer;
+div.has-children {
+    text-align: right;
     display        : inline-block;
     color: $c-firm-1;
-    position: relative;
-    ul {
-        margin : 0;
-        padding : $gutter-m 0;
+   
+    
+    .ul-option{
         width: 200px;
-        position: absolute;
-        z-index: 4;
-        display: none;
+        //height: 100%;
         background: #ffffff;
         border: 1px solid rgba(221,221,221,0.1);
         @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
         @include radius;
-        li {
-            padding: 0 $gutter-l;
-            display: block;
-            float: none;
-            width: 100%;
-            &:hover {
-                background: rgba(0,0,0,0.04);
+        ul{
+            text-align: left;
+            margin : 0;
+            padding : $gutter-m 0;
+            z-index: 4;
+            display: none;
+            border-bottom: 1px solid #D6D6D6;
+                
+            &:last-of-type{
+                border-bottom: none;
             }
-            &:active {
-                background: rgba(0,0,0,0.08);
-            }
-            a {
-                color: $c-grey-5;
-                font-size: $font-s;
+            
+        
+            li {
+                padding: 0 $gutter-l;
                 display: block;
-                line-height: 1em;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                &:before {
-                    display: none;
+                float: none;
+                width: 100%;
+                &:hover {
+                    background: rgba(0,0,0,0.04);
                 }
+                &:active {
+                    background: rgba(0,0,0,0.08);
+                }
+                a {
+                    color: $c-grey-5;
+                    font-size: $font-s;
+                    display: block;
+                    line-height: 1em;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    &:before {
+                        display: none;
+                    }
+                }
+
             }
+
+            
+
+            
+
+            
+
+           
         }
     }
+    
 }
 
-.has-children.is-active {
+div.has-children.is-active {
     ul {
         display: block;
     }

@@ -3194,19 +3194,13 @@ input[type=checkbox]:focus {
   border-radius: 4px;
 }
 
-.has-children {
-  cursor: pointer;
+div.has-children {
+  text-align: right;
   display: inline-block;
   color: #011148;
-  position: relative;
 }
-.has-children ul {
-  margin: 0;
-  padding: 8px 0;
+div.has-children .ul-option {
   width: 200px;
-  position: absolute;
-  z-index: 4;
-  display: none;
   background: #ffffff;
   border: 1px solid rgba(221, 221, 221, 0.1);
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
@@ -3216,19 +3210,30 @@ input[type=checkbox]:focus {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.has-children ul li {
+div.has-children .ul-option ul {
+  text-align: left;
+  margin: 0;
+  padding: 8px 0;
+  z-index: 4;
+  display: none;
+  border-bottom: 1px solid #D6D6D6;
+}
+div.has-children .ul-option ul:last-of-type {
+  border-bottom: none;
+}
+div.has-children .ul-option ul li {
   padding: 0 16px;
   display: block;
   float: none;
   width: 100%;
 }
-.has-children ul li:hover {
+div.has-children .ul-option ul li:hover {
   background: rgba(0, 0, 0, 0.04);
 }
-.has-children ul li:active {
+div.has-children .ul-option ul li:active {
   background: rgba(0, 0, 0, 0.08);
 }
-.has-children ul li a {
+div.has-children .ul-option ul li a {
   color: #757575;
   font-size: 14px;
   display: block;
@@ -3236,11 +3241,11 @@ input[type=checkbox]:focus {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.has-children ul li a:before {
+div.has-children .ul-option ul li a:before {
   display: none;
 }
 
-.has-children.is-active ul {
+div.has-children.is-active ul {
   display: block;
 }
 
