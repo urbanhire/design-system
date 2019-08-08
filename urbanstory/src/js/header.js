@@ -1,7 +1,7 @@
 /* Navbar drop down menu */
 $(document).ready(function () {
     var desktopNav = function() {
-        $('.has-children').hover(function(e) {
+        $('li.has-children').hover(function(e) {
             $(this).addClass('is-active');
             $(this).children('ul').removeClass('is-hidden');
         }, function() {
@@ -30,7 +30,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     var activeIcon = function(){
     $(".has-icon a").click(function() {
-        console.log('icon clicked')
         $(".ats-nav-content li a ").removeClass("active");
         $(".has-icon a").not(this).removeClass("active");
         $(this).addClass("active");

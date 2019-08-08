@@ -1,5 +1,6 @@
 .dropdown-menu,
 .dropdown-icon {
+    position: relative;
     background-color: $c-grey-1;
     font-size: $font-s;
     color: $c-grey-5;
@@ -20,37 +21,39 @@
     // &:focus {
     //     background-color: darken($c-grey-1, 4%);
     //     @include box-shadow(0 0 0 3px rgba($c-grey-6, 0.15));
-    // }
-
-    
+    // }  
 }
 
 .has-children {
+    cursor: pointer;
+    display        : inline-block;
     color: $c-firm-1;
     position: relative;
     ul {
+        margin : 0;
+        padding : $gutter-m 0;
         width: 200px;
         position: absolute;
         z-index: 4;
         display: none;
         background: #ffffff;
-        border-top: solid 1px #ddd;
-        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(221,221,221,0.1);
+        @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
         @include radius;
         li {
+            padding: 0 $gutter-l;
             display: block;
             float: none;
             width: 100%;
             &:hover {
-                background: #f5f5f5
+                background: rgba(0,0,0,0.04);
             }
             &:active {
-                background: #f5f5f5;
+                background: rgba(0,0,0,0.08);
             }
             a {
+                color: $c-grey-5;
+                font-size: $font-s;
                 display: block;
                 line-height: 1em;
                 padding-top: 15px;

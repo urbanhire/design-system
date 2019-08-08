@@ -24,6 +24,7 @@ import '../src/css/urbanstory.css';
 //load js for ats header
 import '../src/js/header.js';
 import '../src/js/tooltip.js';
+import '../src/js/dropdown.js';
 import '../src/js/prism.js';
 
 
