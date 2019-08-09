@@ -3176,8 +3176,8 @@ input[type=checkbox]:focus {
 }
 
 .dropdown-menu,
-.dropdown-icon {
-  position: relative;
+.dropdown-icon,
+.search-icon {
   background-color: #f5f5f5;
   font-size: 14px;
   color: #757575;
@@ -3194,8 +3194,11 @@ input[type=checkbox]:focus {
   border-radius: 4px;
 }
 
-div.has-children {
+div.has-children.float-right {
   text-align: right;
+}
+
+div.has-children {
   display: inline-block;
   color: #011148;
 }
@@ -3230,7 +3233,7 @@ div.has-children .ul-option ul li {
 div.has-children .ul-option ul li:hover {
   background: rgba(0, 0, 0, 0.04);
 }
-div.has-children .ul-option ul li:active {
+div.has-children .ul-option ul li.is-active {
   background: rgba(0, 0, 0, 0.08);
 }
 div.has-children .ul-option ul li a {
@@ -3243,6 +3246,30 @@ div.has-children .ul-option ul li a {
 }
 div.has-children .ul-option ul li a:before {
   display: none;
+}
+
+.has-searchbar .ul-option ul li li:hover {
+  background: #fff;
+}
+.has-searchbar ::placeholder {
+  font-size: 0.875rem;
+}
+.has-searchbar .card {
+  position: relative;
+}
+.has-searchbar .card input {
+  width: 100%;
+  padding-right: 43px;
+}
+.has-searchbar .search-icon {
+  cursor: pointer;
+  right: 0;
+  background: transparent;
+  position: absolute;
+  color: #c2c2c2;
+}
+.has-searchbar .search-icon i {
+  margin-top: 3px;
 }
 
 div.has-children.is-active ul {

@@ -1,6 +1,6 @@
 .dropdown-menu,
-.dropdown-icon {
-    position: relative;
+.dropdown-icon,
+.search-icon {
     background-color: $c-grey-1;
     font-size: $font-s;
     color: $c-grey-5;
@@ -24,15 +24,17 @@
     // }  
 }
 
-div.has-children {
+div.has-children.float-right{
     text-align: right;
+}
+
+div.has-children {
     display        : inline-block;
     color: $c-firm-1;
    
     
     .ul-option{
         width: 200px;
-        //height: 100%;
         background: #ffffff;
         border: 1px solid rgba(221,221,221,0.1);
         @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
@@ -58,7 +60,7 @@ div.has-children {
                 &:hover {
                     background: rgba(0,0,0,0.04);
                 }
-                &:active {
+                &.is-active {
                     background: rgba(0,0,0,0.08);
                 }
                 a {
@@ -72,19 +74,46 @@ div.has-children {
                         display: none;
                     }
                 }
-
             }
-
-            
-
-            
-
-            
-
            
         }
     }
     
+}
+
+.has-searchbar{
+
+    .ul-option ul li{
+        li:hover{
+            background: $c-white;
+        }
+    }
+
+    ::placeholder{
+        font-size: 0.875rem;
+    }
+
+    .card{
+        position: relative;
+        input{
+            width: 100%;
+            padding-right: 43px;
+        }
+    }
+
+    .search-icon{
+        cursor: pointer;
+        right: 0;
+        background: transparent;
+        position: absolute;
+        color: $c-grey-3;
+
+        i{
+            margin-top: 3px;
+        }
+    }
+
+
 }
 
 div.has-children.is-active {
