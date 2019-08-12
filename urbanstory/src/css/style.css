@@ -3185,10 +3185,7 @@ input[type=checkbox]:focus {
   line-height: 38px;
   border: solid 1px transparent;
   letter-spacing: 0.035em;
-  outline: none;
-  display: inline-block;
   display: inline-flex;
-  text-decoration: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3204,7 +3201,7 @@ div.has-children {
 }
 div.has-children .ul-option {
   width: 200px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid rgba(221, 221, 221, 0.1);
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
@@ -3224,19 +3221,19 @@ div.has-children .ul-option ul {
 div.has-children .ul-option ul:last-of-type {
   border-bottom: none;
 }
-div.has-children .ul-option ul li {
-  padding: 0 16px;
-  display: block;
-  float: none;
-  width: 100%;
-}
 div.has-children .ul-option ul li:hover {
   background: rgba(0, 0, 0, 0.04);
 }
 div.has-children .ul-option ul li.is-active {
   background: rgba(0, 0, 0, 0.08);
 }
-div.has-children .ul-option ul li a {
+div.has-children .ul-option ul li, div.has-children .ul-option ul .dropdown-searchbar {
+  padding: 0 16px;
+  display: block;
+  float: none;
+  width: 100%;
+}
+div.has-children .ul-option ul li a, div.has-children .ul-option ul .dropdown-searchbar a {
   color: #757575;
   font-size: 14px;
   display: block;
@@ -3244,7 +3241,7 @@ div.has-children .ul-option ul li a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-div.has-children .ul-option ul li a:before {
+div.has-children .ul-option ul li a:before, div.has-children .ul-option ul .dropdown-searchbar a:before {
   display: none;
 }
 

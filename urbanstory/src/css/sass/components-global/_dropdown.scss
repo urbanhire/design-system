@@ -8,20 +8,8 @@
     line-height: 38px;
     border: solid 1px transparent;
     letter-spacing: 0.035em;
-    outline: none;
-    display: inline-block;
     display: inline-flex;
-    text-decoration: none;
     @include radius;
-    // @extend .transition;
-    // &:hover {
-    //     cursor: pointer;
-    //     background-color: darken($c-grey-1, 2%);
-    // }
-    // &:focus {
-    //     background-color: darken($c-grey-1, 4%);
-    //     @include box-shadow(0 0 0 3px rgba($c-grey-6, 0.15));
-    // }  
 }
 
 div.has-children.float-right{
@@ -35,7 +23,7 @@ div.has-children {
     
     .ul-option{
         width: 200px;
-        background: #ffffff;
+        background: $c-white;
         border: 1px solid rgba(221,221,221,0.1);
         @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
         @include radius;
@@ -51,19 +39,22 @@ div.has-children {
                 border-bottom: none;
             }
             
-        
             li {
-                padding: 0 $gutter-l;
-                display: block;
-                float: none;
-                width: 100%;
                 &:hover {
                     background: rgba(0,0,0,0.04);
                 }
                 &.is-active {
                     background: rgba(0,0,0,0.08);
                 }
-                a {
+            }
+
+            li, .dropdown-searchbar {
+                padding: 0 $gutter-l;
+                display: block;
+                float: none;
+                width: 100%;
+                
+                a{
                     color: $c-grey-5;
                     font-size: $font-s;
                     display: block;
