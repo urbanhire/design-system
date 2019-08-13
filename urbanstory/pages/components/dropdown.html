@@ -161,104 +161,104 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             <pre class="code-snippet display-off" id="sass-2"><code>
-    .dropdown-menu,
-    .dropdown-icon,
-    .search-icon {
-        background-color: $c-grey-1;
-        font-size: $font-s;
-        color: $c-grey-5;
-        padding: 0 0.875rem;
-        line-height: 38px;
-        border: solid 1px transparent;
-        letter-spacing: 0.035em;
-        outline: none;
-        display: inline-block;
-        display: inline-flex;
-        text-decoration: none;
+.dropdown-menu,
+.dropdown-icon,
+.search-icon {
+    background-color: $c-grey-1;
+    font-size: $font-s;
+    color: $c-grey-5;
+    padding: 0 0.875rem;
+    line-height: 38px;
+    border: solid 1px transparent;
+    letter-spacing: 0.035em;
+    outline: none;
+    display: inline-block;
+    display: inline-flex;
+    text-decoration: none;
+    @include radius;
+}
+
+div.has-children.float-right {
+    text-align: right;
+}
+
+div.has-children {
+    display: inline-block;
+    color: $c-firm-1;
+    .ul-option {
+        width: 200px;
+        background: #ffffff;
+        border: 1px solid rgba(221, 221, 221, 0.1);
+        @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
         @include radius;
-    }
-    
-    div.has-children.float-right {
-        text-align: right;
-    }
-    
-    div.has-children {
-        display: inline-block;
-        color: $c-firm-1;
-        .ul-option {
-            width: 200px;
-            background: #ffffff;
-            border: 1px solid rgba(221, 221, 221, 0.1);
-            @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
-            @include radius;
-            ul {
-                text-align: left;
-                margin: 0;
-                padding: $gutter-m 0;
-                z-index: 4;
-                display: none;
-                border-bottom: 1px solid #D6D6D6;
-                &:last-of-type {
-                    border-bottom: none;
+        ul {
+            text-align: left;
+            margin: 0;
+            padding: $gutter-m 0;
+            z-index: 4;
+            display: none;
+            border-bottom: 1px solid #D6D6D6;
+            &:last-of-type {
+                border-bottom: none;
+            }
+            li {
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
                 }
-                li {
-                    &:hover {
-                        background: rgba(0, 0, 0, 0.04);
-                    }
-                    &.is-active {
-                        background: rgba(0, 0, 0, 0.08);
-                    }
+                &.is-active {
+                    background: rgba(0, 0, 0, 0.08);
                 }
-                li,
-                .dropdown-searchbar {
-                    padding: 0 $gutter-l;
+            }
+            li,
+            .dropdown-searchbar {
+                padding: 0 $gutter-l;
+                display: block;
+                float: none;
+                width: 100%;
+                a {
+                    color: $c-grey-5;
+                    font-size: $font-s;
                     display: block;
-                    float: none;
-                    width: 100%;
-                    a {
-                        color: $c-grey-5;
-                        font-size: $font-s;
-                        display: block;
-                        line-height: 1em;
-                        padding-top: 15px;
-                        padding-bottom: 15px;
-                        &:before {
-                            display: none;
-                        }
+                    line-height: 1em;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    &:before {
+                        display: none;
                     }
                 }
             }
         }
     }
-    
-    
-    div.has-children.is-active {
-        ul {
-            display: block;
-        }
+}
+
+
+div.has-children.is-active {
+    ul {
+        display: block;
     }
-    
-    .dropdown-menu {
-        padding: 0 0 0 0.875rem;
-    }
-    
-    .is-success,
-    .is-firm,
-    .is-median {
-        color: $c-white;
-    }
-    
-    .is-success {
-        background: $c-green-1;
-    }
-    
-    .is-firm {
-        background: $c-firm-1;
-    }
-    
-    .is-median {
-        background: $c-median-1;
-    }
+}
+
+.dropdown-menu {
+    padding: 0 0 0 0.875rem;
+}
+
+.is-success,
+.is-firm,
+.is-median {
+    color: $c-white;
+}
+
+.is-success {
+    background: $c-green-1;
+}
+
+.is-firm {
+    background: $c-firm-1;
+}
+
+.is-median {
+    background: $c-median-1;
+}
             </code></pre>
         </section>
         <h4>Dropdowns contains searchbar</h4>
@@ -322,131 +322,131 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             <pre class="code-snippet display-off" id="sass-3"><code>
-        .dropdown-menu,
-        .dropdown-icon,
-        .search-icon {
-            background-color: $c-grey-1;
-            font-size: $font-s;
-            color: $c-grey-5;
-            padding: 0 0.875rem;
-            line-height: 38px;
-            border: solid 1px transparent;
-            letter-spacing: 0.035em;
-            outline: none;
-            display: inline-block;
-            display: inline-flex;
-            text-decoration: none;
-            @include radius;
-        }
-        
-        div.has-children.float-right {
-            text-align: right;
-        }
-        
-        div.has-children {
-            display: inline-block;
-            color: $c-firm-1;
-            .ul-option {
-                width: 200px;
-                background: #ffffff;
-                border: 1px solid rgba(221, 221, 221, 0.1);
-                @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
-                @include radius;
-                ul {
-                    text-align: left;
-                    margin: 0;
-                    padding: $gutter-m 0;
-                    z-index: 4;
-                    display: none;
-                    border-bottom: 1px solid #D6D6D6;
-                    &:last-of-type {
-                        border-bottom: none;
-                    }
-                    li {
-                        &:hover {
-                            background: rgba(0, 0, 0, 0.04);
-                        }
-                        &.is-active {
-                            background: rgba(0, 0, 0, 0.08);
-                        }
-                    }
-                    li,
-                    .dropdown-searchbar {
-                        padding: 0 $gutter-l;
-                        display: block;
-                        float: none;
-                        width: 100%;
-                        a {
-                            color: $c-grey-5;
-                            font-size: $font-s;
-                            display: block;
-                            line-height: 1em;
-                            padding-top: 15px;
-                            padding-bottom: 15px;
-                            &:before {
-                                display: none;
-                            }
-                        }
-                    }
+.dropdown-menu,
+.dropdown-icon,
+.search-icon {
+    background-color: $c-grey-1;
+    font-size: $font-s;
+    color: $c-grey-5;
+    padding: 0 0.875rem;
+    line-height: 38px;
+    border: solid 1px transparent;
+    letter-spacing: 0.035em;
+    outline: none;
+    display: inline-block;
+    display: inline-flex;
+    text-decoration: none;
+    @include radius;
+}
+
+div.has-children.float-right {
+    text-align: right;
+}
+
+div.has-children {
+    display: inline-block;
+    color: $c-firm-1;
+    .ul-option {
+        width: 200px;
+        background: #ffffff;
+        border: 1px solid rgba(221, 221, 221, 0.1);
+        @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
+        @include radius;
+        ul {
+            text-align: left;
+            margin: 0;
+            padding: $gutter-m 0;
+            z-index: 4;
+            display: none;
+            border-bottom: 1px solid #D6D6D6;
+            &:last-of-type {
+                border-bottom: none;
+            }
+            li {
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
+                }
+                &.is-active {
+                    background: rgba(0, 0, 0, 0.08);
                 }
             }
-        }
-        
-        .has-searchbar {
-            .ul-option ul li {
-                li:hover {
-                    background: $c-white;
-                }
-            }
-                ::placeholder {
-                font-size: 0.875rem;
-            }
-            .card {
-                position: relative;
-                input {
-                    width: 100%;
-                    padding-right: 43px;
-                }
-            }
-            .search-icon {
-                cursor: pointer;
-                right: 0;
-                background: transparent;
-                position: absolute;
-                color: $c-grey-3;
-                i {
-                    margin-top: 3px;
-                }
-            }
-        }
-        
-        div.has-children.is-active {
-            ul {
+            li,
+            .dropdown-searchbar {
+                padding: 0 $gutter-l;
                 display: block;
+                float: none;
+                width: 100%;
+                a {
+                    color: $c-grey-5;
+                    font-size: $font-s;
+                    display: block;
+                    line-height: 1em;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    &:before {
+                        display: none;
+                    }
+                }
             }
         }
-        
-        .dropdown-menu {
-            padding: 0 0 0 0.875rem;
+    }
+}
+
+.has-searchbar {
+    .ul-option ul li {
+        li:hover {
+            background: $c-white;
         }
-        
-        .is-success,
-        .is-firm,
-        .is-median {
-            color: $c-white;
+    }
+        ::placeholder {
+        font-size: 0.875rem;
+    }
+    .card {
+        position: relative;
+        input {
+            width: 100%;
+            padding-right: 43px;
         }
-        
-        .is-success {
-            background: $c-green-1;
+    }
+    .search-icon {
+        cursor: pointer;
+        right: 0;
+        background: transparent;
+        position: absolute;
+        color: $c-grey-3;
+        i {
+            margin-top: 3px;
         }
-        
-        .is-firm {
-            background: $c-firm-1;
-        }
-        
-        .is-median {
-            background: $c-median-1;
-        }
+    }
+}
+
+div.has-children.is-active {
+    ul {
+        display: block;
+    }
+}
+
+.dropdown-menu {
+    padding: 0 0 0 0.875rem;
+}
+
+.is-success,
+.is-firm,
+.is-median {
+    color: $c-white;
+}
+
+.is-success {
+    background: $c-green-1;
+}
+
+.is-firm {
+    background: $c-firm-1;
+}
+
+.is-median {
+    background: $c-median-1;
+}
             </code></pre>
         </section>
         <h4>Dropdowns search demo</h4>
@@ -506,131 +506,131 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             <pre class="code-snippet display-off" id="sass-4"><code>
-        .dropdown-menu,
-        .dropdown-icon,
-        .search-icon {
-            background-color: $c-grey-1;
-            font-size: $font-s;
-            color: $c-grey-5;
-            padding: 0 0.875rem;
-            line-height: 38px;
-            border: solid 1px transparent;
-            letter-spacing: 0.035em;
-            outline: none;
-            display: inline-block;
-            display: inline-flex;
-            text-decoration: none;
-            @include radius;
-        }
-        
-        div.has-children.float-right {
-            text-align: right;
-        }
-        
-        div.has-children {
-            display: inline-block;
-            color: $c-firm-1;
-            .ul-option {
-                width: 200px;
-                background: #ffffff;
-                border: 1px solid rgba(221, 221, 221, 0.1);
-                @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
-                @include radius;
-                ul {
-                    text-align: left;
-                    margin: 0;
-                    padding: $gutter-m 0;
-                    z-index: 4;
-                    display: none;
-                    border-bottom: 1px solid #D6D6D6;
-                    &:last-of-type {
-                        border-bottom: none;
-                    }
-                    li {
-                        &:hover {
-                            background: rgba(0, 0, 0, 0.04);
-                        }
-                        &.is-active {
-                            background: rgba(0, 0, 0, 0.08);
-                        }
-                    }
-                    li,
-                    .dropdown-searchbar {
-                        padding: 0 $gutter-l;
-                        display: block;
-                        float: none;
-                        width: 100%;
-                        a {
-                            color: $c-grey-5;
-                            font-size: $font-s;
-                            display: block;
-                            line-height: 1em;
-                            padding-top: 15px;
-                            padding-bottom: 15px;
-                            &:before {
-                                display: none;
-                            }
-                        }
-                    }
+.dropdown-menu,
+.dropdown-icon,
+.search-icon {
+    background-color: $c-grey-1;
+    font-size: $font-s;
+    color: $c-grey-5;
+    padding: 0 0.875rem;
+    line-height: 38px;
+    border: solid 1px transparent;
+    letter-spacing: 0.035em;
+    outline: none;
+    display: inline-block;
+    display: inline-flex;
+    text-decoration: none;
+    @include radius;
+}
+
+div.has-children.float-right {
+    text-align: right;
+}
+
+div.has-children {
+    display: inline-block;
+    color: $c-firm-1;
+    .ul-option {
+        width: 200px;
+        background: #ffffff;
+        border: 1px solid rgba(221, 221, 221, 0.1);
+        @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
+        @include radius;
+        ul {
+            text-align: left;
+            margin: 0;
+            padding: $gutter-m 0;
+            z-index: 4;
+            display: none;
+            border-bottom: 1px solid #D6D6D6;
+            &:last-of-type {
+                border-bottom: none;
+            }
+            li {
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
+                }
+                &.is-active {
+                    background: rgba(0, 0, 0, 0.08);
                 }
             }
-        }
-        
-        .has-searchbar {
-            .ul-option ul li {
-                li:hover {
-                    background: $c-white;
-                }
-            }
-                ::placeholder {
-                font-size: 0.875rem;
-            }
-            .card {
-                position: relative;
-                input {
-                    width: 100%;
-                    padding-right: 43px;
-                }
-            }
-            .search-icon {
-                cursor: pointer;
-                right: 0;
-                background: transparent;
-                position: absolute;
-                color: $c-grey-3;
-                i {
-                    margin-top: 3px;
-                }
-            }
-        }
-        
-        div.has-children.is-active {
-            ul {
+            li,
+            .dropdown-searchbar {
+                padding: 0 $gutter-l;
                 display: block;
+                float: none;
+                width: 100%;
+                a {
+                    color: $c-grey-5;
+                    font-size: $font-s;
+                    display: block;
+                    line-height: 1em;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    &:before {
+                        display: none;
+                    }
+                }
             }
         }
-        
-        .dropdown-menu {
-            padding: 0 0 0 0.875rem;
+    }
+}
+
+.has-searchbar {
+    .ul-option ul li {
+        li:hover {
+            background: $c-white;
         }
-        
-        .is-success,
-        .is-firm,
-        .is-median {
-            color: $c-white;
+    }
+        ::placeholder {
+        font-size: 0.875rem;
+    }
+    .card {
+        position: relative;
+        input {
+            width: 100%;
+            padding-right: 43px;
         }
-        
-        .is-success {
-            background: $c-green-1;
+    }
+    .search-icon {
+        cursor: pointer;
+        right: 0;
+        background: transparent;
+        position: absolute;
+        color: $c-grey-3;
+        i {
+            margin-top: 3px;
         }
-        
-        .is-firm {
-            background: $c-firm-1;
-        }
-        
-        .is-median {
-            background: $c-median-1;
-        }
+    }
+}
+
+div.has-children.is-active {
+    ul {
+        display: block;
+    }
+}
+
+.dropdown-menu {
+    padding: 0 0 0 0.875rem;
+}
+
+.is-success,
+.is-firm,
+.is-median {
+    color: $c-white;
+}
+
+.is-success {
+    background: $c-green-1;
+}
+
+.is-firm {
+    background: $c-firm-1;
+}
+
+.is-median {
+    background: $c-median-1;
+}
             </code></pre>
         </section>
     </section>
