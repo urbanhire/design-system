@@ -19,6 +19,7 @@ div.has-children.float-right{
 div.has-children {
     display        : inline-block;
     color: $c-firm-1;
+    width: 200px;
    
     
     .ul-option{
@@ -133,4 +134,8 @@ div.has-children.is-active {
 
 .is-median{
     background: $c-median-1;
+}
+
+.ul-option.is-hidden {
+    display: none;
 }

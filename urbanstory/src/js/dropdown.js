@@ -2,12 +2,26 @@
 $(document).ready(function () {
     var activeIcon = function(){
     $(".dropdown-menu").click(function() {
-        $(this).parent().toggleClass("is-active");
-
+      $(this).siblings('div').slideToggle(300);
+  
         });
-    }
+  }
     activeIcon();
 });
+
+$(document).ready(function () {
+  var desktopNav = function() {
+      $('li.has-children').hover(function(e) {
+          $(this).addClass('is-active');
+          $(this).children('ul').removeClass('is-hidden');
+      }, function() {
+          $(this).children('ul').addClass('is-hidden');
+          $(this).removeClass('is-active');
+      })
+  }
+  desktopNav();
+});
+
 /* FILTERING WITHOUT HIGHLIGHTING MATHCING STRING */
 
 // $(document).ready(function(){

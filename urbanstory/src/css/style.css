@@ -3198,6 +3198,7 @@ div.has-children.float-right {
 div.has-children {
   display: inline-block;
   color: #011148;
+  width: 200px;
 }
 div.has-children .ul-option {
   width: 200px;
@@ -3293,6 +3294,10 @@ div.has-children.is-active ul {
 
 .is-median {
   background: #2791d9;
+}
+
+.ul-option.is-hidden {
+  display: none;
 }
 
 .uh-img-showcase img {
