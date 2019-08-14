@@ -856,4 +856,12 @@ code {
   margin: 20px;
 }
 
+div.has-children {
+  margin-right: 10px;
+}
+
+li.is-hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
 /*# sourceMappingURL=urbanstory.css.map */

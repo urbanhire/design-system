@@ -47,6 +47,16 @@ select {
     padding: $gutter-m;
     min-height: 64px;
   }
+  label{
+    & + label {
+      display: block;
+      color: $c-grey-4;
+      font-size: (12/16) + rem;
+      margin-top: -($gutter-s);
+      margin-bottom: $gutter-s + 1;
+
+    }
+  }
   textarea,
   input,
   select {

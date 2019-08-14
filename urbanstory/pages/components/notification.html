@@ -1,0 +1,518 @@
+<div class="container-fluid">
+    <section class="page-hero">
+        <h1>Notifications</h1>
+    </section>
+    <section>
+        <h4>Notification <small>(default)</small></h4>
+        <div class="notification">
+            <div class="card notification-base">
+                <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                </div>
+                <div class="notification-content">
+                    <h6>Christopher Clark</h6>
+                    <p>applied <b>Marketing Officer</b></p>
+                    <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                </div>
+            </div>
+        </div>
+        <section class="code-preview has-tab">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
+				</nav>
+            </div>
+            <pre class="code-snippet" id="html-1"><code>&lt;div class=&quot;notification&quot;&gt;
+    &lt;div class=&quot;card notification-base&quot;&gt;
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notification-content&quot;&gt;
+            &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+            &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <pre class="code-snippet display-off" id="sass-1"><code>
+.notification,
+.notification-group {
+    width: 280px;
+    .card {
+        box-shadow: none;
+        border-radius: 0;
+        word-break: break-all;
+    }
+    .notification-base {
+        display: flex;
+        padding: $gutter-m;
+        &:hover,
+        &.hover {
+            background-color: $c-grey-1;
+            @include box-shadow(0 0 0 2px rgba(0, 0, 0, 0.1));
+            @include radius;
+        }
+        .avatar {
+            flex: 0 0 auto;
+            margin-right: $gutter-m + 2px;
+        }
+        h6,
+        p {
+            margin: 0;
+        }
+        h6 {
+            line-height: 21px;
+        }
+        p {
+            font-size: $font-xs;
+            color: $c-grey-5;
+            line-height: 18px;
+        }
+        span {
+            margin-top: $gutter-s;
+            line-height: 16px;
+            display: inline-flex;
+            font-size: $font-xxs;
+            color: $c-grey-4;
+            i {
+                margin-top: 3px;
+            }
+            p {
+                color: $c-grey-4;
+                margin: 0 3px;
+            }
+        }
+    }
+}
+            </code></pre>
+        </section>
+        <h4>Notification <small>(hover)</small></h4>
+        <div class="notification">
+            <div class="card notification-base hover">
+                <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                </div>
+                <div class="notification-content">
+                    <h6>Christopher Clark</h6>
+                    <p>applied <b>Marketing Officer</b></p>
+                    <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                </div>
+            </div>
+        </div>
+        <section class="code-preview has-tab">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html-2" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass-2" id="sass-tab">SASS</a>
+				</nav>
+            </div>
+            <pre class="code-snippet" id="html-2"><code>&lt;div class=&quot;notification&quot;&gt;
+                &lt;div class=&quot;card notification-base hover&quot;&gt;
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notification-content&quot;&gt;
+            &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+            &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <pre class="code-snippet display-off" id="sass-2"><code>
+    .notification,
+    .notification-group {
+        width: 280px;
+        .card {
+            box-shadow: none;
+            border-radius: 0;
+            word-break: break-all;
+        }
+        .notification-base {
+            display: flex;
+            padding: $gutter-m;
+            &:hover,
+            &.hover {
+                background-color: $c-grey-1;
+                @include box-shadow(0 0 0 2px rgba(0, 0, 0, 0.1));
+                @include radius;
+            }
+            .avatar {
+                flex: 0 0 auto;
+                margin-right: $gutter-m + 2px;
+            }
+            h6,
+            p {
+                margin: 0;
+            }
+            h6 {
+                line-height: 21px;
+            }
+            p {
+                font-size: $font-xs;
+                color: $c-grey-5;
+                line-height: 18px;
+            }
+            span {
+                margin-top: $gutter-s;
+                line-height: 16px;
+                display: inline-flex;
+                font-size: $font-xxs;
+                color: $c-grey-4;
+                i {
+                    margin-top: 3px;
+                }
+                p {
+                    color: $c-grey-4;
+                    margin: 0 3px;
+                }
+            }
+        }
+    }
+                </code></pre>
+        </section>
+        <h4>Notifications Group</h4>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="notification-group">
+                    <div class="card notification-base">
+                        <div class="avatar">
+                            <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                        </div>
+                        <div class="notification-content">
+                            <h6>Christopher Clark</h6>
+                            <p>applied <b>Marketing Officer</b></p>
+                            <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                        </div>
+                    </div>
+                    <div class="card notification-base">
+                        <div class="avatar">
+                            <img src="https://randomuser.me/api/portraits/women/8.jpg">
+                        </div>
+                        <div class="notification-content">
+                            <h6>Christopher Clark</h6>
+                            <p>applied <b>Marketing Officer</b></p>
+                            <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                        </div>
+                    </div>
+                    <div class="card notification-base hover">
+                        <div class="avatar">
+                            <img src="https://randomuser.me/api/portraits/men/18.jpg">
+                        </div>
+                        <div class="notification-content">
+                            <h6>Christopher Clark</h6>
+                            <p>applied <b>Marketing Officer</b></p>
+                            <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                        </div>
+                    </div>
+                    <div class="card notification-base">
+                        <div class="avatar">
+                            <img src="https://randomuser.me/api/portraits/women/21.jpg">
+                        </div>
+                        <div class="notification-content">
+                            <h6>Christopher Clark</h6>
+                            <p>applied <b>Marketing Officer</b></p>
+                            <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                        </div>
+                    </div>
+                    <div class="card notification-base">
+                        <div class="avatar">
+                            <img src="https://randomuser.me/api/portraits/men/15.jpg">
+                        </div>
+                        <div class="notification-content">
+                            <h6>Christopher Clark</h6>
+                            <p>applied <b>Marketing Officer</b></p>
+                            <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                        </div>
+                    </div>
+                    <li class="card notification-base">
+                        <p>See all</p>
+                    </li>
+                </div>
+            </div>
+            <div clas="col-xs-6">
+                <div class="notification-group">
+                    <div class="card notification-base notification-header">
+                        <p><b>Notifictaions</b></p>
+                        <li>Mark as read</li>
+                    </div>
+                    <div class="notification-container">
+                        <div class="card notification-base un-read">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                            </div>
+                            <div class="notification-content">
+                                <h6>Christopher Clark</h6>
+                                <p>applied <b>Marketing Officer</b></p>
+                                <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                            </div>
+                        </div>
+                        <div class="card notification-base">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                            </div>
+                            <div class="notification-content">
+                                <h6>Christopher Clark</h6>
+                                <p>applied <b>Marketing Officer</b></p>
+                                <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                            </div>
+                        </div>
+                        <div class="card notification-base hover depth-2">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                            </div>
+                            <div class="notification-content">
+                                <h6>Christopher Clark</h6>
+                                <p>applied <b>Marketing Officer</b></p>
+                                <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                            </div>
+                        </div>
+                        <div class="card notification-base">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                            </div>
+                            <div class="notification-content">
+                                <h6>Christopher Clark</h6>
+                                <p>applied <b>Marketing Officer</b></p>
+                                <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                            </div>
+                        </div>
+                        <div class="card notification-base">
+                            <div class="avatar">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg">
+                            </div>
+                            <div class="notification-content">
+                                <h6>Christopher Clark</h6>
+                                <p>applied <b>Marketing Officer</b></p>
+                                <span><i class="icon-clock"></i><p>about 4 hours ago</p></span>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="card notification-base">
+                        <p>See all</p>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <section class="code-preview has-tab">
+			<div class="card uh-tab">
+				<nav class="uh-tab-nav">
+					<a  class="nav-item nav-fit-content active" href="#html-3" id="html-tab">HTML</a>
+					<a  class="nav-item nav-fit-content" href="#sass-3" id="sass-tab">SASS</a>
+				</nav>
+            </div>
+            <pre class="code-snippet" id="html-3"><code>&lt;div class=&quot;notification-group&quot;&gt;
+    &lt;div class=&quot;card notification-base&quot;&gt;
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notification-content&quot;&gt;
+            &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+            &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card notification-base&quot;&gt;
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://randomuser.me/api/portraits/women/8.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notification-content&quot;&gt;
+            &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+            &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card notification-base hover&quot;&gt;
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://randomuser.me/api/portraits/men/18.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notification-content&quot;&gt;
+            &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+            &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card notification-base&quot;&gt;
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://randomuser.me/api/portraits/women/21.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notification-content&quot;&gt;
+            &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+            &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card notification-base&quot;&gt;
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://randomuser.me/api/portraits/men/15.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notification-content&quot;&gt;
+            &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+            &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+            &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;li class=&quot;card notification-base&quot;&gt;
+        &lt;p&gt;See all&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;notification-group&quot;&gt;
+    &lt;div class=&quot;card notification-base notification-header&quot;&gt;
+        &lt;p&gt;&lt;b&gt;Notifictaions&lt;/b&gt;&lt;/p&gt;
+        &lt;li&gt;Mark as read&lt;/li&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;notification-container&quot;&gt;
+        &lt;div class=&quot;card notification-base un-read&quot;&gt;
+            &lt;div class=&quot;avatar&quot;&gt;
+                &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;notification-content&quot;&gt;
+                &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+                &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+                &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card notification-base&quot;&gt;
+            &lt;div class=&quot;avatar&quot;&gt;
+                &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;notification-content&quot;&gt;
+                &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+                &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+                &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card notification-base hover depth-2&quot;&gt;
+            &lt;div class=&quot;avatar&quot;&gt;
+                &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;notification-content&quot;&gt;
+                &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+                &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+                &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card notification-base&quot;&gt;
+            &lt;div class=&quot;avatar&quot;&gt;
+                &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;notification-content&quot;&gt;
+                &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+                &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+                &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card notification-base&quot;&gt;
+            &lt;div class=&quot;avatar&quot;&gt;
+                &lt;img src=&quot;https://randomuser.me/api/portraits/men/11.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;notification-content&quot;&gt;
+                &lt;h6&gt;Christopher Clark&lt;/h6&gt;
+                &lt;p&gt;applied &lt;b&gt;Marketing Officer&lt;/b&gt;&lt;/p&gt;
+                &lt;span&gt;&lt;i class=&quot;icon-clock&quot;&gt;&lt;/i&gt;&lt;p&gt;about 4 hours ago&lt;/p&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;li class=&quot;card notification-base&quot;&gt;
+        &lt;p&gt;See all&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/div&gt;</code></pre>
+            <pre class="code-snippet display-off" id="sass-3"><code>
+.notification,
+.notification-group {
+    width: 280px;
+    .card {
+        box-shadow: none;
+        border-radius: 0;
+        word-break: break-all;
+    }
+    .notification-base {
+        display: flex;
+        padding: $gutter-m;
+        &amp;:hover,
+        &amp;.hover {
+            background-color: $c-grey-1;
+            @include box-shadow(0 0 0 2px rgba(0, 0, 0, 0.1));
+            @include radius;
+        }
+        .avatar {
+            flex: 0 0 auto;
+            margin-right: $gutter-m + 2px;
+        }
+        h6,
+        p {
+            margin: 0;
+        }
+        h6 {
+            line-height: 21px;
+        }
+        p {
+            font-size: $font-xs;
+            color: $c-grey-5;
+            line-height: 18px;
+        }
+        span {
+            margin-top: $gutter-s;
+            line-height: 16px;
+            display: inline-flex;
+            font-size: $font-xxs;
+            color: $c-grey-4;
+            i {
+                margin-top: 3px;
+            }
+            p {
+                color: $c-grey-4;
+                margin: 0 3px;
+            }
+        }
+    }
+}
+
+.notification-group {
+    overflow: hidden;
+    @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
+    @include radius;
+    .notification-container {
+        height: 375px;
+        overflow-x: auto;
+    }
+    .card {
+        border-bottom: 1px solid #D6D6D6;
+        &amp;:last-child {
+            border-bottom: none;
+        }
+    }
+    li.card {
+        cursor: pointer;
+        border-top: 1px solid #D6D6D6;
+        justify-content: center;
+        p {
+            color: $c-median-1;
+        }
+    }
+    .notification-header {
+        justify-content: space-between;
+        li {
+            cursor: pointer;
+            color: $c-grey-4;
+            list-style: none;
+            font-size: 0.75rem;
+        }
+        &amp;:hover {
+            background: $c-white;
+        }
+    }
+    .un-read {
+        background: $c-yellow-alert;
+        &amp;:hover {
+            background: $c-yellow-alert;
+            cursor: pointer;
+        }
+    }
+}
+            </code></pre>
+        </section>
+    </section>
+</div>

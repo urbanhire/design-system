@@ -9,12 +9,13 @@ import labels from "./labels.html";
 import list from "./list.html";
 import breadcrumbs from "./breadcrumbs.html";
 import pagination from "./pagination.html";
-import chips from "./chips.html";
 import slider from "./slider.html";
 import preloader from "./preloader.html";
 import tooltip from "./tooltip.html";
 import steps from "./steps.html";
 import uhSwitch from "./switch.html";
+import notification from "./notification.html";
+import dropdown from"./dropdown.html";
 
 storiesOf("DEVELOPER|Components", module)
   .add("Alert", () => alert)
@@ -26,9 +27,10 @@ storiesOf("DEVELOPER|Components", module)
   .add("List", () => list)
   .add("Breadcrumbs", () => breadcrumbs)
   .add("Pagination", () => pagination)
-  .add("Chips", () => chips)
   .add("Slider", () => slider)
   .add("Preloader", () => preloader)
   .add("Tooltip", () => tooltip)
   .add("Steps", () => steps)
   .add("Switch", () => uhSwitch)
+  .add("Notification", () => notification)
+  .add("Dropdown", () => dropdown)
