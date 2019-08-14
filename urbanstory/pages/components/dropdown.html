@@ -127,11 +127,11 @@
         &lt;div class=&quot;dropdown-icon is-firm&quot;&gt;&lt;i class=&quot;icon-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;ul-option&quot;&gt;
-        &lt;ul class=&quot;is-hidden&quot;&gt;
-            &lt;li&gt;
+        &lt;ul&gt;
+            &lt;li class=&quot;li-option&quot;&gt;
                 &lt;a href=&quot;&quot;&gt;Option 1&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li&gt;
+            &lt;li class=&quot;li-option&quot;&gt;
                 &lt;a href=&quot;&quot;&gt;Option 2&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
@@ -142,19 +142,19 @@
         &lt;div class=&quot;dropdown-icon is-median&quot;&gt;&lt;i class=&quot;icon-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;ul-option&quot;&gt;
-        &lt;ul class=&quot;is-hidden&quot;&gt;
-            &lt;li&gt;
+        &lt;ul&gt;
+            &lt;li class=&quot;li-option&quot;&gt;
                 &lt;a href=&quot;&quot;&gt;Option 1&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li&gt;
+            &lt;li class=&quot;li-option&quot;&gt;
                 &lt;a href=&quot;&quot;&gt;Option 2&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
-        &lt;ul class=&quot;is-hidden&quot;&gt;
-            &lt;li class=&quot;is-active&quot;&gt;
+        &lt;ul&gt;
+            &lt;li class=&quot;li-option is-active&quot;&gt;
                 &lt;a href=&quot;&quot;&gt;Option clicked&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class=&quot;is-hover&quot;&gt;
+            &lt;li class=&quot;li-option is-hover&quot;&gt;
                 &lt;a href=&quot;&quot;&gt;Option hovered&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
@@ -183,39 +183,45 @@ div.has-children.float-right {
 }
 
 div.has-children {
-    display: inline-block;
+    display        : inline-block;
     color: $c-firm-1;
-    .ul-option {
+    width: 200px;
+   
+    
+    .ul-option{
         width: 200px;
-        background: #ffffff;
-        border: 1px solid rgba(221, 221, 221, 0.1);
-        @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
+        background: $c-white;
+        border: 1px solid rgba(221,221,221,0.1);
+        @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
         @include radius;
-        ul {
+        ul{
             text-align: left;
-            margin: 0;
-            padding: $gutter-m 0;
+            margin : 0;
+            padding : $gutter-m 0;
             z-index: 4;
             display: none;
             border-bottom: 1px solid #D6D6D6;
-            &:last-of-type {
+                
+            &:last-of-type{
                 border-bottom: none;
             }
-            li {
+            
+            li.li-option {
                 &:hover {
-                    background: rgba(0, 0, 0, 0.04);
+                    background: rgba(0,0,0,0.04);
                 }
                 &.is-active {
-                    background: rgba(0, 0, 0, 0.08);
+                    background: rgba(0,0,0,0.08);
                 }
             }
-            li,
-            .dropdown-searchbar {
-                padding: 0 $gutter-l;
+
+            li.li-option, .dropdown-searchbar {
                 display: block;
                 float: none;
                 width: 100%;
-                a {
+                
+                a{
+                    padding: 0 $gutter-l;
                     color: $c-grey-5;
                     font-size: $font-s;
                     display: block;
@@ -228,7 +234,7 @@ div.has-children {
                 }
             }
         }
-    }
+    }  
 }
 
 
@@ -266,27 +272,6 @@ div.has-children.is-active {
             <div class="dropdown-menu">Grey
                 <div class="dropdown-icon"><i class="icon-angle-down"></i></div>
             </div>
-            <!-- <div class="ul-option">
-                <ul id="myUL">   
-                    <li class="dropdown-searchbar">
-                        <div class="card flex">
-                            <input type="text" placeholder="Search...">
-                            <div class="search-icon"><i class="icon-search"></i></div>
-                        </div>
-                    </li>
-                    <li class="li-option">
-                        <a href="">Option-2</a>
-                    </li>
-                </ul>
-                <ul>  
-                    <li class="li-option"> 
-                        <a href="">Option-1</a>
-                    </li>
-                    <li class="li-option"> 
-                        <a href="">Option-2</a>
-                    </li>
-                </ul>
-            </div> -->
             <div class="ul-option">
                 <ul id="myUL">  
                     <li class="dropdown-searchbar">
@@ -321,13 +306,13 @@ div.has-children.is-active {
         &lt;div class=&quot;dropdown-icon&quot;&gt;&lt;i class=&quot;icon-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;ul-option&quot;&gt;
-        &lt;ul&gt;
-            &lt;div class=&quot;dropdown-searchbar&quot;&gt;
+        &lt;ul id=&quot;myUL&quot;&gt;
+            &lt;li class=&quot;dropdown-searchbar&quot;&gt;
                 &lt;div class=&quot;card flex&quot;&gt;
                     &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot;&gt;
                     &lt;div class=&quot;search-icon&quot;&gt;&lt;i class=&quot;icon-search&quot;&gt;&lt;/i&gt;&lt;/div&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
+            &lt;/li&gt;
             &lt;li&gt;
                 &lt;a href=&quot;&quot;&gt;Option-2&lt;/a&gt;
             &lt;/li&gt;
@@ -365,39 +350,45 @@ div.has-children.float-right {
 }
 
 div.has-children {
-    display: inline-block;
+    display        : inline-block;
     color: $c-firm-1;
-    .ul-option {
+    width: 200px;
+   
+    
+    .ul-option{
         width: 200px;
-        background: #ffffff;
-        border: 1px solid rgba(221, 221, 221, 0.1);
-        @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
+        background: $c-white;
+        border: 1px solid rgba(221,221,221,0.1);
+        @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
         @include radius;
-        ul {
+        ul{
             text-align: left;
-            margin: 0;
-            padding: $gutter-m 0;
+            margin : 0;
+            padding : $gutter-m 0;
             z-index: 4;
             display: none;
             border-bottom: 1px solid #D6D6D6;
-            &:last-of-type {
+                
+            &:last-of-type{
                 border-bottom: none;
             }
-            li {
+            
+            li.li-option {
                 &:hover {
-                    background: rgba(0, 0, 0, 0.04);
+                    background: rgba(0,0,0,0.04);
                 }
                 &.is-active {
-                    background: rgba(0, 0, 0, 0.08);
+                    background: rgba(0,0,0,0.08);
                 }
             }
-            li,
-            .dropdown-searchbar {
-                padding: 0 $gutter-l;
+
+            li.li-option, .dropdown-searchbar {
                 display: block;
                 float: none;
                 width: 100%;
-                a {
+                
+                a{
+                    padding: 0 $gutter-l;
                     color: $c-grey-5;
                     font-size: $font-s;
                     display: block;
@@ -408,34 +399,48 @@ div.has-children {
                         display: none;
                     }
                 }
-            }
+            } 
         }
     }
+    
 }
 
-.has-searchbar {
-    .ul-option ul li {
-        li:hover {
+.has-searchbar{
+
+    li.dropdown-searchbar {
+        padding: 0 $gutter-m;
+        &:hover{
+            background: white;
+        }
+    }
+
+    .ul-option ul li{
+       
+        &:hover{
             background: $c-white;
         }
     }
-        ::placeholder {
+
+    ::placeholder{
         font-size: 0.875rem;
     }
-    .card {
+
+    .card{
         position: relative;
-        input {
+        input{
             width: 100%;
             padding-right: 43px;
         }
     }
-    .search-icon {
+
+    .search-icon{
         cursor: pointer;
         right: 0;
         background: transparent;
         position: absolute;
         color: $c-grey-3;
-        i {
+
+        i{
             margin-top: 3px;
         }
     }
@@ -508,12 +513,12 @@ div.has-children.is-active {
     &lt;/div&gt;
     &lt;div class=&quot;ul-option&quot;&gt;
         &lt;ul id=&quot;myUL&quot;&gt;
-            &lt;div class=&quot;dropdown-searchbar&quot;&gt;
+            &lt;li class=&quot;dropdown-searchbar&quot;&gt;
                 &lt;div class=&quot;card flex&quot;&gt;
                     &lt;input type=&quot;text&quot; id=&quot;searchInput&quot; placeholder=&quot;Search...&quot;&gt;
                     &lt;div class=&quot;search-icon&quot;&gt;&lt;i class=&quot;icon-search&quot;&gt;&lt;/i&gt;&lt;/div&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
+            &lt;/li&gt;
             &lt;li class=&quot;li-option&quot;&gt;
                 &lt;a href=&quot;#&quot;&gt;Hello&lt;/a&gt;
             &lt;/li&gt;
@@ -549,39 +554,45 @@ div.has-children.float-right {
 }
 
 div.has-children {
-    display: inline-block;
+    display        : inline-block;
     color: $c-firm-1;
-    .ul-option {
+    width: 200px;
+   
+    
+    .ul-option{
         width: 200px;
-        background: #ffffff;
-        border: 1px solid rgba(221, 221, 221, 0.1);
-        @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.2));
+        background: $c-white;
+        border: 1px solid rgba(221,221,221,0.1);
+        @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
         @include radius;
-        ul {
+        ul{
             text-align: left;
-            margin: 0;
-            padding: $gutter-m 0;
+            margin : 0;
+            padding : $gutter-m 0;
             z-index: 4;
             display: none;
             border-bottom: 1px solid #D6D6D6;
-            &:last-of-type {
+                
+            &:last-of-type{
                 border-bottom: none;
             }
-            li {
+            
+            li.li-option {
                 &:hover {
-                    background: rgba(0, 0, 0, 0.04);
+                    background: rgba(0,0,0,0.04);
                 }
                 &.is-active {
-                    background: rgba(0, 0, 0, 0.08);
+                    background: rgba(0,0,0,0.08);
                 }
             }
-            li,
-            .dropdown-searchbar {
-                padding: 0 $gutter-l;
+
+            li.li-option, .dropdown-searchbar {
                 display: block;
                 float: none;
                 width: 100%;
-                a {
+                
+                a{
+                    padding: 0 $gutter-l;
                     color: $c-grey-5;
                     font-size: $font-s;
                     display: block;
@@ -592,34 +603,47 @@ div.has-children {
                         display: none;
                     }
                 }
-            }
+            } 
         }
-    }
+    } 
 }
 
-.has-searchbar {
-    .ul-option ul li {
-        li:hover {
+.has-searchbar{
+
+    li.dropdown-searchbar {
+        padding: 0 $gutter-m;
+        &:hover{
+            background: white;
+        }
+    }
+
+    .ul-option ul li{
+       
+        &:hover{
             background: $c-white;
         }
     }
-        ::placeholder {
+
+    ::placeholder{
         font-size: 0.875rem;
     }
-    .card {
+
+    .card{
         position: relative;
-        input {
+        input{
             width: 100%;
             padding-right: 43px;
         }
     }
-    .search-icon {
+
+    .search-icon{
         cursor: pointer;
         right: 0;
         background: transparent;
         position: absolute;
         color: $c-grey-3;
-        i {
+
+        i{
             margin-top: 3px;
         }
     }
@@ -652,7 +676,6 @@ div.has-children.is-active {
 .is-median {
     background: $c-median-1;
 }
-            </code></pre>
-        </section>
+        </code></pre>
     </section>
-</div>
+</section>
