@@ -40,7 +40,7 @@ div.has-children {
                 border-bottom: none;
             }
             
-            li {
+            li.li-option {
                 &:hover {
                     background: rgba(0,0,0,0.04);
                 }
@@ -49,13 +49,13 @@ div.has-children {
                 }
             }
 
-            li, .dropdown-searchbar {
-                padding: 0 $gutter-l;
+            li.li-option, .dropdown-searchbar {
                 display: block;
                 float: none;
                 width: 100%;
                 
                 a{
+                    padding: 0 $gutter-l;
                     color: $c-grey-5;
                     font-size: $font-s;
                     display: block;
@@ -75,8 +75,16 @@ div.has-children {
 
 .has-searchbar{
 
+    li.dropdown-searchbar {
+        padding: 0 $gutter-m;
+        &:hover{
+            background: white;
+        }
+    }
+
     .ul-option ul li{
-        li:hover{
+       
+        &:hover{
             background: $c-white;
         }
     }

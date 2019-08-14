@@ -83,10 +83,10 @@
             </div>
             <div class="ul-option">
                 <ul>  
-                    <li>
+                    <li class="li-option">
                         <a href="">Option 1</a>
                     </li>
-                    <li>
+                    <li class="li-option">
                         <a href="">Option 2</a>
                     </li>
                 </ul>
@@ -98,18 +98,18 @@
             </div>
             <div class="ul-option">
                 <ul>  
-                    <li>
+                    <li class="li-option">
                         <a href="">Option 1</a>
                     </li>
-                    <li>
+                    <li class="li-option">
                         <a href="">Option 2</a>
                     </li>
                 </ul>
                 <ul>  
-                    <li class="is-active">
+                    <li class="li-option is-active">
                         <a href="">Option clicked</a>
                     </li>
-                    <li class="is-hover">
+                    <li class="li-option is-hover">
                         <a href="">Option hovered</a>
                     </li>
                 </ul>
@@ -266,23 +266,44 @@ div.has-children.is-active {
             <div class="dropdown-menu">Grey
                 <div class="dropdown-icon"><i class="icon-angle-down"></i></div>
             </div>
-            <div class="ul-option">
-                <ul>  
-                    <div class="dropdown-searchbar">
+            <!-- <div class="ul-option">
+                <ul id="myUL">   
+                    <li class="dropdown-searchbar">
                         <div class="card flex">
                             <input type="text" placeholder="Search...">
                             <div class="search-icon"><i class="icon-search"></i></div>
                         </div>
-                    </div>
-                    <li>
+                    </li>
+                    <li class="li-option">
                         <a href="">Option-2</a>
                     </li>
                 </ul>
                 <ul>  
-                    <li>
+                    <li class="li-option"> 
                         <a href="">Option-1</a>
                     </li>
-                    <li>
+                    <li class="li-option"> 
+                        <a href="">Option-2</a>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="ul-option">
+                <ul id="myUL">  
+                    <li class="dropdown-searchbar">
+                        <div class="card flex">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                            <div class="search-icon"><i class="icon-search"></i></div>
+                        </div>
+                    </li>
+                    <li class="li-option">
+                        <a href="">Option-2</a>
+                    </li>
+                </ul>
+                <ul>  
+                    <li class="li-option"> 
+                        <a href="">Option-1</a>
+                    </li>
+                    <li class="li-option"> 
                         <a href="">Option-2</a>
                     </li>
                 </ul>
@@ -456,12 +477,12 @@ div.has-children.is-active {
             </div>
             <div class="ul-option">
                 <ul id="myUL">  
-                    <div class="dropdown-searchbar">
+                    <li class="dropdown-searchbar">
                         <div class="card flex">
                             <input type="text" id="searchInput" placeholder="Search...">
                             <div class="search-icon"><i class="icon-search"></i></div>
                         </div>
-                    </div>
+                    </li>
                     <li class="li-option">
                         <a href="#">Hello</a>
                     </li>  

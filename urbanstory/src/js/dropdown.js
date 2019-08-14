@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     var activeIcon = function(){
-    $(".dropdown-menu").click(function() {
+    $(".has-children .dropdown-menu").click(function() {
       $(this).siblings('div').slideToggle(300);
   
         });
