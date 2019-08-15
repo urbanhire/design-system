@@ -1,18 +1,37 @@
-.dropdown-menu,
+.dropdown-button,
 .dropdown-icon,
 .search-icon {
-    background-color: $c-grey-1;
     font-size: $font-s;
-    color: $c-grey-5;
     padding: 0 0.875rem;
     line-height: 38px;
     border: solid 1px transparent;
     letter-spacing: 0.035em;
     display: inline-flex;
     @include radius;
+    user-select: none; 
 }
 
-div.has-children.float-right{
+.dropdown-button{
+    padding: 0 0 0 0.875rem;
+    background-color: $c-grey-1;
+    color: $c-grey-5;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($c-grey-1, 2%);
+    }
+    &:active {
+        background-color: darken($c-grey-1, 4%);
+        @include box-shadow(0 0 0 3px rgba($c-grey-6, 0.15));
+    }
+}
+
+.dropdown-icon,
+.search-icon{
+    background-color: transparent;
+}
+
+.float-right{
     text-align: right;
 }
 
@@ -21,13 +40,14 @@ div.has-children {
     color: $c-firm-1;
     width: 200px;
    
-    
     .ul-option{
+        position: absolute;
         width: 200px;
         background: $c-white;
         border: 1px solid rgba(221,221,221,0.1);
         @include box-shadow(0 5px 10px 0 rgba(0,0,0,0.2));
         @include radius;
+        z-index:1;
         ul{
             text-align: left;
             margin : 0;
@@ -40,7 +60,7 @@ div.has-children {
                 border-bottom: none;
             }
             
-            li {
+            li.li-option {
                 &:hover {
                     background: rgba(0,0,0,0.04);
                 }
@@ -49,13 +69,13 @@ div.has-children {
                 }
             }
 
-            li, .dropdown-searchbar {
-                padding: 0 $gutter-l;
+            li.li-option, .dropdown-searchbar {
                 display: block;
                 float: none;
                 width: 100%;
                 
                 a{
+                    padding: 0 $gutter-l;
                     color: $c-grey-5;
                     font-size: $font-s;
                     display: block;
@@ -66,17 +86,21 @@ div.has-children {
                         display: none;
                     }
                 }
-            }
-           
+            } 
         }
-    }
-    
+    }   
 }
 
 .has-searchbar{
+    li.dropdown-searchbar {
+        padding: 0 $gutter-m;
+        &:hover{
+            background: white;
+        }
+    }
 
     .ul-option ul li{
-        li:hover{
+        &:hover{
             background: $c-white;
         }
     }
@@ -101,11 +125,9 @@ div.has-children {
         color: $c-grey-3;
 
         i{
-            margin-top: 3px;
+            margin-top:3px;
         }
     }
-
-
 }
 
 div.has-children.is-active {
@@ -114,8 +136,16 @@ div.has-children.is-active {
     }
 }
 
-.dropdown-menu{
-    padding: 0 0 0 0.875rem;
+.is-show{
+    display: initial;
+}
+.is-hidden{
+    display: none;
+}
+.is-rotate{
+    i{  
+        @include transform(rotate(180deg));
+    }
 }
 
 .is-success,
@@ -126,14 +156,36 @@ div.has-children.is-active {
 
 .is-success{
     background: $c-green-1; 
+
+    &:hover {
+        background-color: $c-green-2;
+    }
+    &:active {
+        background-color: $c-green-3;
+        @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
+    }
 }
 
 .is-firm{
     background: $c-firm-1;
+    &:hover {
+        background-color: $c-firm-2;
+    }
+    &:active {
+        background-color: $c-firm-3;
+        @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
+    }
 }
 
 .is-median{
     background: $c-median-1;
+    &:hover {
+        background-color: $c-median-2;
+    }
+    &:active {
+        background-color: $c-median-3;
+        @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
+    }
 }
 
 .ul-option.is-hidden {
