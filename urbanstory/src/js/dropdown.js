@@ -1,13 +1,24 @@
 
 $(document).ready(function () {
     var activeIcon = function(){
-    $(".has-children .dropdown-menu").click(function() {
-      $(this).siblings('div').slideToggle(300);
-  
+    $(".has-children .dropdown-button").click(function() {
+      $(this).siblings('div').toggleClass('is-hidden').toggleClass('is-show');
         });
   }
     activeIcon();
 });
+
+$(document).ready(function () {
+  var dropdownClick = function(){
+  $(".dropdown-menu").click(function() {
+      $(this).toggleClass("is-rotate", 100);
+
+      });
+}
+  dropdownClick();
+});
+
+
 
 $(document).ready(function () {
   var desktopNav = function() {
@@ -22,41 +33,26 @@ $(document).ready(function () {
   desktopNav();
 });
 
-/* FILTERING WITHOUT HIGHLIGHTING MATHCING STRING */
-
-// $(document).ready(function(){
-//     var lookup = function(){
-//     $("#searchInput").on("keyup", function() {
-//       var value = $(this).val().toLowerCase();
-//       console.log(value)
-//       $("#myUL li").filter(function() {
-//         console.log($(this).text().toLowerCase().indexOf(value))
-//         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//       });
-//     });
-//     }
-//     lookup();
-// });
-
-
-/* FILTERING + HIGHLIGHTING MATHCING STRING */
-
 $(document).ready(function () {
-  $(".li-option a").each(function() {               // ***
+  $(".li-option a").each(function() { // ***
     $(this).data("original", $(this).text()); // ***
   })                                            // ***
   $('#searchInput').keyup(function() {
+    console.log(this.value);
     var valThis = this.value.toLowerCase();
     var length = this.value.length;
+    console.log(($(this).parent().parent().siblings().children()))
+    console.log($('.li-option a'))
 
-    $('.li-option a').each(function() {
+
+    $(this).parent().parent().siblings().children().each(function() {
       var text = $(this).data("original"),      // ***
         textL = text.toLowerCase(),
-        index = textL.indexOf(valThis);         // ***
+        index = textL.indexOf(valThis);  
+        console.log(text);       // ***
 
       if (index !== -1) {
         var htmlR = text.substr(0, index) + '<strong>' + text.substr(index, length) + '</strong>' + text.substr(index + length); // ***
-        console.log(text.substr(0, index))
         $(this).html(htmlR).show()
       } else {
         $(this).hide();

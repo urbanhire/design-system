@@ -3175,12 +3175,10 @@ input[type=checkbox]:focus {
   cursor: pointer;
 }
 
-.dropdown-menu,
+.dropdown-button,
 .dropdown-icon,
 .search-icon {
-  background-color: #f5f5f5;
   font-size: 14px;
-  color: #757575;
   padding: 0 0.875rem;
   line-height: 38px;
   border: solid 1px transparent;
@@ -3189,9 +3187,31 @@ input[type=checkbox]:focus {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  user-select: none;
 }
 
-div.has-children.float-right {
+.dropdown-button {
+  padding: 0 0 0 0.875rem;
+  background-color: #f5f5f5;
+  color: #757575;
+}
+.dropdown-button:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+.dropdown-button:active {
+  background-color: #ebebeb;
+  -webkit-box-shadow: 0 0 0 3px rgba(33, 33, 33, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(33, 33, 33, 0.15);
+  box-shadow: 0 0 0 3px rgba(33, 33, 33, 0.15);
+}
+
+.dropdown-icon,
+.search-icon {
+  background-color: transparent;
+}
+
+.float-right {
   text-align: right;
 }
 
@@ -3282,8 +3302,18 @@ div.has-children.is-active ul {
   display: block;
 }
 
-.dropdown-menu {
-  padding: 0 0 0 0.875rem;
+.is-show {
+  display: initial;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-rotate i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .is-success,
@@ -3295,13 +3325,40 @@ div.has-children.is-active ul {
 .is-success {
   background: #2fbd90;
 }
+.is-success:hover {
+  background-color: #2aa980;
+}
+.is-success:active {
+  background-color: #259471;
+  -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
+  box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
+}
 
 .is-firm {
   background: #011148;
 }
+.is-firm:hover {
+  background-color: #010b2f;
+}
+.is-firm:active {
+  background-color: #000516;
+  -webkit-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
+  box-shadow: 0 0 0 3px rgba(1, 17, 72, 0.15);
+}
 
 .is-median {
   background: #2791d9;
+}
+.is-median:hover {
+  background-color: #2283c4;
+}
+.is-median:active {
+  background-color: #1f74ae;
+  -webkit-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
+  box-shadow: 0 0 0 3px rgba(39, 145, 217, 0.15);
 }
 
 .ul-option.is-hidden {
