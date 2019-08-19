@@ -76,3 +76,21 @@ $(document).ready(function() {
     });
 
 });
+
+$(document).ready(function() { 
+    $( '#btnCopyToClipboard' ).click( function() {
+        console.log("kilik")
+        var clipboardText = "";
+
+        clipboardText = $( '#txtKeyw' ).val();
+        var textArea = document.createElement( "textarea" );
+        textArea.value = clipboardText
+        document.body.appendChild( textArea );
+    
+        textArea.select();
+
+        document.execCommand( 'copy' );
+        document.body.removeChild( textArea );
+        
+    });
+});
