@@ -148,13 +148,13 @@ div.has-children.is-active {
     }
 }
 
-.is-success,
+.is-green,
 .is-firm,
 .is-median {
     color: $c-white;
 }
 
-.is-success{
+.is-green{
     background: $c-green-1; 
 
     &:hover {

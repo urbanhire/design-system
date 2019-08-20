@@ -3316,19 +3316,19 @@ div.has-children.is-active ul {
   transform: rotate(180deg);
 }
 
-.is-success,
+.is-green,
 .is-firm,
 .is-median {
   color: #fff;
 }
 
-.is-success {
+.is-green {
   background: #2fbd90;
 }
-.is-success:hover {
+.is-green:hover {
   background-color: #2aa980;
 }
-.is-success:active {
+.is-green:active {
   background-color: #259471;
   -webkit-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
   -moz-box-shadow: 0 0 0 3px rgba(47, 189, 144, 0.15);
