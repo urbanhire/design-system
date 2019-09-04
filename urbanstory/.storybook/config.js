@@ -19,7 +19,7 @@ import '../src/css/style.css';
 import '../src/css/ats.css';
 
 //css only for storybook
-import '../src/css/urbanstory.css';
+import '../src/css/style_layout.css';
 
 //load js for ats header
 import '../src/js/header.js';
