@@ -24,12 +24,11 @@
 		if(accessToken === "true"){
 			return true;
 		}else{
-			let email = window.prompt('Input email?', '')
 			let password = window.prompt('Input password?', '')
-			if(email === '' || password === '' || email === null || password === null){
+			if(password === '' || email === null || password === null){
 				location.reload();
 			}else{
-				getAuth(email, password)
+				return password === 'UhUiUx115'
 			}
 		}
 	
