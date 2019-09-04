@@ -1,32 +1,35 @@
 // forms
+.uh-input-form{
 textarea,
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="search"],
 select {
-  @extend .transition;
-  outline: none;
-  border: solid 1px $c-grey-3;
-  line-height: 40px;
-  font-size: 14px;
-  padding: 0 $gutter-m;
-  // background:;
-  @include radius;
-  &:focus {
-    @include box-shadow(0 0 0 3px rgba(black, 0.15));
-  }
-  &[disabled] {
-    border: solid 1px $c-grey-2;
-    cursor: not-allowed;
-  }
+    @extend .transition;
+    outline: none;
+    border: solid 1px $c-grey-3;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 $gutter-m;
+    // background:;
+    @include radius;
+    &:focus {
+      @include box-shadow(0 0 0 3px rgba(black, 0.15));
+    }
+    &[disabled] {
+      border: solid 1px $c-grey-2;
+      cursor: not-allowed;
+    }
 }
 select {
   height: 40px;
   width: 100%;
   background: white;
 }
-.input-form {
+}
+
+.uh-input-form {
   label:first-of-type {
     display: block;
     font-size: (14/16) + rem;
