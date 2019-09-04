@@ -24,6 +24,57 @@
         background-color: darken($c-grey-1, 4%);
         @include box-shadow(0 0 0 3px rgba($c-grey-6, 0.15));
     }
+    &.is-show{
+        display: initial;
+    }
+    &.is-hidden{
+        display: none;
+    }
+    &.is-rotate{
+        i{  
+            @include transform(rotate(180deg));
+        }
+    }
+    
+    &.is-success,
+    &.is-firm,
+    &.is-median {
+        color: $c-white;
+    }
+    
+    &.is-success{
+        background: $c-green-1; 
+    
+        &:hover {
+            background-color: $c-green-2;
+        }
+        &:active {
+            background-color: $c-green-3;
+            @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
+        }
+    }
+    
+    &.is-firm{
+        background: $c-firm-1;
+        &:hover {
+            background-color: $c-firm-2;
+        }
+        &:active {
+            background-color: $c-firm-3;
+            @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
+        }
+    }
+    
+    &.is-median{
+        background: $c-median-1;
+        &:hover {
+            background-color: $c-median-2;
+        }
+        &:active {
+            background-color: $c-median-3;
+            @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
+        }
+    }
 }
 
 .dropdown-icon,
@@ -133,58 +184,6 @@ div.has-children {
 div.has-children.is-active {
     ul {
         display: block;
-    }
-}
-
-.is-show{
-    display: initial;
-}
-.is-hidden{
-    display: none;
-}
-.is-rotate{
-    i{  
-        @include transform(rotate(180deg));
-    }
-}
-
-.is-success,
-.is-firm,
-.is-median {
-    color: $c-white;
-}
-
-.is-success{
-    background: $c-green-1; 
-
-    &:hover {
-        background-color: $c-green-2;
-    }
-    &:active {
-        background-color: $c-green-3;
-        @include box-shadow(0 0 0 3px rgba($c-green-1, 0.15));
-    }
-}
-
-.is-firm{
-    background: $c-firm-1;
-    &:hover {
-        background-color: $c-firm-2;
-    }
-    &:active {
-        background-color: $c-firm-3;
-        @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
-    }
-}
-
-.is-median{
-    background: $c-median-1;
-    &:hover {
-        background-color: $c-median-2;
-    }
-    &:active {
-        background-color: $c-median-3;
-        @include box-shadow(0 0 0 3px rgba($c-median-1, 0.15));
     }
 }
 

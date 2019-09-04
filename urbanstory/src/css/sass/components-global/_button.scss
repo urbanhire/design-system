@@ -1,4 +1,4 @@
-.btn {
+.uh-btn {
     background-color: $c-grey-1;
     font-size: $font-s;
     color: $c-grey-5;
@@ -22,7 +22,7 @@
     }
 }
 
-.btn-prime {
+.uh-btn-prime {
     background-color: $c-prime-1;
     color: white;
     &:hover {
@@ -34,7 +34,7 @@
     }
 }
 
-.btn-success {
+.uh-btn-success {
     background-color: $c-green-1;
     color: white;
     &:hover {
@@ -47,7 +47,7 @@
     }
 }
 
-.btn-danger {
+.uh-btn-danger {
     background-color: $c-red-1;
     color: white;
     &:hover {
@@ -59,7 +59,7 @@
     }
 }
 
-.btn-median {
+.uh-btn-median {
     background-color: $c-median-1;
     color: white;
     &:hover {
@@ -71,7 +71,7 @@
     }
 }
 
-.btn-firm {
+.uh-btn-firm {
     background-color: $c-firm-1;
     color: white;
     &:hover {
@@ -83,13 +83,13 @@
     }
 }
 
-.btn-flat {
+.uh-btn-flat {
     background: none;
     color: $c-grey-5;
     border: solid 1px transparent;
 }
 
-.btn-flat-firm {
+.uh-btn-flat-firm {
     background-color: rgba($c-firm-1, .035);
     border: solid 1px $c-firm-1;
     color: $c-firm-1;
@@ -101,7 +101,7 @@
         @include box-shadow(0 0 0 3px rgba($c-firm-1, 0.15));
     }
 }
-.btn-flat-median {
+.uh-btn-flat-median {
     background-color: rgba($c-median-1, .035);
     border: solid 1px $c-median-1;
     color: $c-median-1;
@@ -114,7 +114,7 @@
     }
 }
 
-.btn-flat-prime {
+.uh-btn-flat-prime {
     background-color: rgba($c-prime-1, .035);
     border: solid 1px $c-prime-1;
     color: $c-prime-1;
@@ -126,7 +126,7 @@
         @include box-shadow(0 0 0 3px rgba($c-prime-1, 0.15));
     }
 }
-.btn-flat-success {
+.uh-btn-flat-success {
     background-color: rgba($c-green-1, .035);
     border: solid 1px $c-green-1;
     color: $c-green-1;
@@ -139,7 +139,7 @@
     }
 }
 
-.btn-flat-grey {
+.uh-btn-flat-grey {
     background-color: rgba($c-grey-4, .035);
     border: solid 1px $c-grey-5;
     color: $c-grey-5;
@@ -153,7 +153,7 @@
 }
 
 
-.btn-flat-danger {
+.uh-btn-flat-danger {
     background-color: rgba($c-red-1, .035);
     border: solid 1px $c-red-1;
     color: $c-red-1;
@@ -166,8 +166,8 @@
     }
 }
 
-.btn[disabled="true"],
-.btn-disabled {
+.uh-btn[disabled="true"],
+.uh-btn-disabled {
     background-color: $c-grey-2;
     color: $c-grey-3;
     cursor: not-allowed;
@@ -182,25 +182,25 @@
     }
 }
 
-.btn-small {
+.uh-btn-small {
     font-size: $font-s;
     padding: 0 0.5rem;
     line-height: 28px;
 }
 
-.btn-medium {
+.uh-btn-medium {
     font-size: $font-m;
     padding: 0 1rem;
     line-height: 38px;
 }
 
-.btn-large {
+.uh-btn-large {
     font-size: $font-l;
     padding: 0 1rem;
     line-height: 48px;
 }
 
-.link {
+.uh-link {
     text-decoration: underline;
     color: $c-median-1;
     &:hover {
