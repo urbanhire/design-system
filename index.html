@@ -24,12 +24,11 @@
 		if(accessToken === "true"){
 			return true;
 		}else{
-			let email = window.prompt('Input email?', '')
 			let password = window.prompt('Input password?', '')
-			if(email === '' || password === '' || email === null || password === null){
+			if(password === '' || password === null){
 				location.reload();
 			}else{
-				getAuth(email, password)
+				getAuth(password)
 			}
 		}
 	
@@ -56,28 +55,32 @@
 			}
 			return "";
 	}
-	function getAuth($email, $username){
-		
-		let url = "https://api.urbanhire.co/v1/users/login"
-		$.ajax({
-			type: 'POST',
-			url: url,
-			headers: {
-					"Content-Type":"application/x-www-form-urlencoded",
-					"Authorization":"X-URBANHIRE-WEBAPP"
-			},
-			data: {
-				email : $email,
-				password: $username
-			},
-		}).done(function(data) {
-			console.log('data done', data) 
+	function getAuth($password){
+		if($password === 'UhUiUx115'){
 			setCookie("login", true, 1)
-
-		}).fail(function(error){
-			console.log('data failed', error)
+		}else{
 			return loginPage()
-		});
+		}
+		// let url = "https://api.urbanhire.co/v1/users/login"
+		// $.ajax({
+		// 	type: 'POST',
+		// 	url: url,
+		// 	headers: {
+		// 			"Content-Type":"application/x-www-form-urlencoded",
+		// 			"Authorization":"X-URBANHIRE-WEBAPP"
+		// 	},
+		// 	data: {
+		// 		email : $email,
+		// 		password: $username
+		// 	},
+		// }).done(function(data) {
+		// 	console.log('data done', data) 
+		// 	setCookie("login", true, 1)
+
+		// }).fail(function(error){
+		// 	console.log('data failed', error)
+		// 	return loginPage()
+		// });
 	}    
   } catch (e) {
     // eslint-disable-next-line no-console
