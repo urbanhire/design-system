@@ -865,4 +865,40 @@ li.is-hover {
   background: rgba(0, 0, 0, 0.04);
 }
 
+.local-bg-grey-1 {
+  background: #f5f5f5;
+}
+
+.local-bg-grey-2 {
+  background: #d6d6d6;
+}
+
+.local-bg-grey-3 {
+  background: #c2c2c2;
+}
+
+.local-bg-grey-4 {
+  background: #a3a3a3;
+}
+
+.local-bg-grey-5 {
+  background: #757575;
+}
+
+.local-bg-grey-6 {
+  background: #212121;
+}
+
+.local-padding {
+  padding: 16px;
+}
+
+.local-bg-firm-1 {
+  background: #011148;
+}
+
+.local-color-white {
+  color: white;
+}
+
 /*# sourceMappingURL=style_layout.css.map */

@@ -12,3 +12,6 @@ storiesOf('GLOBAL|Style', module)
 	.add('Visual Language', () => visuallanguage)
 	.add('Typography', () => typography)
 	.add('Icons', () => icons)
+		
+	  
+
