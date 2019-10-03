@@ -23,6 +23,7 @@ import '../src/css/style_layout.css';
 
 //load js for ats header
 import '../src/js/header.js';
+import '../src/js/toast.js';
 import '../src/js/tooltip.js';
 import '../src/js/dropdown.js';
 import '../src/js/prism.js';

@@ -1925,7 +1925,7 @@ table.table-spacy tbody td {
   align-self: flex-start;
 }
 .alert-info {
-  background: rgba(39, 145, 217, 0.2);
+  background: #bfdef4;
   border: 1px solid rgba(31, 116, 174, 0.2);
   color: #1f74ae;
 }
@@ -1933,7 +1933,7 @@ table.table-spacy tbody td {
   color: rgba(31, 116, 174, 0.75);
 }
 .alert-success {
-  background: rgba(47, 189, 144, 0.2);
+  background: #b3ecda;
   border: 1px solid rgba(37, 148, 113, 0.2);
   color: #259471;
 }
@@ -1941,7 +1941,7 @@ table.table-spacy tbody td {
   color: rgba(37, 148, 113, 0.75);
 }
 .alert-warning {
-  background: rgba(255, 206, 7, 0.2);
+  background: #fff1ba;
   border: 1px solid rgba(211, 169, 0, 0.2);
   color: #d3a900;
 }
@@ -1949,7 +1949,7 @@ table.table-spacy tbody td {
   color: rgba(211, 169, 0, 0.75);
 }
 .alert-danger {
-  background: rgba(239, 67, 68, 0.2);
+  background: #fde8e8;
   border: 1px solid rgba(235, 20, 21, 0.2);
   color: rgba(188, 16, 17, 0.8);
   color: #eb1415;
@@ -1966,6 +1966,19 @@ table.table-spacy tbody td {
 
 /*Toast*/
 .toast {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
   padding: 0 16px;
   overflow: auto;
   background: #f3f3f3;
@@ -1974,7 +1987,6 @@ table.table-spacy tbody td {
   color: #212121;
   min-width: 320px;
   max-width: 100%;
-  padding-right: 50px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1983,41 +1995,41 @@ table.table-spacy tbody td {
   * w: http://animista.net, t: @cssanimista
   * ---------------------------------------------- */
 }
-.toast.is-info {
-  background: #d4e9f7;
+.toast-info {
+  background: #bfdef4;
   border: 1px solid rgba(31, 116, 174, 0.2);
   color: #1f74ae;
 }
-.toast.is-info .alert-close {
+.toast-info .toast-close {
   color: rgba(31, 116, 174, 0.75);
 }
-.toast.is-success {
-  background: #d5f2e9;
+.toast-success {
+  background: #b3ecda;
   border: 1px solid rgba(37, 148, 113, 0.2);
   color: #259471;
 }
-.toast.is-success .alert-close {
+.toast-success .toast-close {
   color: rgba(37, 148, 113, 0.75);
 }
-.toast.is-warning {
-  background: #fff5cd;
+.toast-warning {
+  background: #fff1ba;
   border: 1px solid rgba(211, 169, 0, 0.2);
   color: #d3a900;
 }
-.toast.is-warning .alert-close {
+.toast-warning .toast-close {
   color: rgba(211, 169, 0, 0.75);
 }
-.toast.is-danger {
-  background: #fcd9da;
+.toast-danger {
+  background: #fde8e8;
   border: 1px solid rgba(235, 20, 21, 0.2);
   color: #eb1415;
 }
-.toast.is-danger .alert-close {
+.toast-danger .toast-close {
   color: rgba(235, 20, 21, 0.75);
 }
-.toast .toast-close {
+.toast-close {
   position: absolute;
-  top: 12px;
+  top: 8px;
   right: 8px;
   color: rgba(0, 0, 0, 0.35);
 }

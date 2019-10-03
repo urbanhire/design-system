@@ -3,30 +3,30 @@
 $(document).ready(function () {
 
 
-var callToast = function(){
+// var callToast = function(){
    
-    $(".toast-caller").click(function() {
+//     $(".toast-caller").click(function() {
         
-        var toastHTML = `<div class="toast is-danger toast-fixed"><p>Fixed toast sample</p><button class="uh-btn uh-btn-flat uh-btn-small toast-close"><i class="icon-close"></i></button></div>`; 
-        var htmlParse = $.parseHTML(toastHTML)
+//         var toastHTML = `<div class="toast toast-danger"><p>Fixed toast sample</p><button class="uh-btn uh-btn-flat uh-btn-small toast-close"><i class="icon-close"></i></button></div>`; 
+//         var htmlParse = $.parseHTML(toastHTML)
         
-        $(htmlParse).appendTo($("#toast-fixed-content"))
+//         $(htmlParse).appendTo($("#toast-fixed-content"))
        
-        var children = $("#toast-fixed-content").children().toArray()
-        setTimeout(function() { 
+//         var children = $("#toast-fixed-content").children().toArray()
+//         setTimeout(function() { 
 
-            children.forEach(function(items) {
-                setTimeout(function(){
-                    $(items).addClass('hide');
-                    setTimeout(function(){
-                        $(items).remove();
-                    }, 500)
-                }, 500)
-            });
+//             children.forEach(function(items) {
+//                 setTimeout(function(){
+//                     $(items).addClass('hide');
+//                     setTimeout(function(){
+//                         $(items).remove();
+//                     }, 500)
+//                 }, 500)
+//             });
 
-         }, 5000);
-        });        
-    }
+//          }, 5000);
+//         });        
+//     }
 
 var activeStep = function(){
     $(".step-item").click(function() {
@@ -44,7 +44,7 @@ var activeSwitch = function(){
     
 
 activeStep(); 
-callToast(); 
+// callToast(); 
 activeSwitch();
 
 });

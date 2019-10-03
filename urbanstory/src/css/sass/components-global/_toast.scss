@@ -1,54 +1,53 @@
 /*Toast*/
 
 .toast {
-  // @extend .padd-l;
+  @include flexbox;
+  @include align-items(center);
   padding: 0 $gutter-l;
   overflow: auto;
   background: #f3f3f3;
   border: 1px solid rgba($c-grey-3, 0.2);
-  //line-height:1.5rem;
   position: relative;
   color: $c-grey-6;
   min-width: 320px;
   max-width: 100%;
-  padding-right: 50px;
   @include radius;
-  &.is-info {
-    background: $c-info-alert;
+  &-info {
+    background: $c-median-4;
     border: 1px solid rgba($c-median-3, 0.2);
     //color:rgba($c-median-2, .75);
     color: $c-median-3;
-    .alert-close {
+    .toast-close {
       color: rgba($c-median-3, 0.75);
     }
   }
-  &.is-success {
-    background: $c-green-alert;
+  &-success {
+    background: $c-green-4;
     border: 1px solid rgba($c-green-3, 0.2);
     color: $c-green-3;
-    .alert-close {
+    .toast-close {
       color: rgba($c-green-3, 0.75);
     }
   }
-  &.is-warning {
-    background: $c-yellow-alert;
+  &-warning {
+    background: $c-yellow-4;
     border: 1px solid rgba($c-yellow-3, 0.2);
     color: $c-yellow-3;
-    .alert-close {
+    .toast-close {
       color: rgba($c-yellow-3, 0.75);
     }
   }
-  &.is-danger {
-    background: $c-red-alert;
+  &-danger {
+    background: $c-red-4;
     border: 1px solid rgba($c-red-3, 0.2);
     color: $c-red-3;
-    .alert-close {
+    .toast-close {
       color: rgba($c-red-3, 0.75);
     }
   }
-  .toast-close {
+  &-close {
     position: absolute;
-    top: 12px;
+    top: $gutter-m;
     right: $gutter-m;
     color: rgba(black, 0.35);
   }
@@ -86,8 +85,6 @@
 .toast-fixed-wrapper {
   position: fixed;
   z-index: 889;
-  //background:grey;
-  //outline: solid 1px red;
   bottom: $gutter-l;
   right: $gutter-l;
   .toast {
@@ -97,8 +94,4 @@
       margin-bottom: 0;
     }
   }
-
-  // .toast-fixed{
-  //   transition: visibility 0s 2s, opacity 2s linear;
-  // }
 }

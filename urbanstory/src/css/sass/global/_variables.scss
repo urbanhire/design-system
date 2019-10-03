@@ -7,22 +7,27 @@ $c-firm-3: darken($c-firm-1, 10); // #000516
 $c-median-1: #2791d9;
 $c-median-2: darken($c-median-1, 5); //#2283c4
 $c-median-3: darken($c-median-1, 10); //#1f74ae
+$c-median-4: lighten($c-median-1, 35); //#bfdef4
 
 $c-prime-1: #33beef; 
 $c-prime-2: darken($c-prime-1, 5); // #1bb6ed
 $c-prime-3: darken($c-prime-1, 10); // #11a8de
+$c-prime-4: lighten($c-prime-1, 35); // #d9f3fc
 
 $c-red-1: #ef4344;
 $c-red-2: darken($c-red-1, 5); //#ed2c2d
 $c-red-3: darken($c-red-1, 10); //#eb1415
+$c-red-4: lighten($c-red-1, 35); //#fde8e8
 
 $c-yellow-1: #ffce07;
 $c-yellow-2: darken($c-yellow-1, 5); //#edbe00
 $c-yellow-3: darken($c-yellow-1, 10); //#d3a900
+$c-yellow-4: lighten($c-yellow-1, 35); //#fff1ba
 
 $c-green-1: #2fbd90;
 $c-green-2: darken($c-green-1, 5); //#2aa980
 $c-green-3: darken($c-green-1, 10); //#259471
+$c-green-4: lighten($c-green-1, 35); //#b3ecda
 
 $c-red-alert: #fcd9da;
 $c-yellow-alert: #fff5cd;
