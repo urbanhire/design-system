@@ -7,6 +7,19 @@
   display: -webkit-flex; /* NEW - Chrome */
   display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
+@mixin align-items($s...) {
+  -ms-flex-align: $s;
+  -webkit-box-align: $s;
+  align-items: $s;
+}
+@mixin justify-content($s...) {
+  -webkit-justify-content: $s;
+  -ms-flex-pack: $s;
+  justify-content: $s;
+}
+@mixin flex-direction($s...) {
+  flex-direction: $s
+}
 @mixin flex-middle {
   -ms-flex-align: center;
   -webkit-box-align: center;

@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build": "build-storybook",
+    "watch:sass": "cd src/css/sass && sass -I global -I components-ats -I components-global --watch composer:../",
     "deploy": "npm run build && cp -a storybook-static/. ../"
   },
   "keywords": [],

@@ -7,7 +7,7 @@ var callToast = function(){
    
     $(".toast-caller").click(function() {
         
-        var toastHTML = `<div class="toast is-danger toast-fixed"><p>Fixed toast sample</p><button class="btn btn-flat btn-small toast-close"><i class="icon-close"></i></button></div>`; 
+        var toastHTML = `<div class="toast is-danger toast-fixed"><p>Fixed toast sample</p><button class="uh-btn uh-btn-flat uh-btn-small toast-close"><i class="icon-close"></i></button></div>`; 
         var htmlParse = $.parseHTML(toastHTML)
         
         $(htmlParse).appendTo($("#toast-fixed-content"))

@@ -1,4 +1,5 @@
 .card {
+  padding: $gutter-l;
   background: #ffffff;
   @include radius;
   @include box-shadow(0 0 0 1px rgba(black, 0.09));

@@ -66,14 +66,12 @@ $font-stack: 'Source Sans Pro', sans-serif;
 $font-icon: urbanfont;
 
 //font sizes
-$font-xl: 24px;
-$font-l: 18px;
-$font-m: 16px;
-$font-s: 14px;
-$font-xs: 12px;
-$font-xxs: 11px;
-
-
+$font-xl: (24/16)+em;
+$font-l: (18/16)+em;
+$font-m: (16/16)+em;
+$font-s: (14/16)+em;
+$font-xs: (12/16)+em;
+$font-xxs: (11/16)+em;
 
 // customs
 $c-white: #fff;
@@ -84,11 +82,9 @@ $icon-size: 14px;
 
 $br-height: 18px;
 
-
 $screen-s: 48em; // 768
 $screen-md: 62em; // 992
 $screen-lg: 75em; // 1200
-
 
 //customs
 $ats-header-height: 50px;
