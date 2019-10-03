@@ -1,88 +1,85 @@
 <!doctype html><html><head><meta charset="utf-8"><title>Storybook</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>html, body {
-	overflow: hidden;
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>/* globals window */
-/* eslint-disable no-underscore-dangle */
-​
-try {
-	if (window.parent !== window) {
-		window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
-		window.__VUE_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__VUE_DEVTOOLS_GLOBAL_HOOK__;
-}
-$('document').ready(function(){
-	loginPage()
-});
-​
-function loginPage () {
-	var accessToken = getCookie("login");
-	console.log(accessToken)
-	if(accessToken === "true"){
-		return true;
-	}else{
-		let password = window.prompt('Input password?', '')
-		if(password === '' || password === null){
-			location.reload();
-		}else{
-			getAuth(password)
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+	}</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>/* globals window */
+  /* eslint-disable no-underscore-dangle */
+  try {
+    if (window.parent !== window) {
+      window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+      window.__VUE_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__VUE_DEVTOOLS_GLOBAL_HOOK__;
 		}
-	}
-
-}
-
-function setCookie(cname, cvalue, exhour) {
-	var d = new Date();
-	d.setTime(d.getTime() + (exhour*60*60*1000));
-	var expires = "expires="+ d.toUTCString();
-	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-function getCookie(cname) {
-	var name = cname + "=";
-	var decodedCookie = decodeURIComponent(document.cookie);
-	var ca = decodedCookie.split(';');
-	for(var i = 0; i <ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') {
-		c = c.substring(1);
+		$('document').ready(function(){
+			loginPage()
+		});
+		function loginPage () {
+			var accessToken = getCookie("login");
+			console.log(accessToken)
+			if(accessToken === "true"){
+				return true;
+			}else{
+				let password = window.prompt('Input password?', '')
+				if(password === '' || password === null){
+					location.reload();
+				}else{
+					getAuth(password)
+				}
+			}
+		
 		}
-		if (c.indexOf(name) == 0) {
-		return c.substring(name.length, c.length);
+		
+		function setCookie(cname, cvalue, exhour) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exhour*60*60*1000));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 		}
+		function getCookie(cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+				}
+				}
+				return "";
 		}
-		return "";
-}
-function getAuth($password){
-	if($password === 'uiux'){
-		setCookie("login", true, 1)
-	}else{
-		return loginPage()
-	}
-	// let url = "https://api.urbanhire.co/v1/users/login"
-	// $.ajax({
-	// 	type: 'POST',
-	// 	url: url,
-	// 	headers: {
-	// 			"Content-Type":"application/x-www-form-urlencoded",
-	// 			"Authorization":"X-URBANHIRE-WEBAPP"
-	// 	},
-	// 	data: {
-	// 		email : $email,
-	// 		password: $username
-	// 	},
-	// }).done(function(data) {
-	// 	console.log('data done', data) 
-	// 	setCookie("login", true, 1)
-​
-	// }).fail(function(error){
-	// 	console.log('data failed', error)
-	// 	return loginPage()
-	// });
-}    
-} catch (e) {
-	// eslint-disable-next-line no-console
-	console.warn('unable to connect to parent frame for connecting dev tools');
-}</script></head><body><div id="root"></div><script src="runtime~main.17da544d0ef88cbabfaf.bundle.js"></script><script src="vendors~main.4553d28df76a44848bae.bundle.js"></script><script src="main.627f36eda6cc80f94ecc.bundle.js"></script></body></html>
+		function getAuth($password){
+			if($password === 'uiux'){
+				setCookie("login", true, 1)
+			}else{
+				return loginPage()
+			}
+			// let url = "https://api.urbanhire.co/v1/users/login"
+			// $.ajax({
+			// 	type: 'POST',
+			// 	url: url,
+			// 	headers: {
+			// 			"Content-Type":"application/x-www-form-urlencoded",
+			// 			"Authorization":"X-URBANHIRE-WEBAPP"
+			// 	},
+			// 	data: {
+			// 		email : $email,
+			// 		password: $username
+			// 	},
+			// }).done(function(data) {
+			// 	console.log('data done', data) 
+			// 	setCookie("login", true, 1)
+			// }).fail(function(error){
+			// 	console.log('data failed', error)
+			// 	return loginPage()
+			// });
+		} 
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.warn('unable to connect to parent frame for connecting dev tools');
+  }</script></head><body><div id="root"></div><script src="runtime~main.17da544d0ef88cbabfaf.bundle.js"></script><script src="vendors~main.f8b11f7402b21e9c3c49.bundle.js"></script><script src="main.237da26c0093ac11c9b0.bundle.js"></script></body></html>
