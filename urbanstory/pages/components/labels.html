@@ -1,47 +1,72 @@
 <div class="container-fluid">
-    <section class="page-hero">
-        <h1>Labels</h1>
-    </section>
-    <section>
-		<h4>Label Default <code>.label</code></h4>
-		<div class="label-group">
-			<div class="label">Plain label</div>
-			<div class="label label-outlined">Label outlines</div>
-            <div class="label label-grey">Label flat grey</div>
-			<div class="label">Label with icon
-				<button><i class="icon-close"></i></button>
+	<section class="page-hero">
+			<h1>Labels</h1>
+	</section>
+	<section>
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="card m-b-l">
+					<h5>Basic</h5>
+					<div class="label">
+						Label default
+					</div>
+					<div class="code-preview">
+						<pre class="code-snippet"><code>&lt;div class=&quot;label&quot;&gt;Plain label&lt;/div&gt;
+						</code></pre>
+					</div>
+				</div>
+				<div class="card m-b-l">
+					<h5>Label by Size</h5>
+					<div class="label-small">Label small</div>
+					<div class="label-extra-small">Label extra small</div>
+					<div class="code-preview">
+						<pre class="code-snippet"><code>&lt;div class=&quot;label-small&quot;&gt;Plain label&lt;/div&gt;
+	
+&lt;div class=&quot;label-extra-small&quot;&gt;Plain label&lt;/div&gt;
+						</code></pre>
+					</div>
+				</div>
 			</div>
-			<div class="label label-dashed">Label dashed
-				<button><i class="icon-plus"></i></button>
-			</div>
-			<div class="label label-sub-firm">Label sub-firm
-				<button><i class="icon-close"></i></button>
-			</div>
-			<div class="label label-firm">Label firm
-				<button><i class="icon-close"></i></button>
-			</div>
-			<div class="label label-success">Label success
-				<button><i class="icon-close"></i></button>
-			</div>
-			<div class="label label-danger">Label danger
-				<button><i class="icon-close"></i></button>
-			</div>
-			<div class="label label-warning">Label warning
-				<button><i class="icon-close"></i></button>
-			</div>
-			<div class="label label-median">Label median
-				<button><i class="icon-close"></i></button>
-			</div>
-		</div>
-		<section class="code-preview has-tab">
-			<div class="card uh-tab">
-				<nav class="uh-tab-nav">
-					<a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
-					<a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
-				</nav>
-			</div>
-			<pre class="code-snippet" id="html-1"><code>&lt;div class=&quot;label&quot;&gt;Plain label&lt;/div&gt;
-
+			<div class="col-xs-6">
+				<div class="card m-b-l">
+					<h5>Label by Color and Icon</h5>
+					<div class="label-group">
+						<div class="label label-outlined">Label outlines</div>
+						<div class="label label-grey">Label flat grey</div>
+						<div class="label">Label with icon
+							<button><i class="icon-close"></i></button>
+						</div>
+						<div class="label label-dashed">Label dashed
+							<button><i class="icon-plus"></i></button>
+						</div>
+						<div class="label label-sub-firm">Label sub-firm
+							<button><i class="icon-close"></i></button>
+						</div>
+						<div class="label label-firm">Label firm
+							<button><i class="icon-close"></i></button>
+						</div>
+						<div class="label label-success">Label success
+							<button><i class="icon-close"></i></button>
+						</div>
+						<div class="label label-danger">Label danger
+							<button><i class="icon-close"></i></button>
+						</div>
+						<div class="label label-warning">Label warning
+							<button><i class="icon-close"></i></button>
+						</div>
+						<div class="label label-median">Label median
+							<button><i class="icon-close"></i></button>
+						</div>
+					</div>
+					<div class="code-preview has-tab">
+						<div class="card uh-tab">
+							<nav class="uh-tab-nav">
+								<a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+								<a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
+							</nav>
+						</div>
+						<pre class="code-snippet" id="html-1"><code>&lt;div class=&quot;label&quot;&gt;Plain label&lt;/div&gt;
+				
 &lt;div class=&quot;label label-outlined&quot;&gt;Label outlines&lt;/div&gt;
 
 &lt;div class=&quot;label label-grey&quot;&gt;Label flat grey&lt;/div&gt;
@@ -77,8 +102,8 @@
 &lt;div class=&quot;label label-median&quot;&gt;Label median
   &lt;button&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
 &lt;/div&gt;</code></pre>
-			<pre class="code-snippet display-off" id="sass-1"><code>/* Labels */
-
+						<pre class="code-snippet display-off" id="sass-1"><code>/* Labels */
+				
 $label-height: 32px;
 
 .label {
@@ -185,309 +210,10 @@ $label-height: 32px;
 	border: 1px solid $c-median-1;
 	color: $c-white;
 }
-			</code></pre>
-		</section>
-	</section>
-	<section>
-		<h4>Label Small <code>.label-s</code></h4>
-        <div class="labels-group">
-			<div class="label-s">Plain label</div>
-			<div class="label-s label-outlined">Label outlines</div>
-			<div class="label-s label-grey">Label flat grey</div>
-			<div class="label-s label-dashed">Label dashed</div>
-			<div class="label-s label-sub-firm">Label sub-firm</div>
-			<div class="label-s label-firm">Label firm</div>
-			<div class="label-s label-success">Label success</div>
-			<div class="label-s label-danger">Label danger</div>
-			<div class="label-s label-warning">Label warning</div>
-			<div class="label-s label-median">Label median</div>
-        </div>
-        <section class="code-preview has-tab">
-			<div class="card uh-tab">
-				<nav class="uh-tab-nav">
-					<a  class="nav-item nav-fit-content active" href="#html-2" id="html-tab">HTML</a>
-					<a  class="nav-item nav-fit-content" href="#sass-2" id="sass-tab">SASS</a>
-				</nav>
-			</div>
-            <pre class="code-snippet" id="html-2"><code>&lt;div class=&quot;label-s&quot;&gt;Plain label&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-outlined&quot;&gt;Label outlines&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-grey&quot;&gt;Label flat grey&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-dashed&quot;&gt;Label dashed&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-sub-firm&quot;&gt;Label sub-firm&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-firm&quot;&gt;Label firm&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-success&quot;&gt;Label success&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-danger&quot;&gt;Label danger&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-warning&quot;&gt;Label warning&lt;/div&gt;
-
-&lt;div class=&quot;label-s label-median&quot;&gt;Label median&lt;/div&gt;</code></pre>
-            <pre class="code-snippet display-off" id="sass-2"><code>/* Labels */
-
-$label-s-height: 20px;
-
-.label-s {
-	height: $label-s-height;
-	font-size: 11px;
-	padding: 0 $gutter-m;
-}
-
-.label,
-.label-s,
-.label-xs {
-	border: 1px solid $c-grey-1;
-	display: inline-flex;
-	@include flex-middle;
-	justify-content: center;
-	border-radius: ($label-height / 2) + 1;
-	background-color: $c-grey-1;
-	color: $c-grey-4;
-	min-width: $chip-height * 2;
-	margin-right: $gutter-s;
-	margin-bottom: $gutter-m;
-	button {
-		background: none;
-		border: none;
-		width: $chip-height;
-		height: $chip-height;
-		text-align: center;
-		padding: 0;
-		outline: none;
-		margin-right: -($gutter-l);
-		@include border-radius($chip-height);
-		@extend .transition;
-		i {
-			color: rgba(black, 0.25);
-			@extend .transition;
-			&:before {
-				vertical-align: middle;
-			}
-		}
-		&:hover {
-			cursor: pointer;
-			i {
-				color: rgba(black, 0.4);
-			}
-		}
-		&:focus {
-			background: rgba(black, 0.1);
-		}
-	}
-}
-
-.label-outlined {
-	border: 1px solid $c-grey-3;
-	background-color: $c-white;
-	color: $c-grey-5;
-}
-
-.label-sub-firm {
-	background-color: rgba(39, 145, 217, 0.1);
-	color: $c-firm-1;
-	border: 1px solid rgba(39, 145, 217, 0);
-}
-
-.label-dashed {
-	background-color: white;
-	border: 1px dashed $c-grey-5;
-}
-
-.label-firm {
-	background-color: $c-firm-1;
-	border: 1px solid $c-firm-1;
-	color: $c-white;
-	button i {
-		color: white;
-	}
-}
-
-.label-success {
-	background-color: $c-green-1;
-	border: 1px solid $c-green-1;
-	color: $c-white;
-}
-
-.label-grey {
-	background-color: $c-grey-2;
-	border: 1px solid $c-grey-2;
-	color: $c-grey-5;
-}
-
-.label-danger {
-	background-color: $c-red-1;
-	border: 1px solid $c-red-1;
-	color: $c-white;
-}
-
-.label-warning {
-	background-color: $c-yellow-1;
-	border: 1px solid $c-yellow-1;
-	color: $c-white;
-}
-
-.label-median {
-	background-color: $c-median-1;
-	border: 1px solid $c-median-1;
-	color: $c-white;
-}
-			</code></pre>
-		</section>
-	</section>
-	<section>
-			<h4>Label Extra Small <code>.label-xs</code></h4>
-			<div class="labels-group">
-				<div class="label-xs">Plain label</div>
-				<div class="label-xs label-outlined">Label outlines</div>
-				<div class="label-xs label-grey">Label flat grey</div>
-				<div class="label-xs label-dashed">Label dashed</div>
-				<div class="label-xs label-sub-firm">Label sub-firm</div>
-				<div class="label-xs label-firm">Label firm</div>
-				<div class="label-xs label-success">Label success</div>
-				<div class="label-xs label-danger">Label danger</div>
-				<div class="label-xs label-warning">Label warning</div>
-				<div class="label-xs label-median">Label median</div>
-			</div>
-			<section class="code-preview has-tab">
-				<div class="card uh-tab">
-					<nav class="uh-tab-nav">
-						<a  class="nav-item nav-fit-content active" href="#html-3" id="html-tab">HTML</a>
-						<a  class="nav-item nav-fit-content" href="#sass-3" id="sass-tab">SASS</a>
-					</nav>
+						</code></pre>
+					</div>
 				</div>
-				<pre class="code-snippet" id="html-3"><code>&lt;div class=&quot;label-xs&quot;&gt;Plain label&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-outlined&quot;&gt;Label outlines&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-grey&quot;&gt;Label flat grey&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-dashed&quot;&gt;Label dashed&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-sub-firm&quot;&gt;Label sub-firm&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-firm&quot;&gt;Label firm&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-success&quot;&gt;Label success&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-danger&quot;&gt;Label danger&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-warning&quot;&gt;Label warning&lt;/div&gt;
-
-&lt;div class=&quot;label-xs label-median&quot;&gt;Label median&lt;/div&gt;</code></pre>
-				<pre class="code-snippet display-off" id="sass-3"><code>/* Labels */
-
-$label-xs-height: 16px;
-
-.label-xs {
-	height: $label-xs-height;
-	font-size: 10px;
-	padding: 0 $gutter-s;
-}
-
-.label,
-.label-s,
-.label-xs {
-	border: 1px solid $c-grey-1;
-	display: inline-flex;
-	@include flex-middle;
-	justify-content: center;
-	border-radius: ($label-height / 2) + 1;
-	background-color: $c-grey-1;
-	color: $c-grey-4;
-	min-width: $chip-height * 2;
-	margin-right: $gutter-s;
-	margin-bottom: $gutter-m;
-	button {
-		background: none;
-		border: none;
-		width: $chip-height;
-		height: $chip-height;
-		text-align: center;
-		padding: 0;
-		outline: none;
-		margin-right: -($gutter-l);
-		@include border-radius($chip-height);
-		@extend .transition;
-		i {
-			color: rgba(black, 0.25);
-			@extend .transition;
-			&:before {
-				vertical-align: middle;
-			}
-		}
-		&:hover {
-			cursor: pointer;
-			i {
-				color: rgba(black, 0.4);
-			}
-		}
-		&:focus {
-			background: rgba(black, 0.1);
-		}
-	}
-}
-
-.label-outlined {
-	border: 1px solid $c-grey-3;
-	background-color: $c-white;
-	color: $c-grey-5;
-}
-
-.label-sub-firm {
-	background-color: rgba(39, 145, 217, 0.1);
-	color: $c-firm-1;
-	border: 1px solid rgba(39, 145, 217, 0);
-}
-
-.label-dashed {
-	background-color: white;
-	border: 1px dashed $c-grey-5;
-}
-
-.label-firm {
-	background-color: $c-firm-1;
-	border: 1px solid $c-firm-1;
-	color: $c-white;
-	button i {
-		color: white;
-	}
-}
-
-.label-success {
-	background-color: $c-green-1;
-	border: 1px solid $c-green-1;
-	color: $c-white;
-}
-
-.label-grey {
-	background-color: $c-grey-2;
-	border: 1px solid $c-grey-2;
-	color: $c-grey-5;
-}
-
-.label-danger {
-	background-color: $c-red-1;
-	border: 1px solid $c-red-1;
-	color: $c-white;
-}
-
-.label-warning {
-	background-color: $c-yellow-1;
-	border: 1px solid $c-yellow-1;
-	color: $c-white;
-}
-
-.label-median {
-	background-color: $c-median-1;
-	border: 1px solid $c-median-1;
-	color: $c-white;
-}
-				</code></pre>
-			</section>
-		</section>
+			</div>
+		</div>
+	</section>
 </div>

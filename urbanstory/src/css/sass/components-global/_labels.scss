@@ -9,20 +9,20 @@ $label-xs-height: 16px;
   padding: 0 $gutter-l;
 }
 
-.label-s {
+.label-small {
   height: $label-s-height;
   font-size: 11px;
   padding: 0 $gutter-m;
 }
 
-.label-xs {
+.label-extra-small {
   height: $label-xs-height;
   font-size: 10px;
   padding: 0 $gutter-s;
 }
 
 
-.label , .label-s , .label-xs {
+.label , .label-small , .label-extra-small {
   border: 1px solid $c-grey-1;
   display: inline-flex;
   @include flex-middle;

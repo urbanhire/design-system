@@ -327,7 +327,7 @@ pre[class*=language-] {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
 }
 
-.transition, .range-slider input[type=range], .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .label button i, .label-s button i, .label-xs button i, .label button, .label-s button, .label-xs button, .uh-tab-nav .nav-item::before, .avatar, .uh-input-form textarea,
+.transition, .range-slider input[type=range], .pagination a, .breadcrumb a:hover, .breadcrumb a, .list a, .list.has-icon a:before, .label button i, .label-small button i, .label-extra-small button i, .label button, .label-small button, .label-extra-small button, .uh-tab-nav .nav-item::before, .avatar, .uh-input-form textarea,
 .uh-input-form input[type=text],
 .uh-input-form input[type=password],
 .uh-input-form input[type=email],
@@ -1740,45 +1740,45 @@ table.table-spacy tbody td {
   right: 0;
   bottom: 0;
   margin: auto;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   line-height: 2rem;
   color: black;
   color: #c2c2c2;
 }
-.avatar.is-sm {
+.avatar-small {
   width: 48px;
   height: 48px;
 }
-.avatar.is-sm span {
-  font-size: 1rem;
+.avatar-small span {
+  font-size: 0.875em;
 }
-.avatar.is-md {
+.avatar-medium {
   width: 64px;
   height: 64px;
 }
-.avatar.is-md span {
-  font-size: 1.5rem;
+.avatar-medium span {
+  font-size: 1em;
 }
-.avatar.is-lg {
+.avatar-large {
   width: 96px;
   height: 96px;
 }
-.avatar.is-lg span {
-  font-size: 2rem;
+.avatar-large span {
+  font-size: 1.5em;
 }
-.avatar.is-xl {
+.avatar-extra-large {
   width: 128px;
   height: 128px;
 }
-.avatar.is-xl span {
-  font-size: 2rem;
+.avatar-extra-large span {
+  font-size: 2em;
 }
-.avatar.is-square {
+.avatar-square {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.avatar.is-o {
+.avatar-circle {
   -webkit-box-shadow: 0 0 0 2px white;
   -moz-box-shadow: 0 0 0 2px white;
   box-shadow: 0 0 0 2px white;
@@ -2273,19 +2273,19 @@ input[type=checkbox]:focus {
   padding: 0 16px;
 }
 
-.label-s {
+.label-small {
   height: 20px;
   font-size: 11px;
   padding: 0 8px;
 }
 
-.label-xs {
+.label-extra-small {
   height: 16px;
   font-size: 10px;
   padding: 0 4px;
 }
 
-.label, .label-s, .label-xs {
+.label, .label-small, .label-extra-small {
   border: 1px solid #f5f5f5;
   display: inline-flex;
   -ms-flex-align: center;
@@ -2299,7 +2299,7 @@ input[type=checkbox]:focus {
   margin-right: 4px;
   margin-bottom: 8px;
 }
-.label button, .label-s button, .label-xs button {
+.label button, .label-small button, .label-extra-small button {
   background: none;
   border: none;
   width: 32px;
@@ -2312,19 +2312,19 @@ input[type=checkbox]:focus {
   -moz-border-radius: 32px;
   border-radius: 32px;
 }
-.label button i, .label-s button i, .label-xs button i {
+.label button i, .label-small button i, .label-extra-small button i {
   color: rgba(0, 0, 0, 0.25);
 }
-.label button i:before, .label-s button i:before, .label-xs button i:before {
+.label button i:before, .label-small button i:before, .label-extra-small button i:before {
   vertical-align: middle;
 }
-.label button:hover, .label-s button:hover, .label-xs button:hover {
+.label button:hover, .label-small button:hover, .label-extra-small button:hover {
   cursor: pointer;
 }
-.label button:hover i, .label-s button:hover i, .label-xs button:hover i {
+.label button:hover i, .label-small button:hover i, .label-extra-small button:hover i {
   color: rgba(0, 0, 0, 0.4);
 }
-.label button:focus, .label-s button:focus, .label-xs button:focus {
+.label button:focus, .label-small button:focus, .label-extra-small button:focus {
   background: rgba(0, 0, 0, 0.1);
 }
 
