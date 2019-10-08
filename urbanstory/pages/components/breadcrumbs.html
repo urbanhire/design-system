@@ -1,55 +1,58 @@
 <div class="container-fluid">
-    <section class="page-hero">
-        <h1>Breadcrumbs</h1>
-    </section>
-    <section>
-        <nav class="breadcrumb">
-            <a href="#">Home</a>
-            <a href="#">Page</a>
-            <a href="#" class="active">Sub Page</a>
+  <section class="page-hero">
+    <h1>Breadcrumbs</h1>
+  </section>
+  <section>
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <a href="#">Page</a>
+      <a href="#" class="active">Sub Page</a>
+    </nav>
+    <section class="code-preview has-tab">
+      <div class="card uh-tab">
+        <nav class="uh-tab-nav">
+          <a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
+          <a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
         </nav>
-        <section class="code-preview has-tab">
-			<div class="card uh-tab">
-				<nav class="uh-tab-nav">
-					<a  class="nav-item nav-fit-content active" href="#html-1" id="html-tab">HTML</a>
-					<a  class="nav-item nav-fit-content" href="#sass-1" id="sass-tab">SASS</a>
-				</nav>
-			</div>
-            <pre class="code-snippet" id="html-1"><code>&lt;nav class=&quot;breadcrumb&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
-    &lt;a href=&quot;#&quot;&gt;Page&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Sub Page&lt;/a&gt;
+      </div>
+      <pre class="code-snippet" id="html-1"><code>&lt;nav class=&quot;breadcrumb&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Page&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Sub Page&lt;/a&gt;
 &lt;/nav&gt;</code></pre>
-            <pre class="code-snippet display-off" id="sass-1"><code>
+      <pre class="code-snippet display-off" id="sass-1"><code>
 .breadcrumb {
-    a {
-        height: $br-height;
-        display: inline-block;
-        color: $c-grey-5;
-        font-size: 14px;
-        line-height: $br-height;
-        @extend .transition;
-        &:hover {
-            color: $c-grey-4;
-            @extend .transition;
-        }
-        &:not(:last-child):after {
-            color: $c-grey-3;
-            font-family: $font-icon;
-            content: "\E005";
-            display: inline-block;
-            margin: 0 4px;
-            vertical-align: bottom;
-        }
+  a {
+    height: $br-height;
+    display: inline-block;
+    color: $c-grey-3;
+    font-size: 14px;
+    line-height: $br-height;
+    @extend .transition;
+
+    &:hover {
+      color: $c-grey-4;
+      @extend .transition;
     }
-    .active {
-        @include border-radius(0);
-        border: none;
-        background-color: transparent;
-        color: $c-grey-3;
+
+    &:not(:last-child):after {
+      color: $c-grey-3;
+      font-family: $font-icon;
+      content: "\E005";
+      display: inline-block;
+      margin: 0 4px;
+      vertical-align: middle;
     }
+  }
+  
+  .active {
+    @include border-radius(0);
+    border: none;
+    background-color: transparent;
+    color: $c-grey-5;
+  }
 }
-            </code></pre>
-        </section>
-    </section>
+          </code></pre>
+      </section>
+  </section>
 </div>

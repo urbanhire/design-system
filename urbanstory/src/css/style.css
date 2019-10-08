@@ -1847,7 +1847,7 @@ table.table-spacy tbody td {
 }
 .search-bar:before {
   display: block;
-  font-family: urbanfont;
+  font-family: urbanicon !important;
   font-size: 18px;
   content: "";
   color: #c2c2c2;
@@ -2400,10 +2400,10 @@ input[type=checkbox]:focus {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  font-family: urbanfont;
+  font-family: urbanicon !important;
   min-width: 40px;
   height: 40px;
-  content: "";
+  content: "";
   visibility: hidden;
   color: #011148;
 }
@@ -2448,7 +2448,7 @@ input[type=checkbox]:focus {
 .breadcrumb a {
   height: 18px;
   display: inline-block;
-  color: #757575;
+  color: #c2c2c2;
   font-size: 14px;
   line-height: 18px;
 }
@@ -2457,11 +2457,11 @@ input[type=checkbox]:focus {
 }
 .breadcrumb a:not(:last-child):after {
   color: #c2c2c2;
-  font-family: urbanfont;
+  font-family: urbanicon !important;
   content: "";
   display: inline-block;
   margin: 0 4px;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .breadcrumb .active {
   -webkit-border-radius: 0;
@@ -2469,7 +2469,7 @@ input[type=checkbox]:focus {
   border-radius: 0;
   border: none;
   background-color: transparent;
-  color: #c2c2c2;
+  color: #757575;
 }
 
 /* Pagination */

@@ -3,7 +3,7 @@
   a {
     height: $br-height;
     display: inline-block;
-    color: $c-grey-5;
+    color: $c-grey-3;
     font-size: 14px;
     line-height: $br-height;
     @extend .transition;
@@ -19,7 +19,7 @@
       content: "\E005";
       display: inline-block;
       margin: 0 4px;
-      vertical-align: bottom;
+      vertical-align: middle;
     }
   }
 
@@ -27,6 +27,6 @@
     @include border-radius(0);
     border: none;
     background-color: transparent;
-    color: $c-grey-3;
+    color: $c-grey-5;
   }
 }
