@@ -7,24 +7,79 @@ Contributor     : Nadhifa, Tyagita, George
 About           : Urbanstory is a design system library produced by UI / UX Team of Urbanhire
 */
 
+// @charset "UTF-8";
+
+// // Example of build sass on terminal
+// // sass -I global -I components-ats -I components-global --watch composer:../
+// // Meaning include folder global, include folder components-global then compile into folder composer
+
+// // sass library
+// @import "../global/_variables";
+// @import "../global/_mixin";
+
+// /* global css */
+// @import "../global/_global";
+
+// /* extend classes */
+// @import "../components-global/_extends";
+
+// // buttons
+// @import "../components-global/_button";
+
+// // forms
+// @import "../components-global/_forms";
+
+// // alert
+// @import "../components-global/_alert";
+
+// // toast
+// @import "../components-global/_toast";
+
+// // tooltip
+// @import "../components-global/_tooltip";
+
+// // pagination
+// @import "../components-global/_pagination";
+
+
 @charset "UTF-8";
 
 // Example of build sass on terminal
 // sass -I global -I components-ats -I components-global --watch composer:../
 // Meaning include folder global, include folder components-global then compile into folder composer
 
-// sass library
+// library
 @import "../global/_variables";
 @import "../global/_mixin";
 
-/* global css */
+// global css
 @import "../global/_global";
+// @import "../global/_prism";
 
-/* extend classes */
+// main css
 @import "../components-global/_extends";
-
-// buttons
 @import "../components-global/_button";
-
-// forms
+@import "../components-global/_flexboxgrid";
+@import "../components-global/_table";
 @import "../components-global/_forms";
+@import "../components-global/_avatar";
+@import "../components-global/_components";
+@import "../components-global/_alert";
+@import "../components-global/_toast";
+@import "../components-global/_tab";
+@import "../components-global/_checkbox-radio";
+@import "../components-global/_labels";
+@import "../components-global/_list";
+@import "../components-global/_breadcrumbs";
+@import "../components-global/_pagination";
+@import "../components-global/_slider";
+@import "../components-global/_preloader";
+@import "../components-global/_tooltip";
+@import "../components-global/_steps";
+@import "../components-global/_switch";
+@import "../components-global/_notification";
+@import "../components-global/_dropdown";
+@import "../components-global/_margin";
+
+// cards
+// @import "../components-global/_img-showcase";
