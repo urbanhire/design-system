@@ -50,3 +50,7 @@
 .transition {
   @include transition(cubic-bezier(0.11, 0.65, 0.73, 0.66), 0.2s);
 }
+
+.full-width {
+  width: 100%;
+}
