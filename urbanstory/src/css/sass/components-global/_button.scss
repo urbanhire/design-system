@@ -23,6 +23,9 @@
     [class*=" icon-"]:before, [class^=icon-]:before, [data-icon]:before {
         vertical-align: middle !important;
     }
+    .text-center {
+        @include justify-content(center);
+    }
 }
 
 .uh-btn-prime {
