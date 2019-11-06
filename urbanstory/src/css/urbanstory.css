@@ -265,7 +265,7 @@ dl dd {
 .uh-btn [class*=" icon-"]:before, .uh-btn [class^=icon-]:before, .uh-btn [data-icon]:before {
   vertical-align: middle !important;
 }
-.uh-btn .text-center {
+.uh-btn.text-center {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
