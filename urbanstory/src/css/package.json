@@ -1,0 +1,9 @@
+{
+  "name": "@urbanhire.com/styles",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": "urbanhire.com"
+}

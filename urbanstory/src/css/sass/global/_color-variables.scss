@@ -1,0 +1,92 @@
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+$skyblue: (
+  "base":       #33beef,
+  "lighten-2":  #c2ebfa,
+  "lighten-1":  #99def7,
+  "darken-1":   #1bb6ed,
+  "darken-2":   #11a8de
+);
+
+$blue: (
+  "base":       #2791d9,
+  "lighten-2":  #bfdef4,
+  "lighten-1":  #93c8ec,
+  "darken-1":   #2283c4,
+  "darken-2":   #1f74ae
+);
+
+$navy: (
+  "base":       #011148,
+  "lighten-2":  #e5e7ec,
+  "lighten-1":  #8088a3,
+  "darken-1":   #010b2f,
+  "darken-2":   #000516
+);
+
+$green: (
+  "base":       #2fbd90,
+  "lighten-2":  #b3ecda,
+  "lighten-1":  #2aa980,
+  "darken-1":   #97dec7,
+  "darken-2":   #259471
+);
+
+$yellow: (
+  "base":       #ffce07,
+  "lighten-2":  #fff1ba,
+  "lighten-1":  #ffe683,
+  "darken-1":   #edbe00,
+  "darken-2":   #d3a900
+);
+
+$red: (
+  "base":       #ef4344,
+  "lighten-2":  #fde8e8,
+  "lighten-1":  #f7a1a1,
+  "darken-1":   #ed2c2d,
+  "darken-2":   #eb1415
+);
+
+$grey: (
+  "base":       #757575,
+  "lighten-5":  #f6f6f6,
+  "lighten-4":  #f1f1f1,
+  "lighten-3":  #e3e3e3,
+  "lighten-2":  #d5d5d5,
+  "lighten-1":  #bababa,
+  "darken-1":   #3a3a3a,
+  "darken-2":   #222222
+);
+
+$shades: (
+  "black":        #000000,
+  "white":        #FFFFFF,
+  "transparent":  transparent
+);
+
+$colors: (
+  "skyblue": $skyblue,
+  "blue": $blue,
+  "navy": $navy,
+  "green": $green,
+  "yellow": $yellow,
+  "red": $red,
+  "grey": $grey,
+  "shades": $shades
+) !default;
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
+  @return null;
+}
